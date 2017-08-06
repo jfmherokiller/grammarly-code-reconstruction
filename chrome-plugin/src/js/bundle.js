@@ -23,7 +23,11 @@
             };
             name[o][0].call(attributes.exports, function(e) {
                 var n = name[o][1][e];
-                return s(n ? n : e);
+                if (n) {
+                    return s(n);
+                } else {
+                    return s(e);
+                }
             }, attributes, attributes.exports, e$$12, name, n, r);
         }
         return n[o].exports;
