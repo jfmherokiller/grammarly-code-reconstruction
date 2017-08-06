@@ -1,3134 +1,6107 @@
-!function e(t, n, o) {
-    function r(s, c) {
-        if (!n[s]) {
-            if (!t[s]) {
-                var a = "function" == typeof require && require;
-                if (!c && a) return a(s, !0);
-                if (i) return i(s, !0);
-                var u = new Error("Cannot find module '" + s + "'");
-                throw u.code = "MODULE_NOT_FOUND", u;
+!function e$$12(t, n, r) {
+    /**
+     * @param {string} o
+     * @param {?} dx
+     * @return {?}
+     */
+    function s(o, dx) {
+        if (!n[o]) {
+            if (!t[o]) {
+                var i = "function" == typeof require && require;
+                if (!dx && i) {
+                    return i(o, true);
+                }
+                if (a) {
+                    return a(o, true);
+                }
+                /** @type {Error} */
+                var err = new Error("Cannot find module '" + o + "'");
+                throw err.code = "MODULE_NOT_FOUND", err;
             }
-            var l = n[s] = {
-                exports: {}
+            var module_ = n[o] = {
+                exports : {}
             };
-            t[s][0].call(l.exports, function(e) {
-                var n = t[s][1][e];
-                return r(n ? n : e);
-            }, l, l.exports, e, t, n, o);
+            t[o][0].call(module_.exports, function(e) {
+                var n = t[o][1][e];
+                return s(n ? n : e);
+            }, module_, module_.exports, e$$12, t, n, r);
         }
-        return n[s].exports;
+        return n[o].exports;
     }
-    for (var i = "function" == typeof require && require, s = 0; s < o.length; s++) r(o[s]);
-    return r;
+    var a = "function" == typeof require && require;
+    /** @type {number} */
+    var o = 0;
+    for (;o < r.length;o++) {
+        s(r[o]);
+    }
+    return s;
 }({
-    1: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/array/from"),
-            __esModule: !0
+    1 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/array/from"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/array/from": 22
-    } ],
-    2: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/get-iterator"),
-            __esModule: !0
+        "core-js/library/fn/array/from" : 22
+    }],
+    2 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/get-iterator"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/get-iterator": 23
-    } ],
-    3: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/is-iterable"),
-            __esModule: !0
+        "core-js/library/fn/get-iterator" : 23
+    }],
+    3 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/is-iterable"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/is-iterable": 24
-    } ],
-    4: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/json/stringify"),
-            __esModule: !0
+        "core-js/library/fn/is-iterable" : 24
+    }],
+    4 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/json/stringify"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/json/stringify": 25
-    } ],
-    5: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/assign"),
-            __esModule: !0
+        "core-js/library/fn/json/stringify" : 25
+    }],
+    5 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/assign"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/assign": 26
-    } ],
-    6: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/create"),
-            __esModule: !0
+        "core-js/library/fn/object/assign" : 26
+    }],
+    6 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/create"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/create": 27
-    } ],
-    7: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/define-property"),
-            __esModule: !0
+        "core-js/library/fn/object/create" : 27
+    }],
+    7 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/define-property"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/define-property": 28
-    } ],
-    8: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/get-prototype-of"),
-            __esModule: !0
+        "core-js/library/fn/object/define-property" : 28
+    }],
+    8 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/get-prototype-of"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/get-prototype-of": 29
-    } ],
-    9: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/keys"),
-            __esModule: !0
+        "core-js/library/fn/object/get-prototype-of" : 29
+    }],
+    9 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/keys"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/keys": 30
-    } ],
-    10: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/object/set-prototype-of"),
-            __esModule: !0
+        "core-js/library/fn/object/keys" : 30
+    }],
+    10 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/object/set-prototype-of"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/object/set-prototype-of": 31
-    } ],
-    11: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/promise"),
-            __esModule: !0
+        "core-js/library/fn/object/set-prototype-of" : 31
+    }],
+    11 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/promise"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/promise": 32
-    } ],
-    12: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/symbol"),
-            __esModule: !0
+        "core-js/library/fn/promise" : 32
+    }],
+    12 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/symbol"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/symbol": 33
-    } ],
-    13: [ function(e, t, n) {
-        t.exports = {
-            "default": e("core-js/library/fn/symbol/iterator"),
-            __esModule: !0
+        "core-js/library/fn/symbol" : 33
+    }],
+    13 : [function($sanitize, module, dataAndEvents) {
+        module.exports = {
+            "default" : $sanitize("core-js/library/fn/symbol/iterator"),
+            __esModule : true
         };
     }, {
-        "core-js/library/fn/symbol/iterator": 34
-    } ],
-    14: [ function(e, t, n) {
-        "use strict";
-        n.__esModule = !0, n["default"] = function(e, t) {
-            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function");
+        "core-js/library/fn/symbol/iterator" : 34
+    }],
+    14 : [function(dataAndEvents, deepDataAndEvents, __exports__) {
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        /**
+         * @param {?} dataAndEvents
+         * @param {Function} deepDataAndEvents
+         * @return {undefined}
+         */
+        __exports__["default"] = function(dataAndEvents, deepDataAndEvents) {
+            if (!(dataAndEvents instanceof deepDataAndEvents)) {
+                throw new TypeError("Cannot call a class as a function");
+            }
         };
-    }, {} ],
-    15: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+    }, {}],
+    15 : [function(neighbours, dataAndEvents, __exports__) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function url(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/object/define-property"), i = o(r);
-        n["default"] = function() {
-            function e(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var o = t[n];
-                    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), 
-                    (0, i["default"])(e, o.key, o);
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var tile = neighbours("../core-js/object/define-property");
+        var tileUrl = url(tile);
+        __exports__["default"] = function() {
+            /**
+             * @param {Function} value
+             * @param {Array} obj
+             * @return {undefined}
+             */
+            function defineProperty(value, obj) {
+                /** @type {number} */
+                var i = 0;
+                for (;i < obj.length;i++) {
+                    var property = obj[i];
+                    property.enumerable = property.enumerable || false;
+                    /** @type {boolean} */
+                    property.configurable = true;
+                    if ("value" in property) {
+                        /** @type {boolean} */
+                        property.writable = true;
+                    }
+                    (0, tileUrl["default"])(value, property.key, property);
                 }
             }
-            return function(t, n, o) {
-                return n && e(t.prototype, n), o && e(t, o), t;
+            return function(ctor, element, key) {
+                return element && defineProperty(ctor.prototype, element), key && defineProperty(ctor, key), ctor;
             };
         }();
     }, {
-        "../core-js/object/define-property": 7
-    } ],
-    16: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../core-js/object/define-property" : 7
+    }],
+    16 : [function(proceed, dataAndEvents, __exports__) {
+        /**
+         * @param {string} value
+         * @return {?}
+         */
+        function lookupIterator(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/object/define-property"), i = o(r);
-        n["default"] = function(e, t, n) {
-            return t in e ? (0, i["default"])(e, t, {
-                value: n,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0
-            }) : e[t] = n, e;
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var value = proceed("../core-js/object/define-property");
+        var iterator = lookupIterator(value);
+        /**
+         * @param {Object} obj
+         * @param {?} key
+         * @param {string} value
+         * @return {?}
+         */
+        __exports__["default"] = function(obj, key, value) {
+            return key in obj ? (0, iterator["default"])(obj, key, {
+                value : value,
+                enumerable : true,
+                configurable : true,
+                writable : true
+            }) : obj[key] = value, obj;
         };
     }, {
-        "../core-js/object/define-property": 7
-    } ],
-    17: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../core-js/object/define-property" : 7
+    }],
+    17 : [function(require, dataAndEvents, __exports__) {
+        /**
+         * @param {Object} type
+         * @return {?}
+         */
+        function Event(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/object/set-prototype-of"), i = o(r), s = e("../core-js/object/create"), c = o(s), a = e("../helpers/typeof"), u = o(a);
-        n["default"] = function(e, t) {
-            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + ("undefined" == typeof t ? "undefined" : (0, 
-            u["default"])(t)));
-            e.prototype = (0, c["default"])(t && t.prototype, {
-                constructor: {
-                    value: e,
-                    enumerable: !1,
-                    writable: !0,
-                    configurable: !0
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var type = require("../core-js/object/set-prototype-of");
+        var event = Event(type);
+        var complete = require("../core-js/object/create");
+        var c = Event(complete);
+        var selector = require("../helpers/typeof");
+        var elem = Event(selector);
+        /**
+         * @param {Object} ret
+         * @param {Object} b
+         * @return {undefined}
+         */
+        __exports__["default"] = function(ret, b) {
+            if ("function" != typeof b && null !== b) {
+                throw new TypeError("Super expression must either be null or a function, not " + ("undefined" == typeof b ? "undefined" : (0, elem["default"])(b)));
+            }
+            ret.prototype = (0, c["default"])(b && b.prototype, {
+                constructor : {
+                    value : ret,
+                    enumerable : false,
+                    writable : true,
+                    configurable : true
                 }
-            }), t && (i["default"] ? (0, i["default"])(e, t) : e.__proto__ = t);
+            });
+            if (b) {
+                if (event["default"]) {
+                    (0, event["default"])(ret, b);
+                } else {
+                    /** @type {Object} */
+                    ret.__proto__ = b;
+                }
+            }
         };
     }, {
-        "../core-js/object/create": 6,
-        "../core-js/object/set-prototype-of": 10,
-        "../helpers/typeof": 21
-    } ],
-    18: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../core-js/object/create" : 6,
+        "../core-js/object/set-prototype-of" : 10,
+        "../helpers/typeof" : 21
+    }],
+    18 : [function(proceed, dataAndEvents, __exports__) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function lookupIterator(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        n.__esModule = !0;
-        var r = e("../helpers/typeof"), i = o(r);
-        n["default"] = function(e, t) {
-            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            return !t || "object" !== ("undefined" == typeof t ? "undefined" : (0, i["default"])(t)) && "function" != typeof t ? e : t;
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var value = proceed("../helpers/typeof");
+        var iterator = lookupIterator(value);
+        /**
+         * @param {string} dataAndEvents
+         * @param {?} callback
+         * @return {?}
+         */
+        __exports__["default"] = function(dataAndEvents, callback) {
+            if (!dataAndEvents) {
+                throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            }
+            return!callback || "object" !== ("undefined" == typeof callback ? "undefined" : (0, iterator["default"])(callback)) && "function" != typeof callback ? dataAndEvents : callback;
         };
     }, {
-        "../helpers/typeof": 21
-    } ],
-    19: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../helpers/typeof" : 21
+    }],
+    19 : [function(get, dataAndEvents, __exports__) {
+        /**
+         * @param {string} id
+         * @return {?}
+         */
+        function require(id) {
+            return id && id.__esModule ? id : {
+                "default" : id
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/is-iterable"), i = o(r), s = e("../core-js/get-iterator"), c = o(s);
-        n["default"] = function() {
-            function e(e, t) {
-                var n = [], o = !0, r = !1, i = void 0;
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var id = get("../core-js/is-iterable");
+        var map = require(id);
+        var data = get("../core-js/get-iterator");
+        var conf = require(data);
+        __exports__["default"] = function() {
+            /**
+             * @param {Object} name
+             * @param {number} height
+             * @return {?}
+             */
+            function add(name, height) {
+                /** @type {Array} */
+                var parent = [];
+                /** @type {boolean} */
+                var callback2 = true;
+                /** @type {boolean} */
+                var r = false;
+                var bulk = void 0;
                 try {
-                    for (var s, a = (0, c["default"])(e); !(o = (s = a.next()).done) && (n.push(s.value), 
-                    !t || n.length !== t); o = !0) ;
-                } catch (u) {
-                    r = !0, i = u;
+                    var p;
+                    var ret = (0, conf["default"])(name);
+                    for (;!(callback2 = (p = ret.next()).done) && (parent.push(p.value), !height || parent.length !== height);callback2 = true) {
+                    }
+                } catch (fn) {
+                    /** @type {boolean} */
+                    r = true;
+                    bulk = fn;
                 } finally {
                     try {
-                        !o && a["return"] && a["return"]();
+                        if (!callback2) {
+                            if (ret["return"]) {
+                                ret["return"]();
+                            }
+                        }
                     } finally {
-                        if (r) throw i;
+                        if (r) {
+                            throw bulk;
+                        }
                     }
                 }
-                return n;
+                return parent;
             }
-            return function(t, n) {
-                if (Array.isArray(t)) return t;
-                if ((0, i["default"])(Object(t))) return e(t, n);
+            return function(optgroup, v) {
+                if (Array.isArray(optgroup)) {
+                    return optgroup;
+                }
+                if ((0, map["default"])(Object(optgroup))) {
+                    return add(optgroup, v);
+                }
                 throw new TypeError("Invalid attempt to destructure non-iterable instance");
             };
         }();
     }, {
-        "../core-js/get-iterator": 2,
-        "../core-js/is-iterable": 3
-    } ],
-    20: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../core-js/get-iterator" : 2,
+        "../core-js/is-iterable" : 3
+    }],
+    20 : [function(proceed, dataAndEvents, __exports__) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function lookupIterator(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/array/from"), i = o(r);
-        n["default"] = function(e) {
-            if (Array.isArray(e)) {
-                for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
-                return n;
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var value = proceed("../core-js/array/from");
+        var iterator = lookupIterator(value);
+        /**
+         * @param {Object} optgroup
+         * @return {?}
+         */
+        __exports__["default"] = function(optgroup) {
+            if (Array.isArray(optgroup)) {
+                /** @type {number} */
+                var name = 0;
+                /** @type {Array} */
+                var old = Array(optgroup.length);
+                for (;name < optgroup.length;name++) {
+                    old[name] = optgroup[name];
+                }
+                return old;
             }
-            return (0, i["default"])(e);
+            return(0, iterator["default"])(optgroup);
         };
     }, {
-        "../core-js/array/from": 1
-    } ],
-    21: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../core-js/array/from" : 1
+    }],
+    21 : [function(require, dataAndEvents, __exports__) {
+        /**
+         * @param {Object} type
+         * @return {?}
+         */
+        function Event(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
             };
         }
-        n.__esModule = !0;
-        var r = e("../core-js/symbol/iterator"), i = o(r), s = e("../core-js/symbol"), c = o(s), a = "function" == typeof c["default"] && "symbol" == typeof i["default"] ? function(e) {
-            return typeof e;
-        } : function(e) {
-            return e && "function" == typeof c["default"] && e.constructor === c["default"] && e !== c["default"].prototype ? "symbol" : typeof e;
+        /** @type {boolean} */
+        __exports__.__esModule = true;
+        var complete = require("../core-js/symbol/iterator");
+        var c = Event(complete);
+        var type = require("../core-js/symbol");
+        var schema = Event(type);
+        /** @type {function (boolean): ?} */
+        var ownProp = "function" == typeof schema["default"] && "symbol" == typeof c["default"] ? function(attr) {
+            return typeof attr;
+        } : function(attr) {
+            return attr && ("function" == typeof schema["default"] && (attr.constructor === schema["default"] && attr !== schema["default"].prototype)) ? "symbol" : typeof attr;
         };
-        n["default"] = "function" == typeof c["default"] && "symbol" === a(i["default"]) ? function(e) {
-            return "undefined" == typeof e ? "undefined" : a(e);
-        } : function(e) {
-            return e && "function" == typeof c["default"] && e.constructor === c["default"] && e !== c["default"].prototype ? "symbol" : "undefined" == typeof e ? "undefined" : a(e);
+        /** @type {function (boolean): ?} */
+        __exports__["default"] = "function" == typeof schema["default"] && "symbol" === ownProp(c["default"]) ? function(protoProps) {
+            return "undefined" == typeof protoProps ? "undefined" : ownProp(protoProps);
+        } : function(protoProps) {
+            return protoProps && ("function" == typeof schema["default"] && (protoProps.constructor === schema["default"] && protoProps !== schema["default"].prototype)) ? "symbol" : "undefined" == typeof protoProps ? "undefined" : ownProp(protoProps);
         };
     }, {
-        "../core-js/symbol": 12,
-        "../core-js/symbol/iterator": 13
-    } ],
-    22: [ function(e, t, n) {
-        e("../../modules/es6.string.iterator"), e("../../modules/es6.array.from"), t.exports = e("../../modules/_core").Array.from;
+        "../core-js/symbol" : 12,
+        "../core-js/symbol/iterator" : 13
+    }],
+    22 : [function($sanitize, opts, dataAndEvents) {
+        $sanitize("../../modules/es6.string.iterator");
+        $sanitize("../../modules/es6.array.from");
+        opts.exports = $sanitize("../../modules/_core").Array.from;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.array.from": 110,
-        "../../modules/es6.string.iterator": 120
-    } ],
-    23: [ function(e, t, n) {
-        e("../modules/web.dom.iterable"), e("../modules/es6.string.iterator"), t.exports = e("../modules/core.get-iterator");
+        "../../modules/_core" : 42,
+        "../../modules/es6.array.from" : 110,
+        "../../modules/es6.string.iterator" : 120
+    }],
+    23 : [function(factory, module, dataAndEvents) {
+        factory("../modules/web.dom.iterable");
+        factory("../modules/es6.string.iterator");
+        module.exports = factory("../modules/core.get-iterator");
     }, {
-        "../modules/core.get-iterator": 108,
-        "../modules/es6.string.iterator": 120,
-        "../modules/web.dom.iterable": 124
-    } ],
-    24: [ function(e, t, n) {
-        e("../modules/web.dom.iterable"), e("../modules/es6.string.iterator"), t.exports = e("../modules/core.is-iterable");
+        "../modules/core.get-iterator" : 108,
+        "../modules/es6.string.iterator" : 120,
+        "../modules/web.dom.iterable" : 124
+    }],
+    24 : [function(factory, module, dataAndEvents) {
+        factory("../modules/web.dom.iterable");
+        factory("../modules/es6.string.iterator");
+        module.exports = factory("../modules/core.is-iterable");
     }, {
-        "../modules/core.is-iterable": 109,
-        "../modules/es6.string.iterator": 120,
-        "../modules/web.dom.iterable": 124
-    } ],
-    25: [ function(e, t, n) {
-        var o = e("../../modules/_core"), r = o.JSON || (o.JSON = {
-            stringify: JSON.stringify
+        "../modules/core.is-iterable" : 109,
+        "../modules/es6.string.iterator" : 120,
+        "../modules/web.dom.iterable" : 124
+    }],
+    25 : [function($sanitize, module, dataAndEvents) {
+        var S = $sanitize("../../modules/_core");
+        var newArgs = S.JSON || (S.JSON = {
+            /** @type {function (this:JSONType, *, (Array.<string>|function (string, *): *|null)=, (number|string)=): string} */
+            stringify : JSON.stringify
         });
-        t.exports = function(e) {
-            return r.stringify.apply(r, arguments);
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return newArgs.stringify.apply(newArgs, arguments);
         };
     }, {
-        "../../modules/_core": 42
-    } ],
-    26: [ function(e, t, n) {
-        e("../../modules/es6.object.assign"), t.exports = e("../../modules/_core").Object.assign;
+        "../../modules/_core" : 42
+    }],
+    26 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.object.assign");
+        module.exports = $sanitize("../../modules/_core").Object.assign;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.assign": 112
-    } ],
-    27: [ function(e, t, n) {
-        e("../../modules/es6.object.create");
-        var o = e("../../modules/_core").Object;
-        t.exports = function(e, t) {
-            return o.create(e, t);
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.assign" : 112
+    }],
+    27 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.object.create");
+        var handler = $sanitize("../../modules/_core").Object;
+        /**
+         * @param {Object} name
+         * @param {Object} ast
+         * @return {?}
+         */
+        module.exports = function(name, ast) {
+            return handler.create(name, ast);
         };
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.create": 113
-    } ],
-    28: [ function(e, t, n) {
-        e("../../modules/es6.object.define-property");
-        var o = e("../../modules/_core").Object;
-        t.exports = function(e, t, n) {
-            return o.defineProperty(e, t, n);
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.create" : 113
+    }],
+    28 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.object.define-property");
+        var t = $sanitize("../../modules/_core").Object;
+        /**
+         * @param {Object} name
+         * @param {Object} ast
+         * @param {?} opt_attributes
+         * @return {?}
+         */
+        module.exports = function(name, ast, opt_attributes) {
+            return t.defineProperty(name, ast, opt_attributes);
         };
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.define-property": 114
-    } ],
-    29: [ function(e, t, n) {
-        e("../../modules/es6.object.get-prototype-of"), t.exports = e("../../modules/_core").Object.getPrototypeOf;
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.define-property" : 114
+    }],
+    29 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.object.get-prototype-of");
+        module.exports = $sanitize("../../modules/_core").Object.getPrototypeOf;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.get-prototype-of": 115
-    } ],
-    30: [ function(e, t, n) {
-        e("../../modules/es6.object.keys"), t.exports = e("../../modules/_core").Object.keys;
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.get-prototype-of" : 115
+    }],
+    30 : [function($sanitize, config, dataAndEvents) {
+        $sanitize("../../modules/es6.object.keys");
+        config.exports = $sanitize("../../modules/_core").Object.keys;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.keys": 116
-    } ],
-    31: [ function(e, t, n) {
-        e("../../modules/es6.object.set-prototype-of"), t.exports = e("../../modules/_core").Object.setPrototypeOf;
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.keys" : 116
+    }],
+    31 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.object.set-prototype-of");
+        module.exports = $sanitize("../../modules/_core").Object.setPrototypeOf;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.set-prototype-of": 117
-    } ],
-    32: [ function(e, t, n) {
-        e("../modules/es6.object.to-string"), e("../modules/es6.string.iterator"), e("../modules/web.dom.iterable"), 
-        e("../modules/es6.promise"), t.exports = e("../modules/_core").Promise;
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.set-prototype-of" : 117
+    }],
+    32 : [function(require, module, dataAndEvents) {
+        require("../modules/es6.object.to-string");
+        require("../modules/es6.string.iterator");
+        require("../modules/web.dom.iterable");
+        require("../modules/es6.promise");
+        module.exports = require("../modules/_core").Promise;
     }, {
-        "../modules/_core": 42,
-        "../modules/es6.object.to-string": 118,
-        "../modules/es6.promise": 119,
-        "../modules/es6.string.iterator": 120,
-        "../modules/web.dom.iterable": 124
-    } ],
-    33: [ function(e, t, n) {
-        e("../../modules/es6.symbol"), e("../../modules/es6.object.to-string"), e("../../modules/es7.symbol.async-iterator"), 
-        e("../../modules/es7.symbol.observable"), t.exports = e("../../modules/_core").Symbol;
+        "../modules/_core" : 42,
+        "../modules/es6.object.to-string" : 118,
+        "../modules/es6.promise" : 119,
+        "../modules/es6.string.iterator" : 120,
+        "../modules/web.dom.iterable" : 124
+    }],
+    33 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.symbol");
+        $sanitize("../../modules/es6.object.to-string");
+        $sanitize("../../modules/es7.symbol.async-iterator");
+        $sanitize("../../modules/es7.symbol.observable");
+        module.exports = $sanitize("../../modules/_core").Symbol;
     }, {
-        "../../modules/_core": 42,
-        "../../modules/es6.object.to-string": 118,
-        "../../modules/es6.symbol": 121,
-        "../../modules/es7.symbol.async-iterator": 122,
-        "../../modules/es7.symbol.observable": 123
-    } ],
-    34: [ function(e, t, n) {
-        e("../../modules/es6.string.iterator"), e("../../modules/web.dom.iterable"), t.exports = e("../../modules/_wks-ext").f("iterator");
+        "../../modules/_core" : 42,
+        "../../modules/es6.object.to-string" : 118,
+        "../../modules/es6.symbol" : 121,
+        "../../modules/es7.symbol.async-iterator" : 122,
+        "../../modules/es7.symbol.observable" : 123
+    }],
+    34 : [function($sanitize, module, dataAndEvents) {
+        $sanitize("../../modules/es6.string.iterator");
+        $sanitize("../../modules/web.dom.iterable");
+        module.exports = $sanitize("../../modules/_wks-ext").f("iterator");
     }, {
-        "../../modules/_wks-ext": 105,
-        "../../modules/es6.string.iterator": 120,
-        "../../modules/web.dom.iterable": 124
-    } ],
-    35: [ function(e, t, n) {
-        t.exports = function(e) {
-            if ("function" != typeof e) throw TypeError(e + " is not a function!");
-            return e;
+        "../../modules/_wks-ext" : 105,
+        "../../modules/es6.string.iterator" : 120,
+        "../../modules/web.dom.iterable" : 124
+    }],
+    35 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            if ("function" != typeof name) {
+                throw TypeError(name + " is not a function!");
+            }
+            return name;
         };
-    }, {} ],
-    36: [ function(e, t, n) {
-        t.exports = function() {};
-    }, {} ],
-    37: [ function(e, t, n) {
-        t.exports = function(e, t, n, o) {
-            if (!(e instanceof t) || void 0 !== o && o in e) throw TypeError(n + ": incorrect invocation!");
-            return e;
+    }, {}],
+    36 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @return {undefined}
+         */
+        module.exports = function() {
         };
-    }, {} ],
-    38: [ function(e, t, n) {
-        var o = e("./_is-object");
-        t.exports = function(e) {
-            if (!o(e)) throw TypeError(e + " is not an object!");
-            return e;
+    }, {}],
+    37 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @param {string} ary
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes, ary) {
+            if (!(name instanceof key) || void 0 !== ary && ary in name) {
+                throw TypeError(opt_attributes + ": incorrect invocation!");
+            }
+            return name;
+        };
+    }, {}],
+    38 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_is-object");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            if (!inspect(name)) {
+                throw TypeError(name + " is not an object!");
+            }
+            return name;
         };
     }, {
-        "./_is-object": 62
-    } ],
-    39: [ function(e, t, n) {
-        var o = e("./_to-iobject"), r = e("./_to-length"), i = e("./_to-index");
-        t.exports = function(e) {
-            return function(t, n, s) {
-                var c, a = o(t), u = r(a.length), l = i(s, u);
-                if (e && n != n) {
-                    for (;u > l; ) if (c = a[l++], c != c) return !0;
-                } else for (;u > l; l++) if ((e || l in a) && a[l] === n) return e || l || 0;
-                return !e && -1;
+        "./_is-object" : 62
+    }],
+    39 : [function(require, module, dataAndEvents) {
+        var tmpl = require("./_to-iobject");
+        var assert = require("./_to-length");
+        var debug = require("./_to-index");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return function(options, string, msg) {
+                var x;
+                var args = tmpl(options);
+                var ms = assert(args.length);
+                var id = debug(msg, ms);
+                if (name && string != string) {
+                    for (;ms > id;) {
+                        if (x = args[id++], x != x) {
+                            return true;
+                        }
+                    }
+                } else {
+                    for (;ms > id;id++) {
+                        if ((name || id in args) && args[id] === string) {
+                            return name || (id || 0);
+                        }
+                    }
+                }
+                return!name && -1;
             };
         };
     }, {
-        "./_to-index": 97,
-        "./_to-iobject": 99,
-        "./_to-length": 100
-    } ],
-    40: [ function(e, t, n) {
-        var o = e("./_cof"), r = e("./_wks")("toStringTag"), i = "Arguments" == o(function() {
+        "./_to-index" : 97,
+        "./_to-iobject" : 99,
+        "./_to-length" : 100
+    }],
+    40 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_cof");
+        var camelKey = require("./_wks")("toStringTag");
+        /** @type {boolean} */
+        var nativeIsArray = "Arguments" == getActual(function() {
             return arguments;
-        }()), s = function(e, t) {
+        }());
+        /**
+         * @param {Array} data
+         * @param {number} key
+         * @return {?}
+         */
+        var dataAttr = function(data, key) {
             try {
-                return e[t];
-            } catch (n) {}
+                return data[key];
+            } catch (n) {
+            }
         };
-        t.exports = function(e) {
-            var t, n, c;
-            return void 0 === e ? "Undefined" : null === e ? "Null" : "string" == typeof (n = s(t = Object(e), r)) ? n : i ? o(t) : "Object" == (c = o(t)) && "function" == typeof t.callee ? "Arguments" : c;
-        };
-    }, {
-        "./_cof": 41,
-        "./_wks": 106
-    } ],
-    41: [ function(e, t, n) {
-        var o = {}.toString;
-        t.exports = function(e) {
-            return o.call(e).slice(8, -1);
-        };
-    }, {} ],
-    42: [ function(e, t, n) {
-        var o = t.exports = {
-            version: "2.4.0"
-        };
-        "number" == typeof __e && (__e = o);
-    }, {} ],
-    43: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_object-dp"), r = e("./_property-desc");
-        t.exports = function(e, t, n) {
-            t in e ? o.f(e, t, r(0, n)) : e[t] = n;
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            var obj;
+            var data;
+            var hash;
+            return void 0 === name ? "Undefined" : null === name ? "Null" : "string" == typeof(data = dataAttr(obj = Object(name), camelKey)) ? data : nativeIsArray ? getActual(obj) : "Object" == (hash = getActual(obj)) && "function" == typeof obj.callee ? "Arguments" : hash;
         };
     }, {
-        "./_object-dp": 75,
-        "./_property-desc": 86
-    } ],
-    44: [ function(e, t, n) {
-        var o = e("./_a-function");
-        t.exports = function(e, t, n) {
-            if (o(e), void 0 === t) return e;
-            switch (n) {
-              case 1:
-                return function(n) {
-                    return e.call(t, n);
-                };
-
-              case 2:
-                return function(n, o) {
-                    return e.call(t, n, o);
-                };
-
-              case 3:
-                return function(n, o, r) {
-                    return e.call(t, n, o, r);
-                };
+        "./_cof" : 41,
+        "./_wks" : 106
+    }],
+    41 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {function (this:*): string} */
+        var toString = {}.toString;
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return toString.call(name).slice(8, -1);
+        };
+    }, {}],
+    42 : [function(dataAndEvents, $, deepDataAndEvents) {
+        var o = $.exports = {
+            version : "2.4.0"
+        };
+        if ("number" == typeof __e) {
+            __e = o;
+        }
+    }, {}],
+    43 : [function(require, module, dataAndEvents) {
+        var t = require("./_object-dp");
+        var getActual = require("./_property-desc");
+        /**
+         * @param {Object} name
+         * @param {Object} ast
+         * @param {?} opt_attributes
+         * @return {undefined}
+         */
+        module.exports = function(name, ast, opt_attributes) {
+            if (ast in name) {
+                t.f(name, ast, getActual(0, opt_attributes));
+            } else {
+                name[ast] = opt_attributes;
+            }
+        };
+    }, {
+        "./_object-dp" : 75,
+        "./_property-desc" : 86
+    }],
+    44 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_a-function");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes) {
+            if (inspect(name), void 0 === key) {
+                return name;
+            }
+            switch(opt_attributes) {
+                case 1:
+                    return function(loc) {
+                        return name.call(key, loc);
+                    };
+                case 2:
+                    return function(loc, element) {
+                        return name.call(key, loc, element);
+                    };
+                case 3:
+                    return function(loc, element, capture) {
+                        return name.call(key, loc, element, capture);
+                    };
             }
             return function() {
-                return e.apply(t, arguments);
+                return name.apply(key, arguments);
             };
         };
     }, {
-        "./_a-function": 35
-    } ],
-    45: [ function(e, t, n) {
-        t.exports = function(e) {
-            if (void 0 == e) throw TypeError("Can't call method on  " + e);
-            return e;
+        "./_a-function" : 35
+    }],
+    45 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            if (void 0 == name) {
+                throw TypeError("Can't call method on  " + name);
+            }
+            return name;
         };
-    }, {} ],
-    46: [ function(e, t, n) {
-        t.exports = !e("./_fails")(function() {
+    }, {}],
+    46 : [function($sanitize, module, dataAndEvents) {
+        /** @type {boolean} */
+        module.exports = !$sanitize("./_fails")(function() {
             return 7 != Object.defineProperty({}, "a", {
-                get: function() {
+                /**
+                 * @return {?}
+                 */
+                get : function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_fails": 51
-    } ],
-    47: [ function(e, t, n) {
-        var o = e("./_is-object"), r = e("./_global").document, i = o(r) && o(r.createElement);
-        t.exports = function(e) {
-            return i ? r.createElement(e) : {};
+        "./_fails" : 51
+    }],
+    47 : [function(require, module, dataAndEvents) {
+        var isObject = require("./_is-object");
+        var doc = require("./_global").document;
+        var is_defun = isObject(doc) && isObject(doc.createElement);
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return is_defun ? doc.createElement(name) : {};
         };
     }, {
-        "./_global": 53,
-        "./_is-object": 62
-    } ],
-    48: [ function(e, t, n) {
-        t.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
-    }, {} ],
-    49: [ function(e, t, n) {
-        var o = e("./_object-keys"), r = e("./_object-gops"), i = e("./_object-pie");
-        t.exports = function(e) {
-            var t = o(e), n = r.f;
-            if (n) for (var s, c = n(e), a = i.f, u = 0; c.length > u; ) a.call(e, s = c[u++]) && t.push(s);
-            return t;
-        };
-    }, {
-        "./_object-gops": 80,
-        "./_object-keys": 83,
-        "./_object-pie": 84
-    } ],
-    50: [ function(e, t, n) {
-        var o = e("./_global"), r = e("./_core"), i = e("./_ctx"), s = e("./_hide"), c = "prototype", a = function(e, t, n) {
-            var u, l, f, d = e & a.F, p = e & a.G, g = e & a.S, _ = e & a.P, b = e & a.B, h = e & a.W, v = p ? r : r[t] || (r[t] = {}), m = v[c], y = p ? o : g ? o[t] : (o[t] || {})[c];
-            p && (n = t);
-            for (u in n) l = !d && y && void 0 !== y[u], l && u in v || (f = l ? y[u] : n[u], 
-            v[u] = p && "function" != typeof y[u] ? n[u] : b && l ? i(f, o) : h && y[u] == f ? function(e) {
-                var t = function(t, n, o) {
-                    if (this instanceof e) {
-                        switch (arguments.length) {
-                          case 0:
-                            return new e();
-
-                          case 1:
-                            return new e(t);
-
-                          case 2:
-                            return new e(t, n);
-                        }
-                        return new e(t, n, o);
+        "./_global" : 53,
+        "./_is-object" : 62
+    }],
+    48 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {Array.<string>} */
+        module.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
+    }, {}],
+    49 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_object-keys");
+        var b = require("./_object-gops");
+        var cfg = require("./_object-pie");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            var str = inspect(name);
+            var next = b.f;
+            if (next) {
+                var v;
+                var items = next(name);
+                var filter = cfg.f;
+                /** @type {number} */
+                var index = 0;
+                for (;items.length > index;) {
+                    if (filter.call(name, v = items[index++])) {
+                        str.push(v);
                     }
-                    return e.apply(this, arguments);
-                };
-                return t[c] = e[c], t;
-            }(f) : _ && "function" == typeof f ? i(Function.call, f) : f, _ && ((v.virtual || (v.virtual = {}))[u] = f, 
-            e & a.R && m && !m[u] && s(m, u, f)));
+                }
+            }
+            return str;
         };
-        a.F = 1, a.G = 2, a.S = 4, a.P = 8, a.B = 16, a.W = 32, a.U = 64, a.R = 128, t.exports = a;
     }, {
-        "./_core": 42,
-        "./_ctx": 44,
-        "./_global": 53,
-        "./_hide": 55
-    } ],
-    51: [ function(e, t, n) {
-        t.exports = function(e) {
-            try {
-                return !!e();
-            } catch (t) {
-                return !0;
+        "./_object-gops" : 80,
+        "./_object-keys" : 83,
+        "./_object-pie" : 84
+    }],
+    50 : [function(require, module, dataAndEvents) {
+        var item = require("./_global");
+        var helper = require("./_core");
+        var is = require("./_ctx");
+        var debug = require("./_hide");
+        /** @type {string} */
+        var j = "prototype";
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {undefined}
+         */
+        var proxy = function(name, key, opt_attributes) {
+            var i;
+            var dest;
+            var val;
+            /** @type {number} */
+            var d = name & proxy.F;
+            /** @type {number} */
+            var args = name & proxy.G;
+            /** @type {number} */
+            var isComposite = name & proxy.S;
+            /** @type {number} */
+            var stream = name & proxy.P;
+            /** @type {number} */
+            var source = name & proxy.B;
+            /** @type {number} */
+            var isPattern = name & proxy.W;
+            var arr2 = args ? helper : helper[key] || (helper[key] = {});
+            var arr = arr2[j];
+            var obj = args ? item : isComposite ? item[key] : (item[key] || {})[j];
+            if (args) {
+                /** @type {Object} */
+                opt_attributes = key;
+            }
+            for (i in opt_attributes) {
+                dest = !d && (obj && void 0 !== obj[i]);
+                if (!(dest && i in arr2)) {
+                    val = dest ? obj[i] : opt_attributes[i];
+                    arr2[i] = args && "function" != typeof obj[i] ? opt_attributes[i] : source && dest ? is(val, item) : isPattern && obj[i] == val ? function(second) {
+                        /**
+                         * @param {string} elem
+                         * @param {string} returnDom
+                         * @param {string} arr
+                         * @return {?}
+                         */
+                        var first = function(elem, returnDom, arr) {
+                            if (this instanceof second) {
+                                switch(arguments.length) {
+                                    case 0:
+                                        return new second;
+                                    case 1:
+                                        return new second(elem);
+                                    case 2:
+                                        return new second(elem, returnDom);
+                                }
+                                return new second(elem, returnDom, arr);
+                            }
+                            return second.apply(this, arguments);
+                        };
+                        return first[j] = second[j], first;
+                    }(val) : stream && "function" == typeof val ? is(Function.call, val) : val;
+                    if (stream) {
+                        (arr2.virtual || (arr2.virtual = {}))[i] = val;
+                        if (name & proxy.R) {
+                            if (arr) {
+                                if (!arr[i]) {
+                                    debug(arr, i, val);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         };
-    }, {} ],
-    52: [ function(e, t, n) {
-        var o = e("./_ctx"), r = e("./_iter-call"), i = e("./_is-array-iter"), s = e("./_an-object"), c = e("./_to-length"), a = e("./core.get-iterator-method"), u = {}, l = {}, n = t.exports = function(e, t, n, f, d) {
-            var p, g, _, b, h = d ? function() {
-                return e;
-            } : a(e), v = o(n, f, t ? 2 : 1), m = 0;
-            if ("function" != typeof h) throw TypeError(e + " is not iterable!");
-            if (i(h)) {
-                for (p = c(e.length); p > m; m++) if (b = t ? v(s(g = e[m])[0], g[1]) : v(e[m]), 
-                b === u || b === l) return b;
-            } else for (_ = h.call(e); !(g = _.next()).done; ) if (b = r(_, v, g.value, t), 
-            b === u || b === l) return b;
-        };
-        n.BREAK = u, n.RETURN = l;
+        /** @type {number} */
+        proxy.F = 1;
+        /** @type {number} */
+        proxy.G = 2;
+        /** @type {number} */
+        proxy.S = 4;
+        /** @type {number} */
+        proxy.P = 8;
+        /** @type {number} */
+        proxy.B = 16;
+        /** @type {number} */
+        proxy.W = 32;
+        /** @type {number} */
+        proxy.U = 64;
+        /** @type {number} */
+        proxy.R = 128;
+        /** @type {function (Object, Object, ?): undefined} */
+        module.exports = proxy;
     }, {
-        "./_an-object": 38,
-        "./_ctx": 44,
-        "./_is-array-iter": 60,
-        "./_iter-call": 63,
-        "./_to-length": 100,
-        "./core.get-iterator-method": 107
-    } ],
-    53: [ function(e, t, n) {
-        var o = t.exports = "undefined" != typeof window && window.Math == Math ? window : "undefined" != typeof self && self.Math == Math ? self : Function("return this")();
-        "number" == typeof __g && (__g = o);
-    }, {} ],
-    54: [ function(e, t, n) {
-        var o = {}.hasOwnProperty;
-        t.exports = function(e, t) {
-            return o.call(e, t);
+        "./_core" : 42,
+        "./_ctx" : 44,
+        "./_global" : 53,
+        "./_hide" : 55
+    }],
+    51 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            try {
+                return!!name();
+            } catch (t) {
+                return true;
+            }
         };
-    }, {} ],
-    55: [ function(e, t, n) {
-        var o = e("./_object-dp"), r = e("./_property-desc");
-        t.exports = e("./_descriptors") ? function(e, t, n) {
-            return o.f(e, t, r(1, n));
-        } : function(e, t, n) {
-            return e[t] = n, e;
+    }, {}],
+    52 : [function(require, module, e) {
+        var getActual = require("./_ctx");
+        var test = require("./_iter-call");
+        var swap = require("./_is-array-iter");
+        var objDisplay = require("./_an-object");
+        var assert = require("./_to-length");
+        var inspect = require("./core.get-iterator-method");
+        var resultUS = {};
+        var resultCommaDecimal = {};
+        /** @type {function (Object, Object, ?, string, boolean): ?} */
+        e = module.exports = function(name, key, opt_attributes, args, program) {
+            var l;
+            var p;
+            var curr;
+            var result;
+            var formatter = program ? function() {
+                return name;
+            } : inspect(name);
+            var fn = getActual(opt_attributes, args, key ? 2 : 1);
+            /** @type {number} */
+            var i = 0;
+            if ("function" != typeof formatter) {
+                throw TypeError(name + " is not iterable!");
+            }
+            if (swap(formatter)) {
+                l = assert(name.length);
+                for (;l > i;i++) {
+                    if (result = key ? fn(objDisplay(p = name[i])[0], p[1]) : fn(name[i]), result === resultUS || result === resultCommaDecimal) {
+                        return result;
+                    }
+                }
+            } else {
+                curr = formatter.call(name);
+                for (;!(p = curr.next()).done;) {
+                    if (result = test(curr, fn, p.value, key), result === resultUS || result === resultCommaDecimal) {
+                        return result;
+                    }
+                }
+            }
+        };
+        e.BREAK = resultUS;
+        e.RETURN = resultCommaDecimal;
+    }, {
+        "./_an-object" : 38,
+        "./_ctx" : 44,
+        "./_is-array-iter" : 60,
+        "./_iter-call" : 63,
+        "./_to-length" : 100,
+        "./core.get-iterator-method" : 107
+    }],
+    53 : [function(dataAndEvents, module, deepDataAndEvents) {
+        var o = module.exports = "undefined" != typeof window && window.Math == Math ? window : "undefined" != typeof self && self.Math == Math ? self : Function("return this")();
+        if ("number" == typeof __g) {
+            __g = o;
+        }
+    }, {}],
+    54 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {function (this:Object, *): boolean} */
+        var has = {}.hasOwnProperty;
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            return has.call(name, key);
+        };
+    }, {}],
+    55 : [function(require, module, dataAndEvents) {
+        var t = require("./_object-dp");
+        var getActual = require("./_property-desc");
+        /** @type {function (Object, Object, ?): ?} */
+        module.exports = require("./_descriptors") ? function(name, ast, opt_attributes) {
+            return t.f(name, ast, getActual(1, opt_attributes));
+        } : function(name, key, opt_attributes) {
+            return name[key] = opt_attributes, name;
         };
     }, {
-        "./_descriptors": 46,
-        "./_object-dp": 75,
-        "./_property-desc": 86
-    } ],
-    56: [ function(e, t, n) {
-        t.exports = e("./_global").document && document.documentElement;
+        "./_descriptors" : 46,
+        "./_object-dp" : 75,
+        "./_property-desc" : 86
+    }],
+    56 : [function($sanitize, module, dataAndEvents) {
+        module.exports = $sanitize("./_global").document && document.documentElement;
     }, {
-        "./_global": 53
-    } ],
-    57: [ function(e, t, n) {
-        t.exports = !e("./_descriptors") && !e("./_fails")(function() {
-            return 7 != Object.defineProperty(e("./_dom-create")("div"), "a", {
-                get: function() {
+        "./_global" : 53
+    }],
+    57 : [function($sanitize, module, dataAndEvents) {
+        /** @type {boolean} */
+        module.exports = !$sanitize("./_descriptors") && !$sanitize("./_fails")(function() {
+            return 7 != Object.defineProperty($sanitize("./_dom-create")("div"), "a", {
+                /**
+                 * @return {?}
+                 */
+                get : function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_descriptors": 46,
-        "./_dom-create": 47,
-        "./_fails": 51
-    } ],
-    58: [ function(e, t, n) {
-        t.exports = function(e, t, n) {
-            var o = void 0 === n;
-            switch (t.length) {
-              case 0:
-                return o ? e() : e.call(n);
-
-              case 1:
-                return o ? e(t[0]) : e.call(n, t[0]);
-
-              case 2:
-                return o ? e(t[0], t[1]) : e.call(n, t[0], t[1]);
-
-              case 3:
-                return o ? e(t[0], t[1], t[2]) : e.call(n, t[0], t[1], t[2]);
-
-              case 4:
-                return o ? e(t[0], t[1], t[2], t[3]) : e.call(n, t[0], t[1], t[2], t[3]);
+        "./_descriptors" : 46,
+        "./_dom-create" : 47,
+        "./_fails" : 51
+    }],
+    58 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @param {Array} key
+         * @param {?} opt_attributes
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes) {
+            /** @type {boolean} */
+            var o = void 0 === opt_attributes;
+            switch(key.length) {
+                case 0:
+                    return o ? name() : name.call(opt_attributes);
+                case 1:
+                    return o ? name(key[0]) : name.call(opt_attributes, key[0]);
+                case 2:
+                    return o ? name(key[0], key[1]) : name.call(opt_attributes, key[0], key[1]);
+                case 3:
+                    return o ? name(key[0], key[1], key[2]) : name.call(opt_attributes, key[0], key[1], key[2]);
+                case 4:
+                    return o ? name(key[0], key[1], key[2], key[3]) : name.call(opt_attributes, key[0], key[1], key[2], key[3]);
             }
-            return e.apply(n, t);
+            return name.apply(opt_attributes, key);
         };
-    }, {} ],
-    59: [ function(e, t, n) {
-        var o = e("./_cof");
-        t.exports = Object("z").propertyIsEnumerable(0) ? Object : function(e) {
-            return "String" == o(e) ? e.split("") : Object(e);
-        };
-    }, {
-        "./_cof": 41
-    } ],
-    60: [ function(e, t, n) {
-        var o = e("./_iterators"), r = e("./_wks")("iterator"), i = Array.prototype;
-        t.exports = function(e) {
-            return void 0 !== e && (o.Array === e || i[r] === e);
+    }, {}],
+    59 : [function($sanitize, module, dataAndEvents) {
+        var ondata = $sanitize("./_cof");
+        /** @type {Function} */
+        module.exports = Object("z").propertyIsEnumerable(0) ? Object : function(name) {
+            return "String" == ondata(name) ? name.split("") : Object(name);
         };
     }, {
-        "./_iterators": 68,
-        "./_wks": 106
-    } ],
-    61: [ function(e, t, n) {
-        var o = e("./_cof");
-        t.exports = Array.isArray || function(e) {
-            return "Array" == o(e);
+        "./_cof" : 41
+    }],
+    60 : [function(values, module, dataAndEvents) {
+        var v = values("./_iterators");
+        var i = values("./_wks")("iterator");
+        var ap = Array.prototype;
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return void 0 !== name && (v.Array === name || ap[i] === name);
         };
     }, {
-        "./_cof": 41
-    } ],
-    62: [ function(e, t, n) {
-        t.exports = function(e) {
-            return "object" == typeof e ? null !== e : "function" == typeof e;
+        "./_iterators" : 68,
+        "./_wks" : 106
+    }],
+    61 : [function($sanitize, module, dataAndEvents) {
+        var ondata = $sanitize("./_cof");
+        /** @type {function (*): boolean} */
+        module.exports = Array.isArray || function(name) {
+            return "Array" == ondata(name);
         };
-    }, {} ],
-    63: [ function(e, t, n) {
-        var o = e("./_an-object");
-        t.exports = function(e, t, n, r) {
+    }, {
+        "./_cof" : 41
+    }],
+    62 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return "object" == typeof name ? null !== name : "function" == typeof name;
+        };
+    }, {}],
+    63 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_an-object");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @param {string} index
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes, index) {
             try {
-                return r ? t(o(n)[0], n[1]) : t(n);
+                return index ? key(getActual(opt_attributes)[0], opt_attributes[1]) : key(opt_attributes);
             } catch (i) {
-                var s = e["return"];
-                throw void 0 !== s && o(s.call(e)), i;
+                var prop = name["return"];
+                throw void 0 !== prop && getActual(prop.call(name)), i;
             }
         };
     }, {
-        "./_an-object": 38
-    } ],
-    64: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_object-create"), r = e("./_property-desc"), i = e("./_set-to-string-tag"), s = {};
-        e("./_hide")(s, e("./_wks")("iterator"), function() {
+        "./_an-object" : 38
+    }],
+    64 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_object-create");
+        var objDisplay = require("./_property-desc");
+        var inspect = require("./_set-to-string-tag");
+        var proto = {};
+        require("./_hide")(proto, require("./_wks")("iterator"), function() {
             return this;
-        }), t.exports = function(e, t, n) {
-            e.prototype = o(s, {
-                next: r(1, n)
-            }), i(e, t + " Iterator");
+        });
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {undefined}
+         */
+        module.exports = function(name, key, opt_attributes) {
+            name.prototype = getActual(proto, {
+                next : objDisplay(1, opt_attributes)
+            });
+            inspect(name, key + " Iterator");
         };
     }, {
-        "./_hide": 55,
-        "./_object-create": 74,
-        "./_property-desc": 86,
-        "./_set-to-string-tag": 91,
-        "./_wks": 106
-    } ],
-    65: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_library"), r = e("./_export"), i = e("./_redefine"), s = e("./_hide"), c = e("./_has"), a = e("./_iterators"), u = e("./_iter-create"), l = e("./_set-to-string-tag"), f = e("./_object-gpo"), d = e("./_wks")("iterator"), p = !([].keys && "next" in [].keys()), g = "@@iterator", _ = "keys", b = "values", h = function() {
+        "./_hide" : 55,
+        "./_object-create" : 74,
+        "./_property-desc" : 86,
+        "./_set-to-string-tag" : 91,
+        "./_wks" : 106
+    }],
+    65 : [function(require, module, dataAndEvents) {
+        var Block = require("./_library");
+        var inspect = require("./_export");
+        var merge = require("./_redefine");
+        var b = require("./_hide");
+        var a = require("./_has");
+        var target = require("./_iterators");
+        var getActual = require("./_iter-create");
+        var each = require("./_set-to-string-tag");
+        var objDisplay = require("./_object-gpo");
+        var locals = require("./_wks")("iterator");
+        /** @type {boolean} */
+        var retval = !([].keys && "next" in [].keys());
+        /** @type {string} */
+        var tail = "@@iterator";
+        /** @type {string} */
+        var text = "keys";
+        /** @type {string} */
+        var length = "values";
+        /**
+         * @return {?}
+         */
+        var copy = function() {
             return this;
         };
-        t.exports = function(e, t, n, v, m, y, j) {
-            u(n, t, v);
-            var w, x, L, k = function(e) {
-                if (!p && e in C) return C[e];
-                switch (e) {
-                  case _:
-                    return function() {
-                        return new n(this, e);
-                    };
-
-                  case b:
-                    return function() {
-                        return new n(this, e);
-                    };
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @param {string} ary
+         * @param {Function} input
+         * @param {string} raw
+         * @param {string} chai
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes, ary, input, raw, chai) {
+            getActual(opt_attributes, key, ary);
+            var obj;
+            var child;
+            var self;
+            /**
+             * @param {string} key
+             * @return {?}
+             */
+            var callback = function(key) {
+                if (!retval && key in ret) {
+                    return ret[key];
+                }
+                switch(key) {
+                    case text:
+                        return function() {
+                            return new opt_attributes(this, key);
+                        };
+                    case length:
+                        return function() {
+                            return new opt_attributes(this, key);
+                        };
                 }
                 return function() {
-                    return new n(this, e);
+                    return new opt_attributes(this, key);
                 };
-            }, O = t + " Iterator", N = m == b, I = !1, C = e.prototype, F = C[d] || C[g] || m && C[m], P = F || k(m), E = m ? N ? k("entries") : P : void 0, S = "Array" == t ? C.entries || F : F;
-            if (S && (L = f(S.call(new e())), L !== Object.prototype && (l(L, O, !0), o || c(L, d) || s(L, d, h))), 
-            N && F && F.name !== b && (I = !0, P = function() {
-                return F.call(this);
-            }), o && !j || !p && !I && C[d] || s(C, d, P), a[t] = P, a[O] = h, m) if (w = {
-                values: N ? P : k(b),
-                keys: y ? P : k(_),
-                entries: E
-            }, j) for (x in w) x in C || i(C, x, w[x]); else r(r.P + r.F * (p || I), t, w);
-            return w;
+            };
+            /** @type {string} */
+            var i = key + " Iterator";
+            /** @type {boolean} */
+            var err = input == length;
+            /** @type {boolean} */
+            var lists = false;
+            var ret = name.prototype;
+            var value = ret[locals] || (ret[tail] || input && ret[input]);
+            var result = value || callback(input);
+            var entries = input ? err ? callback("entries") : result : void 0;
+            var newValue = "Array" == key ? ret.entries || value : value;
+            if (newValue && (self = objDisplay(newValue.call(new name)), self !== Object.prototype && (each(self, i, true), Block || (a(self, locals) || b(self, locals, copy)))), err && (value && (value.name !== length && (lists = true, result = function() {
+                    return value.call(this);
+                }))), Block && !chai || (!retval && (!lists && ret[locals]) || b(ret, locals, result)), target[key] = result, target[i] = copy, input) {
+                if (obj = {
+                        values : err ? result : callback(length),
+                        keys : raw ? result : callback(text),
+                        entries : entries
+                    }, chai) {
+                    for (child in obj) {
+                        if (!(child in ret)) {
+                            merge(ret, child, obj[child]);
+                        }
+                    }
+                } else {
+                    inspect(inspect.P + inspect.F * (retval || lists), key, obj);
+                }
+            }
+            return obj;
         };
     }, {
-        "./_export": 50,
-        "./_has": 54,
-        "./_hide": 55,
-        "./_iter-create": 64,
-        "./_iterators": 68,
-        "./_library": 70,
-        "./_object-gpo": 81,
-        "./_redefine": 88,
-        "./_set-to-string-tag": 91,
-        "./_wks": 106
-    } ],
-    66: [ function(e, t, n) {
-        var o = e("./_wks")("iterator"), r = !1;
+        "./_export" : 50,
+        "./_has" : 54,
+        "./_hide" : 55,
+        "./_iter-create" : 64,
+        "./_iterators" : 68,
+        "./_library" : 70,
+        "./_object-gpo" : 81,
+        "./_redefine" : 88,
+        "./_set-to-string-tag" : 91,
+        "./_wks" : 106
+    }],
+    66 : [function($sanitize, module, dataAndEvents) {
+        var prop = $sanitize("./_wks")("iterator");
+        /** @type {boolean} */
+        var defaultMessage = false;
         try {
-            var i = [ 7 ][o]();
-            i["return"] = function() {
-                r = !0;
-            }, Array.from(i, function() {
+            var optgroup = [7][prop]();
+            /**
+             * @return {undefined}
+             */
+            optgroup["return"] = function() {
+                /** @type {boolean} */
+                defaultMessage = true;
+            };
+            Array.from(optgroup, function() {
                 throw 2;
             });
-        } catch (s) {}
-        t.exports = function(e, t) {
-            if (!t && !r) return !1;
-            var n = !1;
+        } catch (s) {
+        }
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            if (!key && !defaultMessage) {
+                return false;
+            }
+            /** @type {boolean} */
+            var str = false;
             try {
-                var i = [ 7 ], s = i[o]();
-                s.next = function() {
-                    return {
-                        done: n = !0
+                /** @type {Array} */
+                var originalEvent = [7];
+                var stream = originalEvent[prop]();
+                /**
+                 * @return {?}
+                 */
+                stream.next = function() {
+                    return{
+                        done : str = true
                     };
-                }, i[o] = function() {
-                    return s;
-                }, e(i);
-            } catch (c) {}
-            return n;
+                };
+                /**
+                 * @return {?}
+                 */
+                originalEvent[prop] = function() {
+                    return stream;
+                };
+                name(originalEvent);
+            } catch (c) {
+            }
+            return str;
         };
     }, {
-        "./_wks": 106
-    } ],
-    67: [ function(e, t, n) {
-        t.exports = function(e, t) {
-            return {
-                value: t,
-                done: !!e
+        "./_wks" : 106
+    }],
+    67 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            return{
+                value : key,
+                done : !!name
             };
         };
-    }, {} ],
-    68: [ function(e, t, n) {
-        t.exports = {};
-    }, {} ],
-    69: [ function(e, t, n) {
-        var o = e("./_object-keys"), r = e("./_to-iobject");
-        t.exports = function(e, t) {
-            for (var n, i = r(e), s = o(i), c = s.length, a = 0; c > a; ) if (i[n = s[a++]] === t) return n;
+    }, {}],
+    68 : [function(dataAndEvents, module, deepDataAndEvents) {
+        module.exports = {};
+    }, {}],
+    69 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_object-keys");
+        var inspect = require("./_to-iobject");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            var node;
+            var obj = inspect(name);
+            var nodes = getActual(obj);
+            var len = nodes.length;
+            /** @type {number} */
+            var i = 0;
+            for (;len > i;) {
+                if (obj[node = nodes[i++]] === key) {
+                    return node;
+                }
+            }
         };
     }, {
-        "./_object-keys": 83,
-        "./_to-iobject": 99
-    } ],
-    70: [ function(e, t, n) {
-        t.exports = !0;
-    }, {} ],
-    71: [ function(e, t, n) {
-        var o = e("./_uid")("meta"), r = e("./_is-object"), i = e("./_has"), s = e("./_object-dp").f, c = 0, a = Object.isExtensible || function() {
-            return !0;
-        }, u = !e("./_fails")(function() {
-            return a(Object.preventExtensions({}));
-        }), l = function(e) {
-            s(e, o, {
-                value: {
-                    i: "O" + ++c,
-                    w: {}
+        "./_object-keys" : 83,
+        "./_to-iobject" : 99
+    }],
+    70 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {boolean} */
+        module.exports = true;
+    }, {}],
+    71 : [function(topic, module, dataAndEvents) {
+        var ast = topic("./_uid")("meta");
+        var out = topic("./_is-object");
+        var reportError = topic("./_has");
+        var setDescriptor = topic("./_object-dp").f;
+        /** @type {number} */
+        var O = 0;
+        /** @type {function (Object): boolean} */
+        var indexOf = Object.isExtensible || function() {
+            return true;
+        };
+        /** @type {boolean} */
+        var u = !topic("./_fails")(function() {
+            return indexOf(Object.preventExtensions({}));
+        });
+        /**
+         * @param {Object} optgroup
+         * @return {undefined}
+         */
+        var isString = function(optgroup) {
+            setDescriptor(optgroup, ast, {
+                value : {
+                    i : "O" + ++O,
+                    w : {}
                 }
             });
-        }, f = function(e, t) {
-            if (!r(e)) return "symbol" == typeof e ? e : ("string" == typeof e ? "S" : "P") + e;
-            if (!i(e, o)) {
-                if (!a(e)) return "F";
-                if (!t) return "E";
-                l(e);
+        };
+        /**
+         * @param {string} e
+         * @param {?} idt
+         * @return {?}
+         */
+        var toString = function(e, idt) {
+            if (!out(e)) {
+                return "symbol" == typeof e ? e : ("string" == typeof e ? "S" : "P") + e;
             }
-            return e[o].i;
-        }, d = function(e, t) {
-            if (!i(e, o)) {
-                if (!a(e)) return !0;
-                if (!t) return !1;
-                l(e);
+            if (!reportError(e, ast)) {
+                if (!indexOf(e)) {
+                    return "F";
+                }
+                if (!idt) {
+                    return "E";
+                }
+                isString(e);
             }
-            return e[o].w;
-        }, p = function(e) {
-            return u && g.NEED && a(e) && !i(e, o) && l(e), e;
-        }, g = t.exports = {
-            KEY: o,
-            NEED: !1,
-            fastKey: f,
-            getWeak: d,
-            onFreeze: p
+            return e[ast].i;
+        };
+        /**
+         * @param {Object} data
+         * @param {?} view
+         * @return {?}
+         */
+        var push = function(data, view) {
+            if (!reportError(data, ast)) {
+                if (!indexOf(data)) {
+                    return true;
+                }
+                if (!view) {
+                    return false;
+                }
+                isString(data);
+            }
+            return data[ast].w;
+        };
+        /**
+         * @param {Object} e
+         * @return {?}
+         */
+        var error = function(e) {
+            return u && (NEED.NEED && (indexOf(e) && (!reportError(e, ast) && isString(e)))), e;
+        };
+        var NEED = module.exports = {
+            KEY : ast,
+            NEED : false,
+            /** @type {function (string, ?): ?} */
+            fastKey : toString,
+            /** @type {function (Object, ?): ?} */
+            getWeak : push,
+            /** @type {function (Object): ?} */
+            onFreeze : error
         };
     }, {
-        "./_fails": 51,
-        "./_has": 54,
-        "./_is-object": 62,
-        "./_object-dp": 75,
-        "./_uid": 103
-    } ],
-    72: [ function(e, t, n) {
-        var o = e("./_global"), r = e("./_task").set, i = o.MutationObserver || o.WebKitMutationObserver, s = o.process, c = o.Promise, a = "process" == e("./_cof")(s);
-        t.exports = function() {
-            var e, t, n, u = function() {
-                var o, r;
-                for (a && (o = s.domain) && o.exit(); e; ) {
-                    r = e.fn, e = e.next;
-                    try {
-                        r();
-                    } catch (i) {
-                        throw e ? n() : t = void 0, i;
+        "./_fails" : 51,
+        "./_has" : 54,
+        "./_is-object" : 62,
+        "./_object-dp" : 75,
+        "./_uid" : 103
+    }],
+    72 : [function(require, module, dataAndEvents) {
+        var global = require("./_global");
+        var self = require("./_task").set;
+        var Response = global.MutationObserver || global.WebKitMutationObserver;
+        var process = global.process;
+        var context = global.Promise;
+        /** @type {boolean} */
+        var a = "process" == require("./_cof")(process);
+        /**
+         * @return {?}
+         */
+        module.exports = function() {
+            var v;
+            var ret;
+            var done;
+            /**
+             * @return {undefined}
+             */
+            var finish = function() {
+                var d;
+                var headers;
+                if (a) {
+                    if (d = process.domain) {
+                        d.exit();
                     }
                 }
-                t = void 0, o && o.enter();
+                for (;v;) {
+                    headers = v.fn;
+                    v = v.next;
+                    try {
+                        headers();
+                    } catch (i) {
+                        throw v ? done() : ret = void 0, i;
+                    }
+                }
+                ret = void 0;
+                if (d) {
+                    d.enter();
+                }
             };
-            if (a) n = function() {
-                s.nextTick(u);
-            }; else if (i) {
-                var l = !0, f = document.createTextNode("");
-                new i(u).observe(f, {
-                    characterData: !0
-                }), n = function() {
-                    f.data = l = !l;
+            if (a) {
+                /**
+                 * @return {undefined}
+                 */
+                done = function() {
+                    process.nextTick(finish);
                 };
-            } else if (c && c.resolve) {
-                var d = c.resolve();
-                n = function() {
-                    d.then(u);
-                };
-            } else n = function() {
-                r.call(o, u);
-            };
-            return function(o) {
-                var r = {
-                    fn: o,
-                    next: void 0
-                };
-                t && (t.next = r), e || (e = r, n()), t = r;
-            };
-        };
-    }, {
-        "./_cof": 41,
-        "./_global": 53,
-        "./_task": 96
-    } ],
-    73: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_object-keys"), r = e("./_object-gops"), i = e("./_object-pie"), s = e("./_to-object"), c = e("./_iobject"), a = Object.assign;
-        t.exports = !a || e("./_fails")(function() {
-            var e = {}, t = {}, n = Symbol(), o = "abcdefghijklmnopqrst";
-            return e[n] = 7, o.split("").forEach(function(e) {
-                t[e] = e;
-            }), 7 != a({}, e)[n] || Object.keys(a({}, t)).join("") != o;
-        }) ? function(e, t) {
-            for (var n = s(e), a = arguments.length, u = 1, l = r.f, f = i.f; a > u; ) for (var d, p = c(arguments[u++]), g = l ? o(p).concat(l(p)) : o(p), _ = g.length, b = 0; _ > b; ) f.call(p, d = g[b++]) && (n[d] = p[d]);
-            return n;
-        } : a;
-    }, {
-        "./_fails": 51,
-        "./_iobject": 59,
-        "./_object-gops": 80,
-        "./_object-keys": 83,
-        "./_object-pie": 84,
-        "./_to-object": 101
-    } ],
-    74: [ function(e, t, n) {
-        var o = e("./_an-object"), r = e("./_object-dps"), i = e("./_enum-bug-keys"), s = e("./_shared-key")("IE_PROTO"), c = function() {}, a = "prototype", u = function() {
-            var t, n = e("./_dom-create")("iframe"), o = i.length, r = "<", s = ">";
-            for (n.style.display = "none", e("./_html").appendChild(n), n.src = "javascript:", 
-            t = n.contentWindow.document, t.open(), t.write(r + "script" + s + "document.F=Object" + r + "/script" + s), 
-            t.close(), u = t.F; o--; ) delete u[a][i[o]];
-            return u();
-        };
-        t.exports = Object.create || function(e, t) {
-            var n;
-            return null !== e ? (c[a] = o(e), n = new c(), c[a] = null, n[s] = e) : n = u(), 
-            void 0 === t ? n : r(n, t);
-        };
-    }, {
-        "./_an-object": 38,
-        "./_dom-create": 47,
-        "./_enum-bug-keys": 48,
-        "./_html": 56,
-        "./_object-dps": 76,
-        "./_shared-key": 92
-    } ],
-    75: [ function(e, t, n) {
-        var o = e("./_an-object"), r = e("./_ie8-dom-define"), i = e("./_to-primitive"), s = Object.defineProperty;
-        n.f = e("./_descriptors") ? Object.defineProperty : function(e, t, n) {
-            if (o(e), t = i(t, !0), o(n), r) try {
-                return s(e, t, n);
-            } catch (c) {}
-            if ("get" in n || "set" in n) throw TypeError("Accessors not supported!");
-            return "value" in n && (e[t] = n.value), e;
-        };
-    }, {
-        "./_an-object": 38,
-        "./_descriptors": 46,
-        "./_ie8-dom-define": 57,
-        "./_to-primitive": 102
-    } ],
-    76: [ function(e, t, n) {
-        var o = e("./_object-dp"), r = e("./_an-object"), i = e("./_object-keys");
-        t.exports = e("./_descriptors") ? Object.defineProperties : function(e, t) {
-            r(e);
-            for (var n, s = i(t), c = s.length, a = 0; c > a; ) o.f(e, n = s[a++], t[n]);
-            return e;
-        };
-    }, {
-        "./_an-object": 38,
-        "./_descriptors": 46,
-        "./_object-dp": 75,
-        "./_object-keys": 83
-    } ],
-    77: [ function(e, t, n) {
-        var o = e("./_object-pie"), r = e("./_property-desc"), i = e("./_to-iobject"), s = e("./_to-primitive"), c = e("./_has"), a = e("./_ie8-dom-define"), u = Object.getOwnPropertyDescriptor;
-        n.f = e("./_descriptors") ? u : function(e, t) {
-            if (e = i(e), t = s(t, !0), a) try {
-                return u(e, t);
-            } catch (n) {}
-            if (c(e, t)) return r(!o.f.call(e, t), e[t]);
-        };
-    }, {
-        "./_descriptors": 46,
-        "./_has": 54,
-        "./_ie8-dom-define": 57,
-        "./_object-pie": 84,
-        "./_property-desc": 86,
-        "./_to-iobject": 99,
-        "./_to-primitive": 102
-    } ],
-    78: [ function(e, t, n) {
-        var o = e("./_to-iobject"), r = e("./_object-gopn").f, i = {}.toString, s = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [], c = function(e) {
-            try {
-                return r(e);
-            } catch (t) {
-                return s.slice();
+            } else {
+                if (Response) {
+                    /** @type {boolean} */
+                    var iterations = true;
+                    /** @type {Text} */
+                    var node = document.createTextNode("");
+                    (new Response(finish)).observe(node, {
+                        characterData : true
+                    });
+                    /**
+                     * @return {undefined}
+                     */
+                    done = function() {
+                        /** @type {boolean} */
+                        node.data = iterations = !iterations;
+                    };
+                } else {
+                    if (context && context.resolve) {
+                        var promise = context.resolve();
+                        /**
+                         * @return {undefined}
+                         */
+                        done = function() {
+                            promise.then(finish);
+                        };
+                    } else {
+                        /**
+                         * @return {undefined}
+                         */
+                        done = function() {
+                            self.call(global, finish);
+                        };
+                    }
+                }
             }
-        };
-        t.exports.f = function(e) {
-            return s && "[object Window]" == i.call(e) ? c(e) : r(o(e));
-        };
-    }, {
-        "./_object-gopn": 79,
-        "./_to-iobject": 99
-    } ],
-    79: [ function(e, t, n) {
-        var o = e("./_object-keys-internal"), r = e("./_enum-bug-keys").concat("length", "prototype");
-        n.f = Object.getOwnPropertyNames || function(e) {
-            return o(e, r);
-        };
-    }, {
-        "./_enum-bug-keys": 48,
-        "./_object-keys-internal": 82
-    } ],
-    80: [ function(e, t, n) {
-        n.f = Object.getOwnPropertySymbols;
-    }, {} ],
-    81: [ function(e, t, n) {
-        var o = e("./_has"), r = e("./_to-object"), i = e("./_shared-key")("IE_PROTO"), s = Object.prototype;
-        t.exports = Object.getPrototypeOf || function(e) {
-            return e = r(e), o(e, i) ? e[i] : "function" == typeof e.constructor && e instanceof e.constructor ? e.constructor.prototype : e instanceof Object ? s : null;
-        };
-    }, {
-        "./_has": 54,
-        "./_shared-key": 92,
-        "./_to-object": 101
-    } ],
-    82: [ function(e, t, n) {
-        var o = e("./_has"), r = e("./_to-iobject"), i = e("./_array-includes")(!1), s = e("./_shared-key")("IE_PROTO");
-        t.exports = function(e, t) {
-            var n, c = r(e), a = 0, u = [];
-            for (n in c) n != s && o(c, n) && u.push(n);
-            for (;t.length > a; ) o(c, n = t[a++]) && (~i(u, n) || u.push(n));
-            return u;
-        };
-    }, {
-        "./_array-includes": 39,
-        "./_has": 54,
-        "./_shared-key": 92,
-        "./_to-iobject": 99
-    } ],
-    83: [ function(e, t, n) {
-        var o = e("./_object-keys-internal"), r = e("./_enum-bug-keys");
-        t.exports = Object.keys || function(e) {
-            return o(e, r);
-        };
-    }, {
-        "./_enum-bug-keys": 48,
-        "./_object-keys-internal": 82
-    } ],
-    84: [ function(e, t, n) {
-        n.f = {}.propertyIsEnumerable;
-    }, {} ],
-    85: [ function(e, t, n) {
-        var o = e("./_export"), r = e("./_core"), i = e("./_fails");
-        t.exports = function(e, t) {
-            var n = (r.Object || {})[e] || Object[e], s = {};
-            s[e] = t(n), o(o.S + o.F * i(function() {
-                n(1);
-            }), "Object", s);
-        };
-    }, {
-        "./_core": 42,
-        "./_export": 50,
-        "./_fails": 51
-    } ],
-    86: [ function(e, t, n) {
-        t.exports = function(e, t) {
-            return {
-                enumerable: !(1 & e),
-                configurable: !(2 & e),
-                writable: !(4 & e),
-                value: t
+            return function(fn) {
+                var next = {
+                    fn : fn,
+                    next : void 0
+                };
+                if (ret) {
+                    ret.next = next;
+                }
+                if (!v) {
+                    v = next;
+                    done();
+                }
+                ret = next;
             };
         };
-    }, {} ],
-    87: [ function(e, t, n) {
-        var o = e("./_hide");
-        t.exports = function(e, t, n) {
-            for (var r in t) n && e[r] ? e[r] = t[r] : o(e, r, t[r]);
-            return e;
+    }, {
+        "./_cof" : 41,
+        "./_global" : 53,
+        "./_task" : 96
+    }],
+    73 : [function(require, module, dataAndEvents) {
+        var toArray = require("./_object-keys");
+        var item = require("./_object-gops");
+        var cfg = require("./_object-pie");
+        var color = require("./_to-object");
+        var inspect = require("./_iobject");
+        var getNames_ = Object.assign;
+        module.exports = !getNames_ || require("./_fails")(function() {
+            var camelKey = {};
+            var ast = {};
+            var unlock = Symbol();
+            /** @type {string} */
+            var view = "abcdefghijklmnopqrst";
+            return camelKey[unlock] = 7, view.split("").forEach(function(testname) {
+                /** @type {string} */
+                ast[testname] = testname;
+            }), 7 != getNames_({}, camelKey)[unlock] || Object.keys(getNames_({}, ast)).join("") != view;
+        }) ? function(name, key) {
+            var c = color(name);
+            /** @type {number} */
+            var argLength = arguments.length;
+            /** @type {number} */
+            var current = 1;
+            var element = item.f;
+            var filter = cfg.f;
+            for (;argLength > current;) {
+                var v;
+                var optgroup = inspect(arguments[current++]);
+                var second = element ? toArray(optgroup).concat(element(optgroup)) : toArray(optgroup);
+                var l = second.length;
+                /** @type {number} */
+                var i = 0;
+                for (;l > i;) {
+                    if (filter.call(optgroup, v = second[i++])) {
+                        c[v] = optgroup[v];
+                    }
+                }
+            }
+            return c;
+        } : getNames_;
+    }, {
+        "./_fails" : 51,
+        "./_iobject" : 59,
+        "./_object-gops" : 80,
+        "./_object-keys" : 83,
+        "./_object-pie" : 84,
+        "./_to-object" : 101
+    }],
+    74 : [function(require, module, dataAndEvents) {
+        var factory = require("./_an-object");
+        var inspect = require("./_object-dps");
+        var nodes = require("./_enum-bug-keys");
+        var n = require("./_shared-key")("IE_PROTO");
+        /**
+         * @return {undefined}
+         */
+        var context = function() {
+        };
+        /** @type {string} */
+        var exports = "prototype";
+        /**
+         * @return {?}
+         */
+        var run = function() {
+            var d;
+            var ifr = require("./_dom-create")("iframe");
+            var i = nodes.length;
+            /** @type {string} */
+            var prefix = "<";
+            /** @type {string} */
+            var name = ">";
+            /** @type {string} */
+            ifr.style.display = "none";
+            require("./_html").appendChild(ifr);
+            /** @type {string} */
+            ifr.src = "javascript:";
+            d = ifr.contentWindow.document;
+            d.open();
+            d.write(prefix + "script" + name + "document.F=Object" + prefix + "/script" + name);
+            d.close();
+            run = d.F;
+            for (;i--;) {
+                delete run[exports][nodes[i]];
+            }
+            return run();
+        };
+        /** @type {function ((Object|null), (Object|null)=): Object} */
+        module.exports = Object.create || function(name, key) {
+            var out;
+            return null !== name ? (context[exports] = factory(name), out = new context, context[exports] = null, out[n] = name) : out = run(), void 0 === key ? out : inspect(out, key);
         };
     }, {
-        "./_hide": 55
-    } ],
-    88: [ function(e, t, n) {
-        t.exports = e("./_hide");
-    }, {
-        "./_hide": 55
-    } ],
-    89: [ function(e, t, n) {
-        var o = e("./_is-object"), r = e("./_an-object"), i = function(e, t) {
-            if (r(e), !o(t) && null !== t) throw TypeError(t + ": can't set as prototype!");
-        };
-        t.exports = {
-            set: Object.setPrototypeOf || ("__proto__" in {} ? function(t, n, o) {
+        "./_an-object" : 38,
+        "./_dom-create" : 47,
+        "./_enum-bug-keys" : 48,
+        "./_html" : 56,
+        "./_object-dps" : 76,
+        "./_shared-key" : 92
+    }],
+    75 : [function(require, dataAndEvents, entry) {
+        var inspect = require("./_an-object");
+        var Block = require("./_ie8-dom-define");
+        var walk = require("./_to-primitive");
+        /** @type {function (Object, string, Object): Object} */
+        var ondata = Object.defineProperty;
+        /** @type {Function} */
+        entry.f = require("./_descriptors") ? Object.defineProperty : function(name, ast, opt_attributes) {
+            if (inspect(name), ast = walk(ast, true), inspect(opt_attributes), Block) {
                 try {
-                    o = e("./_ctx")(Function.call, e("./_object-gopd").f(Object.prototype, "__proto__").set, 2), 
-                    o(t, []), n = !(t instanceof Array);
-                } catch (r) {
-                    n = !0;
+                    return ondata(name, ast, opt_attributes);
+                } catch (c) {
                 }
-                return function(e, t) {
-                    return i(e, t), n ? e.__proto__ = t : o(e, t), e;
-                };
-            }({}, !1) : void 0),
-            check: i
-        };
-    }, {
-        "./_an-object": 38,
-        "./_ctx": 44,
-        "./_is-object": 62,
-        "./_object-gopd": 77
-    } ],
-    90: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_global"), r = e("./_core"), i = e("./_object-dp"), s = e("./_descriptors"), c = e("./_wks")("species");
-        t.exports = function(e) {
-            var t = "function" == typeof r[e] ? r[e] : o[e];
-            s && t && !t[c] && i.f(t, c, {
-                configurable: !0,
-                get: function() {
-                    return this;
-                }
-            });
-        };
-    }, {
-        "./_core": 42,
-        "./_descriptors": 46,
-        "./_global": 53,
-        "./_object-dp": 75,
-        "./_wks": 106
-    } ],
-    91: [ function(e, t, n) {
-        var o = e("./_object-dp").f, r = e("./_has"), i = e("./_wks")("toStringTag");
-        t.exports = function(e, t, n) {
-            e && !r(e = n ? e : e.prototype, i) && o(e, i, {
-                configurable: !0,
-                value: t
-            });
-        };
-    }, {
-        "./_has": 54,
-        "./_object-dp": 75,
-        "./_wks": 106
-    } ],
-    92: [ function(e, t, n) {
-        var o = e("./_shared")("keys"), r = e("./_uid");
-        t.exports = function(e) {
-            return o[e] || (o[e] = r(e));
-        };
-    }, {
-        "./_shared": 93,
-        "./_uid": 103
-    } ],
-    93: [ function(e, t, n) {
-        var o = e("./_global"), r = "__core-js_shared__", i = o[r] || (o[r] = {});
-        t.exports = function(e) {
-            return i[e] || (i[e] = {});
-        };
-    }, {
-        "./_global": 53
-    } ],
-    94: [ function(e, t, n) {
-        var o = e("./_an-object"), r = e("./_a-function"), i = e("./_wks")("species");
-        t.exports = function(e, t) {
-            var n, s = o(e).constructor;
-            return void 0 === s || void 0 == (n = o(s)[i]) ? t : r(n);
-        };
-    }, {
-        "./_a-function": 35,
-        "./_an-object": 38,
-        "./_wks": 106
-    } ],
-    95: [ function(e, t, n) {
-        var o = e("./_to-integer"), r = e("./_defined");
-        t.exports = function(e) {
-            return function(t, n) {
-                var i, s, c = String(r(t)), a = o(n), u = c.length;
-                return a < 0 || a >= u ? e ? "" : void 0 : (i = c.charCodeAt(a), i < 55296 || i > 56319 || a + 1 === u || (s = c.charCodeAt(a + 1)) < 56320 || s > 57343 ? e ? c.charAt(a) : i : e ? c.slice(a, a + 2) : (i - 55296 << 10) + (s - 56320) + 65536);
-            };
-        };
-    }, {
-        "./_defined": 45,
-        "./_to-integer": 98
-    } ],
-    96: [ function(e, t, n) {
-        var o, r, i, s = e("./_ctx"), c = e("./_invoke"), a = e("./_html"), u = e("./_dom-create"), l = e("./_global"), f = l.process, d = l.setImmediate, p = l.clearImmediate, g = l.MessageChannel, _ = 0, b = {}, h = "onreadystatechange", v = function() {
-            var e = +this;
-            if (b.hasOwnProperty(e)) {
-                var t = b[e];
-                delete b[e], t();
             }
-        }, m = function(e) {
-            v.call(e.data);
+            if ("get" in opt_attributes || "set" in opt_attributes) {
+                throw TypeError("Accessors not supported!");
+            }
+            return "value" in opt_attributes && (name[ast] = opt_attributes.value), name;
         };
-        d && p || (d = function(e) {
-            for (var t = [], n = 1; arguments.length > n; ) t.push(arguments[n++]);
-            return b[++_] = function() {
-                c("function" == typeof e ? e : Function(e), t);
-            }, o(_), _;
-        }, p = function(e) {
-            delete b[e];
-        }, "process" == e("./_cof")(f) ? o = function(e) {
-            f.nextTick(s(v, e, 1));
-        } : g ? (r = new g(), i = r.port2, r.port1.onmessage = m, o = s(i.postMessage, i, 1)) : l.addEventListener && "function" == typeof postMessage && !l.importScripts ? (o = function(e) {
-            l.postMessage(e + "", "*");
-        }, l.addEventListener("message", m, !1)) : o = h in u("script") ? function(e) {
-            a.appendChild(u("script"))[h] = function() {
-                a.removeChild(this), v.call(e);
+    }, {
+        "./_an-object" : 38,
+        "./_descriptors" : 46,
+        "./_ie8-dom-define" : 57,
+        "./_to-primitive" : 102
+    }],
+    76 : [function(require, module, dataAndEvents) {
+        var keys = require("./_object-dp");
+        var inspect = require("./_an-object");
+        var i = require("./_object-keys");
+        /** @type {Function} */
+        module.exports = require("./_descriptors") ? Object.defineProperties : function(name, key) {
+            inspect(name);
+            var f;
+            var faces = i(key);
+            var count = faces.length;
+            /** @type {number} */
+            var offset = 0;
+            for (;count > offset;) {
+                keys.f(name, f = faces[offset++], key[f]);
+            }
+            return name;
+        };
+    }, {
+        "./_an-object" : 38,
+        "./_descriptors" : 46,
+        "./_object-dp" : 75,
+        "./_object-keys" : 83
+    }],
+    77 : [function(require, dataAndEvents, entry) {
+        var module = require("./_object-pie");
+        var store = require("./_property-desc");
+        var expect = require("./_to-iobject");
+        var i = require("./_to-primitive");
+        var inspect = require("./_has");
+        var Block = require("./_ie8-dom-define");
+        /** @type {function (Object, string): (ObjectPropertyDescriptor|undefined)} */
+        var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+        /** @type {Function} */
+        entry.f = require("./_descriptors") ? getOwnPropertyDescriptor : function(name, key) {
+            if (name = expect(name), key = i(key, true), Block) {
+                try {
+                    return getOwnPropertyDescriptor(name, key);
+                } catch (n) {
+                }
+            }
+            if (inspect(name, key)) {
+                return store(!module.f.call(name, key), name[key]);
+            }
+        };
+    }, {
+        "./_descriptors" : 46,
+        "./_has" : 54,
+        "./_ie8-dom-define" : 57,
+        "./_object-pie" : 84,
+        "./_property-desc" : 86,
+        "./_to-iobject" : 99,
+        "./_to-primitive" : 102
+    }],
+    78 : [function(get_func, mod, dataAndEvents) {
+        var func = get_func("./_to-iobject");
+        var $ = get_func("./_object-gopn").f;
+        /** @type {function (this:*): string} */
+        var toString = {}.toString;
+        /** @type {Array} */
+        var el = "object" == typeof window && (window && Object.getOwnPropertyNames) ? Object.getOwnPropertyNames(window) : [];
+        /**
+         * @param {Object} optgroup
+         * @return {?}
+         */
+        var next = function(optgroup) {
+            try {
+                return $(optgroup);
+            } catch (t) {
+                return el.slice();
+            }
+        };
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        mod.exports.f = function(name) {
+            return el && "[object Window]" == toString.call(name) ? next(name) : $(func(name));
+        };
+    }, {
+        "./_object-gopn" : 79,
+        "./_to-iobject" : 99
+    }],
+    79 : [function(toArray, dataAndEvents, entry) {
+        var ondata = toArray("./_object-keys-internal");
+        var val = toArray("./_enum-bug-keys").concat("length", "prototype");
+        /** @type {function (Object): Array.<string>} */
+        entry.f = Object.getOwnPropertyNames || function(name) {
+            return ondata(name, val);
+        };
+    }, {
+        "./_enum-bug-keys" : 48,
+        "./_object-keys-internal" : 82
+    }],
+    80 : [function(dataAndEvents, deepDataAndEvents, object) {
+        object.f = Object.getOwnPropertySymbols;
+    }, {}],
+    81 : [function($sanitize, module, dataAndEvents) {
+        var hasKey = $sanitize("./_has");
+        var get_mangled = $sanitize("./_to-object");
+        var type = $sanitize("./_shared-key")("IE_PROTO");
+        var objectProto = Object.prototype;
+        /** @type {function (Object): (Object|null)} */
+        module.exports = Object.getPrototypeOf || function(name) {
+            return name = get_mangled(name), hasKey(name, type) ? name[type] : "function" == typeof name.constructor && name instanceof name.constructor ? name.constructor.prototype : name instanceof Object ? objectProto : null;
+        };
+    }, {
+        "./_has" : 54,
+        "./_shared-key" : 92,
+        "./_to-object" : 101
+    }],
+    82 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_has");
+        var inspect = require("./_to-iobject");
+        var callback = require("./_array-includes")(false);
+        var e = require("./_shared-key")("IE_PROTO");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            var i;
+            var obj = inspect(name);
+            /** @type {number} */
+            var bs = 0;
+            /** @type {Array} */
+            var errors = [];
+            for (i in obj) {
+                if (i != e) {
+                    if (getActual(obj, i)) {
+                        errors.push(i);
+                    }
+                }
+            }
+            for (;key.length > bs;) {
+                if (getActual(obj, i = key[bs++])) {
+                    if (!~callback(errors, i)) {
+                        errors.push(i);
+                    }
+                }
+            }
+            return errors;
+        };
+    }, {
+        "./_array-includes" : 39,
+        "./_has" : 54,
+        "./_shared-key" : 92,
+        "./_to-iobject" : 99
+    }],
+    83 : [function(proceed, module, dataAndEvents) {
+        var ondata = proceed("./_object-keys-internal");
+        var val = proceed("./_enum-bug-keys");
+        /** @type {function (Object): Array.<string>} */
+        module.exports = Object.keys || function(name) {
+            return ondata(name, val);
+        };
+    }, {
+        "./_enum-bug-keys" : 48,
+        "./_object-keys-internal" : 82
+    }],
+    84 : [function(dataAndEvents, deepDataAndEvents, entry) {
+        /** @type {function (this:Object, string): boolean} */
+        entry.f = {}.propertyIsEnumerable;
+    }, {}],
+    85 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_export");
+        var util = require("./_core");
+        var getActual = require("./_fails");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {undefined}
+         */
+        module.exports = function(name, key) {
+            var value = (util.Object || {})[name] || Object[name];
+            var cookies = {};
+            cookies[name] = key(value);
+            inspect(inspect.S + inspect.F * getActual(function() {
+                value(1);
+            }), "Object", cookies);
+        };
+    }, {
+        "./_core" : 42,
+        "./_export" : 50,
+        "./_fails" : 51
+    }],
+    86 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            return{
+                enumerable : !(1 & name),
+                configurable : !(2 & name),
+                writable : !(4 & name),
+                value : key
             };
-        } : function(e) {
-            setTimeout(s(v, e, 1), 0);
-        }), t.exports = {
-            set: d,
-            clear: p
+        };
+    }, {}],
+    87 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_hide");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {?}
+         */
+        module.exports = function(name, key, opt_attributes) {
+            var k;
+            for (k in key) {
+                if (opt_attributes && name[k]) {
+                    name[k] = key[k];
+                } else {
+                    inspect(name, k, key[k]);
+                }
+            }
+            return name;
         };
     }, {
-        "./_cof": 41,
-        "./_ctx": 44,
-        "./_dom-create": 47,
-        "./_global": 53,
-        "./_html": 56,
-        "./_invoke": 58
-    } ],
-    97: [ function(e, t, n) {
-        var o = e("./_to-integer"), r = Math.max, i = Math.min;
-        t.exports = function(e, t) {
-            return e = o(e), e < 0 ? r(e + t, 0) : i(e, t);
+        "./_hide" : 55
+    }],
+    88 : [function(factory, module, dataAndEvents) {
+        module.exports = factory("./_hide");
+    }, {
+        "./_hide" : 55
+    }],
+    89 : [function(require, c, dataAndEvents) {
+        var forIn = require("./_is-object");
+        var baseCreateCallback = require("./_an-object");
+        /**
+         * @param {Object} callback
+         * @param {Object} object
+         * @return {undefined}
+         */
+        var forOwn = function(callback, object) {
+            if (baseCreateCallback(callback), !forIn(object) && null !== object) {
+                throw TypeError(object + ": can't set as prototype!");
+            }
+        };
+        c.exports = {
+            set : Object.setPrototypeOf || ("__proto__" in {} ? function(value, err, func) {
+                try {
+                    func = require("./_ctx")(Function.call, require("./_object-gopd").f(Object.prototype, "__proto__").set, 2);
+                    func(value, []);
+                    /** @type {boolean} */
+                    err = !(value instanceof Array);
+                } catch (r) {
+                    /** @type {boolean} */
+                    err = true;
+                }
+                return function(object, callback) {
+                    return forOwn(object, callback), err ? object.__proto__ = callback : func(object, callback), object;
+                };
+            }({}, false) : void 0),
+            /** @type {function (Object, Object): undefined} */
+            check : forOwn
         };
     }, {
-        "./_to-integer": 98
-    } ],
-    98: [ function(e, t, n) {
-        var o = Math.ceil, r = Math.floor;
-        t.exports = function(e) {
-            return isNaN(e = +e) ? 0 : (e > 0 ? r : o)(e);
-        };
-    }, {} ],
-    99: [ function(e, t, n) {
-        var o = e("./_iobject"), r = e("./_defined");
-        t.exports = function(e) {
-            return o(r(e));
+        "./_an-object" : 38,
+        "./_ctx" : 44,
+        "./_is-object" : 62,
+        "./_object-gopd" : 77
+    }],
+    90 : [function(require, module, dataAndEvents) {
+        var map = require("./_global");
+        var helper = require("./_core");
+        var doc = require("./_object-dp");
+        var Block = require("./_descriptors");
+        var ast = require("./_wks")("species");
+        /**
+         * @param {Object} name
+         * @return {undefined}
+         */
+        module.exports = function(name) {
+            var optgroup = "function" == typeof helper[name] ? helper[name] : map[name];
+            if (Block) {
+                if (optgroup) {
+                    if (!optgroup[ast]) {
+                        doc.f(optgroup, ast, {
+                            configurable : true,
+                            /**
+                             * @return {?}
+                             */
+                            get : function() {
+                                return this;
+                            }
+                        });
+                    }
+                }
+            }
         };
     }, {
-        "./_defined": 45,
-        "./_iobject": 59
-    } ],
-    100: [ function(e, t, n) {
-        var o = e("./_to-integer"), r = Math.min;
-        t.exports = function(e) {
-            return e > 0 ? r(o(e), 9007199254740991) : 0;
+        "./_core" : 42,
+        "./_descriptors" : 46,
+        "./_global" : 53,
+        "./_object-dp" : 75,
+        "./_wks" : 106
+    }],
+    91 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_object-dp").f;
+        var getActual = require("./_has");
+        var ast = require("./_wks")("toStringTag");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {undefined}
+         */
+        module.exports = function(name, key, opt_attributes) {
+            if (name) {
+                if (!getActual(name = opt_attributes ? name : name.prototype, ast)) {
+                    inspect(name, ast, {
+                        configurable : true,
+                        value : key
+                    });
+                }
+            }
         };
     }, {
-        "./_to-integer": 98
-    } ],
-    101: [ function(e, t, n) {
-        var o = e("./_defined");
-        t.exports = function(e) {
-            return Object(o(e));
+        "./_has" : 54,
+        "./_object-dp" : 75,
+        "./_wks" : 106
+    }],
+    92 : [function($sanitize, module, dataAndEvents) {
+        var context = $sanitize("./_shared")("keys");
+        var definition = $sanitize("./_uid");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return context[name] || (context[name] = definition(name));
         };
     }, {
-        "./_defined": 45
-    } ],
-    102: [ function(e, t, n) {
-        var o = e("./_is-object");
-        t.exports = function(e, t) {
-            if (!o(e)) return e;
-            var n, r;
-            if (t && "function" == typeof (n = e.toString) && !o(r = n.call(e))) return r;
-            if ("function" == typeof (n = e.valueOf) && !o(r = n.call(e))) return r;
-            if (!t && "function" == typeof (n = e.toString) && !o(r = n.call(e))) return r;
+        "./_shared" : 93,
+        "./_uid" : 103
+    }],
+    93 : [function(createElement, module, dataAndEvents) {
+        var o = createElement("./_global");
+        /** @type {string} */
+        var oride = "__core-js_shared__";
+        var old = o[oride] || (o[oride] = {});
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return old[name] || (old[name] = {});
+        };
+    }, {
+        "./_global" : 53
+    }],
+    94 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_an-object");
+        var getActual = require("./_a-function");
+        var part = require("./_wks")("species");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            var obj;
+            var bCtor = inspect(name).constructor;
+            return void 0 === bCtor || void 0 == (obj = inspect(bCtor)[part]) ? key : getActual(obj);
+        };
+    }, {
+        "./_a-function" : 35,
+        "./_an-object" : 38,
+        "./_wks" : 106
+    }],
+    95 : [function(getCallback, module, dataAndEvents) {
+        var getIndex = getCallback("./_to-integer");
+        var callback = getCallback("./_defined");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return function(value, prevId) {
+                var headers;
+                var s;
+                /** @type {string} */
+                var source = String(callback(value));
+                var index = getIndex(prevId);
+                /** @type {number} */
+                var len = source.length;
+                return index < 0 || index >= len ? name ? "" : void 0 : (headers = source.charCodeAt(index), headers < 55296 || (headers > 56319 || (index + 1 === len || ((s = source.charCodeAt(index + 1)) < 56320 || s > 57343))) ? name ? source.charAt(index) : headers : name ? source.slice(index, index + 2) : (headers - 55296 << 10) + (s - 56320) + 65536);
+            };
+        };
+    }, {
+        "./_defined" : 45,
+        "./_to-integer" : 98
+    }],
+    96 : [function(require, c, dataAndEvents) {
+        var callback;
+        var channel;
+        var thisArg;
+        var bind = require("./_ctx");
+        var getActual = require("./_invoke");
+        var xml = require("./_html");
+        var inspect = require("./_dom-create");
+        var global = require("./_global");
+        var process = global.process;
+        var pass = global.setImmediate;
+        var Benchmark = global.clearImmediate;
+        var MessageChannel = global.MessageChannel;
+        /** @type {number} */
+        var pdataCur = 0;
+        var buf = {};
+        /** @type {string} */
+        var onreadystatechange = "onreadystatechange";
+        /**
+         * @return {undefined}
+         */
+        var self = function() {
+            /** @type {number} */
+            var key = +this;
+            if (buf.hasOwnProperty(key)) {
+                var pp = buf[key];
+                delete buf[key];
+                pp();
+            }
+        };
+        /**
+         * @param {MessageEvent} ev
+         * @return {undefined}
+         */
+        var onmessage = function(ev) {
+            self.call(ev.data);
+        };
+        if (!(pass && Benchmark)) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            pass = function(name) {
+                /** @type {Array} */
+                var args = [];
+                /** @type {number} */
+                var i = 1;
+                for (;arguments.length > i;) {
+                    args.push(arguments[i++]);
+                }
+                return buf[++pdataCur] = function() {
+                    getActual("function" == typeof name ? name : Function(name), args);
+                }, callback(pdataCur), pdataCur;
+            };
+            /**
+             * @param {Object} name
+             * @return {undefined}
+             */
+            Benchmark = function(name) {
+                delete buf[name];
+            };
+            if ("process" == require("./_cof")(process)) {
+                /**
+                 * @param {number} data
+                 * @return {undefined}
+                 */
+                callback = function(data) {
+                    process.nextTick(bind(self, data, 1));
+                };
+            } else {
+                if (MessageChannel) {
+                    channel = new MessageChannel;
+                    thisArg = channel.port2;
+                    /** @type {function (MessageEvent): undefined} */
+                    channel.port1.onmessage = onmessage;
+                    callback = bind(thisArg.postMessage, thisArg, 1);
+                } else {
+                    if (global.addEventListener && ("function" == typeof postMessage && !global.importScripts)) {
+                        /**
+                         * @param {string} value
+                         * @return {undefined}
+                         */
+                        callback = function(value) {
+                            global.postMessage(value + "", "*");
+                        };
+                        global.addEventListener("message", onmessage, false);
+                    } else {
+                        /** @type {function (number): undefined} */
+                        callback = onreadystatechange in inspect("script") ? function(value) {
+                            /**
+                             * @return {undefined}
+                             */
+                            xml.appendChild(inspect("script"))[onreadystatechange] = function() {
+                                xml.removeChild(this);
+                                self.call(value);
+                            };
+                        } : function(data) {
+                            setTimeout(bind(self, data, 1), 0);
+                        };
+                    }
+                }
+            }
+        }
+        c.exports = {
+            set : pass,
+            clear : Benchmark
+        };
+    }, {
+        "./_cof" : 41,
+        "./_ctx" : 44,
+        "./_dom-create" : 47,
+        "./_global" : 53,
+        "./_html" : 56,
+        "./_invoke" : 58
+    }],
+    97 : [function($filter, module, dataAndEvents) {
+        var capitalize = $filter("./_to-integer");
+        /** @type {function (...[*]): number} */
+        var log = Math.max;
+        /** @type {function (...[*]): number} */
+        var inspect = Math.min;
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            return name = capitalize(name), name < 0 ? log(name + key, 0) : inspect(name, key);
+        };
+    }, {
+        "./_to-integer" : 98
+    }],
+    98 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {function (*): number} */
+        var ceil = Math.ceil;
+        /** @type {function (*): number} */
+        var floor = Math.floor;
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return isNaN(name = +name) ? 0 : (name > 0 ? floor : ceil)(name);
+        };
+    }, {}],
+    99 : [function(require, module, dataAndEvents) {
+        var set = require("./_iobject");
+        var inspect = require("./_defined");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return set(inspect(name));
+        };
+    }, {
+        "./_defined" : 45,
+        "./_iobject" : 59
+    }],
+    100 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_to-integer");
+        /** @type {function (...[*]): number} */
+        var nativeMin = Math.min;
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return name > 0 ? nativeMin(inspect(name), 9007199254740991) : 0;
+        };
+    }, {
+        "./_to-integer" : 98
+    }],
+    101 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_defined");
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return Object(inspect(name));
+        };
+    }, {
+        "./_defined" : 45
+    }],
+    102 : [function(require, module, dataAndEvents) {
+        var inspect = require("./_is-object");
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        module.exports = function(name, key) {
+            if (!inspect(name)) {
+                return name;
+            }
+            var toString;
+            var m;
+            if (key && ("function" == typeof(toString = name.toString) && !inspect(m = toString.call(name)))) {
+                return m;
+            }
+            if ("function" == typeof(toString = name.valueOf) && !inspect(m = toString.call(name))) {
+                return m;
+            }
+            if (!key && ("function" == typeof(toString = name.toString) && !inspect(m = toString.call(name)))) {
+                return m;
+            }
             throw TypeError("Can't convert object to primitive value");
         };
     }, {
-        "./_is-object": 62
-    } ],
-    103: [ function(e, t, n) {
-        var o = 0, r = Math.random();
-        t.exports = function(e) {
-            return "Symbol(".concat(void 0 === e ? "" : e, ")_", (++o + r).toString(36));
+        "./_is-object" : 62
+    }],
+    103 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /** @type {number} */
+        var count = 0;
+        /** @type {number} */
+        var id = Math.random();
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        module.exports = function(name) {
+            return "Symbol(".concat(void 0 === name ? "" : name, ")_", (++count + id).toString(36));
         };
-    }, {} ],
-    104: [ function(e, t, n) {
-        var o = e("./_global"), r = e("./_core"), i = e("./_library"), s = e("./_wks-ext"), c = e("./_object-dp").f;
-        t.exports = function(e) {
-            var t = r.Symbol || (r.Symbol = i ? {} : o.Symbol || {});
-            "_" == e.charAt(0) || e in t || c(t, e, {
-                value: s.f(e)
-            });
-        };
-    }, {
-        "./_core": 42,
-        "./_global": 53,
-        "./_library": 70,
-        "./_object-dp": 75,
-        "./_wks-ext": 105
-    } ],
-    105: [ function(e, t, n) {
-        n.f = e("./_wks");
-    }, {
-        "./_wks": 106
-    } ],
-    106: [ function(e, t, n) {
-        var o = e("./_shared")("wks"), r = e("./_uid"), i = e("./_global").Symbol, s = "function" == typeof i, c = t.exports = function(e) {
-            return o[e] || (o[e] = s && i[e] || (s ? i : r)("Symbol." + e));
-        };
-        c.store = o;
-    }, {
-        "./_global": 53,
-        "./_shared": 93,
-        "./_uid": 103
-    } ],
-    107: [ function(e, t, n) {
-        var o = e("./_classof"), r = e("./_wks")("iterator"), i = e("./_iterators");
-        t.exports = e("./_core").getIteratorMethod = function(e) {
-            if (void 0 != e) return e[r] || e["@@iterator"] || i[o(e)];
-        };
-    }, {
-        "./_classof": 40,
-        "./_core": 42,
-        "./_iterators": 68,
-        "./_wks": 106
-    } ],
-    108: [ function(e, t, n) {
-        var o = e("./_an-object"), r = e("./core.get-iterator-method");
-        t.exports = e("./_core").getIterator = function(e) {
-            var t = r(e);
-            if ("function" != typeof t) throw TypeError(e + " is not iterable!");
-            return o(t.call(e));
-        };
-    }, {
-        "./_an-object": 38,
-        "./_core": 42,
-        "./core.get-iterator-method": 107
-    } ],
-    109: [ function(e, t, n) {
-        var o = e("./_classof"), r = e("./_wks")("iterator"), i = e("./_iterators");
-        t.exports = e("./_core").isIterable = function(e) {
-            var t = Object(e);
-            return void 0 !== t[r] || "@@iterator" in t || i.hasOwnProperty(o(t));
-        };
-    }, {
-        "./_classof": 40,
-        "./_core": 42,
-        "./_iterators": 68,
-        "./_wks": 106
-    } ],
-    110: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_ctx"), r = e("./_export"), i = e("./_to-object"), s = e("./_iter-call"), c = e("./_is-array-iter"), a = e("./_to-length"), u = e("./_create-property"), l = e("./core.get-iterator-method");
-        r(r.S + r.F * !e("./_iter-detect")(function(e) {
-            Array.from(e);
-        }), "Array", {
-            from: function(e) {
-                var t, n, r, f, d = i(e), p = "function" == typeof this ? this : Array, g = arguments.length, _ = g > 1 ? arguments[1] : void 0, b = void 0 !== _, h = 0, v = l(d);
-                if (b && (_ = o(_, g > 2 ? arguments[2] : void 0, 2)), void 0 == v || p == Array && c(v)) for (t = a(d.length), 
-                n = new p(t); t > h; h++) u(n, h, b ? _(d[h], h) : d[h]); else for (f = v.call(d), 
-                n = new p(); !(r = f.next()).done; h++) u(n, h, b ? s(f, _, [ r.value, h ], !0) : r.value);
-                return n.length = h, n;
-            }
-        });
-    }, {
-        "./_create-property": 43,
-        "./_ctx": 44,
-        "./_export": 50,
-        "./_is-array-iter": 60,
-        "./_iter-call": 63,
-        "./_iter-detect": 66,
-        "./_to-length": 100,
-        "./_to-object": 101,
-        "./core.get-iterator-method": 107
-    } ],
-    111: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_add-to-unscopables"), r = e("./_iter-step"), i = e("./_iterators"), s = e("./_to-iobject");
-        t.exports = e("./_iter-define")(Array, "Array", function(e, t) {
-            this._t = s(e), this._i = 0, this._k = t;
-        }, function() {
-            var e = this._t, t = this._k, n = this._i++;
-            return !e || n >= e.length ? (this._t = void 0, r(1)) : "keys" == t ? r(0, n) : "values" == t ? r(0, e[n]) : r(0, [ n, e[n] ]);
-        }, "values"), i.Arguments = i.Array, o("keys"), o("values"), o("entries");
-    }, {
-        "./_add-to-unscopables": 36,
-        "./_iter-define": 65,
-        "./_iter-step": 67,
-        "./_iterators": 68,
-        "./_to-iobject": 99
-    } ],
-    112: [ function(e, t, n) {
-        var o = e("./_export");
-        o(o.S + o.F, "Object", {
-            assign: e("./_object-assign")
-        });
-    }, {
-        "./_export": 50,
-        "./_object-assign": 73
-    } ],
-    113: [ function(e, t, n) {
-        var o = e("./_export");
-        o(o.S, "Object", {
-            create: e("./_object-create")
-        });
-    }, {
-        "./_export": 50,
-        "./_object-create": 74
-    } ],
-    114: [ function(e, t, n) {
-        var o = e("./_export");
-        o(o.S + o.F * !e("./_descriptors"), "Object", {
-            defineProperty: e("./_object-dp").f
-        });
-    }, {
-        "./_descriptors": 46,
-        "./_export": 50,
-        "./_object-dp": 75
-    } ],
-    115: [ function(e, t, n) {
-        var o = e("./_to-object"), r = e("./_object-gpo");
-        e("./_object-sap")("getPrototypeOf", function() {
-            return function(e) {
-                return r(o(e));
-            };
-        });
-    }, {
-        "./_object-gpo": 81,
-        "./_object-sap": 85,
-        "./_to-object": 101
-    } ],
-    116: [ function(e, t, n) {
-        var o = e("./_to-object"), r = e("./_object-keys");
-        e("./_object-sap")("keys", function() {
-            return function(e) {
-                return r(o(e));
-            };
-        });
-    }, {
-        "./_object-keys": 83,
-        "./_object-sap": 85,
-        "./_to-object": 101
-    } ],
-    117: [ function(e, t, n) {
-        var o = e("./_export");
-        o(o.S, "Object", {
-            setPrototypeOf: e("./_set-proto").set
-        });
-    }, {
-        "./_export": 50,
-        "./_set-proto": 89
-    } ],
-    118: [ function(e, t, n) {}, {} ],
-    119: [ function(e, t, n) {
-        "use strict";
-        var o, r, i, s = e("./_library"), c = e("./_global"), a = e("./_ctx"), u = e("./_classof"), l = e("./_export"), f = e("./_is-object"), d = e("./_a-function"), p = e("./_an-instance"), g = e("./_for-of"), _ = e("./_species-constructor"), b = e("./_task").set, h = e("./_microtask")(), v = "Promise", m = c.TypeError, y = c.process, j = c[v], y = c.process, w = "process" == u(y), x = function() {}, L = !!function() {
-            try {
-                var t = j.resolve(1), n = (t.constructor = {})[e("./_wks")("species")] = function(e) {
-                    e(x, x);
-                };
-                return (w || "function" == typeof PromiseRejectionEvent) && t.then(x) instanceof n;
-            } catch (o) {}
-        }(), k = function(e, t) {
-            return e === t || e === j && t === i;
-        }, O = function(e) {
-            var t;
-            return !(!f(e) || "function" != typeof (t = e.then)) && t;
-        }, N = function(e) {
-            return k(j, e) ? new I(e) : new r(e);
-        }, I = r = function(e) {
-            var t, n;
-            this.promise = new e(function(e, o) {
-                if (void 0 !== t || void 0 !== n) throw m("Bad Promise constructor");
-                t = e, n = o;
-            }), this.resolve = d(t), this.reject = d(n);
-        }, C = function(e) {
-            try {
-                e();
-            } catch (t) {
-                return {
-                    error: t
-                };
-            }
-        }, F = function(e, t) {
-            if (!e._n) {
-                e._n = !0;
-                var n = e._c;
-                h(function() {
-                    for (var o = e._v, r = 1 == e._s, i = 0, s = function(t) {
-                        var n, i, s = r ? t.ok : t.fail, c = t.resolve, a = t.reject, u = t.domain;
-                        try {
-                            s ? (r || (2 == e._h && S(e), e._h = 1), s === !0 ? n = o : (u && u.enter(), n = s(o), 
-                            u && u.exit()), n === t.promise ? a(m("Promise-chain cycle")) : (i = O(n)) ? i.call(n, c, a) : c(n)) : a(o);
-                        } catch (l) {
-                            a(l);
-                        }
-                    }; n.length > i; ) s(n[i++]);
-                    e._c = [], e._n = !1, t && !e._h && P(e);
-                });
-            }
-        }, P = function(e) {
-            b.call(c, function() {
-                var t, n, o, r = e._v;
-                if (E(e) && (t = C(function() {
-                    w ? y.emit("unhandledRejection", r, e) : (n = c.onunhandledrejection) ? n({
-                        promise: e,
-                        reason: r
-                    }) : (o = c.console) && o.error && o.error("Unhandled promise rejection", r);
-                }), e._h = w || E(e) ? 2 : 1), e._a = void 0, t) throw t.error;
-            });
-        }, E = function(e) {
-            if (1 == e._h) return !1;
-            for (var t, n = e._a || e._c, o = 0; n.length > o; ) if (t = n[o++], t.fail || !E(t.promise)) return !1;
-            return !0;
-        }, S = function(e) {
-            b.call(c, function() {
-                var t;
-                w ? y.emit("rejectionHandled", e) : (t = c.onrejectionhandled) && t({
-                    promise: e,
-                    reason: e._v
-                });
-            });
-        }, M = function(e) {
-            var t = this;
-            t._d || (t._d = !0, t = t._w || t, t._v = e, t._s = 2, t._a || (t._a = t._c.slice()), 
-            F(t, !0));
-        }, R = function(e) {
-            var t, n = this;
-            if (!n._d) {
-                n._d = !0, n = n._w || n;
-                try {
-                    if (n === e) throw m("Promise can't be resolved itself");
-                    (t = O(e)) ? h(function() {
-                        var o = {
-                            _w: n,
-                            _d: !1
-                        };
-                        try {
-                            t.call(e, a(R, o, 1), a(M, o, 1));
-                        } catch (r) {
-                            M.call(o, r);
-                        }
-                    }) : (n._v = e, n._s = 1, F(n, !1));
-                } catch (o) {
-                    M.call({
-                        _w: n,
-                        _d: !1
-                    }, o);
+    }, {}],
+    104 : [function(require, module, dataAndEvents) {
+        var nodes = require("./_global");
+        var runtime = require("./_core");
+        var Block = require("./_library");
+        var keys = require("./_wks-ext");
+        var getter = require("./_object-dp").f;
+        /**
+         * @param {Object} name
+         * @return {undefined}
+         */
+        module.exports = function(name) {
+            var optgroup = runtime.Symbol || (runtime.Symbol = Block ? {} : nodes.Symbol || {});
+            if (!("_" == name.charAt(0))) {
+                if (!(name in optgroup)) {
+                    getter(optgroup, name, {
+                        value : keys.f(name)
+                    });
                 }
             }
         };
-        L || (j = function(e) {
-            p(this, j, v, "_h"), d(e), o.call(this);
-            try {
-                e(a(R, this, 1), a(M, this, 1));
-            } catch (t) {
-                M.call(this, t);
+    }, {
+        "./_core" : 42,
+        "./_global" : 53,
+        "./_library" : 70,
+        "./_object-dp" : 75,
+        "./_wks-ext" : 105
+    }],
+    105 : [function(trim, dataAndEvents, el) {
+        el.f = trim("./_wks");
+    }, {
+        "./_wks" : 106
+    }],
+    106 : [function(inspect, module, dataAndEvents) {
+        var store = inspect("./_shared")("wks");
+        var str = inspect("./_uid");
+        var conditions = inspect("./_global").Symbol;
+        /** @type {boolean} */
+        var style = "function" == typeof conditions;
+        /** @type {function (Object): ?} */
+        var self = module.exports = function(name) {
+            return store[name] || (store[name] = style && conditions[name] || (style ? conditions : str)("Symbol." + name));
+        };
+        self.store = store;
+    }, {
+        "./_global" : 53,
+        "./_shared" : 93,
+        "./_uid" : 103
+    }],
+    107 : [function(require, module, dataAndEvents) {
+        var getActual = require("./_classof");
+        var implementation = require("./_wks")("iterator");
+        var objectTypes = require("./_iterators");
+        /** @type {function (Object): ?} */
+        module.exports = require("./_core").getIteratorMethod = function(obj) {
+            if (void 0 != obj) {
+                return obj[implementation] || (obj["@@iterator"] || objectTypes[getActual(obj)]);
             }
-        }, o = function(e) {
-            this._c = [], this._a = void 0, this._s = 0, this._d = !1, this._v = void 0, this._h = 0, 
-            this._n = !1;
-        }, o.prototype = e("./_redefine-all")(j.prototype, {
-            then: function(e, t) {
-                var n = N(_(this, j));
-                return n.ok = "function" != typeof e || e, n.fail = "function" == typeof t && t, 
-                n.domain = w ? y.domain : void 0, this._c.push(n), this._a && this._a.push(n), this._s && F(this, !1), 
-                n.promise;
-            },
-            "catch": function(e) {
-                return this.then(void 0, e);
+        };
+    }, {
+        "./_classof" : 40,
+        "./_core" : 42,
+        "./_iterators" : 68,
+        "./_wks" : 106
+    }],
+    108 : [function(require, module, dataAndEvents) {
+        var getName = require("./_an-object");
+        var filter = require("./core.get-iterator-method");
+        /** @type {function (string): ?} */
+        module.exports = require("./_core").getIterator = function(elem) {
+            var matched = filter(elem);
+            if ("function" != typeof matched) {
+                throw TypeError(elem + " is not iterable!");
             }
-        }), I = function() {
-            var e = new o();
-            this.promise = e, this.resolve = a(R, e, 1), this.reject = a(M, e, 1);
-        }), l(l.G + l.W + l.F * !L, {
-            Promise: j
-        }), e("./_set-to-string-tag")(j, v), e("./_set-species")(v), i = e("./_core")[v], 
-        l(l.S + l.F * !L, v, {
-            reject: function(e) {
-                var t = N(this), n = t.reject;
-                return n(e), t.promise;
-            }
-        }), l(l.S + l.F * (s || !L), v, {
-            resolve: function(e) {
-                if (e instanceof j && k(e.constructor, this)) return e;
-                var t = N(this), n = t.resolve;
-                return n(e), t.promise;
-            }
-        }), l(l.S + l.F * !(L && e("./_iter-detect")(function(e) {
-            j.all(e)["catch"](x);
-        })), v, {
-            all: function(e) {
-                var t = this, n = N(t), o = n.resolve, r = n.reject, i = C(function() {
-                    var n = [], i = 0, s = 1;
-                    g(e, !1, function(e) {
-                        var c = i++, a = !1;
-                        n.push(void 0), s++, t.resolve(e).then(function(e) {
-                            a || (a = !0, n[c] = e, --s || o(n));
-                        }, r);
-                    }), --s || o(n);
-                });
-                return i && r(i.error), n.promise;
-            },
-            race: function(e) {
-                var t = this, n = N(t), o = n.reject, r = C(function() {
-                    g(e, !1, function(e) {
-                        t.resolve(e).then(n.resolve, o);
-                    });
-                });
-                return r && o(r.error), n.promise;
+            return getName(matched.call(elem));
+        };
+    }, {
+        "./_an-object" : 38,
+        "./_core" : 42,
+        "./core.get-iterator-method" : 107
+    }],
+    109 : [function(require, module, dataAndEvents) {
+        var helper = require("./_classof");
+        var func = require("./_wks")("iterator");
+        var tags = require("./_iterators");
+        /** @type {function (Object): ?} */
+        module.exports = require("./_core").isIterable = function(optgroup) {
+            var t = Object(optgroup);
+            return void 0 !== t[func] || ("@@iterator" in t || tags.hasOwnProperty(helper(t)));
+        };
+    }, {
+        "./_classof" : 40,
+        "./_core" : 42,
+        "./_iterators" : 68,
+        "./_wks" : 106
+    }],
+    110 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var makeIterator = require("./_ctx");
+        var expr = require("./_export");
+        var create = require("./_to-object");
+        var merge = require("./_iter-call");
+        var getActual = require("./_is-array-iter");
+        var assert = require("./_to-length");
+        var isArray = require("./_create-property");
+        var filter = require("./core.get-iterator-method");
+        expr(expr.S + expr.F * !require("./_iter-detect")(function(optgroup) {
+            Array.from(optgroup);
+        }), "Array", {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            from : function(name) {
+                var val;
+                var first;
+                var input;
+                var ret;
+                var elem = create(name);
+                var type = "function" == typeof this ? this : Array;
+                /** @type {number} */
+                var len = arguments.length;
+                var callback = len > 1 ? arguments[1] : void 0;
+                /** @type {boolean} */
+                var isFunction = void 0 !== callback;
+                /** @type {number} */
+                var i = 0;
+                var matched = filter(elem);
+                if (isFunction && (callback = makeIterator(callback, len > 2 ? arguments[2] : void 0, 2)), void 0 == matched || type == Array && getActual(matched)) {
+                    val = assert(elem.length);
+                    first = new type(val);
+                    for (;val > i;i++) {
+                        isArray(first, i, isFunction ? callback(elem[i], i) : elem[i]);
+                    }
+                } else {
+                    ret = matched.call(elem);
+                    first = new type;
+                    for (;!(input = ret.next()).done;i++) {
+                        isArray(first, i, isFunction ? merge(ret, callback, [input.value, i], true) : input.value);
+                    }
+                }
+                return first.length = i, first;
             }
         });
     }, {
-        "./_a-function": 35,
-        "./_an-instance": 37,
-        "./_classof": 40,
-        "./_core": 42,
-        "./_ctx": 44,
-        "./_export": 50,
-        "./_for-of": 52,
-        "./_global": 53,
-        "./_is-object": 62,
-        "./_iter-detect": 66,
-        "./_library": 70,
-        "./_microtask": 72,
-        "./_redefine-all": 87,
-        "./_set-species": 90,
-        "./_set-to-string-tag": 91,
-        "./_species-constructor": 94,
-        "./_task": 96,
-        "./_wks": 106
-    } ],
-    120: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_string-at")(!0);
-        e("./_iter-define")(String, "String", function(e) {
-            this._t = String(e), this._i = 0;
+        "./_create-property" : 43,
+        "./_ctx" : 44,
+        "./_export" : 50,
+        "./_is-array-iter" : 60,
+        "./_iter-call" : 63,
+        "./_iter-detect" : 66,
+        "./_to-length" : 100,
+        "./_to-object" : 101,
+        "./core.get-iterator-method" : 107
+    }],
+    111 : [function(require, module, dataAndEvents) {
+        var isArray = require("./_add-to-unscopables");
+        var _ = require("./_iter-step");
+        var nodes = require("./_iterators");
+        var getActual = require("./_to-iobject");
+        module.exports = require("./_iter-define")(Array, "Array", function(obj, dataAndEvents) {
+            this._t = getActual(obj);
+            /** @type {number} */
+            this._i = 0;
+            /** @type {(number|string)} */
+            this._k = dataAndEvents;
         }, function() {
-            var e, t = this._t, n = this._i;
-            return n >= t.length ? {
-                value: void 0,
-                done: !0
-            } : (e = o(t, n), this._i += e.length, {
-                value: e,
-                done: !1
+            var _col = this._t;
+            var incoming = this._k;
+            /** @type {number} */
+            var _ty = this._i++;
+            return!_col || _ty >= _col.length ? (this._t = void 0, _(1)) : "keys" == incoming ? _(0, _ty) : "values" == incoming ? _(0, _col[_ty]) : _(0, [_ty, _col[_ty]]);
+        }, "values");
+        nodes.Arguments = nodes.Array;
+        isArray("keys");
+        isArray("values");
+        isArray("entries");
+    }, {
+        "./_add-to-unscopables" : 36,
+        "./_iter-define" : 65,
+        "./_iter-step" : 67,
+        "./_iterators" : 68,
+        "./_to-iobject" : 99
+    }],
+    112 : [function(parser, dataAndEvents, deepDataAndEvents) {
+        var expr = parser("./_export");
+        expr(expr.S + expr.F, "Object", {
+            assign : parser("./_object-assign")
+        });
+    }, {
+        "./_export" : 50,
+        "./_object-assign" : 73
+    }],
+    113 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var isKind = require("./_export");
+        isKind(isKind.S, "Object", {
+            create : require("./_object-create")
+        });
+    }, {
+        "./_export" : 50,
+        "./_object-create" : 74
+    }],
+    114 : [function(parser, dataAndEvents, deepDataAndEvents) {
+        var expr = parser("./_export");
+        expr(expr.S + expr.F * !parser("./_descriptors"), "Object", {
+            defineProperty : parser("./_object-dp").f
+        });
+    }, {
+        "./_descriptors" : 46,
+        "./_export" : 50,
+        "./_object-dp" : 75
+    }],
+    115 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var HOP = require("./_to-object");
+        var getActual = require("./_object-gpo");
+        require("./_object-sap")("getPrototypeOf", function() {
+            return function(walkers) {
+                return getActual(HOP(walkers));
+            };
+        });
+    }, {
+        "./_object-gpo" : 81,
+        "./_object-sap" : 85,
+        "./_to-object" : 101
+    }],
+    116 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var getActual = require("./_to-object");
+        var assert = require("./_object-keys");
+        require("./_object-sap")("keys", function() {
+            return function(obj) {
+                return assert(getActual(obj));
+            };
+        });
+    }, {
+        "./_object-keys" : 83,
+        "./_object-sap" : 85,
+        "./_to-object" : 101
+    }],
+    117 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var isKind = require("./_export");
+        isKind(isKind.S, "Object", {
+            setPrototypeOf : require("./_set-proto").set
+        });
+    }, {
+        "./_export" : 50,
+        "./_set-proto" : 89
+    }],
+    118 : [function(dataAndEvents, deepDataAndEvents, ignoreMethodDoesntExist) {
+    }, {}],
+    119 : [function(f, dataAndEvents, deepDataAndEvents) {
+        var Moment;
+        var Deferred;
+        var option;
+        var _isFocused = f("./_library");
+        var global = f("./_global");
+        var $ = f("./_ctx");
+        var status = f("./_classof");
+        var square = f("./_export");
+        var isWrapper = f("./_is-object");
+        var __bind = f("./_a-function");
+        var value = f("./_an-instance");
+        var each = f("./_for-of");
+        var callback = f("./_species-constructor");
+        var setter = f("./_task").set;
+        var flush = f("./_microtask")();
+        /** @type {string} */
+        var i = "Promise";
+        var unescape = global.TypeError;
+        var process = global.process;
+        var model = global[i];
+        process = global.process;
+        /** @type {boolean} */
+        var domain = "process" == status(process);
+        /**
+         * @return {undefined}
+         */
+        var resolved = function() {
+        };
+        /** @type {boolean} */
+        var _tryInitOnFocus = !!function() {
+            try {
+                var promise = model.resolve(1);
+                /** @type {function (?): undefined} */
+                var n = (promise.constructor = {})[f("./_wks")("species")] = function(require) {
+                    require(resolved, resolved);
+                };
+                return(domain || "function" == typeof PromiseRejectionEvent) && promise.then(resolved) instanceof n;
+            } catch (o) {
+            }
+        }();
+        /**
+         * @param {number} type
+         * @param {number} name
+         * @return {?}
+         */
+        var when = function(type, name) {
+            return type === name || type === model && name === option;
+        };
+        /**
+         * @param {?} object
+         * @return {?}
+         */
+        var unwrap = function(object) {
+            var length;
+            return!(!isWrapper(object) || "function" != typeof(length = object.then)) && length;
+        };
+        /**
+         * @param {?} resolve
+         * @return {?}
+         */
+        var then = function(resolve) {
+            return when(model, resolve) ? new Promise(resolve) : new Deferred(resolve);
+        };
+        /** @type {function (?): undefined} */
+        var Promise = Deferred = function(promise) {
+            var text;
+            var doneResults;
+            this.promise = new promise(function(textAlt, data) {
+                if (void 0 !== text || void 0 !== doneResults) {
+                    throw unescape("Bad Promise constructor");
+                }
+                text = textAlt;
+                doneResults = data;
+            });
+            this.resolve = __bind(text);
+            this.reject = __bind(doneResults);
+        };
+        /**
+         * @param {Function} func
+         * @return {?}
+         */
+        var call = function(func) {
+            try {
+                func();
+            } catch (err) {
+                return{
+                    error : err
+                };
+            }
+        };
+        /**
+         * @param {?} b
+         * @param {boolean} recurring
+         * @return {undefined}
+         */
+        var fn = function(b, recurring) {
+            if (!b._n) {
+                /** @type {boolean} */
+                b._n = true;
+                var items = b._c;
+                flush(function() {
+                    var v = b._v;
+                    /** @type {boolean} */
+                    var caseSensitive = 1 == b._s;
+                    /** @type {number} */
+                    var index = 0;
+                    /**
+                     * @param {Object} result
+                     * @return {undefined}
+                     */
+                    var finish = function(result) {
+                        var optgroup;
+                        var cb;
+                        var $ = caseSensitive ? result.ok : result.fail;
+                        var resolve = result.resolve;
+                        var callback = result.reject;
+                        var domain = result.domain;
+                        try {
+                            if ($) {
+                                if (!caseSensitive) {
+                                    if (2 == b._h) {
+                                        start(b);
+                                    }
+                                    /** @type {number} */
+                                    b._h = 1;
+                                }
+                                if ($ === true) {
+                                    optgroup = v;
+                                } else {
+                                    if (domain) {
+                                        domain.enter();
+                                    }
+                                    optgroup = $(v);
+                                    if (domain) {
+                                        domain.exit();
+                                    }
+                                }
+                                if (optgroup === result.promise) {
+                                    callback(unescape("Promise-chain cycle"));
+                                } else {
+                                    if (cb = unwrap(optgroup)) {
+                                        cb.call(optgroup, resolve, callback);
+                                    } else {
+                                        resolve(optgroup);
+                                    }
+                                }
+                            } else {
+                                callback(v);
+                            }
+                        } catch (e) {
+                            callback(e);
+                        }
+                    };
+                    for (;items.length > index;) {
+                        finish(items[index++]);
+                    }
+                    /** @type {Array} */
+                    b._c = [];
+                    /** @type {boolean} */
+                    b._n = false;
+                    if (recurring) {
+                        if (!b._h) {
+                            ready(b);
+                        }
+                    }
+                });
+            }
+        };
+        /**
+         * @param {?} data
+         * @return {undefined}
+         */
+        var ready = function(data) {
+            setter.call(global, function() {
+                var object;
+                var cancelAnimationFrame;
+                var console;
+                var err = data._v;
+                if (test(data) && (object = call(function() {
+                        if (domain) {
+                            process.emit("unhandledRejection", err, data);
+                        } else {
+                            if (cancelAnimationFrame = global.onunhandledrejection) {
+                                cancelAnimationFrame({
+                                    promise : data,
+                                    reason : err
+                                });
+                            } else {
+                                if (console = global.console) {
+                                    if (console.error) {
+                                        console.error("Unhandled promise rejection", err);
+                                    }
+                                }
+                            }
+                        }
+                    }), data._h = domain || test(data) ? 2 : 1), data._a = void 0, object) {
+                    throw object.error;
+                }
+            });
+        };
+        /**
+         * @param {?} t
+         * @return {?}
+         */
+        var test = function(t) {
+            if (1 == t._h) {
+                return false;
+            }
+            var next;
+            var items = t._a || t._c;
+            /** @type {number} */
+            var index = 0;
+            for (;items.length > index;) {
+                if (next = items[index++], next.fail || !test(next.promise)) {
+                    return false;
+                }
+            }
+            return true;
+        };
+        /**
+         * @param {Object} args
+         * @return {undefined}
+         */
+        var start = function(args) {
+            setter.call(global, function() {
+                var onError;
+                if (domain) {
+                    process.emit("rejectionHandled", args);
+                } else {
+                    if (onError = global.onrejectionhandled) {
+                        onError({
+                            promise : args,
+                            reason : args._v
+                        });
+                    }
+                }
+            });
+        };
+        /**
+         * @param {?} block
+         * @return {undefined}
+         */
+        var add = function(block) {
+            var config = this;
+            if (!config._d) {
+                /** @type {boolean} */
+                config._d = true;
+                config = config._w || config;
+                config._v = block;
+                /** @type {number} */
+                config._s = 2;
+                if (!config._a) {
+                    config._a = config._c.slice();
+                }
+                fn(config, true);
+            }
+        };
+        /**
+         * @param {string} b
+         * @return {undefined}
+         */
+        var step = function(b) {
+            var self;
+            var a = this;
+            if (!a._d) {
+                /** @type {boolean} */
+                a._d = true;
+                a = a._w || a;
+                try {
+                    if (a === b) {
+                        throw unescape("Promise can't be resolved itself");
+                    }
+                    if (self = unwrap(b)) {
+                        flush(function() {
+                            var options = {
+                                _w : a,
+                                _d : false
+                            };
+                            try {
+                                self.call(b, $(step, options, 1), $(add, options, 1));
+                            } catch (modelsToAdd) {
+                                add.call(options, modelsToAdd);
+                            }
+                        });
+                    } else {
+                        /** @type {string} */
+                        a._v = b;
+                        /** @type {number} */
+                        a._s = 1;
+                        fn(a, false);
+                    }
+                } catch (modelsToAdd) {
+                    add.call({
+                        _w : a,
+                        _d : false
+                    }, modelsToAdd);
+                }
+            }
+        };
+        if (!_tryInitOnFocus) {
+            /**
+             * @param {Object} name
+             * @return {undefined}
+             */
+            model = function(name) {
+                value(this, model, i, "_h");
+                __bind(name);
+                Moment.call(this);
+                try {
+                    name($(step, this, 1), $(add, this, 1));
+                } catch (modelsToAdd) {
+                    add.call(this, modelsToAdd);
+                }
+            };
+            /**
+             * @param {?} isUTC
+             * @return {undefined}
+             */
+            Moment = function(isUTC) {
+                /** @type {Array} */
+                this._c = [];
+                this._a = void 0;
+                /** @type {number} */
+                this._s = 0;
+                /** @type {boolean} */
+                this._d = false;
+                this._v = void 0;
+                /** @type {number} */
+                this._h = 0;
+                /** @type {boolean} */
+                this._n = false;
+            };
+            Moment.prototype = f("./_redefine-all")(model.prototype, {
+                /**
+                 * @param {Object} resolved
+                 * @param {Object} onReject
+                 * @return {?}
+                 */
+                then : function(resolved, onReject) {
+                    var test = then(callback(this, model));
+                    return test.ok = "function" != typeof resolved || resolved, test.fail = "function" == typeof onReject && onReject, test.domain = domain ? process.domain : void 0, this._c.push(test), this._a && this._a.push(test), this._s && fn(this, false), test.promise;
+                },
+                /**
+                 * @param {Object} callback
+                 * @return {?}
+                 */
+                "catch" : function(callback) {
+                    return this.then(void 0, callback);
+                }
+            });
+            /**
+             * @return {undefined}
+             */
+            Promise = function() {
+                var rc1 = new Moment;
+                this.promise = rc1;
+                this.resolve = $(step, rc1, 1);
+                this.reject = $(add, rc1, 1);
+            };
+        }
+        square(square.G + square.W + square.F * !_tryInitOnFocus, {
+            Promise : model
+        });
+        f("./_set-to-string-tag")(model, i);
+        f("./_set-species")(i);
+        option = f("./_core")[i];
+        square(square.S + square.F * !_tryInitOnFocus, i, {
+            /**
+             * @param {?} reason
+             * @return {?}
+             */
+            reject : function(reason) {
+                var createDeferred = then(this);
+                var reject = createDeferred.reject;
+                return reject(reason), createDeferred.promise;
+            }
+        });
+        square(square.S + square.F * (_isFocused || !_tryInitOnFocus), i, {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            resolve : function(name) {
+                if (name instanceof model && when(name.constructor, this)) {
+                    return name;
+                }
+                var promise = then(this);
+                var resolve = promise.resolve;
+                return resolve(name), promise.promise;
+            }
+        });
+        square(square.S + square.F * !(_tryInitOnFocus && f("./_iter-detect")(function(value) {
+            model.all(value)["catch"](resolved);
+        })), i, {
+            /**
+             * @param {?} obj
+             * @return {?}
+             */
+            all : function(obj) {
+                var resolved = this;
+                var deferred = then(resolved);
+                var resolver = deferred.resolve;
+                var reject = deferred.reject;
+                var r = call(function() {
+                    /** @type {Array} */
+                    var rvar = [];
+                    /** @type {number} */
+                    var i = 0;
+                    /** @type {number} */
+                    var s = 1;
+                    each(obj, false, function(optgroup) {
+                        /** @type {number} */
+                        var unlock = i++;
+                        /** @type {boolean} */
+                        var a = false;
+                        rvar.push(void 0);
+                        s++;
+                        resolved.resolve(optgroup).then(function(data) {
+                            if (!a) {
+                                /** @type {boolean} */
+                                a = true;
+                                rvar[unlock] = data;
+                                if (!--s) {
+                                    resolver(rvar);
+                                }
+                            }
+                        }, reject);
+                    });
+                    if (!--s) {
+                        resolver(rvar);
+                    }
+                });
+                return r && reject(r.error), deferred.promise;
+            },
+            /**
+             * @param {?} initial
+             * @return {?}
+             */
+            race : function(initial) {
+                var resolved = this;
+                var deferred = then(resolved);
+                var reject = deferred.reject;
+                var r = call(function() {
+                    each(initial, false, function(optgroup) {
+                        resolved.resolve(optgroup).then(deferred.resolve, reject);
+                    });
+                });
+                return r && reject(r.error), deferred.promise;
+            }
+        });
+    }, {
+        "./_a-function" : 35,
+        "./_an-instance" : 37,
+        "./_classof" : 40,
+        "./_core" : 42,
+        "./_ctx" : 44,
+        "./_export" : 50,
+        "./_for-of" : 52,
+        "./_global" : 53,
+        "./_is-object" : 62,
+        "./_iter-detect" : 66,
+        "./_library" : 70,
+        "./_microtask" : 72,
+        "./_redefine-all" : 87,
+        "./_set-species" : 90,
+        "./_set-to-string-tag" : 91,
+        "./_species-constructor" : 94,
+        "./_task" : 96,
+        "./_wks" : 106
+    }],
+    120 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+        var filter = $sanitize("./_string-at")(true);
+        $sanitize("./_iter-define")(String, "String", function(opt_message) {
+            /** @type {string} */
+            this._t = String(opt_message);
+            /** @type {number} */
+            this._i = 0;
+        }, function() {
+            var val;
+            var arr = this._t;
+            var i = this._i;
+            return i >= arr.length ? {
+                value : void 0,
+                done : true
+            } : (val = filter(arr, i), this._i += val.length, {
+                value : val,
+                done : false
             });
         });
     }, {
-        "./_iter-define": 65,
-        "./_string-at": 95
-    } ],
-    121: [ function(e, t, n) {
-        "use strict";
-        var o = e("./_global"), r = e("./_has"), i = e("./_descriptors"), s = e("./_export"), c = e("./_redefine"), a = e("./_meta").KEY, u = e("./_fails"), l = e("./_shared"), f = e("./_set-to-string-tag"), d = e("./_uid"), p = e("./_wks"), g = e("./_wks-ext"), _ = e("./_wks-define"), b = e("./_keyof"), h = e("./_enum-keys"), v = e("./_is-array"), m = e("./_an-object"), y = e("./_to-iobject"), j = e("./_to-primitive"), w = e("./_property-desc"), x = e("./_object-create"), L = e("./_object-gopn-ext"), k = e("./_object-gopd"), O = e("./_object-dp"), N = e("./_object-keys"), I = k.f, C = O.f, F = L.f, P = o.Symbol, E = o.JSON, S = E && E.stringify, M = "prototype", R = p("_hidden"), A = p("toPrimitive"), T = {}.propertyIsEnumerable, W = l("symbol-registry"), U = l("symbols"), B = l("op-symbols"), D = Object[M], V = "function" == typeof P, G = o.QObject, z = !G || !G[M] || !G[M].findChild, q = i && u(function() {
-            return 7 != x(C({}, "a", {
-                get: function() {
-                    return C(this, "a", {
-                        value: 7
+        "./_iter-define" : 65,
+        "./_string-at" : 95
+    }],
+    121 : [function(require, dataAndEvents, deepDataAndEvents) {
+        var opts = require("./_global");
+        var func = require("./_has");
+        var deep = require("./_descriptors");
+        var node = require("./_export");
+        var inspect = require("./_redefine");
+        var KEY = require("./_meta").KEY;
+        var getActual = require("./_fails");
+        var toObject = require("./_shared");
+        var isUndefined = require("./_set-to-string-tag");
+        var nodes = require("./_uid");
+        var parse = require("./_wks");
+        var argv = require("./_wks-ext");
+        var helper = require("./_wks-define");
+        var b = require("./_keyof");
+        var assert = require("./_enum-keys");
+        var isString = require("./_is-array");
+        var normalize = require("./_an-object");
+        var encodeURIComponent = require("./_to-iobject");
+        var trim = require("./_to-primitive");
+        var value = require("./_property-desc");
+        var expect = require("./_object-create");
+        var module = require("./_object-gopn-ext");
+        var state = require("./_object-gopd");
+        var $ = require("./_object-dp");
+        var toString = require("./_object-keys");
+        var print = state.f;
+        var has = $.f;
+        var String = module.f;
+        var options = opts.Symbol;
+        var context = opts.JSON;
+        var fn = context && context.stringify;
+        /** @type {string} */
+        var key = "prototype";
+        var ast = parse("_hidden");
+        var x = parse("toPrimitive");
+        /** @type {function (this:Object, string): boolean} */
+        var propertyIsEnumerable = {}.propertyIsEnumerable;
+        var self = toObject("symbol-registry");
+        var object = toObject("symbols");
+        var rvar = toObject("op-symbols");
+        var optgroup = Object[key];
+        /** @type {boolean} */
+        var symbol = "function" == typeof options;
+        var duration = opts.QObject;
+        /** @type {boolean} */
+        var copy = !duration || (!duration[key] || !duration[key].findChild);
+        var defineProperty = deep && getActual(function() {
+            return 7 != expect(has({}, "a", {
+                /**
+                 * @return {?}
+                 */
+                get : function() {
+                    return has(this, "a", {
+                        value : 7
                     }).a;
                 }
             })).a;
-        }) ? function(e, t, n) {
-            var o = I(D, t);
-            o && delete D[t], C(e, t, n), o && e !== D && C(D, t, o);
-        } : C, H = function(e) {
-            var t = U[e] = x(P[M]);
-            return t._k = e, t;
-        }, J = V && "symbol" == typeof P.iterator ? function(e) {
-            return "symbol" == typeof e;
-        } : function(e) {
-            return e instanceof P;
-        }, K = function(e, t, n) {
-            return e === D && K(B, t, n), m(e), t = j(t, !0), m(n), r(U, t) ? (n.enumerable ? (r(e, R) && e[R][t] && (e[R][t] = !1), 
-            n = x(n, {
-                enumerable: w(0, !1)
-            })) : (r(e, R) || C(e, R, w(1, {})), e[R][t] = !0), q(e, t, n)) : C(e, t, n);
-        }, Y = function(e, t) {
-            m(e);
-            for (var n, o = h(t = y(t)), r = 0, i = o.length; i > r; ) K(e, n = o[r++], t[n]);
-            return e;
-        }, Q = function(e, t) {
-            return void 0 === t ? x(e) : Y(x(e), t);
-        }, X = function(e) {
-            var t = T.call(this, e = j(e, !0));
-            return !(this === D && r(U, e) && !r(B, e)) && (!(t || !r(this, e) || !r(U, e) || r(this, R) && this[R][e]) || t);
-        }, Z = function(e, t) {
-            if (e = y(e), t = j(t, !0), e !== D || !r(U, t) || r(B, t)) {
-                var n = I(e, t);
-                return !n || !r(U, t) || r(e, R) && e[R][t] || (n.enumerable = !0), n;
+        }) ? function(name, ast, opt_attributes) {
+            var attributes = print(optgroup, ast);
+            if (attributes) {
+                delete optgroup[ast];
             }
-        }, $ = function(e) {
-            for (var t, n = F(y(e)), o = [], i = 0; n.length > i; ) r(U, t = n[i++]) || t == R || t == a || o.push(t);
-            return o;
-        }, ee = function(e) {
-            for (var t, n = e === D, o = F(n ? B : y(e)), i = [], s = 0; o.length > s; ) !r(U, t = o[s++]) || n && !r(D, t) || i.push(U[t]);
-            return i;
-        };
-        V || (P = function() {
-            if (this instanceof P) throw TypeError("Symbol is not a constructor!");
-            var e = d(arguments.length > 0 ? arguments[0] : void 0), t = function(n) {
-                this === D && t.call(B, n), r(this, R) && r(this[R], e) && (this[R][e] = !1), q(this, e, w(1, n));
-            };
-            return i && z && q(D, e, {
-                configurable: !0,
-                set: t
-            }), H(e);
-        }, c(P[M], "toString", function() {
-            return this._k;
-        }), k.f = Z, O.f = K, e("./_object-gopn").f = L.f = $, e("./_object-pie").f = X, 
-        e("./_object-gops").f = ee, i && !e("./_library") && c(D, "propertyIsEnumerable", X, !0), 
-        g.f = function(e) {
-            return H(p(e));
-        }), s(s.G + s.W + s.F * !V, {
-            Symbol: P
-        });
-        for (var te = "hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","), ne = 0; te.length > ne; ) p(te[ne++]);
-        for (var te = N(p.store), ne = 0; te.length > ne; ) _(te[ne++]);
-        s(s.S + s.F * !V, "Symbol", {
-            "for": function(e) {
-                return r(W, e += "") ? W[e] : W[e] = P(e);
-            },
-            keyFor: function(e) {
-                if (J(e)) return b(W, e);
-                throw TypeError(e + " is not a symbol!");
-            },
-            useSetter: function() {
-                z = !0;
-            },
-            useSimple: function() {
-                z = !1;
-            }
-        }), s(s.S + s.F * !V, "Object", {
-            create: Q,
-            defineProperty: K,
-            defineProperties: Y,
-            getOwnPropertyDescriptor: Z,
-            getOwnPropertyNames: $,
-            getOwnPropertySymbols: ee
-        }), E && s(s.S + s.F * (!V || u(function() {
-            var e = P();
-            return "[null]" != S([ e ]) || "{}" != S({
-                a: e
-            }) || "{}" != S(Object(e));
-        })), "JSON", {
-            stringify: function(e) {
-                if (void 0 !== e && !J(e)) {
-                    for (var t, n, o = [ e ], r = 1; arguments.length > r; ) o.push(arguments[r++]);
-                    return t = o[1], "function" == typeof t && (n = t), !n && v(t) || (t = function(e, t) {
-                        if (n && (t = n.call(this, e, t)), !J(t)) return t;
-                    }), o[1] = t, S.apply(E, o);
+            has(name, ast, opt_attributes);
+            if (attributes) {
+                if (name !== optgroup) {
+                    has(optgroup, ast, attributes);
                 }
             }
-        }), P[M][A] || e("./_hide")(P[M], A, P[M].valueOf), f(P, "Symbol"), f(Math, "Math", !0), 
-        f(o.JSON, "JSON", !0);
+        } : has;
+        /**
+         * @param {(number|string)} value
+         * @return {?}
+         */
+        var callback = function(value) {
+            var self = object[value] = expect(options[key]);
+            return self._k = value, self;
+        };
+        /** @type {function (Object): ?} */
+        var _extend = symbol && "symbol" == typeof options.iterator ? function(opt_attributes) {
+            return "symbol" == typeof opt_attributes;
+        } : function(opt_attributes) {
+            return opt_attributes instanceof options;
+        };
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @param {?} opt_attributes
+         * @return {?}
+         */
+        var get = function(name, key, opt_attributes) {
+            return name === optgroup && get(rvar, key, opt_attributes), normalize(name), key = trim(key, true), normalize(opt_attributes), func(object, key) ? (opt_attributes.enumerable ? (func(name, ast) && (name[ast][key] && (name[ast][key] = false)), opt_attributes = expect(opt_attributes, {
+                enumerable : value(0, false)
+            })) : (func(name, ast) || has(name, ast, value(1, {})), name[ast][key] = true), defineProperty(name, key, opt_attributes)) : has(name, key, opt_attributes);
+        };
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        var set = function(name, key) {
+            normalize(name);
+            var className;
+            var classNames = assert(key = encodeURIComponent(key));
+            /** @type {number} */
+            var i = 0;
+            var len = classNames.length;
+            for (;len > i;) {
+                get(name, className = classNames[i++], key[className]);
+            }
+            return name;
+        };
+        /**
+         * @param {Object} name
+         * @param {Object} ast
+         * @return {?}
+         */
+        var name = function(name, ast) {
+            return void 0 === ast ? expect(name) : set(expect(name), ast);
+        };
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        var next = function(name) {
+            /** @type {boolean} */
+            var t = propertyIsEnumerable.call(this, name = trim(name, true));
+            return!(this === optgroup && (func(object, name) && !func(rvar, name))) && (!(t || (!func(this, name) || (!func(object, name) || func(this, ast) && this[ast][name]))) || t);
+        };
+        /**
+         * @param {Object} name
+         * @param {Object} key
+         * @return {?}
+         */
+        var f = function(name, key) {
+            if (name = encodeURIComponent(name), key = trim(key, true), name !== optgroup || (!func(object, key) || func(rvar, key))) {
+                var descriptor = print(name, key);
+                return!descriptor || (!func(object, key) || (func(name, ast) && name[ast][key] || (descriptor.enumerable = true))), descriptor;
+            }
+        };
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        var add = function(name) {
+            var copies;
+            var h = String(encodeURIComponent(name));
+            /** @type {Array} */
+            var out = [];
+            /** @type {number} */
+            var i = 0;
+            for (;h.length > i;) {
+                if (!func(object, copies = h[i++])) {
+                    if (!(copies == ast)) {
+                        if (!(copies == KEY)) {
+                            out.push(copies);
+                        }
+                    }
+                }
+            }
+            return out;
+        };
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        var listener = function(name) {
+            var key;
+            /** @type {boolean} */
+            var prefix = name === optgroup;
+            var path = String(prefix ? rvar : encodeURIComponent(name));
+            /** @type {Array} */
+            var values = [];
+            /** @type {number} */
+            var idx = 0;
+            for (;path.length > idx;) {
+                if (!!func(object, key = path[idx++])) {
+                    if (!(prefix && !func(optgroup, key))) {
+                        values.push(object[key]);
+                    }
+                }
+            }
+            return values;
+        };
+        if (!symbol) {
+            /**
+             * @return {?}
+             */
+            options = function() {
+                if (this instanceof options) {
+                    throw TypeError("Symbol is not a constructor!");
+                }
+                var camelKey = nodes(arguments.length > 0 ? arguments[0] : void 0);
+                /**
+                 * @param {Object} name
+                 * @return {undefined}
+                 */
+                var add = function(name) {
+                    if (this === optgroup) {
+                        add.call(rvar, name);
+                    }
+                    if (func(this, ast)) {
+                        if (func(this[ast], camelKey)) {
+                            /** @type {boolean} */
+                            this[ast][camelKey] = false;
+                        }
+                    }
+                    defineProperty(this, camelKey, value(1, name));
+                };
+                return deep && (copy && defineProperty(optgroup, camelKey, {
+                    configurable : true,
+                    /** @type {function (Object): undefined} */
+                    set : add
+                })), callback(camelKey);
+            };
+            inspect(options[key], "toString", function() {
+                return this._k;
+            });
+            /** @type {function (Object, Object): ?} */
+            state.f = f;
+            /** @type {function (Object, Object, ?): ?} */
+            $.f = get;
+            /** @type {function (Object): ?} */
+            require("./_object-gopn").f = module.f = add;
+            /** @type {function (Object): ?} */
+            require("./_object-pie").f = next;
+            /** @type {function (Object): ?} */
+            require("./_object-gops").f = listener;
+            if (deep) {
+                if (!require("./_library")) {
+                    inspect(optgroup, "propertyIsEnumerable", next, true);
+                }
+            }
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            argv.f = function(name) {
+                return callback(parse(name));
+            };
+        }
+        node(node.G + node.W + node.F * !symbol, {
+            Symbol : options
+        });
+        /** @type {Array.<string>} */
+        var str = "hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(",");
+        /** @type {number} */
+        var chars = 0;
+        for (;str.length > chars;) {
+            parse(str[chars++]);
+        }
+        str = toString(parse.store);
+        /** @type {number} */
+        chars = 0;
+        for (;str.length > chars;) {
+            helper(str[chars++]);
+        }
+        node(node.S + node.F * !symbol, "Symbol", {
+            /**
+             * @param {Object} optgroup
+             * @return {?}
+             */
+            "for" : function(optgroup) {
+                return func(self, optgroup += "") ? self[optgroup] : self[optgroup] = options(optgroup);
+            },
+            /**
+             * @param {string} attributes
+             * @return {?}
+             */
+            keyFor : function(attributes) {
+                if (_extend(attributes)) {
+                    return b(self, attributes);
+                }
+                throw TypeError(attributes + " is not a symbol!");
+            },
+            /**
+             * @return {undefined}
+             */
+            useSetter : function() {
+                /** @type {boolean} */
+                copy = true;
+            },
+            /**
+             * @return {undefined}
+             */
+            useSimple : function() {
+                /** @type {boolean} */
+                copy = false;
+            }
+        });
+        node(node.S + node.F * !symbol, "Object", {
+            /** @type {function (Object, Object): ?} */
+            create : name,
+            /** @type {function (Object, Object, ?): ?} */
+            defineProperty : get,
+            /** @type {function (Object, Object): ?} */
+            defineProperties : set,
+            /** @type {function (Object, Object): ?} */
+            getOwnPropertyDescriptor : f,
+            /** @type {function (Object): ?} */
+            getOwnPropertyNames : add,
+            /** @type {function (Object): ?} */
+            getOwnPropertySymbols : listener
+        });
+        if (context) {
+            node(node.S + node.F * (!symbol || getActual(function() {
+                var optgroup = options();
+                return "[null]" != fn([optgroup]) || ("{}" != fn({
+                    a : optgroup
+                }) || "{}" != fn(Object(optgroup)));
+            })), "JSON", {
+                /**
+                 * @param {Object} attributes
+                 * @return {?}
+                 */
+                stringify : function(attributes) {
+                    if (void 0 !== attributes && !_extend(attributes)) {
+                        var data;
+                        var callback;
+                        /** @type {Array} */
+                        var args = [attributes];
+                        /** @type {number} */
+                        var i = 1;
+                        for (;arguments.length > i;) {
+                            args.push(arguments[i++]);
+                        }
+                        return data = args[1], "function" == typeof data && (callback = data), !callback && isString(data) || (data = function(key, data) {
+                            if (callback && (data = callback.call(this, key, data)), !_extend(data)) {
+                                return data;
+                            }
+                        }), args[1] = data, fn.apply(context, args);
+                    }
+                }
+            });
+        }
+        if (!options[key][x]) {
+            require("./_hide")(options[key], x, options[key].valueOf);
+        }
+        isUndefined(options, "Symbol");
+        isUndefined(Math, "Math", true);
+        isUndefined(opts.JSON, "JSON", true);
     }, {
-        "./_an-object": 38,
-        "./_descriptors": 46,
-        "./_enum-keys": 49,
-        "./_export": 50,
-        "./_fails": 51,
-        "./_global": 53,
-        "./_has": 54,
-        "./_hide": 55,
-        "./_is-array": 61,
-        "./_keyof": 69,
-        "./_library": 70,
-        "./_meta": 71,
-        "./_object-create": 74,
-        "./_object-dp": 75,
-        "./_object-gopd": 77,
-        "./_object-gopn": 79,
-        "./_object-gopn-ext": 78,
-        "./_object-gops": 80,
-        "./_object-keys": 83,
-        "./_object-pie": 84,
-        "./_property-desc": 86,
-        "./_redefine": 88,
-        "./_set-to-string-tag": 91,
-        "./_shared": 93,
-        "./_to-iobject": 99,
-        "./_to-primitive": 102,
-        "./_uid": 103,
-        "./_wks": 106,
-        "./_wks-define": 104,
-        "./_wks-ext": 105
-    } ],
-    122: [ function(e, t, n) {
-        e("./_wks-define")("asyncIterator");
+        "./_an-object" : 38,
+        "./_descriptors" : 46,
+        "./_enum-keys" : 49,
+        "./_export" : 50,
+        "./_fails" : 51,
+        "./_global" : 53,
+        "./_has" : 54,
+        "./_hide" : 55,
+        "./_is-array" : 61,
+        "./_keyof" : 69,
+        "./_library" : 70,
+        "./_meta" : 71,
+        "./_object-create" : 74,
+        "./_object-dp" : 75,
+        "./_object-gopd" : 77,
+        "./_object-gopn" : 79,
+        "./_object-gopn-ext" : 78,
+        "./_object-gops" : 80,
+        "./_object-keys" : 83,
+        "./_object-pie" : 84,
+        "./_property-desc" : 86,
+        "./_redefine" : 88,
+        "./_set-to-string-tag" : 91,
+        "./_shared" : 93,
+        "./_to-iobject" : 99,
+        "./_to-primitive" : 102,
+        "./_uid" : 103,
+        "./_wks" : 106,
+        "./_wks-define" : 104,
+        "./_wks-ext" : 105
+    }],
+    122 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+        $sanitize("./_wks-define")("asyncIterator");
     }, {
-        "./_wks-define": 104
-    } ],
-    123: [ function(e, t, n) {
-        e("./_wks-define")("observable");
+        "./_wks-define" : 104
+    }],
+    123 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+        $sanitize("./_wks-define")("observable");
     }, {
-        "./_wks-define": 104
-    } ],
-    124: [ function(e, t, n) {
-        e("./es6.array.iterator");
-        for (var o = e("./_global"), r = e("./_hide"), i = e("./_iterators"), s = e("./_wks")("toStringTag"), c = [ "NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList" ], a = 0; a < 5; a++) {
-            var u = c[a], l = o[u], f = l && l.prototype;
-            f && !f[s] && r(f, s, u), i[u] = i.Array;
+        "./_wks-define" : 104
+    }],
+    124 : [function(require, dataAndEvents, deepDataAndEvents) {
+        require("./es6.array.iterator");
+        var events = require("./_global");
+        var getActual = require("./_hide");
+        var nodes = require("./_iterators");
+        var args = require("./_wks")("toStringTag");
+        /** @type {Array} */
+        var layerNames = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"];
+        /** @type {number} */
+        var i = 0;
+        for (;i < 5;i++) {
+            var name = layerNames[i];
+            var constructor = events[name];
+            var obj = constructor && constructor.prototype;
+            if (obj) {
+                if (!obj[args]) {
+                    getActual(obj, args, name);
+                }
+            }
+            nodes[name] = nodes.Array;
         }
     }, {
-        "./_global": 53,
-        "./_hide": 55,
-        "./_iterators": 68,
-        "./_wks": 106,
-        "./es6.array.iterator": 111
-    } ],
-    125: [ function(e, t, n) {
-        function o() {
+        "./_global" : 53,
+        "./_hide" : 55,
+        "./_iterators" : 68,
+        "./_wks" : 106,
+        "./es6.array.iterator" : 111
+    }],
+    125 : [function(dataAndEvents, module, deepDataAndEvents) {
+        /**
+         * @return {?}
+         */
+        function none() {
             throw new Error("setTimeout has not been defined");
         }
-        function r() {
+        /**
+         * @return {?}
+         */
+        function start() {
             throw new Error("clearTimeout has not been defined");
         }
-        function i(e) {
-            if (f === setTimeout) return setTimeout(e, 0);
-            if ((f === o || !f) && setTimeout) return f = setTimeout, setTimeout(e, 0);
+        /**
+         * @param {Function} fn
+         * @return {?}
+         */
+        function requestAnimationFrame(fn) {
+            if (display === setTimeout) {
+                return setTimeout(fn, 0);
+            }
+            if ((display === none || !display) && setTimeout) {
+                return display = setTimeout, setTimeout(fn, 0);
+            }
             try {
-                return f(e, 0);
+                return display(fn, 0);
             } catch (t) {
                 try {
-                    return f.call(null, e, 0);
+                    return display.call(null, fn, 0);
                 } catch (t) {
-                    return f.call(this, e, 0);
+                    return display.call(this, fn, 0);
                 }
             }
         }
-        function s(e) {
-            if (d === clearTimeout) return clearTimeout(e);
-            if ((d === r || !d) && clearTimeout) return d = clearTimeout, clearTimeout(e);
+        /**
+         * @param {?} id
+         * @return {?}
+         */
+        function cancelAnimationFrame(id) {
+            if (state === clearTimeout) {
+                return clearTimeout(id);
+            }
+            if ((state === start || !state) && clearTimeout) {
+                return state = clearTimeout, clearTimeout(id);
+            }
             try {
-                return d(e);
+                return state(id);
             } catch (t) {
                 try {
-                    return d.call(null, e);
+                    return state.call(null, id);
                 } catch (t) {
-                    return d.call(this, e);
+                    return state.call(this, id);
                 }
             }
         }
-        function c() {
-            b && g && (b = !1, g.length ? _ = g.concat(_) : h = -1, _.length && a());
+        /**
+         * @return {undefined}
+         */
+        function update() {
+            if (b) {
+                if (received) {
+                    /** @type {boolean} */
+                    b = false;
+                    if (received.length) {
+                        data = received.concat(data);
+                    } else {
+                        /** @type {number} */
+                        index = -1;
+                    }
+                    if (data.length) {
+                        tick();
+                    }
+                }
+            }
         }
-        function a() {
+        /**
+         * @return {undefined}
+         */
+        function tick() {
             if (!b) {
-                var e = i(c);
-                b = !0;
-                for (var t = _.length; t; ) {
-                    for (g = _, _ = []; ++h < t; ) g && g[h].run();
-                    h = -1, t = _.length;
+                var id = requestAnimationFrame(update);
+                /** @type {boolean} */
+                b = true;
+                var length = data.length;
+                for (;length;) {
+                    received = data;
+                    /** @type {Array} */
+                    data = [];
+                    for (;++index < length;) {
+                        if (received) {
+                            received[index].run();
+                        }
+                    }
+                    /** @type {number} */
+                    index = -1;
+                    /** @type {number} */
+                    length = data.length;
                 }
-                g = null, b = !1, s(e);
+                /** @type {null} */
+                received = null;
+                /** @type {boolean} */
+                b = false;
+                cancelAnimationFrame(id);
             }
         }
-        function u(e, t) {
-            this.fun = e, this.array = t;
+        /**
+         * @param {Function} options
+         * @param {Object} array
+         * @return {undefined}
+         */
+        function Animation(options, array) {
+            /** @type {Function} */
+            this.fun = options;
+            /** @type {Object} */
+            this.array = array;
         }
-        function l() {}
-        var f, d, p = t.exports = {};
+        /**
+         * @return {undefined}
+         */
+        function tmp() {
+        }
+        var display;
+        var state;
+        var process = module.exports = {};
         !function() {
             try {
-                f = "function" == typeof setTimeout ? setTimeout : o;
+                /** @type {Function} */
+                display = "function" == typeof setTimeout ? setTimeout : none;
             } catch (e) {
-                f = o;
+                /** @type {function (): ?} */
+                display = none;
             }
             try {
-                d = "function" == typeof clearTimeout ? clearTimeout : r;
+                /** @type {Function} */
+                state = "function" == typeof clearTimeout ? clearTimeout : start;
             } catch (e) {
-                d = r;
+                /** @type {function (): ?} */
+                state = start;
             }
         }();
-        var g, _ = [], b = !1, h = -1;
-        p.nextTick = function(e) {
-            var t = new Array(arguments.length - 1);
-            if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-            _.push(new u(e, t)), 1 !== _.length || b || i(a);
-        }, u.prototype.run = function() {
+        var received;
+        /** @type {Array} */
+        var data = [];
+        /** @type {boolean} */
+        var b = false;
+        /** @type {number} */
+        var index = -1;
+        /**
+         * @param {Function} callback
+         * @return {undefined}
+         */
+        process.nextTick = function(callback) {
+            /** @type {Array} */
+            var x = new Array(arguments.length - 1);
+            if (arguments.length > 1) {
+                /** @type {number} */
+                var i = 1;
+                for (;i < arguments.length;i++) {
+                    x[i - 1] = arguments[i];
+                }
+            }
+            data.push(new Animation(callback, x));
+            if (!(1 !== data.length)) {
+                if (!b) {
+                    requestAnimationFrame(tick);
+                }
+            }
+        };
+        /**
+         * @return {undefined}
+         */
+        Animation.prototype.run = function() {
             this.fun.apply(null, this.array);
-        }, p.title = "browser", p.browser = !0, p.env = {}, p.argv = [], p.version = "", 
-        p.versions = {}, p.on = l, p.addListener = l, p.once = l, p.off = l, p.removeListener = l, 
-        p.removeAllListeners = l, p.emit = l, p.binding = function(e) {
+        };
+        /** @type {string} */
+        process.title = "browser";
+        /** @type {boolean} */
+        process.browser = true;
+        process.env = {};
+        /** @type {Array} */
+        process.argv = [];
+        /** @type {string} */
+        process.version = "";
+        process.versions = {};
+        /** @type {function (): undefined} */
+        process.on = tmp;
+        /** @type {function (): undefined} */
+        process.addListener = tmp;
+        /** @type {function (): undefined} */
+        process.once = tmp;
+        /** @type {function (): undefined} */
+        process.off = tmp;
+        /** @type {function (): undefined} */
+        process.removeListener = tmp;
+        /** @type {function (): undefined} */
+        process.removeAllListeners = tmp;
+        /** @type {function (): undefined} */
+        process.emit = tmp;
+        /**
+         * @param {?} name
+         * @return {?}
+         */
+        process.binding = function(name) {
             throw new Error("process.binding is not supported");
-        }, p.cwd = function() {
+        };
+        /**
+         * @return {?}
+         */
+        process.cwd = function() {
             return "/";
-        }, p.chdir = function(e) {
+        };
+        /**
+         * @param {?} dir
+         * @return {?}
+         */
+        process.chdir = function(dir) {
             throw new Error("process.chdir is not supported");
-        }, p.umask = function() {
+        };
+        /**
+         * @return {?}
+         */
+        process.umask = function() {
             return 0;
         };
-    }, {} ],
-    126: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+    }, {}],
+    126 : [function($, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} type
+         * @return {?}
+         */
+        function select(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
             };
         }
-        function r() {
-            function e(e) {
-                var t = e.detail, n = t.name, o = t.data;
-                i && i[n].postMessage(o);
+        /**
+         * @return {undefined}
+         */
+        function initialize() {
+            /**
+             * @param {Event} event
+             * @return {undefined}
+             */
+            function handler(event) {
+                var message = event.detail;
+                var n = message.name;
+                var parameters = message.data;
+                if (oSpace) {
+                    oSpace[n].postMessage(parameters);
+                }
             }
-            function t() {
-                document.dispatchEvent(new CustomEvent("grammarly:pong")), document.dispatchEvent(new CustomEvent("grammarly:reset"));
+            /**
+             * @return {undefined}
+             */
+            function onTouchEnd() {
+                document.dispatchEvent(new CustomEvent("grammarly:pong"));
+                document.dispatchEvent(new CustomEvent("grammarly:reset"));
             }
-            function n(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            /**
+             * @param {string} msg
+             * @return {?}
+             */
+            function cb(msg) {
+                var r20 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 return document.dispatchEvent(new CustomEvent("grammarly:message", {
-                    detail: (0, a["default"])({
-                        event: e
-                    }, t)
+                    detail : (0, elem["default"])({
+                        event : msg
+                    }, r20)
                 }));
             }
-            function o() {
-                document.removeEventListener("grammarly:action", e), document.removeEventListener("grammarly:ping", t), 
-                document.removeEventListener("grammarly:reset", o), i = null;
+            /**
+             * @return {undefined}
+             */
+            function completed() {
+                document.removeEventListener("grammarly:action", handler);
+                document.removeEventListener("grammarly:ping", onTouchEnd);
+                document.removeEventListener("grammarly:reset", completed);
+                /** @type {null} */
+                oSpace = null;
             }
-            function r(e) {
-                var t = p.runtime.connect({
-                    name: e
+            /**
+             * @param {string} name
+             * @return {?}
+             */
+            function initialize(name) {
+                var self = o.runtime.connect({
+                    name : name
                 });
-                return t.onMessage.addListener(function(t) {
-                    return n("message", {
-                        msg: t,
-                        name: e
+                return self.onMessage.addListener(function(msg) {
+                    return cb("message", {
+                        msg : msg,
+                        name : name
                     });
-                }), t.onDisconnect.addListener(function() {
-                    console.warn("port malfunction " + e);
-                    var t = p.runtime.lastError;
-                    g.proxyPortDisconnected(e, t && t.message || "port malfunction: " + e), o(), document.dispatchEvent(new CustomEvent("grammarly:error", {
-                        detail: {
-                            event: "disconnect",
-                            name: e
+                }), self.onDisconnect.addListener(function() {
+                    console.warn("port malfunction " + name);
+                    var err = o.runtime.lastError;
+                    rparentsprev.proxyPortDisconnected(name, err && err.message || "port malfunction: " + name);
+                    completed();
+                    document.dispatchEvent(new CustomEvent("grammarly:error", {
+                        detail : {
+                            event : "disconnect",
+                            name : name
                         }
                     }));
-                }), t;
+                }), self;
             }
-            var i = [ d.ports.bridge, d.ports.background, d.ports.broadcast ].reduce(function(e, t) {
-                return (0, a["default"])({}, e, (0, s["default"])({}, t, r(t)));
+            var oSpace = [self.ports.bridge, self.ports.background, self.ports.broadcast].reduce(function(deepDataAndEvents, node) {
+                return(0, elem["default"])({}, deepDataAndEvents, (0, keys["default"])({}, node, initialize(node)));
             }, {});
-            document.addEventListener("grammarly:action", e), document.addEventListener("grammarly:ping", t), 
-            document.dispatchEvent(new CustomEvent("grammarly:proxyports")), document.addEventListener("grammarly:proxyports", o), 
-            g.proxyInit();
+            document.addEventListener("grammarly:action", handler);
+            document.addEventListener("grammarly:ping", onTouchEnd);
+            document.dispatchEvent(new CustomEvent("grammarly:proxyports"));
+            document.addEventListener("grammarly:proxyports", completed);
+            rparentsprev.proxyInit();
         }
-        var i = e("babel-runtime/helpers/defineProperty"), s = o(i), c = e("babel-runtime/core-js/object/assign"), a = o(c);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var obj = $("babel-runtime/helpers/defineProperty");
+        var keys = select(obj);
+        var selector = $("babel-runtime/core-js/object/assign");
+        var elem = select(selector);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var u = e("config");
-        u.initGlobal("chrome", "cs");
-        var l = e("lib/tracking/felogPixel"), f = e("lib/tracking/telemetry"), d = e("extension-api/interface"), p = window.chrome || window.firefox, g = new f.Telemetry(l.sendEventPixel, function() {}, function() {}, function() {});
-        "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", r, !1) : r();
-    }, {
-        "babel-runtime/core-js/object/assign": 5,
-        "babel-runtime/helpers/defineProperty": 16,
-        config: 130,
-        "extension-api/interface": 135,
-        "lib/tracking/felogPixel": 138,
-        "lib/tracking/telemetry": 139
-    } ],
-    127: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var sandbox = $("config");
+        sandbox.initGlobal("chrome", "cs");
+        var emptyJ = $("lib/tracking/felogPixel");
+        var $spy = $("lib/tracking/telemetry");
+        var self = $("extension-api/interface");
+        var o = window.chrome || window.firefox;
+        var rparentsprev = new $spy.Telemetry(emptyJ.sendEventPixel, function() {
+        }, function() {
+        }, function() {
         });
-        var o, r = e("stdlib"), i = e("./url"), s = e("./services");
-        !function(e) {
-            function t(e, t, c) {
-                var a = "prod" === t ? "https://f-log-extension.grammarly.io" : "qa" === t || "dev" === t ? "https://127.0.0.1:8000" : r.assertNever(t), u = "prod" === t ? o : "qa" === t || "dev" === t ? "qagr.io" : r.assertNever(t);
-                return {
-                    url: i.UrlConfig.create(o, a, c),
-                    gnar: s.GnarConfig.create(e, u),
-                    felog: s.FelogConfig.create(e),
-                    extensionId: n
-                };
-            }
-            var n = "87677a2c52b84ad3a151a4a72f5bd3c4", o = "grammarly.com";
-            e.create = t;
-        }(o = n.AppConfig || (n.AppConfig = {}));
-    }, {
-        "./services": 132,
-        "./url": 134,
-        stdlib: 142
-    } ],
-    128: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        });
-        var o, r = e("stdlib");
-        !function(e) {
-            function t(e, t, n, o, r, i, s) {
-                var c = void 0 !== i && void 0 !== s ? i : "UNVERSIONED", a = e + "." + t + "." + n, u = [ "prod" !== r ? r : null, c !== o ? c : null ].filter(function(e) {
-                    return !!e;
-                }).join(".");
-                return {
-                    version: a,
-                    fullVersion: a + "-" + [ o, u ].filter(function(e) {
-                        return "" !== e;
-                    }).join("/"),
-                    commitHash: s,
-                    gitBranch: i
-                };
-            }
-            function n(e, t, n) {
-                try {
-                    switch (e) {
-                      case "safari":
-                        switch (t) {
-                          case "bg":
-                          case "popup":
-                            return n.safari.extension.displayVersion;
-
-                          default:
-                            return;
-                        }
-
-                      case "chrome":
-                        return n.chrome.runtime.getManifest().version;
-
-                      case "firefox":
-                        return n.firefox.runtime.getManifest().version;
-
-                      case "edge":
-                        return n.edge.runtime.getManifest().version;
-
-                      default:
-                        return r.assertNever(e);
-                    }
-                } catch (o) {
-                    return void console.error("Could not get extension version from manifest", o);
-                }
-            }
-            e.create = t, e.getManifestVersion = n;
-        }(o = n.BuildInfo || (n.BuildInfo = {}));
-    }, {
-        stdlib: 142
-    } ],
-    129: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        });
-        var o, r = e("stdlib");
-        !function(e) {
-            function t(e) {
-                return r.optionalStringUnion([ "chrome", "safari", "firefox", "edge" ], e);
-            }
-            function n(e) {
-                return e.chrome && /google/i.test(e.navigator.vendor) ? "chrome" : e.navigator.userAgent.indexOf("Firefox") !== -1 ? "firefox" : /^((?!chrome).)*safari/i.test(e.navigator.userAgent) ? "safari" : "Netscape" === e.navigator.appName && e.navigator.appVersion.indexOf("Edge") > -1 ? "edge" : void 0;
-            }
-            e.create = t, e.detect = n;
-        }(o = n.TargetBrowser || (n.TargetBrowser = {}));
-        var i;
-        !function(e) {
-            function t(e) {
-                return r.optionalStringUnion([ "dev", "prod", "qa" ], e);
-            }
-            e.create = t;
-        }(i = n.TargetEnv || (n.TargetEnv = {}));
-        var s;
-        !function(e) {
-            function t(e) {
-                return r.optionalStringUnion([ "bg", "cs", "popup" ], e);
-            }
-            function n(e, t) {
-                function n() {
-                    try {
-                        return e.safari.extension.globalPage.contentWindow !== e;
-                    } catch (t) {
-                        return !1;
-                    }
-                }
-                var o = !!e.IS_BG, r = "safari" === t ? n() : !!e.IS_POPUP;
-                return o ? "bg" : r ? "popup" : "cs";
-            }
-            e.create = t, e.detect = n;
-        }(s = n.TargetContext || (n.TargetContext = {}));
-        var c;
-        !function(e) {
-            function t(e, t, n) {
-                return {
-                    browser: e,
-                    env: t,
-                    context: n
-                };
-            }
-            e.create = t;
-        }(c = n.BundleInfo || (n.BundleInfo = {}));
-    }, {
-        stdlib: 142
-    } ],
-    130: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            for (var t in e) n.hasOwnProperty(t) || (n[t] = e[t]);
+        if ("loading" === document.readyState) {
+            document.addEventListener("DOMContentLoaded", initialize, false);
+        } else {
+            initialize();
         }
-        function r() {
-            return u.get();
-        }
-        function i(e, t, n) {
-            u.init(s.MainConfig.create(e, t, n || s.ProcessEnv.fromBrowserify())), window.GR_CFG = u.get();
-        }
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        }), o(e("./app")), o(e("./build")), o(e("./bundle")), o(e("./services")), o(e("./system")), 
-        o(e("./url")), o(e("./mainConfig"));
-        var s = e("./mainConfig"), c = e("./bundle"), a = e("stdlib"), u = new a.Global(function() {
-            console.warn("Global config not initialized -- using fall back value.");
-            var e = a.assertNonNull(c.TargetBrowser.detect(window), "runtime-detected browser type"), t = s.MainConfig.create(e, c.TargetContext.detect(window, e), s.ProcessEnv.fromBrowserify());
-            return window.GR_CFG = t, t;
-        });
-        n.getGlobal = r, n.initGlobal = i;
     }, {
-        "./app": 127,
-        "./build": 128,
-        "./bundle": 129,
-        "./mainConfig": 131,
-        "./services": 132,
-        "./system": 133,
-        "./url": 134,
-        stdlib: 142
-    } ],
-    131: [ function(e, t, n) {
-        (function(t) {
-            "use strict";
-            function o(e) {
-                return e && e.__esModule ? e : {
-                    "default": e
-                };
-            }
-            var r = e("babel-runtime/helpers/slicedToArray"), i = o(r);
-            Object.defineProperty(n, "__esModule", {
-                value: !0
-            });
-            var s, c = e("./app"), a = e("./build"), u = e("./system"), l = e("./bundle"), f = e("stdlib");
-            !function(e) {
-                function n(e, t, n, o, r, i, s) {
-                    return {
-                        env: e,
-                        major_number: t,
-                        build_number: n,
-                        release_number: o,
-                        git_branch: r,
-                        git_commit: i,
-                        popup_url: s
-                    };
-                }
-                function o() {
-                    return n("prod", "14", "794", "1083", t.env.GIT_BRANCH, "9a2e211e63c063be2ea48c13d2448ef885669f14", "https://s3.amazonaws.com/grammarly_neweditor/index/1.0.87-browserplugin_2.0/popup.html");
-                }
-                e.create = n, e.fromBrowserify = o;
-            }(s = n.ProcessEnv || (n.ProcessEnv = {}));
-            var d;
-            !function(e) {
-                function t(e, t, n) {
-                    var o = void 0;
-                    if (n.env) {
-                        var r = l.TargetEnv.create(n.env);
-                        void 0 !== r ? o = r : (console.warn("*** process.env.ENV is invalid ('" + n.env + "'), assuming 'prod' env"), 
-                        o = "prod");
-                    } else console.warn("*** process.env.ENV is not defined, assuming 'prod' env"), 
-                    o = "prod";
-                    var s = f.assertNonNull(o, "ENV env var OR a fallback value"), d = [ n.major_number, n.build_number, n.release_number ].map(f.optionalIntString), p = void 0;
-                    if (3 === d.length && d.every(function(e) {
-                        return void 0 !== e;
-                    })) p = d; else {
-                        var g = (a.BuildInfo.getManifestVersion(e, t, window) || "").split(".").map(f.optionalIntString);
-                        p = 3 === g.length && g.every(function(e) {
-                            return void 0 !== e;
-                        }) ? g : [ 4, 0, 2 ];
-                    }
-                    var _ = p, b = (0, i["default"])(_, 3), h = b[0], v = b[1], m = b[2];
-                    return {
-                        buildInfo: a.BuildInfo.create(h, v, m, e, s, n.git_branch, n.git_commit),
-                        bundleInfo: l.BundleInfo.create(e, s, t),
-                        appConfig: c.AppConfig.create(e, s, n.popup_url),
-                        systemInfo: u.SystemInfo.create(e, window)
-                    };
-                }
-                e.create = t;
-            }(d = n.MainConfig || (n.MainConfig = {}));
-        }).call(this, e("_process"));
-    }, {
-        "./app": 127,
-        "./build": 128,
-        "./bundle": 129,
-        "./system": 133,
-        _process: 125,
-        "babel-runtime/helpers/slicedToArray": 19,
-        stdlib: 142
-    } ],
-    132: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        });
-        var o, r = e("stdlib");
-        !function(e) {
-            function t(e, t) {
-                return {
-                    appName: r.assertNonNull(n[e], "gnar app name"),
-                    url: "https://gnar." + t,
-                    domain: "." + t
-                };
-            }
-            var n = {
-                chrome: "chromeExt",
-                firefox: "firefoxExt",
-                safari: "safariExt",
-                edge: "edgeExt"
-            };
-            e.create = t;
-        }(o = n.GnarConfig || (n.GnarConfig = {}));
-        var i;
-        !function(e) {
-            function t(e) {
-                return {
-                    appName: r.assertNonNull(n[e], "felog app name")
-                };
-            }
-            var n = {
-                chrome: "extensionChrome",
-                firefox: "extensionFirefox",
-                safari: "extensionSafari",
-                edge: "extensionEdge"
-            };
-            e.create = t;
-        }(i = n.FelogConfig || (n.FelogConfig = {}));
-    }, {
-        stdlib: 142
-    } ],
-    133: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        });
-        var o, r = e("./bundle"), i = e("stdlib");
-        !function(e) {
-            function t(e, t) {
-                var n = r.TargetBrowser.detect(t) || "other";
-                return {
-                    type: n,
-                    isWE: "firefox" === e ? i.try_(function() {
-                        return !!firefox.runtime;
-                    }, function(e) {
-                        return !1;
-                    }) : "chrome" === e || "edge" === e
-                };
-            }
-            e.create = t;
-        }(o = n.BrowserInfo || (n.BrowserInfo = {}));
-        var s;
-        !function(e) {
-            function t(e) {
-                return {
-                    isWindows: e.navigator.appVersion.indexOf("Win") !== -1
-                };
-            }
-            e.create = t;
-        }(s = n.OsInfo || (n.OsInfo = {}));
-        var c;
-        !function(e) {
-            function t(e, t) {
-                return {
-                    browser: o.create(e, t),
-                    os: s.create(t)
-                };
-            }
-            e.create = t;
-        }(c = n.SystemInfo || (n.SystemInfo = {}));
-    }, {
-        "./bundle": 129,
-        stdlib: 142
-    } ],
-    134: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        "babel-runtime/core-js/object/assign" : 5,
+        "babel-runtime/helpers/defineProperty" : 16,
+        config : 130,
+        "extension-api/interface" : 135,
+        "lib/tracking/felogPixel" : 138,
+        "lib/tracking/telemetry" : 139
+    }],
+    127 : [function(require, dataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
         var o;
-        !function(e) {
-            function t(e, t, n) {
-                var o = "https://www." + e, r = "https://data." + e, i = "https://app." + e, s = "https://auth." + e + "/v3", c = "https://emailfeedback." + e;
-                return {
-                    app: i,
-                    appPersonalDictionary: i + "/profile/dictionary",
-                    capi: "wss://capi." + e + "/freews",
-                    dapiMimic: r + "/api/mimic",
-                    dapiProps: r + "/api/props",
-                    editorDictionary: i + "/profile/dictionary",
-                    dictionary: "https://capi." + e + "/api/defs",
-                    docs: i + "/docs",
-                    docsApi: "https://dox." + e + "/documents",
-                    authCreatePage: s + "/redirect-anonymous?location=" + o + "/after_install_page",
-                    userOrAnonymous: s + "/user/oranonymous",
-                    authSignin: s + "/login",
-                    authSignup: s + "/signup",
-                    signin: o + "/signin",
-                    signup: o + "/signup",
-                    resetPassword: o + "/resetpassword",
-                    saveEmailFeedback: c + "/api/feedback/",
-                    newFelog: t,
-                    referral: o + "/referral?page=extension",
-                    welcomeC: o + "/extension-success",
-                    upgrade: o + "/upgrade",
-                    uninstall: o + "/extension-uninstall",
-                    terms: o + "/terms",
-                    policy: o + "/privacy-policy",
-                    pageConfigUrl: "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
-                    popupUrl: n,
-                    grammarlyDomain: e
+        var nodes = require("stdlib");
+        var config = require("./url");
+        var module = require("./services");
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @param {string} key
+             * @param {?} opt_attributes
+             * @return {?}
+             */
+            function create(name, key, opt_attributes) {
+                var ast = "prod" === key ? "https://f-log-extension.grammarly.io" : "qa" === key || "dev" === key ? "https://127.0.0.1:8000" : nodes.assertNever(key);
+                var camelKey = "prod" === key ? optgroup : "qa" === key || "dev" === key ? "qagr.io" : nodes.assertNever(key);
+                return{
+                    url : config.UrlConfig.create(optgroup, ast, opt_attributes),
+                    gnar : module.GnarConfig.create(name, camelKey),
+                    felog : module.FelogConfig.create(name),
+                    extensionId : extensionId
                 };
             }
-            e.create = t;
-        }(o = n.UrlConfig || (n.UrlConfig = {}));
-    }, {} ],
-    135: [ function(e, t, n) {
-        "use strict";
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        }), n.ports = {
-            bridge: "bridge",
-            background: "message:to-priv",
-            broadcast: "message:to-non-priv"
+            /** @type {string} */
+            var extensionId = "87677a2c52b84ad3a151a4a72f5bd3c4";
+            /** @type {string} */
+            var optgroup = "grammarly.com";
+            /** @type {function (Object, string, ?): ?} */
+            exports.create = create;
+        }(o = optgroup.AppConfig || (optgroup.AppConfig = {}));
+    }, {
+        "./services" : 132,
+        "./url" : 134,
+        stdlib : 142
+    }],
+    128 : [function(format, dataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var o;
+        var f = format("stdlib");
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @param {?} opt_attributes
+             * @param {string} index
+             * @param {string} code
+             * @param {string} type
+             * @param {string} id
+             * @return {?}
+             */
+            function setup(name, key, opt_attributes, index, code, type, id) {
+                var num = void 0 !== type && void 0 !== id ? type : "UNVERSIONED";
+                /** @type {string} */
+                var l = name + "." + key + "." + opt_attributes;
+                /** @type {string} */
+                var min = ["prod" !== code ? code : null, num !== index ? num : null].filter(function(dataAndEvents) {
+                    return!!dataAndEvents;
+                }).join(".");
+                return{
+                    version : l,
+                    fullVersion : l + "-" + [index, min].filter(function(g) {
+                        return "" !== g;
+                    }).join("/"),
+                    commitHash : id,
+                    gitBranch : type
+                };
+            }
+            /**
+             * @param {string} o
+             * @param {Object} opt_attributes
+             * @param {Object} browser
+             * @return {?}
+             */
+            function detectBrowser(o, opt_attributes, browser) {
+                try {
+                    switch(o) {
+                        case "safari":
+                            switch(opt_attributes) {
+                                case "bg":
+                                    ;
+                                case "popup":
+                                    return browser.safari.extension.displayVersion;
+                                default:
+                                    return;
+                            }
+                            ;
+                        case "chrome":
+                            return browser.chrome.runtime.getManifest().version;
+                        case "firefox":
+                            return browser.firefox.runtime.getManifest().version;
+                        case "edge":
+                            return browser.edge.runtime.getManifest().version;
+                        default:
+                            return f.assertNever(o);
+                    }
+                } catch (m) {
+                    return void console.error("Could not get extension version from manifest", m);
+                }
+            }
+            /** @type {function (Object, Object, ?, string, string, string, string): ?} */
+            exports.create = setup;
+            /** @type {function (string, Object, Object): ?} */
+            exports.getManifestVersion = detectBrowser;
+        }(o = optgroup.BuildInfo || (optgroup.BuildInfo = {}));
+    }, {
+        stdlib : 142
+    }],
+    129 : [function($sanitize, dataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var o;
+        var data_priv = $sanitize("stdlib");
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function fn(name) {
+                return data_priv.optionalStringUnion(["chrome", "safari", "firefox", "edge"], name);
+            }
+            /**
+             * @param {Object} w
+             * @return {?}
+             */
+            function detect(w) {
+                return w.chrome && /google/i.test(w.navigator.vendor) ? "chrome" : w.navigator.userAgent.indexOf("Firefox") !== -1 ? "firefox" : /^((?!chrome).)*safari/i.test(w.navigator.userAgent) ? "safari" : "Netscape" === w.navigator.appName && w.navigator.appVersion.indexOf("Edge") > -1 ? "edge" : void 0;
+            }
+            /** @type {function (Object): ?} */
+            exports.create = fn;
+            /** @type {function (Object): ?} */
+            exports.detect = detect;
+        }(o = optgroup.TargetBrowser || (optgroup.TargetBrowser = {}));
+        var i;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function create(name) {
+                return data_priv.optionalStringUnion(["dev", "prod", "qa"], name);
+            }
+            /** @type {function (Object): ?} */
+            exports.create = create;
+        }(i = optgroup.TargetEnv || (optgroup.TargetEnv = {}));
+        var s;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function create(name) {
+                return data_priv.optionalStringUnion(["bg", "cs", "popup"], name);
+            }
+            /**
+             * @param {Object} obj
+             * @param {string} name
+             * @return {?}
+             */
+            function rename(obj, name) {
+                /**
+                 * @return {?}
+                 */
+                function init() {
+                    try {
+                        return obj.safari.extension.globalPage.contentWindow !== obj;
+                    } catch (t) {
+                        return false;
+                    }
+                }
+                /** @type {boolean} */
+                var bulk = !!obj.IS_BG;
+                var length = "safari" === name ? init() : !!obj.IS_POPUP;
+                return bulk ? "bg" : length ? "popup" : "cs";
+            }
+            /** @type {function (Object): ?} */
+            exports.create = create;
+            /** @type {function (Object, string): ?} */
+            exports.detect = rename;
+        }(s = optgroup.TargetContext || (optgroup.TargetContext = {}));
+        var c;
+        !function(d) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @param {?} opt_attributes
+             * @return {?}
+             */
+            function data(name, key, opt_attributes) {
+                return{
+                    browser : name,
+                    env : key,
+                    context : opt_attributes
+                };
+            }
+            /** @type {function (Object, Object, ?): ?} */
+            d.create = data;
+        }(c = optgroup.BundleInfo || (optgroup.BundleInfo = {}));
+    }, {
+        stdlib : 142
+    }],
+    130 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} iterable
+         * @return {undefined}
+         */
+        function enumerate(iterable) {
+            var key;
+            for (key in iterable) {
+                if (!optgroup.hasOwnProperty(key)) {
+                    optgroup[key] = iterable[key];
+                }
+            }
+        }
+        /**
+         * @return {?}
+         */
+        function match() {
+            return proto.get();
+        }
+        /**
+         * @param {Object} optgroup
+         * @param {Object} ast
+         * @param {(Object|boolean|number|string)} last
+         * @return {undefined}
+         */
+        function process(optgroup, ast, last) {
+            proto.init(config.MainConfig.create(optgroup, ast, last || config.ProcessEnv.fromBrowserify()));
+            window.GR_CFG = proto.get();
+        }
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        enumerate(require("./app"));
+        enumerate(require("./build"));
+        enumerate(require("./bundle"));
+        enumerate(require("./services"));
+        enumerate(require("./system"));
+        enumerate(require("./url"));
+        enumerate(require("./mainConfig"));
+        var config = require("./mainConfig");
+        var drop = require("./bundle");
+        var header = require("stdlib");
+        var proto = new header.Global(function() {
+            console.warn("Global config not initialized -- using fall back value.");
+            var optgroup = header.assertNonNull(drop.TargetBrowser.detect(window), "runtime-detected browser type");
+            var _$ = config.MainConfig.create(optgroup, drop.TargetContext.detect(window, optgroup), config.ProcessEnv.fromBrowserify());
+            return window.GR_CFG = _$, _$;
+        });
+        /** @type {function (): ?} */
+        optgroup.getGlobal = match;
+        /** @type {function (Object, Object, (Object|boolean|number|string)): undefined} */
+        optgroup.initGlobal = process;
+    }, {
+        "./app" : 127,
+        "./build" : 128,
+        "./bundle" : 129,
+        "./mainConfig" : 131,
+        "./services" : 132,
+        "./system" : 133,
+        "./url" : 134,
+        stdlib : 142
+    }],
+    131 : [function($, dataAndEvents, optgroup) {
+        (function(p) {
+            /**
+             * @param {Object} value
+             * @return {?}
+             */
+            function h(value) {
+                return value && value.__esModule ? value : {
+                    "default" : value
+                };
+            }
+            var selector = $("babel-runtime/helpers/slicedToArray");
+            var elem = h(selector);
+            Object.defineProperty(optgroup, "__esModule", {
+                value : true
+            });
+            var s;
+            var $window = $("./app");
+            var book = $("./build");
+            var game = $("./system");
+            var article = $("./bundle");
+            var block = $("stdlib");
+            !function(exports) {
+                /**
+                 * @param {Object} name
+                 * @param {Object} key
+                 * @param {?} opt_attributes
+                 * @param {string} property
+                 * @param {?} c
+                 * @param {string} target
+                 * @param {string} attr
+                 * @return {?}
+                 */
+                function has(name, key, opt_attributes, property, c, target, attr) {
+                    return{
+                        env : name,
+                        major_number : key,
+                        build_number : opt_attributes,
+                        release_number : property,
+                        git_branch : c,
+                        git_commit : target,
+                        popup_url : attr
+                    };
+                }
+                /**
+                 * @return {?}
+                 */
+                function filter() {
+                    return has("prod", "14", "794", "1083", p.env.GIT_BRANCH, "9a2e211e63c063be2ea48c13d2448ef885669f14", "https://s3.amazonaws.com/grammarly_neweditor/index/1.0.87-browserplugin_2.0/popup.html");
+                }
+                /** @type {function (Object, Object, ?, string, ?, string, string): ?} */
+                exports.create = has;
+                /** @type {function (): ?} */
+                exports.fromBrowserify = filter;
+            }(s = optgroup.ProcessEnv || (optgroup.ProcessEnv = {}));
+            var d;
+            !function(exports) {
+                /**
+                 * @param {Object} name
+                 * @param {Object} attributes
+                 * @param {?} opt_attributes
+                 * @return {?}
+                 */
+                function setup(name, attributes, opt_attributes) {
+                    var node = void 0;
+                    if (opt_attributes.env) {
+                        var fragment = article.TargetEnv.create(opt_attributes.env);
+                        if (void 0 !== fragment) {
+                            node = fragment;
+                        } else {
+                            console.warn("*** process.env.ENV is invalid ('" + opt_attributes.env + "'), assuming 'prod' env");
+                            /** @type {string} */
+                            node = "prod";
+                        }
+                    } else {
+                        console.warn("*** process.env.ENV is not defined, assuming 'prod' env");
+                        /** @type {string} */
+                        node = "prod";
+                    }
+                    var ast = block.assertNonNull(node, "ENV env var OR a fallback value");
+                    /** @type {Array.<?>} */
+                    var e = [opt_attributes.major_number, opt_attributes.build_number, opt_attributes.release_number].map(block.optionalIntString);
+                    var event = void 0;
+                    if (3 === e.length && e.every(function(dataAndEvents) {
+                            return void 0 !== dataAndEvents;
+                        })) {
+                        /** @type {Array.<?>} */
+                        event = e;
+                    } else {
+                        var tasks = (book.BuildInfo.getManifestVersion(name, attributes, window) || "").split(".").map(block.optionalIntString);
+                        event = 3 === tasks.length && tasks.every(function(dataAndEvents) {
+                            return void 0 !== dataAndEvents;
+                        }) ? tasks : [4, 0, 2];
+                    }
+                    var originalEvent = event;
+                    var ranges = (0, elem["default"])(originalEvent, 3);
+                    var optgroup = ranges[0];
+                    var camelKey = ranges[1];
+                    var gl = ranges[2];
+                    return{
+                        buildInfo : book.BuildInfo.create(optgroup, camelKey, gl, name, ast, opt_attributes.git_branch, opt_attributes.git_commit),
+                        bundleInfo : article.BundleInfo.create(name, ast, attributes),
+                        appConfig : $window.AppConfig.create(name, ast, opt_attributes.popup_url),
+                        systemInfo : game.SystemInfo.create(name, window)
+                    };
+                }
+                /** @type {function (Object, Object, ?): ?} */
+                exports.create = setup;
+            }(d = optgroup.MainConfig || (optgroup.MainConfig = {}));
+        }).call(this, $("_process"));
+    }, {
+        "./app" : 127,
+        "./build" : 128,
+        "./bundle" : 129,
+        "./system" : 133,
+        _process : 125,
+        "babel-runtime/helpers/slicedToArray" : 19,
+        stdlib : 142
+    }],
+    132 : [function(require, dataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var o;
+        var assert = require("stdlib");
+        !function(d) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @return {?}
+             */
+            function data(name, key) {
+                return{
+                    appName : assert.assertNonNull(browser[name], "gnar app name"),
+                    url : "https://gnar." + key,
+                    domain : "." + key
+                };
+            }
+            var browser = {
+                chrome : "chromeExt",
+                firefox : "firefoxExt",
+                safari : "safariExt",
+                edge : "edgeExt"
+            };
+            /** @type {function (Object, Object): ?} */
+            d.create = data;
+        }(o = optgroup.GnarConfig || (optgroup.GnarConfig = {}));
+        var i;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function create(name) {
+                return{
+                    appName : assert.assertNonNull(browser[name], "felog app name")
+                };
+            }
+            var browser = {
+                chrome : "extensionChrome",
+                firefox : "extensionFirefox",
+                safari : "extensionSafari",
+                edge : "extensionEdge"
+            };
+            /** @type {function (Object): ?} */
+            exports.create = create;
+        }(i = optgroup.FelogConfig || (optgroup.FelogConfig = {}));
+    }, {
+        stdlib : 142
+    }],
+    133 : [function(require, dataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var Class;
+        var drop = require("./bundle");
+        var Block = require("stdlib");
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @return {?}
+             */
+            function get(name, key) {
+                var paramType = drop.TargetBrowser.detect(key) || "other";
+                return{
+                    type : paramType,
+                    isWE : "firefox" === name ? Block.try_(function() {
+                        return!!firefox.runtime;
+                    }, function(dataAndEvents) {
+                        return false;
+                    }) : "chrome" === name || "edge" === name
+                };
+            }
+            /** @type {function (Object, Object): ?} */
+            exports.create = get;
+        }(Class = optgroup.BrowserInfo || (optgroup.BrowserInfo = {}));
+        var keys;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function create(name) {
+                return{
+                    isWindows : name.navigator.appVersion.indexOf("Win") !== -1
+                };
+            }
+            /** @type {function (Object): ?} */
+            exports.create = create;
+        }(keys = optgroup.OsInfo || (optgroup.OsInfo = {}));
+        var c;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @return {?}
+             */
+            function create(name, key) {
+                return{
+                    browser : Class.create(name, key),
+                    os : keys.create(key)
+                };
+            }
+            /** @type {function (Object, Object): ?} */
+            exports.create = create;
+        }(c = optgroup.SystemInfo || (optgroup.SystemInfo = {}));
+    }, {
+        "./bundle" : 129,
+        stdlib : 142
+    }],
+    134 : [function(dataAndEvents, deepDataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var o;
+        !function(exports) {
+            /**
+             * @param {Object} name
+             * @param {Object} key
+             * @param {?} opt_attributes
+             * @return {?}
+             */
+            function init(name, key, opt_attributes) {
+                /** @type {string} */
+                var authPath = "https://www." + name;
+                /** @type {string} */
+                var propname = "https://data." + name;
+                /** @type {string} */
+                var rootPath = "https://app." + name;
+                /** @type {string} */
+                var appPathRoute = "https://auth." + name + "/v3";
+                /** @type {string} */
+                var newPath = "https://emailfeedback." + name;
+                return{
+                    app : rootPath,
+                    appPersonalDictionary : rootPath + "/profile/dictionary",
+                    capi : "wss://capi." + name + "/freews",
+                    dapiMimic : propname + "/api/mimic",
+                    dapiProps : propname + "/api/props",
+                    editorDictionary : rootPath + "/profile/dictionary",
+                    dictionary : "https://capi." + name + "/api/defs",
+                    docs : rootPath + "/docs",
+                    docsApi : "https://dox." + name + "/documents",
+                    authCreatePage : appPathRoute + "/redirect-anonymous?location=" + authPath + "/after_install_page",
+                    userOrAnonymous : appPathRoute + "/user/oranonymous",
+                    authSignin : appPathRoute + "/login",
+                    authSignup : appPathRoute + "/signup",
+                    signin : authPath + "/signin",
+                    signup : authPath + "/signup",
+                    resetPassword : authPath + "/resetpassword",
+                    saveEmailFeedback : newPath + "/api/feedback/",
+                    newFelog : key,
+                    referral : authPath + "/referral?page=extension",
+                    welcomeC : authPath + "/extension-success",
+                    upgrade : authPath + "/upgrade",
+                    uninstall : authPath + "/extension-uninstall",
+                    terms : authPath + "/terms",
+                    policy : authPath + "/privacy-policy",
+                    pageConfigUrl : "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
+                    popupUrl : opt_attributes,
+                    grammarlyDomain : name
+                };
+            }
+            /** @type {function (Object, Object, ?): ?} */
+            exports.create = init;
+        }(o = optgroup.UrlConfig || (optgroup.UrlConfig = {}));
+    }, {}],
+    135 : [function(dataAndEvents, deepDataAndEvents, optgroup) {
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        optgroup.ports = {
+            bridge : "bridge",
+            background : "message:to-priv",
+            broadcast : "message:to-non-priv"
         };
-    }, {} ],
-    136: [ function(e, t, n) {
-        "use strict";
-        function o() {
-            return !!window.__extensionTestsMode;
+    }, {}],
+    136 : [function(Application, dataAndEvents, optgroup) {
+        /**
+         * @return {?}
+         */
+        function isTestsMode() {
+            return!!window.__extensionTestsMode;
         }
-        function r() {
-            return b.appConfig.extensionId;
+        /**
+         * @return {?}
+         */
+        function dispatcher() {
+            return self.appConfig.extensionId;
         }
-        function i() {
-            return "firefox" === b.bundleInfo.browser;
+        /**
+         * @return {?}
+         */
+        function getMaxSupportedCssHeight() {
+            return "firefox" === self.bundleInfo.browser;
         }
-        function s() {
-            return "chrome" === b.bundleInfo.browser;
+        /**
+         * @return {?}
+         */
+        function handler() {
+            return "chrome" === self.bundleInfo.browser;
         }
+        /**
+         * @return {?}
+         */
         function c() {
-            return "safari" === b.bundleInfo.browser;
+            return "safari" === self.bundleInfo.browser;
         }
-        function a() {
-            return "edge" === b.bundleInfo.browser;
+        /**
+         * @return {?}
+         */
+        function dispose() {
+            return "edge" === self.bundleInfo.browser;
         }
-        function u() {
-            return b.systemInfo.os.isWindows;
+        /**
+         * @return {?}
+         */
+        function setupScroller() {
+            return self.systemInfo.os.isWindows;
         }
-        function l() {
-            return "bg" === b.bundleInfo.context;
+        /**
+         * @return {?}
+         */
+        function fn() {
+            return "bg" === self.bundleInfo.context;
         }
-        function f() {
-            return "popup" === b.bundleInfo.context;
+        /**
+         * @return {?}
+         */
+        function init() {
+            return "popup" === self.bundleInfo.context;
         }
-        function d() {
-            return l() || f();
+        /**
+         * @return {?}
+         */
+        function runTest() {
+            return fn() || init();
         }
-        function p() {
-            return b.bundleInfo.browser;
+        /**
+         * @return {?}
+         */
+        function browser() {
+            return self.bundleInfo.browser;
         }
-        function g() {
-            return b.buildInfo.version;
+        /**
+         * @return {?}
+         */
+        function getVersion() {
+            return self.buildInfo.version;
         }
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var _ = e("config"), b = _.getGlobal();
-        n.isTestsMode = o, n.getUuid = r, n.isFF = i, n.isChrome = s, n.isSafari = c, n.isEdge = a, 
-        n.isWindows = u, n.isBg = l, n.isPopup = f, n.isBgOrPopup = d, n.getBrowser = p, 
-        n.getVersion = g, n.ENV = b.bundleInfo.env, n.URLS = b.appConfig.url, n.appName = b.appConfig.felog.appName, 
-        n.gnarAppName = b.appConfig.gnar.appName, n.GRAMMARLY_DOMAIN = b.appConfig.url.grammarlyDomain;
+        var sandbox = Application("config");
+        var self = sandbox.getGlobal();
+        /** @type {function (): ?} */
+        optgroup.isTestsMode = isTestsMode;
+        /** @type {function (): ?} */
+        optgroup.getUuid = dispatcher;
+        /** @type {function (): ?} */
+        optgroup.isFF = getMaxSupportedCssHeight;
+        /** @type {function (): ?} */
+        optgroup.isChrome = handler;
+        /** @type {function (): ?} */
+        optgroup.isSafari = c;
+        /** @type {function (): ?} */
+        optgroup.isEdge = dispose;
+        /** @type {function (): ?} */
+        optgroup.isWindows = setupScroller;
+        /** @type {function (): ?} */
+        optgroup.isBg = fn;
+        /** @type {function (): ?} */
+        optgroup.isPopup = init;
+        /** @type {function (): ?} */
+        optgroup.isBgOrPopup = runTest;
+        /** @type {function (): ?} */
+        optgroup.getBrowser = browser;
+        /** @type {function (): ?} */
+        optgroup.getVersion = getVersion;
+        optgroup.ENV = self.bundleInfo.env;
+        optgroup.URLS = self.appConfig.url;
+        optgroup.appName = self.appConfig.felog.appName;
+        optgroup.gnarAppName = self.appConfig.gnar.appName;
+        optgroup.GRAMMARLY_DOMAIN = self.appConfig.url.grammarlyDomain;
     }, {
-        config: 130
-    } ],
-    137: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        config : 130
+    }],
+    137 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function isUndefinedOrNull(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        function r(e, t, n, o, r, i, s, u, l) {
-            var f = {
-                message: i,
-                logger: r,
-                level: a.toFelogString(s),
-                application: e,
-                version: t,
-                userId: l && l.userId,
-                containerId: l && l.containerId,
-                env: n
+        /**
+         * @param {?} opt_noCache
+         * @param {string} service
+         * @param {Object} opt_headers
+         * @param {string} url
+         * @param {Object} var_args
+         * @param {string} output
+         * @param {string} serviceName
+         * @param {Object} data
+         * @param {Object} config
+         * @return {?}
+         */
+        function send(opt_noCache, service, opt_headers, url, var_args, output, serviceName, data, config) {
+            var obj = {
+                message : output,
+                logger : var_args,
+                level : path.toFelogString(serviceName),
+                application : opt_noCache,
+                version : service,
+                userId : config && config.userId,
+                containerId : config && config.containerId,
+                env : opt_headers
             };
-            return u && (f.extra = u), o + "/log?json=" + encodeURIComponent((0, c["default"])(f));
+            return data && (obj.extra = data), url + "/log?json=" + encodeURIComponent((0, keys["default"])(obj));
         }
-        function i(e, t, n, o, r, i, s, u) {
-            var l = {
-                message: i,
-                logger: r,
-                level: a.toFelogString(s),
-                application: e,
-                version: t,
-                env: n,
-                extra_usage: u
+        /**
+         * @param {?} app
+         * @param {string} config
+         * @param {Object} allBindingsAccessor
+         * @param {string} url
+         * @param {Object} logger
+         * @param {string} output
+         * @param {string} baseUrl
+         * @param {?} depMaps
+         * @return {?}
+         */
+        function init(app, config, allBindingsAccessor, url, logger, output, baseUrl, depMaps) {
+            var obj = {
+                message : output,
+                logger : logger,
+                level : path.toFelogString(baseUrl),
+                application : app,
+                version : config,
+                env : allBindingsAccessor,
+                extra_usage : depMaps
             };
-            return o + "/log?json=" + encodeURIComponent((0, c["default"])(l));
+            return url + "/log?json=" + encodeURIComponent((0, keys["default"])(obj));
         }
-        var s = e("babel-runtime/core-js/json/stringify"), c = o(s);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var b = require("babel-runtime/core-js/json/stringify");
+        var keys = isUndefinedOrNull(b);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var a;
-        !function(e) {
-            e[e.INFO = 0] = "INFO", e[e.WARN = 1] = "WARN", e[e.ERROR = 2] = "ERROR";
-        }(a = n.LogLevel || (n.LogLevel = {})), function(e) {
-            function t(t) {
-                switch (t) {
-                  case e.INFO:
-                    return "INFO";
-
-                  case e.WARN:
-                    return "WARN";
-
-                  case e.ERROR:
-                    return "ERROR";
-
-                  default:
-                    ;
-                    throw new TypeError("Unrecognized log level " + t);
+        var path;
+        !function(logging) {
+            /** @type {string} */
+            logging[logging.INFO = 0] = "INFO";
+            /** @type {string} */
+            logging[logging.WARN = 1] = "WARN";
+            /** @type {string} */
+            logging[logging.ERROR = 2] = "ERROR";
+        }(path = optgroup.LogLevel || (optgroup.LogLevel = {}));
+        (function(logging) {
+            /**
+             * @param {string} name
+             * @return {?}
+             */
+            function initialize(name) {
+                switch(name) {
+                    case logging.INFO:
+                        return "INFO";
+                    case logging.WARN:
+                        return "WARN";
+                    case logging.ERROR:
+                        return "ERROR";
+                    default:
+                        throw new TypeError("Unrecognized log level " + name);;
                 }
             }
-            e.toFelogString = t;
-        }(a = n.LogLevel || (n.LogLevel = {})), n.felogRequestUrl = r, n.felogUsageRequestUrl = i;
+            /** @type {function (string): ?} */
+            logging.toFelogString = initialize;
+        })(path = optgroup.LogLevel || (optgroup.LogLevel = {}));
+        /** @type {function (?, string, Object, string, Object, string, string, Object, Object): ?} */
+        optgroup.felogRequestUrl = send;
+        /** @type {function (?, string, Object, string, Object, string, string, ?): ?} */
+        optgroup.felogUsageRequestUrl = init;
     }, {
-        "babel-runtime/core-js/json/stringify": 4
-    } ],
-    138: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "babel-runtime/core-js/json/stringify" : 4
+    }],
+    138 : [function(valueAccessor, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function lookupIterator(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        function r(e, t, n, o, r) {
-            var i = document.createElement("img");
-            return i.src = a.felogRequestUrl(c.appName, c.getVersion(), c.ENV, c.URLS.newFelog, e, t, n, o, r), 
-            s["default"].resolve();
+        /**
+         * @param {Object} styles
+         * @param {string} callback
+         * @param {string} serviceName
+         * @param {Object} er
+         * @param {Object} data
+         * @return {?}
+         */
+        function done(styles, callback, serviceName, er, data) {
+            /** @type {Element} */
+            var img = document.createElement("img");
+            return img.src = that.felogRequestUrl(args.appName, args.getVersion(), args.ENV, args.URLS.newFelog, styles, callback, serviceName, er, data), iterator["default"].resolve();
         }
-        var i = e("babel-runtime/core-js/promise"), s = o(i);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var value = valueAccessor("babel-runtime/core-js/promise");
+        var iterator = lookupIterator(value);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var c = e("../newConfig"), a = e("./felog");
-        n.sendEventPixel = r;
+        var args = valueAccessor("../newConfig");
+        var that = valueAccessor("./felog");
+        /** @type {function (Object, string, string, Object, Object): ?} */
+        optgroup.sendEventPixel = done;
     }, {
-        "../newConfig": 136,
-        "./felog": 137,
-        "babel-runtime/core-js/promise": 11
-    } ],
-    139: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "../newConfig" : 136,
+        "./felog" : 137,
+        "babel-runtime/core-js/promise" : 11
+    }],
+    139 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} type
+         * @return {?}
+         */
+        function Event(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
             };
         }
-        var r = e("babel-runtime/core-js/json/stringify"), i = o(r), s = e("babel-runtime/helpers/classCallCheck"), c = o(s), a = e("babel-runtime/helpers/createClass"), u = o(a);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var target = require("babel-runtime/core-js/json/stringify");
+        var targets = Event(target);
+        var type = require("babel-runtime/helpers/classCallCheck");
+        var event = Event(type);
+        var selector = require("babel-runtime/helpers/createClass");
+        var elem = Event(selector);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var l = e("./felog"), f = .1, d = .05, p = function() {
-            function e(t, n, o, r) {
-                var i = this;
-                (0, c["default"])(this, e), this._sendFelog = t, this._sendFelogUsage = n, this._setUserId = o, 
-                this._setContainerId = r, this.pageLoadTimeout = function() {
-                    i._send("cs.connection.failover.pageLoad.timeout", "content script init failed", l.LogLevel.ERROR);
-                }, this.appLoadTimeout = function() {
-                    i._send("cs.connection.failover.appLoad.timeout", "extension init timed out", l.LogLevel.ERROR);
-                }, this.differentStateDomain = function(e) {
-                    i._send("cs.state.differentDomain", "received state for different domain", l.LogLevel.INFO, {
-                        stateDomain: e
+        var $$Log = require("./felog");
+        /** @type {number} */
+        var onComplete = 0.1;
+        /** @type {number} */
+        var which = 0.05;
+        var Telemetry = function() {
+            /**
+             * @param {?} dataAndEvents
+             * @param {?} deepDataAndEvents
+             * @param {?} events
+             * @param {?} keepData
+             * @return {undefined}
+             */
+            function clone(dataAndEvents, deepDataAndEvents, events, keepData) {
+                var self = this;
+                (0, event["default"])(this, clone);
+                this._sendFelog = dataAndEvents;
+                this._sendFelogUsage = deepDataAndEvents;
+                this._setUserId = events;
+                this._setContainerId = keepData;
+                /**
+                 * @return {undefined}
+                 */
+                this.pageLoadTimeout = function() {
+                    self._send("cs.connection.failover.pageLoad.timeout", "content script init failed", $$Log.LogLevel.ERROR);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.appLoadTimeout = function() {
+                    self._send("cs.connection.failover.appLoad.timeout", "extension init timed out", $$Log.LogLevel.ERROR);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.differentStateDomain = function(dataAndEvents) {
+                    self._send("cs.state.differentDomain", "received state for different domain", $$Log.LogLevel.INFO, {
+                        stateDomain : dataAndEvents
                     });
-                }, this.restoredBgConnection = function(e) {
-                    i._send("cs.connection.bg.restored", "bg page connection restored", l.LogLevel.INFO, {
-                        timeWithoutConnection: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.restoredBgConnection = function(dataAndEvents) {
+                    self._send("cs.connection.bg.restored", "bg page connection restored", $$Log.LogLevel.INFO, {
+                        timeWithoutConnection : dataAndEvents
                     });
-                }, this.initWithoutBgConnection = function() {
-                    i._send("cs.connection.bg.disconnected", "no connection to bg page", l.LogLevel.INFO);
-                }, this.fetchDefinitionsFail = function() {
-                    i._send("cs.connection.api.definition.failed", "definitions fetch failed", l.LogLevel.WARN);
-                }, this.infinityCheckResetFail = function(e) {
-                    i._send("cs.connection.infiniteCheck.failed", "infinite check reset failed", l.LogLevel.ERROR, {
-                        delay: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.initWithoutBgConnection = function() {
+                    self._send("cs.connection.bg.disconnected", "no connection to bg page", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.fetchDefinitionsFail = function() {
+                    self._send("cs.connection.api.definition.failed", "definitions fetch failed", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {number} delay
+                 * @return {undefined}
+                 */
+                this.infinityCheckResetFail = function(delay) {
+                    self._send("cs.connection.infiniteCheck.failed", "infinite check reset failed", $$Log.LogLevel.ERROR, {
+                        delay : delay
                     });
-                }, this.tooLongPageConfigInit = function(e) {
-                    i._send("cs.pageConfig.init.exceeded", "page config init timeout", l.LogLevel.WARN, {
-                        initTime: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.tooLongPageConfigInit = function(dataAndEvents) {
+                    self._send("cs.pageConfig.init.exceeded", "page config init timeout", $$Log.LogLevel.WARN, {
+                        initTime : dataAndEvents
                     });
-                }, this.tooLongUserUpdateTime = function(e) {
-                    i._send("bg.state.user.update.exceeded", "user state update took too long", l.LogLevel.WARN, {
-                        updateTime: e
+                };
+                /**
+                 * @param {?} date
+                 * @return {undefined}
+                 */
+                this.tooLongUserUpdateTime = function(date) {
+                    self._send("bg.state.user.update.exceeded", "user state update took too long", $$Log.LogLevel.WARN, {
+                        updateTime : date
                     });
-                }, this.lostBgPageConnection = function() {
-                    i._send("cs.gbutton.bgСonnection.lost", "gbutton connection to bg page lost", l.LogLevel.INFO);
-                }, this.restoreBgPageConnection = function(e) {
-                    i._send("cs.gbutton.bgСonnection.restored", "gbutton connection to bg page restored", l.LogLevel.INFO, {
-                        time: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.lostBgPageConnection = function() {
+                    self._send("cs.gbutton.bg\u0421onnection.lost", "gbutton connection to bg page lost", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {number} time
+                 * @return {undefined}
+                 */
+                this.restoreBgPageConnection = function(time) {
+                    self._send("cs.gbutton.bg\u0421onnection.restored", "gbutton connection to bg page restored", $$Log.LogLevel.INFO, {
+                        time : time
                     });
-                }, this.badCursorPosition = function() {
-                    i._send("cs.editor.badCursorPosition", "incorrect cursor position in grammarly-editor", l.LogLevel.INFO);
-                }, this.cursorJump = function() {
-                    i._send("cs.editor.cursorJump", "cursor jump detected", l.LogLevel.WARN);
-                }, this.signinOpen = function() {
-                    i._send("cs.signin.open", "sign in dialog opened", l.LogLevel.INFO);
-                }, this.signinClose = function(e) {
-                    i._send("cs.signin.close", "sign in dialog closed", l.LogLevel.INFO, {
-                        openTime: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.badCursorPosition = function() {
+                    self._send("cs.editor.badCursorPosition", "incorrect cursor position in grammarly-editor", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cursorJump = function() {
+                    self._send("cs.editor.cursorJump", "cursor jump detected", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.signinOpen = function() {
+                    self._send("cs.signin.open", "sign in dialog opened", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.signinClose = function(dataAndEvents) {
+                    self._send("cs.signin.close", "sign in dialog closed", $$Log.LogLevel.INFO, {
+                        openTime : dataAndEvents
                     });
-                }, this.tabReloadClick = function() {
-                    i._send("cs.gbutton.reload.click", "gbutton reload clicked", l.LogLevel.WARN);
-                }, this.popupLoadError = function(e, t) {
-                    i._send("cs.popup.load.error", "could not open pop-up editor", l.LogLevel.ERROR, {
-                        message: e,
-                        name: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.tabReloadClick = function() {
+                    self._send("cs.gbutton.reload.click", "gbutton reload clicked", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {string} output
+                 * @param {string} errorName
+                 * @return {undefined}
+                 */
+                this.popupLoadError = function(output, errorName) {
+                    self._send("cs.popup.load.error", "could not open pop-up editor", $$Log.LogLevel.ERROR, {
+                        message : output,
+                        name : errorName
                     });
-                }, this.loginNoBgPageConnection = function(e) {
-                    i._send("debug.cs.connection.signin.bg.timeout", "can not connect to bg page on login", l.LogLevel.INFO, {
-                        message: e
+                };
+                /**
+                 * @param {string} output
+                 * @return {undefined}
+                 */
+                this.loginNoBgPageConnection = function(output) {
+                    self._send("debug.cs.connection.signin.bg.timeout", "can not connect to bg page on login", $$Log.LogLevel.INFO, {
+                        message : output
                     });
-                }, this.pageConfigCDNError = function(e) {
-                    i._send("cs.pageConfig.cdn.error", "could not read page config", l.LogLevel.ERROR, {
-                        message: e
+                };
+                /**
+                 * @param {string} output
+                 * @return {undefined}
+                 */
+                this.pageConfigCDNError = function(output) {
+                    self._send("cs.pageConfig.cdn.error", "could not read page config", $$Log.LogLevel.ERROR, {
+                        message : output
                     });
-                }, this.pageConfigLocalStorageError = function(e, t) {
-                    i._send("cs.pageConfig.localStorage.error", "could not read page config from localStorage", l.LogLevel.INFO, {
-                        message: e,
-                        name: t
+                };
+                /**
+                 * @param {string} output
+                 * @param {string} errorName
+                 * @return {undefined}
+                 */
+                this.pageConfigLocalStorageError = function(output, errorName) {
+                    self._send("cs.pageConfig.localStorage.error", "could not read page config from localStorage", $$Log.LogLevel.INFO, {
+                        message : output,
+                        name : errorName
                     });
-                }, this.pageConfigUpdated = function(e, t) {
-                    i._send("cs.pageConfig.updated", "page config updated", l.LogLevel.INFO, {
-                        oldVersion: e,
-                        newVersion: t
+                };
+                /**
+                 * @param {number} ver
+                 * @param {number} newVersion
+                 * @return {undefined}
+                 */
+                this.pageConfigUpdated = function(ver, newVersion) {
+                    self._send("cs.pageConfig.updated", "page config updated", $$Log.LogLevel.INFO, {
+                        oldVersion : ver,
+                        newVersion : newVersion
                     });
-                }, this.settingsPopupTimeout = function() {
-                    i._send("settings.popup.init.timeout", "settings popup open timeout", l.LogLevel.WARN);
-                }, this.settingsUsupportedShow = function(e) {
-                    i._send("settings.popup.state.unsupported.show", "page unsupported message shown", l.LogLevel.INFO, {
-                        popupType: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.settingsPopupTimeout = function() {
+                    self._send("settings.popup.init.timeout", "settings popup open timeout", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.settingsUsupportedShow = function(dataAndEvents) {
+                    self._send("settings.popup.state.unsupported.show", "page unsupported message shown", $$Log.LogLevel.INFO, {
+                        popupType : dataAndEvents
                     });
-                }, this.settingsPopupToggled = function(e) {
-                    i._send("settings.popup.experiment.toggle", "settings popup disabled/enabled for experiment on /personalize page", l.LogLevel.INFO, {
-                        isPopupDisabled: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.settingsPopupToggled = function(dataAndEvents) {
+                    self._send("settings.popup.experiment.toggle", "settings popup disabled/enabled for experiment on /personalize page", $$Log.LogLevel.INFO, {
+                        isPopupDisabled : dataAndEvents
                     });
-                }, this.socketBgError = function() {
-                    i._send("bg.socket.error", "bg page socket error", l.LogLevel.WARN);
-                }, this.capiNotAuthorizedLoop = function(e, t) {
-                    i._send("debug.socket.notAuthorizedLoop", "could not authenticate on capi and auth", l.LogLevel.INFO, {
-                        authDegradation: e,
-                        cookiesDisabled: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.socketBgError = function() {
+                    self._send("bg.socket.error", "bg page socket error", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @param {?} deepDataAndEvents
+                 * @return {undefined}
+                 */
+                this.capiNotAuthorizedLoop = function(dataAndEvents, deepDataAndEvents) {
+                    self._send("debug.socket.notAuthorizedLoop", "could not authenticate on capi and auth", $$Log.LogLevel.INFO, {
+                        authDegradation : dataAndEvents,
+                        cookiesDisabled : deepDataAndEvents
                     });
-                }, this.socketDisabledCookie = function() {
-                    i._send("debug.socket.disabledCookies", "disabled cookies after failed authentication", l.LogLevel.INFO);
-                }, this.socketBgRestored = function(e) {
-                    i._send("debug.bg.socket.restored", "capi session restored", l.LogLevel.INFO, {
-                        tryCount: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.socketDisabledCookie = function() {
+                    self._send("debug.socket.disabledCookies", "disabled cookies after failed authentication", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.socketBgRestored = function(dataAndEvents) {
+                    self._send("debug.bg.socket.restored", "capi session restored", $$Log.LogLevel.INFO, {
+                        tryCount : dataAndEvents
                     });
-                }, this.socketBgReconnectFail = function(e, t) {
-                    i._send("bg.socket.reconnect.fail", "could not restore ws connection", l.LogLevel.WARN, {
-                        token: e,
-                        tryCount: t
+                };
+                /**
+                 * @param {string} oauth_token
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.socketBgReconnectFail = function(oauth_token, dataAndEvents) {
+                    self._send("bg.socket.reconnect.fail", "could not restore ws connection", $$Log.LogLevel.WARN, {
+                        token : oauth_token,
+                        tryCount : dataAndEvents
                     });
-                }, this.socketCsError = function() {
-                    i._send("cs.socket.error", "content script socket error", l.LogLevel.WARN);
-                }, this.soketCsErrorMsg = function(e) {
-                    i._send("cs.socket.errorMsg", "capi error", l.LogLevel.WARN, {
-                        message: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.socketCsError = function() {
+                    self._send("cs.socket.error", "content script socket error", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {string} output
+                 * @return {undefined}
+                 */
+                this.soketCsErrorMsg = function(output) {
+                    self._send("cs.socket.errorMsg", "capi error", $$Log.LogLevel.WARN, {
+                        message : output
                     });
-                }, this.gnarClientInitFail = function(e) {
-                    i._send("gnar.bg.tracking.gnar.init.fail", "gnar init failed", l.LogLevel.WARN, {
-                        message: e
+                };
+                /**
+                 * @param {string} output
+                 * @return {undefined}
+                 */
+                this.gnarClientInitFail = function(output) {
+                    self._send("gnar.bg.tracking.gnar.init.fail", "gnar init failed", $$Log.LogLevel.WARN, {
+                        message : output
                     });
-                }, this.bgTrackingInitFail = function() {
-                    i._send("debug.tracking.init.fail", "bg page tracking library init failed", l.LogLevel.INFO);
-                }, this.dailyPing = function() {
-                    i._send("debug.dailyPing", "daily ping", l.LogLevel.INFO);
-                }, this.userUpgradeClick = function(e) {
-                    i._send("cs.ui.action.upgradeClick", "upgrade hook clicked", l.LogLevel.INFO, {
-                        placement: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.bgTrackingInitFail = function() {
+                    self._send("debug.tracking.init.fail", "bg page tracking library init failed", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.dailyPing = function() {
+                    self._send("debug.dailyPing", "daily ping", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} labelPlacement
+                 * @return {undefined}
+                 */
+                this.userUpgradeClick = function(labelPlacement) {
+                    self._send("cs.ui.action.upgradeClick", "upgrade hook clicked", $$Log.LogLevel.INFO, {
+                        placement : labelPlacement
                     });
-                }, this.gButtonClick = function() {
-                    i._send("cs.ui.gbutton.click", "gbutton clicked", l.LogLevel.INFO);
-                }, this.checkingToggledInField = function(e) {
-                    i._send("cs.ui.gbutton.toggleInField", "checking toggled in field", l.LogLevel.INFO, {
-                        enabled: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.gButtonClick = function() {
+                    self._send("cs.ui.gbutton.click", "gbutton clicked", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {boolean} _enabled
+                 * @return {undefined}
+                 */
+                this.checkingToggledInField = function(_enabled) {
+                    self._send("cs.ui.gbutton.toggleInField", "checking toggled in field", $$Log.LogLevel.INFO, {
+                        enabled : _enabled
                     });
-                }, this.sessionInvalidated = function(e, t) {
-                    i._send("bg.session.invalidated", "user session invalidated", l.LogLevel.INFO, {
-                        reason: e,
-                        userChanged: t
+                };
+                /**
+                 * @param {string} err
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.sessionInvalidated = function(err, dataAndEvents) {
+                    self._send("bg.session.invalidated", "user session invalidated", $$Log.LogLevel.INFO, {
+                        reason : err,
+                        userChanged : dataAndEvents
                     });
-                }, this.unexpectedAnonymous = function(e) {
-                    i._send("debug.bg.session.unexpectedAnonymous", "user changed to anonymous", l.LogLevel.INFO, e);
-                }, this.dapiPropInitialized = function(e, t) {
-                    i._send("bg.settings.dapi.prop.init", "save property to the DAPI", l.LogLevel.INFO, {
-                        name: e,
-                        value: t
+                };
+                /**
+                 * @param {?} a3
+                 * @return {undefined}
+                 */
+                this.unexpectedAnonymous = function(a3) {
+                    self._send("debug.bg.session.unexpectedAnonymous", "user changed to anonymous", $$Log.LogLevel.INFO, a3);
+                };
+                /**
+                 * @param {string} errorName
+                 * @param {Object} x
+                 * @return {undefined}
+                 */
+                this.dapiPropInitialized = function(errorName, x) {
+                    self._send("bg.settings.dapi.prop.init", "save property to the DAPI", $$Log.LogLevel.INFO, {
+                        name : errorName,
+                        value : x
                     });
-                }, this.getDapiPropError = function(e, t) {
-                    i._send("bg.connection.dapi.getProp.error", "could not get dapi property", l.LogLevel.WARN, {
-                        property: e,
-                        body: t
+                };
+                /**
+                 * @param {string} fieldName
+                 * @param {Object} reqData
+                 * @return {undefined}
+                 */
+                this.getDapiPropError = function(fieldName, reqData) {
+                    self._send("bg.connection.dapi.getProp.error", "could not get dapi property", $$Log.LogLevel.WARN, {
+                        property : fieldName,
+                        body : reqData
                     });
-                }, this.setDapiPropError = function(e, t) {
-                    i._send("bg.connection.dapi.setProp.error", "could not set dapi property", l.LogLevel.WARN, {
-                        property: e,
-                        body: t
+                };
+                /**
+                 * @param {string} fieldName
+                 * @param {Object} reqData
+                 * @return {undefined}
+                 */
+                this.setDapiPropError = function(fieldName, reqData) {
+                    self._send("bg.connection.dapi.setProp.error", "could not set dapi property", $$Log.LogLevel.WARN, {
+                        property : fieldName,
+                        body : reqData
                     });
-                }, this.toggleExtensionDefs = function(e) {
-                    i._send("bg.settings.definitions.toggle", "definitions toggled for domain", l.LogLevel.INFO, {
-                        enabled: e
+                };
+                /**
+                 * @param {boolean} _enabled
+                 * @return {undefined}
+                 */
+                this.toggleExtensionDefs = function(_enabled) {
+                    self._send("bg.settings.definitions.toggle", "definitions toggled for domain", $$Log.LogLevel.INFO, {
+                        enabled : _enabled
                     });
-                }, this.toggleExtension = function(e, t) {
-                    i._send("bg.settings.extension.toggle", "extension toggled for domain", l.LogLevel.INFO, {
-                        enabled: e,
-                        placement: t
+                };
+                /**
+                 * @param {boolean} _enabled
+                 * @param {?} labelPlacement
+                 * @return {undefined}
+                 */
+                this.toggleExtension = function(_enabled, labelPlacement) {
+                    self._send("bg.settings.extension.toggle", "extension toggled for domain", $$Log.LogLevel.INFO, {
+                        enabled : _enabled,
+                        placement : labelPlacement
                     });
-                }, this.disableUntilNextVisit = function() {
-                    i._send("cs.gbutton.disableUntilNextVisit", "extension temporary disabled on the current tab", l.LogLevel.INFO);
-                }, this.disableButtonClick = function() {
-                    i._send("cs.gbutton.disableButtonClick", "clicked on disable button in gButton", l.LogLevel.INFO);
-                }, this.cookieOverflow = function(e, t) {
-                    i._send("debug.bg.state.cookie.overflow", "cookie is too big", l.LogLevel.INFO, {
-                        size: e,
-                        biggestCookie: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.disableUntilNextVisit = function() {
+                    self._send("cs.gbutton.disableUntilNextVisit", "extension temporary disabled on the current tab", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.disableButtonClick = function() {
+                    self._send("cs.gbutton.disableButtonClick", "clicked on disable button in gButton", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {number} size
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.cookieOverflow = function(size, dataAndEvents) {
+                    self._send("debug.bg.state.cookie.overflow", "cookie is too big", $$Log.LogLevel.INFO, {
+                        size : size,
+                        biggestCookie : dataAndEvents
                     });
-                }, this.externalChangePlan = function() {
-                    i._send("bg.api.external.changePlan", "plan changed from editor", l.LogLevel.INFO);
-                }, this.externalChangeDialect = function() {
-                    i._send("bg.api.external.changeDialect", "dialect changed from editor", l.LogLevel.INFO);
-                }, this.externalChangeUser = function() {
-                    i._send("bg.api.external.changeUsed", "user changed from editor", l.LogLevel.INFO);
-                }, this.externalLogout = function() {
-                    i._send("bg.api.external.logout", "user logged out form editor", l.LogLevel.INFO);
-                }, this.externalEnableEmailPerception = function() {
-                    i._send("bg.api.external.enableEmailPerception", "user enabled email perception feature on the funnel", l.LogLevel.INFO);
-                }, this.bgPageStartFail = function(e, t) {
-                    i._send("bg.start.fail", "bg page start failed", l.LogLevel.ERROR, {
-                        message: e,
-                        stack: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.externalChangePlan = function() {
+                    self._send("bg.api.external.changePlan", "plan changed from editor", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.externalChangeDialect = function() {
+                    self._send("bg.api.external.changeDialect", "dialect changed from editor", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.externalChangeUser = function() {
+                    self._send("bg.api.external.changeUsed", "user changed from editor", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.externalLogout = function() {
+                    self._send("bg.api.external.logout", "user logged out form editor", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.externalEnableEmailPerception = function() {
+                    self._send("bg.api.external.enableEmailPerception", "user enabled email perception feature on the funnel", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {string} output
+                 * @param {Array} stack
+                 * @return {undefined}
+                 */
+                this.bgPageStartFail = function(output, stack) {
+                    self._send("bg.start.fail", "bg page start failed", $$Log.LogLevel.ERROR, {
+                        message : output,
+                        stack : stack
                     });
-                }, this.bgPageInitTimeout = function(e) {
-                    i._send("bg.state.start.timeout", "bg page init timeout", l.LogLevel.WARN, {
-                        initTime: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.bgPageInitTimeout = function(dataAndEvents) {
+                    self._send("bg.state.start.timeout", "bg page init timeout", $$Log.LogLevel.WARN, {
+                        initTime : dataAndEvents
                     });
-                }, this.bgPageInitFail = function(e) {
-                    i._send("bg.state.init.fail", "bg page init failed", l.LogLevel.ERROR, {
-                        initAttempts: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.bgPageInitFail = function(dataAndEvents) {
+                    self._send("bg.state.init.fail", "bg page init failed", $$Log.LogLevel.ERROR, {
+                        initAttempts : dataAndEvents
                     });
-                }, this.extensionUpdated = function(e, t) {
-                    i._send("bg.state.updated", "extension updated", l.LogLevel.INFO, {
-                        currentVersion: e,
-                        previousVersion: t
+                };
+                /**
+                 * @param {?} currentVersion
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.extensionUpdated = function(currentVersion, dataAndEvents) {
+                    self._send("bg.state.updated", "extension updated", $$Log.LogLevel.INFO, {
+                        currentVersion : currentVersion,
+                        previousVersion : dataAndEvents
                     });
-                }, this.extensionUpdateFail = function(e) {
-                    i._send("bg.state.update.fail", "extension update failed", l.LogLevel.INFO, {
-                        previousVersion: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.extensionUpdateFail = function(dataAndEvents) {
+                    self._send("bg.state.update.fail", "extension update failed", $$Log.LogLevel.INFO, {
+                        previousVersion : dataAndEvents
                     });
-                }, this.cannotGetInstallSource = function() {
-                    i._send("bg.getSource.fail", "failed to get extension install source", l.LogLevel.WARN);
-                }, this.extensionInstall = function(e) {
-                    i._send("bg.state.install", "extension installed", l.LogLevel.INFO, {
-                        source: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cannotGetInstallSource = function() {
+                    self._send("bg.getSource.fail", "failed to get extension install source", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {string} key
+                 * @return {undefined}
+                 */
+                this.extensionInstall = function(key) {
+                    self._send("bg.state.install", "extension installed", $$Log.LogLevel.INFO, {
+                        source : key
                     });
-                }, this.chromeForcedToUpdate = function(e) {
-                    i._send("bg.chrome.forcedToUpdate", "chrome forced update", l.LogLevel.INFO, {
-                        newVersion: e
+                };
+                /**
+                 * @param {number} newVersion
+                 * @return {undefined}
+                 */
+                this.chromeForcedToUpdate = function(newVersion) {
+                    self._send("bg.chrome.forcedToUpdate", "chrome forced update", $$Log.LogLevel.INFO, {
+                        newVersion : newVersion
                     });
-                }, this.chromeContentScriptLoadError = function(e, t) {
-                    i._send("bg.chrome.cs.load.error", "content script execution error", l.LogLevel.WARN, {
-                        message: e,
-                        type: t
+                };
+                /**
+                 * @param {string} output
+                 * @param {string} paramType
+                 * @return {undefined}
+                 */
+                this.chromeContentScriptLoadError = function(output, paramType) {
+                    self._send("bg.chrome.cs.load.error", "content script execution error", $$Log.LogLevel.WARN, {
+                        message : output,
+                        type : paramType
                     });
-                }, this.reloadNotificationShow = function() {
-                    i._send("bg.ui.notification.tabsReload.show", "extension reload notification shown", l.LogLevel.WARN);
-                }, this.reloadNotificationClick = function() {
-                    i._send("bg.ui.notification.tabsReload.click", "reload notification clicked", l.LogLevel.INFO);
-                }, this.fetchUserFail = function(e, t, n) {
-                    i._send("bg.user.fetch.fail", "failed to update user", l.LogLevel.WARN, {
-                        body: t,
-                        statusCode: n,
-                        reason: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.reloadNotificationShow = function() {
+                    self._send("bg.ui.notification.tabsReload.show", "extension reload notification shown", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.reloadNotificationClick = function() {
+                    self._send("bg.ui.notification.tabsReload.click", "reload notification clicked", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {string} err
+                 * @param {Object} reqData
+                 * @param {number} statusCode
+                 * @return {undefined}
+                 */
+                this.fetchUserFail = function(err, reqData, statusCode) {
+                    self._send("bg.user.fetch.fail", "failed to update user", $$Log.LogLevel.WARN, {
+                        body : reqData,
+                        statusCode : statusCode,
+                        reason : err
                     });
-                }, this.fetchMimicFail = function(e, t) {
-                    i._send("bg.user.mimic.fail", "mimic request failed", l.LogLevel.WARN, {
-                        body: e,
-                        statusCode: t
+                };
+                /**
+                 * @param {Object} reqData
+                 * @param {number} statusCode
+                 * @return {undefined}
+                 */
+                this.fetchMimicFail = function(reqData, statusCode) {
+                    self._send("bg.user.mimic.fail", "mimic request failed", $$Log.LogLevel.WARN, {
+                        body : reqData,
+                        statusCode : statusCode
                     });
-                }, this.fetchCookieFail = function() {
-                    i._send("bg.cookie.fail", "could not get grauth from cookie", l.LogLevel.WARN);
-                }, this.fetchSettingsFail = function(e, t) {
-                    i._send("bg.user.settings.fail", "could not get settings from auth", l.LogLevel.WARN, {
-                        body: e,
-                        statusCode: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.fetchCookieFail = function() {
+                    self._send("bg.cookie.fail", "could not get grauth from cookie", $$Log.LogLevel.WARN);
+                };
+                /**
+                 * @param {Object} reqData
+                 * @param {number} statusCode
+                 * @return {undefined}
+                 */
+                this.fetchSettingsFail = function(reqData, statusCode) {
+                    self._send("bg.user.settings.fail", "could not get settings from auth", $$Log.LogLevel.WARN, {
+                        body : reqData,
+                        statusCode : statusCode
                     });
-                }, this.frequentCookieChanges = function(e) {
-                    i._send("debug.cookie.onChange.error", "cookie change too frequent", l.LogLevel.INFO, {
-                        canceled: e
+                };
+                /**
+                 * @param {?} canceled
+                 * @return {undefined}
+                 */
+                this.frequentCookieChanges = function(canceled) {
+                    self._send("debug.cookie.onChange.error", "cookie change too frequent", $$Log.LogLevel.INFO, {
+                        canceled : canceled
                     });
-                }, this.initializePropFromDapi = function(e) {
-                    i._send("bg.state.dapi.prop.initialize", "set property from dapi", l.LogLevel.INFO, {
-                        name: e
+                };
+                /**
+                 * @param {string} errorName
+                 * @return {undefined}
+                 */
+                this.initializePropFromDapi = function(errorName) {
+                    self._send("bg.state.dapi.prop.initialize", "set property from dapi", $$Log.LogLevel.INFO, {
+                        name : errorName
                     });
-                }, this.emailPerceptionPopupShow = function() {
-                    i._send("cs.emailPerception.popup.show", "show email perception popup on gmail/inbox domain", l.LogLevel.INFO);
-                }, this.emailPerceptionPopupCancel = function() {
-                    i._send("cs.emailPerception.popup.cancel", "user canceled email perception popup on gmail/inbox", l.LogLevel.INFO);
-                }, this.emailPerceptiongButtonHover = function() {
-                    i._send("cs.emailPerception.gbutton.hover", "user hovered gButton and ask for feedback btn is shown on gmail/inbox", l.LogLevel.INFO);
-                }, this.onboardingPopupShow = function() {
-                    i._send("cs.onboarding.popup.show", "show onboarding popup to user after first time extension install", l.LogLevel.INFO);
-                }, this.onboardingPopupCancel = function() {
-                    i._send("cs.onboarding.popup.cancel", "user canceled onboarding popup", l.LogLevel.INFO);
-                }, this.onboardingTutorialShow = function() {
-                    i._send("cs.onboarding.tutorial.show", "opened onboarding dialog after popup", l.LogLevel.INFO);
-                }, this.onboardingVideoLoaded = function() {
-                    i._send("cs.onboarding.tutorial.video.loaded", "load video data for onboarding tutorial", l.LogLevel.INFO);
-                }, this.saveEmailFeedbackError = function(e) {
-                    i._send("bg.emailfeedback.save.error", "failed to save email feedback", l.LogLevel.INFO, {
-                        body: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.emailPerceptionPopupShow = function() {
+                    self._send("cs.emailPerception.popup.show", "show email perception popup on gmail/inbox domain", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.emailPerceptionPopupCancel = function() {
+                    self._send("cs.emailPerception.popup.cancel", "user canceled email perception popup on gmail/inbox", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.emailPerceptiongButtonHover = function() {
+                    self._send("cs.emailPerception.gbutton.hover", "user hovered gButton and ask for feedback btn is shown on gmail/inbox", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.onboardingPopupShow = function() {
+                    self._send("cs.onboarding.popup.show", "show onboarding popup to user after first time extension install", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.onboardingPopupCancel = function() {
+                    self._send("cs.onboarding.popup.cancel", "user canceled onboarding popup", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.onboardingTutorialShow = function() {
+                    self._send("cs.onboarding.tutorial.show", "opened onboarding dialog after popup", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.onboardingVideoLoaded = function() {
+                    self._send("cs.onboarding.tutorial.video.loaded", "load video data for onboarding tutorial", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} reqData
+                 * @return {undefined}
+                 */
+                this.saveEmailFeedbackError = function(reqData) {
+                    self._send("bg.emailfeedback.save.error", "failed to save email feedback", $$Log.LogLevel.INFO, {
+                        body : reqData
                     });
-                }, this.incognitoInit = function() {
-                    i._send("bg.incognito.init", "extension initialized in incognito mode", l.LogLevel.INFO);
-                }, this.disabledCookiesInit = function() {
-                    i._send("bg.cookie.disabled", "extension initialized with disabled cookies", l.LogLevel.INFO);
-                }, this.proxyInit = function() {
-                    i._sendWithProbability(d, "proxy.init", "proxy script initialized", l.LogLevel.INFO);
-                }, this.proxyPortDisconnected = function(e, t) {
-                    i._sendWithProbability(d, "proxy.disconnect", "proxy port disconnected", l.LogLevel.INFO, {
-                        port: e,
-                        error: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.incognitoInit = function() {
+                    self._send("bg.incognito.init", "extension initialized in incognito mode", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.disabledCookiesInit = function() {
+                    self._send("bg.cookie.disabled", "extension initialized with disabled cookies", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.proxyInit = function() {
+                    self._sendWithProbability(which, "proxy.init", "proxy script initialized", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {string} keepData
+                 * @param {string} err
+                 * @return {undefined}
+                 */
+                this.proxyPortDisconnected = function(keepData, err) {
+                    self._sendWithProbability(which, "proxy.disconnect", "proxy port disconnected", $$Log.LogLevel.INFO, {
+                        port : keepData,
+                        error : err
                     });
-                }, this.unhandledBgPageException = function(e) {
-                    i._send("bg.unhandledException", "unhandled exception on background page", l.LogLevel.ERROR, {
-                        message: e.error ? e.error.message : e.message
+                };
+                /**
+                 * @param {Object} err
+                 * @return {undefined}
+                 */
+                this.unhandledBgPageException = function(err) {
+                    self._send("bg.unhandledException", "unhandled exception on background page", $$Log.LogLevel.ERROR, {
+                        message : err.error ? err.error.message : err.message
                     });
-                }, this.unhandledBgPageRejection = function(e) {
-                    i._send("bg.unhandledRejection", "unhandled promise rejection on background page", l.LogLevel.ERROR, {
-                        message: null != e.reason ? "string" == typeof e.reason ? e.reason : e.reason.message : void 0
+                };
+                /**
+                 * @param {Object} err
+                 * @return {undefined}
+                 */
+                this.unhandledBgPageRejection = function(err) {
+                    self._send("bg.unhandledRejection", "unhandled promise rejection on background page", $$Log.LogLevel.ERROR, {
+                        message : null != err.reason ? "string" == typeof err.reason ? err.reason : err.reason.message : void 0
                     });
-                }, this.storageMigrationSucceeded = function() {
-                    i._send("bg.storageMigration.success", "storage migration succeeded", l.LogLevel.INFO, {});
-                }, this.storageMigrationFailed = function(e) {
-                    i._send("bg.storageMigration.failure", "storage migration failed", l.LogLevel.ERROR, {
-                        message: e && e.message
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.storageMigrationSucceeded = function() {
+                    self._send("bg.storageMigration.success", "storage migration succeeded", $$Log.LogLevel.INFO, {});
+                };
+                /**
+                 * @param {string} e
+                 * @return {undefined}
+                 */
+                this.storageMigrationFailed = function(e) {
+                    self._send("bg.storageMigration.failure", "storage migration failed", $$Log.LogLevel.ERROR, {
+                        message : e && e.message
                     });
-                }, this.cardShowAction = function() {
-                    i._sendWithProbability(f, "cs.editor.card.show", "show card action", l.LogLevel.INFO);
-                }, this.cardHideAction = function() {
-                    i._sendWithProbability(f, "cs.editor.card.hide", "hide card action", l.LogLevel.INFO);
-                }, this.cardReplacementAction = function() {
-                    i._sendWithProbability(f, "cs.editor.card.replacement", "click on the replacement in the card", l.LogLevel.INFO);
-                }, this.cardAddToDictAction = function() {
-                    i._sendWithProbability(f, "cs.editor.card.addToDict", "click add to dictionary button in the card", l.LogLevel.INFO);
-                }, this.cardIgnoreAction = function() {
-                    i._sendWithProbability(f, "cs.editor.card.ignore", "click ignore button in the card", l.LogLevel.INFO);
-                }, this.synonymCardShowAction = function(e) {
-                    i._sendWithProbability(f, "cs.editor.synonym.show", "show synonymous card action", l.LogLevel.INFO, {
-                        notFoundCard: e
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cardShowAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.card.show", "show card action", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cardHideAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.card.hide", "hide card action", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cardReplacementAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.card.replacement", "click on the replacement in the card", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cardAddToDictAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.card.addToDict", "click add to dictionary button in the card", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.cardIgnoreAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.card.ignore", "click ignore button in the card", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.synonymCardShowAction = function(dataAndEvents) {
+                    self._sendWithProbability(onComplete, "cs.editor.synonym.show", "show synonymous card action", $$Log.LogLevel.INFO, {
+                        notFoundCard : dataAndEvents
                     });
-                }, this.synonymCardHideAction = function(e) {
-                    i._sendWithProbability(f, "cs.editor.synonym.hide", "hide synonymous card action", l.LogLevel.INFO, {
-                        notFoundCard: e
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.synonymCardHideAction = function(dataAndEvents) {
+                    self._sendWithProbability(onComplete, "cs.editor.synonym.hide", "hide synonymous card action", $$Log.LogLevel.INFO, {
+                        notFoundCard : dataAndEvents
                     });
-                }, this.synonymReplacementAction = function() {
-                    i._sendWithProbability(f, "cs.editor.synonym.replacement", "click on the replacement in the synonym", l.LogLevel.INFO);
-                }, this.dictCardShowAction = function() {
-                    i._sendWithProbability(f, "cs.editor.dict.show", "show dictionary card action", l.LogLevel.INFO);
-                }, this.dictCardHideAction = function() {
-                    i._sendWithProbability(f, "cs.editor.dict.hide", "hide dictionary card action", l.LogLevel.INFO);
-                }, this.couldNotParseTransform = function(e, t) {
-                    i._send("cs.cards.transforms.parse.error", "Could not parse transform in inline cards", l.LogLevel.WARN, {
-                        transformHTML: e,
-                        fallbackParseSuccessful: t
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.synonymReplacementAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.synonym.replacement", "click on the replacement in the synonym", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.dictCardShowAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.dict.show", "show dictionary card action", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @return {undefined}
+                 */
+                this.dictCardHideAction = function() {
+                    self._sendWithProbability(onComplete, "cs.editor.dict.hide", "hide dictionary card action", $$Log.LogLevel.INFO);
+                };
+                /**
+                 * @param {?} dataAndEvents
+                 * @param {?} deepDataAndEvents
+                 * @return {undefined}
+                 */
+                this.couldNotParseTransform = function(dataAndEvents, deepDataAndEvents) {
+                    self._send("cs.cards.transforms.parse.error", "Could not parse transform in inline cards", $$Log.LogLevel.WARN, {
+                        transformHTML : dataAndEvents,
+                        fallbackParseSuccessful : deepDataAndEvents
                     });
-                }, this.disabledTabLoad = function(e, t) {
-                    i._sendUsage("usage.loadOnDisabledTab", "tab load event with disabled extension", l.LogLevel.INFO, {
-                        domain: e,
-                        accountType: t
+                };
+                /**
+                 * @param {string} domain
+                 * @param {?} dataAndEvents
+                 * @return {undefined}
+                 */
+                this.disabledTabLoad = function(domain, dataAndEvents) {
+                    self._sendUsage("usage.loadOnDisabledTab", "tab load event with disabled extension", $$Log.LogLevel.INFO, {
+                        domain : domain,
+                        accountType : dataAndEvents
                     });
-                }, this.initSession = function(e, t, n, o) {
-                    i._sendUsage("usage.session.init", "init in the field", l.LogLevel.INFO, {
-                        domain: e,
-                        accountType: t,
-                        fieldType: n,
-                        fieldSupported: o
+                };
+                /**
+                 * @param {string} domain
+                 * @param {?} res
+                 * @param {?} inType
+                 * @param {?} req
+                 * @return {undefined}
+                 */
+                this.initSession = function(domain, res, inType, req) {
+                    self._sendUsage("usage.session.init", "init in the field", $$Log.LogLevel.INFO, {
+                        domain : domain,
+                        accountType : res,
+                        fieldType : inType,
+                        fieldSupported : req
                     });
-                }, this.cardFirstInteraction = function(e, t, n) {
-                    i._sendUsage("usage.card.interaction", "interaction with card in the field", l.LogLevel.INFO, {
-                        domain: e,
-                        accountType: t,
-                        fieldType: n
+                };
+                /**
+                 * @param {string} domain
+                 * @param {?} dataAndEvents
+                 * @param {?} inType
+                 * @return {undefined}
+                 */
+                this.cardFirstInteraction = function(domain, dataAndEvents, inType) {
+                    self._sendUsage("usage.card.interaction", "interaction with card in the field", $$Log.LogLevel.INFO, {
+                        domain : domain,
+                        accountType : dataAndEvents,
+                        fieldType : inType
                     });
                 };
             }
-            return (0, u["default"])(e, [ {
-                key: "_send",
-                value: function(e, t, n, o) {
-                    var r = void 0;
+            return(0, elem["default"])(clone, [{
+                key : "_send",
+                /**
+                 * @param {string} f
+                 * @param {string} newValue
+                 * @param {?} thisValue
+                 * @param {string} data
+                 * @return {undefined}
+                 */
+                value : function(f, newValue, thisValue, data) {
+                    var message = void 0;
                     try {
-                        r = (0, i["default"])(o);
-                    } catch (s) {
-                        r = "Failed to stringify event properties: '" + s + "', '" + (s && s.message) + "'", 
-                        console.warn(r, "for " + t + "@" + e);
+                        message = (0, targets["default"])(data);
+                    } catch (ex) {
+                        /** @type {string} */
+                        message = "Failed to stringify event properties: '" + ex + "', '" + (ex && ex.message) + "'";
+                        console.warn(message, "for " + newValue + "@" + f);
                     }
                     try {
-                        this._sendFelog(e, t, n, null != o ? {
-                            json: r
+                        this._sendFelog(f, newValue, thisValue, null != data ? {
+                            json : message
                         } : void 0);
-                    } catch (s) {
-                        console.warn("Failed to send felog for " + t + "@" + e + ": '" + s + "', '" + (s && s.message) + "'");
+                    } catch (error) {
+                        console.warn("Failed to send felog for " + newValue + "@" + f + ": '" + error + "', '" + (error && error.message) + "'");
                     }
                 }
             }, {
-                key: "_sendUsage",
-                value: function(e, t, n, o) {
-                    this._sendFelogUsage(e, t, n, o);
+                key : "_sendUsage",
+                /**
+                 * @param {?} newValue
+                 * @param {?} thisValue
+                 * @param {?} factor
+                 * @param {?} newVal
+                 * @return {undefined}
+                 */
+                value : function(newValue, thisValue, factor, newVal) {
+                    this._sendFelogUsage(newValue, thisValue, factor, newVal);
                 }
             }, {
-                key: "_sendWithProbability",
-                value: function(e, t, n, o, r) {
-                    e > Math.random() && this._send(t, n, o, r);
+                key : "_sendWithProbability",
+                /**
+                 * @param {number} thisValue
+                 * @param {?} code
+                 * @param {?} x
+                 * @param {?} callback
+                 * @param {?} newValue
+                 * @return {undefined}
+                 */
+                value : function(thisValue, code, x, callback, newValue) {
+                    if (thisValue > Math.random()) {
+                        this._send(code, x, callback, newValue);
+                    }
                 }
             }, {
-                key: "setUserId",
-                value: function(e) {
-                    this._setUserId(e);
+                key : "setUserId",
+                /**
+                 * @param {?} newValue
+                 * @return {undefined}
+                 */
+                value : function(newValue) {
+                    this._setUserId(newValue);
                 }
             }, {
-                key: "setContainerId",
-                value: function(e) {
-                    this._setContainerId(e);
+                key : "setContainerId",
+                /**
+                 * @param {?} newValue
+                 * @return {undefined}
+                 */
+                value : function(newValue) {
+                    this._setContainerId(newValue);
                 }
             }, {
-                key: "notificationShown",
-                value: function(e) {
-                    this._send("cs.notification.show", "show notification on the page", l.LogLevel.INFO, {
-                        type: e
+                key : "notificationShown",
+                /**
+                 * @param {string} event
+                 * @return {undefined}
+                 */
+                value : function(event) {
+                    this._send("cs.notification.show", "show notification on the page", $$Log.LogLevel.INFO, {
+                        type : event
                     });
                 }
             }, {
-                key: "notificationHide",
-                value: function(e) {
-                    this._send("cs.notification.hide", "hide notification on the page", l.LogLevel.INFO, {
-                        type: e
+                key : "notificationHide",
+                /**
+                 * @param {string} event
+                 * @return {undefined}
+                 */
+                value : function(event) {
+                    this._send("cs.notification.hide", "hide notification on the page", $$Log.LogLevel.INFO, {
+                        type : event
                     });
                 }
-            } ]), e;
+            }]), clone;
         }();
-        n.Telemetry = p;
+        optgroup.Telemetry = Telemetry;
     }, {
-        "./felog": 137,
-        "babel-runtime/core-js/json/stringify": 4,
-        "babel-runtime/helpers/classCallCheck": 14,
-        "babel-runtime/helpers/createClass": 15
-    } ],
-    140: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "./felog" : 137,
+        "babel-runtime/core-js/json/stringify" : 4,
+        "babel-runtime/helpers/classCallCheck" : 14,
+        "babel-runtime/helpers/createClass" : 15
+    }],
+    140 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} type
+         * @return {?}
+         */
+        function Event(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
             };
         }
-        function r(e, t) {
-            var n;
-            return (n = []).concat.apply(n, (0, b["default"])(t.map(e)));
+        /**
+         * @param {Function} scripts
+         * @param {Array} async
+         * @return {?}
+         */
+        function init(scripts, async) {
+            var _ref1;
+            return(_ref1 = []).concat.apply(_ref1, (0, c["default"])(async.map(scripts)));
         }
-        function i(e, t, n) {
-            for (var o = [ t ], r = t, i = 0; i < n.length; i++) r = e(r, n[i]), o.push(r);
-            return o;
-        }
-        function s(e) {
-            return e.reduce(function(e, t) {
-                return t > e ? t : e;
-            }, e[0]);
-        }
-        function c(e, t) {
-            return 0 === e.length ? void 0 : e.reduce(function(e, n) {
-                var o = t(n);
-                return o > e[1] ? [ n, o ] : e;
-            }, [ e[0], t(e[0]) ])[0];
-        }
-        function a(e) {
-            return e.slice().reverse();
-        }
-        function u(e, t) {
-            for (var n = [], o = [], r = 0, i = 0, s = 0; s < t.length; s++) e(t[s]) ? n[r++] = t[s] : o[i++] = t[s];
-            return [ n, o ];
-        }
-        function l(e, t) {
-            if (e < 1) throw new Error("Invalid chunk size, expected > 0");
-            if (0 === t.length) return [ [] ];
-            for (var n = [], o = 0; o < Math.ceil(t.length / e); o++) n.push(t.slice(o * e, (o + 1) * e));
-            return n;
-        }
-        function f(e, t) {
-            for (var n = [], o = e(t); void 0 !== o; ) n.push(o[0]), o = e(o[1]);
-            return n;
-        }
-        function d(e, t) {
-            return void 0 !== t ? (0, g["default"])(Array(t - e), function(t, n) {
-                return n + e;
-            }) : (0, g["default"])(Array(e), function(e, t) {
-                return t;
-            });
-        }
-        var p = e("babel-runtime/core-js/array/from"), g = o(p), _ = e("babel-runtime/helpers/toConsumableArray"), b = o(_);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        }), n.flatMap = r, n.scan = i, n.maximum = s, n.maximumBy = c, n.reverse = a, n.partition = u, 
-        n.chunkBySize = l, n.unfold = f, n.range = d;
-    }, {
-        "babel-runtime/core-js/array/from": 1,
-        "babel-runtime/helpers/toConsumableArray": 20
-    } ],
-    141: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
-            };
-        }
-        function r(e, t) {
-            if (!e) throw new g(t);
-        }
-        function i(e, t) {
-            if (null == e) throw new g(function() {
-                return t ? "Expected " + t + " to be non-null" : "Expected non-null";
-            });
-            return e;
-        }
-        var s = e("babel-runtime/core-js/object/get-prototype-of"), c = o(s), a = e("babel-runtime/helpers/classCallCheck"), u = o(a), l = e("babel-runtime/helpers/possibleConstructorReturn"), f = o(l), d = e("babel-runtime/helpers/inherits"), p = o(d);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        });
-        var g = function(e) {
-            function t(e) {
-                return (0, u["default"])(this, t), (0, f["default"])(this, (t.__proto__ || (0, c["default"])(t)).call(this, "Assertion failed: " + (e ? "string" == typeof e ? e : e() : "(unnamed)")));
+        /**
+         * @param {?} callback
+         * @param {?} elem
+         * @param {Array} items
+         * @return {?}
+         */
+        function swap(callback, elem, items) {
+            /** @type {Array} */
+            var eventPath = [elem];
+            var cur = elem;
+            /** @type {number} */
+            var i = 0;
+            for (;i < items.length;i++) {
+                cur = callback(cur, items[i]);
+                eventPath.push(cur);
             }
-            return (0, p["default"])(t, e), t;
+            return eventPath;
+        }
+        /**
+         * @param {Array} versions
+         * @return {?}
+         */
+        function max(versions) {
+            return versions.reduce(function(date2, date1) {
+                return date1 > date2 ? date1 : date2;
+            }, versions[0]);
+        }
+        /**
+         * @param {Array} array
+         * @param {?} pred
+         * @return {?}
+         */
+        function filter(array, pred) {
+            return 0 === array.length ? void 0 : array.reduce(function(maxDim, node) {
+                var dim = pred(node);
+                return dim > maxDim[1] ? [node, dim] : maxDim;
+            }, [array[0], pred(array[0])])[0];
+        }
+        /**
+         * @param {Object} array
+         * @return {?}
+         */
+        function nlargest(array) {
+            return array.slice().reverse();
+        }
+        /**
+         * @param {?} fn
+         * @param {Array} a
+         * @return {?}
+         */
+        function param(fn, a) {
+            /** @type {Array} */
+            var target = [];
+            /** @type {Array} */
+            var vec = [];
+            /** @type {number} */
+            var j = 0;
+            /** @type {number} */
+            var resLength = 0;
+            /** @type {number} */
+            var i = 0;
+            for (;i < a.length;i++) {
+                if (fn(a[i])) {
+                    target[j++] = a[i];
+                } else {
+                    vec[resLength++] = a[i];
+                }
+            }
+            return[target, vec];
+        }
+        /**
+         * @param {number} size
+         * @param {string} filter
+         * @return {?}
+         */
+        function parse(size, filter) {
+            if (size < 1) {
+                throw new Error("Invalid chunk size, expected > 0");
+            }
+            if (0 === filter.length) {
+                return[[]];
+            }
+            /** @type {Array} */
+            var resp = [];
+            /** @type {number} */
+            var i = 0;
+            for (;i < Math.ceil(filter.length / size);i++) {
+                resp.push(filter.slice(i * size, (i + 1) * size));
+            }
+            return resp;
+        }
+        /**
+         * @param {?} fn
+         * @param {?} item
+         * @return {?}
+         */
+        function clean(fn, item) {
+            /** @type {Array} */
+            var ret = [];
+            var elems = fn(item);
+            for (;void 0 !== elems;) {
+                ret.push(elems[0]);
+                elems = fn(elems[1]);
+            }
+            return ret;
+        }
+        /**
+         * @param {number} col
+         * @param {number} width
+         * @return {?}
+         */
+        function create(col, width) {
+            return void 0 !== width ? (0, event["default"])(Array(width - col), function(dataAndEvents, x) {
+                return x + col;
+            }) : (0, event["default"])(Array(col), function(dataAndEvents, els) {
+                return els;
+            });
+        }
+        var type = require("babel-runtime/core-js/array/from");
+        var event = Event(type);
+        var complete = require("babel-runtime/helpers/toConsumableArray");
+        var c = Event(complete);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        /** @type {function (Function, Array): ?} */
+        optgroup.flatMap = init;
+        /** @type {function (?, ?, Array): ?} */
+        optgroup.scan = swap;
+        /** @type {function (Array): ?} */
+        optgroup.maximum = max;
+        /** @type {function (Array, ?): ?} */
+        optgroup.maximumBy = filter;
+        /** @type {function (Object): ?} */
+        optgroup.reverse = nlargest;
+        /** @type {function (?, Array): ?} */
+        optgroup.partition = param;
+        /** @type {function (number, string): ?} */
+        optgroup.chunkBySize = parse;
+        /** @type {function (?, ?): ?} */
+        optgroup.unfold = clean;
+        /** @type {function (number, number): ?} */
+        optgroup.range = create;
+    }, {
+        "babel-runtime/core-js/array/from" : 1,
+        "babel-runtime/helpers/toConsumableArray" : 20
+    }],
+    141 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {string} type
+         * @return {?}
+         */
+        function Event(type) {
+            return type && type.__esModule ? type : {
+                "default" : type
+            };
+        }
+        /**
+         * @param {?} guard
+         * @param {?} msg
+         * @return {undefined}
+         */
+        function assert(guard, msg) {
+            if (!guard) {
+                throw new AssertionError(msg);
+            }
+        }
+        /**
+         * @param {number} event
+         * @param {string} obj
+         * @return {?}
+         */
+        function fix(event, obj) {
+            if (null == event) {
+                throw new AssertionError(function() {
+                    return obj ? "Expected " + obj + " to be non-null" : "Expected non-null";
+                });
+            }
+            return event;
+        }
+        var complete = require("babel-runtime/core-js/object/get-prototype-of");
+        var c = Event(complete);
+        var target = require("babel-runtime/helpers/classCallCheck");
+        var targets = Event(target);
+        var selector = require("babel-runtime/helpers/possibleConstructorReturn");
+        var elem = Event(selector);
+        var type = require("babel-runtime/helpers/inherits");
+        var event = Event(type);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        var AssertionError = function(_super) {
+            /**
+             * @param {string} e
+             * @return {?}
+             */
+            function process(e) {
+                return(0, targets["default"])(this, process), (0, elem["default"])(this, (process.__proto__ || (0, c["default"])(process)).call(this, "Assertion failed: " + (e ? "string" == typeof e ? e : e() : "(unnamed)")));
+            }
+            return(0, event["default"])(process, _super), process;
         }(Error);
-        n.AssertionError = g, n.assert = r, n.assertNonNull = i;
+        optgroup.AssertionError = AssertionError;
+        /** @type {function (?, ?): undefined} */
+        optgroup.assert = assert;
+        /** @type {function (number, string): ?} */
+        optgroup.assertNonNull = fix;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of": 8,
-        "babel-runtime/helpers/classCallCheck": 14,
-        "babel-runtime/helpers/inherits": 17,
-        "babel-runtime/helpers/possibleConstructorReturn": 18
-    } ],
-    142: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "babel-runtime/core-js/object/get-prototype-of" : 8,
+        "babel-runtime/helpers/classCallCheck" : 14,
+        "babel-runtime/helpers/inherits" : 17,
+        "babel-runtime/helpers/possibleConstructorReturn" : 18
+    }],
+    142 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} selector
+         * @return {?}
+         */
+        function jQuery(selector) {
+            return selector && selector.__esModule ? selector : {
+                "default" : selector
             };
         }
-        function r(e, t) {
-            return e.some(function(e) {
-                return e === t;
-            }) ? t : void 0;
+        /**
+         * @param {Array} opt_attributes
+         * @param {?} keepData
+         * @return {?}
+         */
+        function pred(opt_attributes, keepData) {
+            return opt_attributes.some(function(dataAndEvents) {
+                return dataAndEvents === keepData;
+            }) ? keepData : void 0;
         }
-        function i(e, t, n) {
-            var o = r(e, t);
-            if (void 0 !== o) return o;
-            throw new TypeError('Unrecognized string union value "' + t + '"' + (n ? " for " + n : ""));
+        /**
+         * @param {(Array|string)} value
+         * @param {string} key
+         * @param {boolean} charset
+         * @return {?}
+         */
+        function filter(value, key, charset) {
+            var values = pred(value, key);
+            if (void 0 !== values) {
+                return values;
+            }
+            throw new TypeError('Unrecognized string union value "' + key + '"' + (charset ? " for " + charset : ""));
         }
-        function s(e) {
-            throw new k(e);
+        /**
+         * @param {string} label
+         * @return {?}
+         */
+        function callback(label) {
+            throw new YAMLException(label);
         }
-        function c(e) {
-            var t = parseInt(e, 10);
-            return isNaN(t) ? void 0 : t;
+        /**
+         * @param {string} value
+         * @return {?}
+         */
+        function compare(value) {
+            /** @type {number} */
+            var state = parseInt(value, 10);
+            return isNaN(state) ? void 0 : state;
         }
-        function a(e, t) {
-            var n = c(e);
-            if (void 0 !== n) return n;
-            throw new Error("Expected a number string, got '" + e + "'" + (void 0 !== t ? " for " + t : ""));
+        /**
+         * @param {string} isXML
+         * @param {string} year
+         * @return {?}
+         */
+        function find(isXML, year) {
+            var result = compare(isXML);
+            if (void 0 !== result) {
+                return result;
+            }
+            throw new Error("Expected a number string, got '" + isXML + "'" + (void 0 !== year ? " for " + year : ""));
         }
-        function u(e, t) {
+        /**
+         * @param {Function} func
+         * @param {Function} add
+         * @return {?}
+         */
+        function after(func, add) {
             try {
-                return e();
-            } catch (n) {
-                return t(n);
+                return func();
+            } catch (prefix) {
+                return add(prefix);
             }
         }
-        var l = e("babel-runtime/core-js/object/get-prototype-of"), f = o(l), d = e("babel-runtime/helpers/possibleConstructorReturn"), p = o(d), g = e("babel-runtime/helpers/inherits"), _ = o(g), b = e("babel-runtime/helpers/classCallCheck"), h = o(b), v = e("babel-runtime/helpers/createClass"), m = o(v);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var b = require("babel-runtime/core-js/object/get-prototype-of");
+        var keys = jQuery(b);
+        var html = require("babel-runtime/helpers/possibleConstructorReturn");
+        var c = jQuery(html);
+        var selector = require("babel-runtime/helpers/inherits");
+        var elem = jQuery(selector);
+        var tag = require("babel-runtime/helpers/classCallCheck");
+        var elements = jQuery(tag);
+        var target = require("babel-runtime/helpers/createClass");
+        var targets = jQuery(target);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
-        var y = e("./assert");
-        n.assert = y.assert, n.assertNonNull = y.assertNonNull, n.AssertionError = y.AssertionError;
-        var j = e("./promise");
-        n.SafePromise = j.SafePromise;
-        var w = e("./array");
-        n.Arr = w;
-        var x = e("./object");
-        n.Obj = x;
-        var L = function() {
-            function e(t) {
-                (0, h["default"])(this, e), this._getFallbackValue = t;
+        var chai = require("./assert");
+        optgroup.assert = chai.assert;
+        optgroup.assertNonNull = chai.assertNonNull;
+        optgroup.AssertionError = chai.AssertionError;
+        var nodes = require("./promise");
+        optgroup.SafePromise = nodes.SafePromise;
+        var Block = require("./array");
+        optgroup.Arr = Block;
+        var helper = require("./object");
+        optgroup.Obj = helper;
+        var Global = function() {
+            /**
+             * @param {(Object|number)} elem
+             * @return {undefined}
+             */
+            function restoreScript(elem) {
+                (0, elements["default"])(this, restoreScript);
+                /** @type {(Object|number)} */
+                this._getFallbackValue = elem;
             }
-            return (0, m["default"])(e, [ {
-                key: "init",
-                value: function(e) {
-                    if (void 0 !== this._value) throw new Error("Global value already initialized.");
-                    this._value = e;
+            return(0, targets["default"])(restoreScript, [{
+                key : "init",
+                /**
+                 * @param {number} newValue
+                 * @return {undefined}
+                 */
+                value : function(newValue) {
+                    if (void 0 !== this._value) {
+                        throw new Error("Global value already initialized.");
+                    }
+                    /** @type {number} */
+                    this._value = newValue;
                 }
             }, {
-                key: "get",
-                value: function() {
+                key : "get",
+                /**
+                 * @return {?}
+                 */
+                value : function() {
                     if (void 0 === this._value) {
-                        if (void 0 === this._getFallbackValue) throw new Error("Global value not initialized and no fallback value provided.");
+                        if (void 0 === this._getFallbackValue) {
+                            throw new Error("Global value not initialized and no fallback value provided.");
+                        }
                         this._value = this._getFallbackValue();
                     }
                     return this._value;
                 }
-            } ]), e;
+            }]), restoreScript;
         }();
-        n.Global = L, n.optionalStringUnion = r, n.assertStringUnion = i;
-        var k = function(e) {
-            function t(e) {
-                return (0, h["default"])(this, t), (0, p["default"])(this, (t.__proto__ || (0, f["default"])(t)).call(this, "Matching not exhaustive" + (e ? ": unexpected value " + e : "")));
+        optgroup.Global = Global;
+        /** @type {function (Array, ?): ?} */
+        optgroup.optionalStringUnion = pred;
+        /** @type {function ((Array|string), string, boolean): ?} */
+        optgroup.assertStringUnion = filter;
+        var YAMLException = function(_super) {
+            /**
+             * @param {boolean} domain
+             * @return {?}
+             */
+            function value(domain) {
+                return(0, elements["default"])(this, value), (0, c["default"])(this, (value.__proto__ || (0, keys["default"])(value)).call(this, "Matching not exhaustive" + (domain ? ": unexpected value " + domain : "")));
             }
-            return (0, _["default"])(t, e), t;
+            return(0, elem["default"])(value, _super), value;
         }(Error);
-        n.MatchingNotExhaustiveError = k, n.assertNever = s, n.optionalIntString = c, n.assertIntString = a, 
-        n.try_ = u;
+        optgroup.MatchingNotExhaustiveError = YAMLException;
+        /** @type {function (string): ?} */
+        optgroup.assertNever = callback;
+        /** @type {function (string): ?} */
+        optgroup.optionalIntString = compare;
+        /** @type {function (string, string): ?} */
+        optgroup.assertIntString = find;
+        /** @type {function (Function, Function): ?} */
+        optgroup.try_ = after;
     }, {
-        "./array": 140,
-        "./assert": 141,
-        "./object": 143,
-        "./promise": 144,
-        "babel-runtime/core-js/object/get-prototype-of": 8,
-        "babel-runtime/helpers/classCallCheck": 14,
-        "babel-runtime/helpers/createClass": 15,
-        "babel-runtime/helpers/inherits": 17,
-        "babel-runtime/helpers/possibleConstructorReturn": 18
-    } ],
-    143: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "./array" : 140,
+        "./assert" : 141,
+        "./object" : 143,
+        "./promise" : 144,
+        "babel-runtime/core-js/object/get-prototype-of" : 8,
+        "babel-runtime/helpers/classCallCheck" : 14,
+        "babel-runtime/helpers/createClass" : 15,
+        "babel-runtime/helpers/inherits" : 17,
+        "babel-runtime/helpers/possibleConstructorReturn" : 18
+    }],
+    143 : [function(require, dataAndEvents, optgroup) {
+        /**
+         * @param {string} value
+         * @return {?}
+         */
+        function appendModelPrefix(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        function r(e, t) {
-            var n = {};
-            return (0, u["default"])(t).forEach(function(o) {
-                return n[o] = e(o, t[o]);
-            }), n;
+        /**
+         * @param {Function} callback
+         * @param {Array} results
+         * @return {?}
+         */
+        function initialize(callback, results) {
+            var employees = {};
+            return(0, fullOtherName["default"])(results).forEach(function(i) {
+                return employees[i] = callback(i, results[i]);
+            }), employees;
         }
-        function i(e, t) {
-            var n = {};
-            return (0, u["default"])(t).forEach(function(o) {
-                e(o, t[o]) && (n[o] = t[o]);
-            }), n;
+        /**
+         * @param {Function} cb
+         * @param {Array} data
+         * @return {?}
+         */
+        function emit(cb, data) {
+            var cache = {};
+            return(0, fullOtherName["default"])(data).forEach(function(prop) {
+                if (cb(prop, data[prop])) {
+                    cache[prop] = data[prop];
+                }
+            }), cache;
         }
-        function s(e) {
-            return (0, u["default"])(e).map(function(t) {
-                return e[t];
+        /**
+         * @param {Object} name
+         * @return {?}
+         */
+        function values(name) {
+            return(0, fullOtherName["default"])(name).map(function(timeoutKey) {
+                return name[timeoutKey];
             });
         }
-        function c(e) {
-            return (0, u["default"])(e).map(function(t) {
-                return [ t, e[t] ];
+        /**
+         * @param {Array} collection
+         * @return {?}
+         */
+        function pluck(collection) {
+            return(0, fullOtherName["default"])(collection).map(function(method) {
+                return[method, collection[method]];
             });
         }
-        var a = e("babel-runtime/core-js/object/keys"), u = o(a);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
-        }), n.map = r, n.filter = i, n.values = s, n.pairs = c;
+        var other = require("babel-runtime/core-js/object/keys");
+        var fullOtherName = appendModelPrefix(other);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
+        });
+        /** @type {function (Function, Array): ?} */
+        optgroup.map = initialize;
+        /** @type {function (Function, Array): ?} */
+        optgroup.filter = emit;
+        /** @type {function (Object): ?} */
+        optgroup.values = values;
+        /** @type {function (Array): ?} */
+        optgroup.pairs = pluck;
     }, {
-        "babel-runtime/core-js/object/keys": 9
-    } ],
-    144: [ function(e, t, n) {
-        "use strict";
-        function o(e) {
-            return e && e.__esModule ? e : {
-                "default": e
+        "babel-runtime/core-js/object/keys" : 9
+    }],
+    144 : [function(proceed, dataAndEvents, optgroup) {
+        /**
+         * @param {Object} value
+         * @return {?}
+         */
+        function lookupIterator(value) {
+            return value && value.__esModule ? value : {
+                "default" : value
             };
         }
-        var r = e("babel-runtime/core-js/promise"), i = o(r);
-        Object.defineProperty(n, "__esModule", {
-            value: !0
+        var value = proceed("babel-runtime/core-js/promise");
+        var iterator = lookupIterator(value);
+        Object.defineProperty(optgroup, "__esModule", {
+            value : true
         });
         var s;
-        !function(e) {
-            function t(e) {
-                return new i["default"](e);
+        !function(calendar) {
+            /**
+             * @param {Object} name
+             * @return {?}
+             */
+            function create(name) {
+                return new iterator["default"](name);
             }
-            function n() {
-                var e = void 0, t = void 0, n = new i["default"](function(n, o) {
-                    e = n, t = o;
+            /**
+             * @return {?}
+             */
+            function makeRequest() {
+                var next = void 0;
+                var eb = void 0;
+                var getPromise = new iterator["default"](function(ng, dataAndEvents) {
+                    /** @type {(number|string)} */
+                    next = ng;
+                    /** @type {(number|string)} */
+                    eb = dataAndEvents;
                 });
-                return {
-                    promise: n,
-                    resolve: function(t) {
-                        e(t);
+                return{
+                    promise : getPromise,
+                    /**
+                     * @param {Object} name
+                     * @return {undefined}
+                     */
+                    resolve : function(name) {
+                        next(name);
                     },
-                    reject: function(e) {
-                        t(e);
+                    /**
+                     * @param {?} reason
+                     * @return {undefined}
+                     */
+                    reject : function(reason) {
+                        eb(reason);
                     }
                 };
             }
-            function o(e) {
-                return t(function(t, n) {
-                    return t(e());
+            /**
+             * @param {?} cb
+             * @return {?}
+             */
+            function sync(cb) {
+                return create(function(callback, dataAndEvents) {
+                    return callback(cb());
                 });
             }
-            e.create = t, e.createCompletionSource = n, e.sync = o;
-        }(s = n.SafePromise || (n.SafePromise = {}));
+            /** @type {function (Object): ?} */
+            calendar.create = create;
+            /** @type {function (): ?} */
+            calendar.createCompletionSource = makeRequest;
+            /** @type {function (?): ?} */
+            calendar.sync = sync;
+        }(s = optgroup.SafePromise || (optgroup.SafePromise = {}));
     }, {
-        "babel-runtime/core-js/promise": 11
-    } ]
-}, {}, [ 126 ]);
+        "babel-runtime/core-js/promise" : 11
+    }]
+}, {}, [126]);

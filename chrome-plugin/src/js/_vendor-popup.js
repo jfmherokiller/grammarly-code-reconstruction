@@ -1,4 +1,4 @@
-require = function e(t, n, r) {
+!function e(t, n, r) {
     function o(a, u) {
         if (!n[a]) {
             if (!t[a]) {
@@ -20,7 +20,8 @@ require = function e(t, n, r) {
     }
     for (var i = "function" == typeof require && require, a = 0; a < r.length; a++) o(r[a]);
     return o;
-}({
+}(
+    {
     1: [ function(e, t, n) {
         function r(e) {
             function t(e) {
