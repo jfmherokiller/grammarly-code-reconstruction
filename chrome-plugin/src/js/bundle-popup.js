@@ -1,4 +1,4 @@
-!function e$$12(t, n, r) {
+! function e$$12(t, n, r) {
     /**
      * @param {string} o
      * @param {?} u
@@ -19,7 +19,7 @@
                 throw err.code = "MODULE_NOT_FOUND", err;
             }
             var module_ = n[o] = {
-                exports : {}
+                exports: {}
             };
             t[o][0].call(module_.exports, function(e) {
                 var n = t[o][1][e];
@@ -35,12 +35,12 @@
     var i = "function" === typeof require && require;
     /** @type {number} */
     var o = 0;
-    for (;o < r.length;o++) {
+    for (; o < r.length; o++) {
         s(r[o]);
     }
     return s;
 }({
-    1 : [function(require, dataAndEvents, result) {
+    1: [function(require, dataAndEvents, result) {
         /**
          * @param {number} name
          * @param {number} type
@@ -152,15 +152,15 @@
         /** @type {function (number, number, ?): ?} */
         result["default"] = style;
     }, {}],
-    2 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    2: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {string} _value
          * @return {?}
          */
         function resolve(_value) {
-            return{
-                type : "success",
-                value : _value
+            return {
+                type: "success",
+                value: _value
             };
         }
         /**
@@ -168,9 +168,9 @@
          * @return {?}
          */
         function reject(reason) {
-            return{
-                type : "failure",
-                error : reason
+            return {
+                type: "failure",
+                error: reason
             };
         }
         /**
@@ -189,7 +189,7 @@
         function save(opt_attributes, timestep, callback) {
             var result = callback();
             return opt_attributes > 0 ? result["catch"](function(dataAndEvents) {
-                return(new Promise(function(fnc, dataAndEvents) {
+                return (new Promise(function(fnc, dataAndEvents) {
                     return setTimeout(fnc, timestep);
                 })).then(function(dataAndEvents) {
                     return save(opt_attributes - 1, timestep, callback);
@@ -198,18 +198,19 @@
         }
         var dataAttr = this && this.__extends || function() {
             var mixIn = Object.setPrototypeOf || ({
-                __proto__ : []
-            } instanceof Array && function(expectedNumberOfNonCommentArgs, key) {
-                /** @type {Function} */
-                expectedNumberOfNonCommentArgs.__proto__ = key;
-            } || function(expectedNumberOfNonCommentArgs, key) {
-                var k;
-                for (k in key) {
-                    if (key.hasOwnProperty(k)) {
-                        expectedNumberOfNonCommentArgs[k] = key[k];
-                    }
+                    __proto__: []
                 }
-            });
+                instanceof Array && function(expectedNumberOfNonCommentArgs, key) {
+                    /** @type {Function} */
+                    expectedNumberOfNonCommentArgs.__proto__ = key;
+                } || function(expectedNumberOfNonCommentArgs, key) {
+                    var k;
+                    for (k in key) {
+                        if (key.hasOwnProperty(k)) {
+                            expectedNumberOfNonCommentArgs[k] = key[k];
+                        }
+                    }
+                });
             return function(constructor, expectedNumberOfNonCommentArgs) {
                 /**
                  * @return {undefined}
@@ -223,7 +224,7 @@
             };
         }();
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var events = require("@grammarly-npm/cookie");
         var Base = require("./util");
@@ -237,13 +238,13 @@
          * @return {?}
          */
         var formatDate = function() {
-            return(new Date).setFullYear((new Date).getFullYear() + 10);
+            return (new Date).setFullYear((new Date).getFullYear() + 10);
         };
         /**
          * @return {?}
          */
         var timestamp = function() {
-            return(new Date).setMinutes((new Date).getMinutes() + 10);
+            return (new Date).setMinutes((new Date).getMinutes() + 10);
         };
         /** @type {RegExp} */
         var isSimple = /^\.\w+\.\w+/;
@@ -419,11 +420,11 @@
                         var tag = Base.alphanumeric(10);
                         try {
                             window.chrome.cookies.set({
-                                name : tag,
-                                value : tag,
-                                url : settings._url,
-                                domain : settings._domain,
-                                expirationDate : timestamp() / 1E3
+                                name: tag,
+                                value: tag,
+                                url: settings._url,
+                                domain: settings._domain,
+                                expirationDate: timestamp() / 1E3
                             }, function(child) {
                                 var ex = settings._hasRuntimeError();
                                 if (!child) {
@@ -447,8 +448,8 @@
                 return new Promise(function(done, on) {
                     try {
                         window.chrome.cookies.get({
-                            url : settings._url,
-                            name : key
+                            url: settings._url,
+                            name: key
                         }, function(found) {
                             var ex = settings._hasRuntimeError();
                             if (!found) {
@@ -467,11 +468,11 @@
                 return new Promise(function($sanitize, done) {
                     try {
                         window.chrome.cookies.set({
-                            name : key,
-                            value : value,
-                            url : settings._url,
-                            domain : settings._domain,
-                            expirationDate : formatDate() / 1E3
+                            name: key,
+                            value: value,
+                            url: settings._url,
+                            domain: settings._domain,
+                            expirationDate: formatDate() / 1E3
                         }, function(s) {
                             var ex = settings._hasRuntimeError();
                             if (!s) {
@@ -510,15 +511,15 @@
                     return new Promise(function($sanitize, done) {
                         var tag = Base.alphanumeric(10);
                         window.browser.cookies.set({
-                            name : tag,
-                            value : tag,
-                            url : settings._url,
-                            domain : settings._domain,
-                            expirationDate : timestamp() / 1E3
+                            name: tag,
+                            value: tag,
+                            url: settings._url,
+                            domain: settings._domain,
+                            expirationDate: timestamp() / 1E3
                         }).then(function() {
                             window.browser.cookies.get({
-                                url : settings._url,
-                                name : tag
+                                url: settings._url,
+                                name: tag
                             }).then(function(child) {
                                 if (child && child.value === tag) {
                                     $sanitize();
@@ -537,8 +538,8 @@
                 var settings = this;
                 return new Promise(function(done, $sanitize) {
                     window.browser.cookies.get({
-                        url : settings._url,
-                        name : key
+                        url: settings._url,
+                        name: key
                     }).then(function(found) {
                         done(found ? found.value : void 0);
                     })["catch"](function(m1) {
@@ -549,11 +550,11 @@
                 var settings = this;
                 return new Promise(function($sanitize, done) {
                     window.browser.cookies.set({
-                        name : key,
-                        value : value,
-                        url : settings._url,
-                        domain : settings._domain,
-                        expirationDate : formatDate() / 1E3
+                        name: key,
+                        value: value,
+                        url: settings._url,
+                        domain: settings._domain,
+                        expirationDate: formatDate() / 1E3
                     }).then(function(s) {
                         if (!(s && s.value === value)) {
                             done(new Error("setContainerId failed.\n          Tried to set " + value + ", the result is " + (s ? s.value : s) + "."));
@@ -610,10 +611,10 @@
                 return self;
             }
             return dataAttr(expectedNumberOfNonCommentArgs, camelKey), expectedNumberOfNonCommentArgs.prototype._getCookieOptions = function() {
-                return{
-                    path : "/",
-                    domain : this._domain,
-                    expires : new Date(formatDate())
+                return {
+                    path: "/",
+                    domain: this._domain,
+                    expires: new Date(formatDate())
                 };
             }, expectedNumberOfNonCommentArgs.prototype.ensureAvailable = function() {
                 var event = Base.alphanumeric(10);
@@ -676,8 +677,8 @@
                 });
             }, expectedNumberOfNonCommentArgs.prototype._doSend = function(data, method) {
                 return this._fetch(data, {
-                    credentials : "include",
-                    method : method
+                    credentials: "include",
+                    method: method
                 });
             }, expectedNumberOfNonCommentArgs.prototype.getContainerId = function() {
                 /** @type {string} */
@@ -692,8 +693,7 @@
                 var type = (formatDate() - Date.now()) / 1E3;
                 /** @type {string} */
                 var msg = this._baseUrl + "?name=" + this._keyName + "&value=" + isXML + "&maxAge=" + type;
-                return this._doSend(msg, "post").then(function() {
-                });
+                return this._doSend(msg, "post").then(function() {});
             }, expectedNumberOfNonCommentArgs;
         }(camelKey);
         expectedNumberOfNonCommentArgs.BackendStorage = BackendStorage;
@@ -719,12 +719,12 @@
         }(camelKey);
         expectedNumberOfNonCommentArgs.MemoryStorage = MemoryStorage;
     }, {
-        "./util" : 4,
-        "@grammarly-npm/cookie" : 1
+        "./util": 4,
+        "@grammarly-npm/cookie": 1
     }],
-    3 : [function(lerp, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    3: [function(lerp, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var cd = lerp("./util");
         var bc = lerp("./container_id_manager");
@@ -847,15 +847,15 @@
                 if (void 0 === deepDataAndEvents && (deepDataAndEvents = false), this._shouldPing(deepDataAndEvents)) {
                     this._setNextPingTimestamp();
                     var pdataCur = {
-                        referrer : document.referrer,
-                        url : document.location.href,
-                        userAgent : navigator.userAgent,
-                        navigatorAppName : navigator.appName,
-                        navigatorAppCodeName : navigator.appCodeName,
-                        navigatorAppVersion : navigator.appVersion,
-                        navigatorVendor : navigator.vendor,
-                        screenWidth : screen.width,
-                        screenHeight : screen.height
+                        referrer: document.referrer,
+                        url: document.location.href,
+                        userAgent: navigator.userAgent,
+                        navigatorAppName: navigator.appName,
+                        navigatorAppCodeName: navigator.appCodeName,
+                        navigatorAppVersion: navigator.appVersion,
+                        navigatorVendor: navigator.vendor,
+                        screenWidth: screen.width,
+                        screenHeight: screen.height
                     };
                     this.track("ping", pdataCur);
                 }
@@ -878,14 +878,14 @@
                 var _batchId = this._batchId++;
                 this.getContainerId().then(function(containerId) {
                     var options = {
-                        eventName : self._client + "/" + message,
-                        client : self._client,
-                        clientVersion : self._clientVersion,
-                        userId : self._userId,
-                        isTest : self._isTest,
-                        containerId : containerId,
-                        instanceId : self._instanceId,
-                        batchId : _batchId
+                        eventName: self._client + "/" + message,
+                        client: self._client,
+                        clientVersion: self._clientVersion,
+                        userId: self._userId,
+                        isTest: self._isTest,
+                        containerId: containerId,
+                        instanceId: self._instanceId,
+                        batchId: _batchId
                     };
                     return self._doSend(options, m);
                 })["catch"](function(key) {
@@ -894,14 +894,14 @@
                 });
             }, self.prototype._doSend = function(expectedNumberOfNonCommentArgs, camelKey) {
                 return this._fetch(this._eventsUrl, {
-                    mode : "cors",
-                    credentials : "include",
-                    method : "post",
-                    headers : {
-                        "Content-Type" : "application/json"
+                    mode: "cors",
+                    credentials: "include",
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json"
                     },
-                    body : JSON.stringify({
-                        events : [Object.assign(expectedNumberOfNonCommentArgs, camelKey)]
+                    body: JSON.stringify({
+                        events: [Object.assign(expectedNumberOfNonCommentArgs, camelKey)]
                     })
                 });
             }, self;
@@ -920,12 +920,10 @@
                     data = {};
                 }
                 this.history.push({
-                    eventName : eventName,
-                    props : data
+                    eventName: eventName,
+                    props: data
                 });
-            }, self.prototype.pingMaybe = function() {
-            }, self.prototype.setUser = function(user, aValue) {
-            }, self.prototype.getContainerId = function() {
+            }, self.prototype.pingMaybe = function() {}, self.prototype.setUser = function(user, aValue) {}, self.prototype.getContainerId = function() {
                 return Promise.resolve("dummy_container_id");
             }, self;
         }();
@@ -934,8 +932,7 @@
             /**
              * @return {undefined}
              */
-            function self() {
-            }
+            function self() {}
             return self.prototype.track = function(eventName, data) {
                 if (void 0 === data) {
                     data = {};
@@ -946,24 +943,21 @@
                     /** @type {*} */
                     var list = JSON.parse(localStorage.getItem(storageKey)) || [];
                     list.push({
-                        eventName : eventName,
-                        props : data
+                        eventName: eventName,
+                        props: data
                     });
                     localStorage.setItem(storageKey, JSON.stringify(list));
-                } catch (error) {
-                }
-            }, self.prototype.pingMaybe = function() {
-            }, self.prototype.setUser = function(user, aValue) {
-            }, self.prototype.getContainerId = function() {
+                } catch (error) {}
+            }, self.prototype.pingMaybe = function() {}, self.prototype.setUser = function(user, aValue) {}, self.prototype.getContainerId = function() {
                 return Promise.resolve("dummy_container_id");
             }, self;
         }();
         expectedNumberOfNonCommentArgs.LocalStorageGnarClient = LocalStorageGnarClient;
     }, {
-        "./container_id_manager" : 2,
-        "./util" : 4
+        "./container_id_manager": 2,
+        "./util": 4
     }],
-    4 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    4: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {number} opt_attributes
          * @param {string} max
@@ -986,7 +980,7 @@
             return currentTime.getHours() > 2 && currentTime.setDate(currentTime.getDate() + 1), currentTime.setHours(3), currentTime.setMinutes(Math.floor(60 * Math.random())), currentTime.getTime();
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {string} */
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -995,9 +989,9 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.getNextPingDate = process;
     }, {}],
-    5 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    5: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var nodes = require("./ring_buffer");
         var CrashLogWrapper = function() {
@@ -1041,8 +1035,8 @@
                         error = err;
                     }
                     this._crashLogger.log(o.level, "CrashLog", {
-                        events : error,
-                        first : !this._crashLogged
+                        events: error,
+                        first: !this._crashLogged
                     });
                     /** @type {boolean} */
                     this._crashLogged = true;
@@ -1052,11 +1046,11 @@
         }();
         expectedNumberOfNonCommentArgs.CrashLogWrapper = CrashLogWrapper;
     }, {
-        "./ring_buffer" : 9
+        "./ring_buffer": 9
     }],
-    6 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    6: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var Block = require("./log4ts");
         expectedNumberOfNonCommentArgs.Logging = Block;
@@ -1069,22 +1063,21 @@
         var nodes = require("./utils");
         expectedNumberOfNonCommentArgs.EventProps = nodes.EventProps;
         var Monitoring;
-        !function(exports) {
+        ! function(exports) {
             var EventEmitter = function() {
                 /**
                  * @return {undefined}
                  */
-                function expectedNumberOfNonCommentArgs() {
-                }
+                function expectedNumberOfNonCommentArgs() {}
                 return Object.defineProperty(expectedNumberOfNonCommentArgs, "root", {
                     /**
                      * @return {?}
                      */
-                    get : function() {
+                    get: function() {
                         return inspect.LoggingConfig.getRootLogger();
                     },
-                    enumerable : true,
-                    configurable : true
+                    enumerable: true,
+                    configurable: true
                 }), expectedNumberOfNonCommentArgs.getLogger = function(name, deepDataAndEvents) {
                     return expectedNumberOfNonCommentArgs.root.getLogger(name, deepDataAndEvents);
                 }, expectedNumberOfNonCommentArgs;
@@ -1094,34 +1087,33 @@
                 /**
                  * @return {undefined}
                  */
-                function expectedNumberOfNonCommentArgs() {
-                }
+                function expectedNumberOfNonCommentArgs() {}
                 return Object.defineProperty(expectedNumberOfNonCommentArgs, "root", {
                     /**
                      * @return {?}
                      */
-                    get : function() {
+                    get: function() {
                         return helper.MetricsConfig.getRootMetric();
                     },
-                    enumerable : true,
-                    configurable : true
+                    enumerable: true,
+                    configurable: true
                 }), expectedNumberOfNonCommentArgs;
             }();
             exports.TimeSeries = TimeSeries;
         }(Monitoring = expectedNumberOfNonCommentArgs.Monitoring || (expectedNumberOfNonCommentArgs.Monitoring = {}));
     }, {
-        "./log4ts" : 7,
-        "./log4ts_impl" : 8,
-        "./timeseries" : 10,
-        "./timeseries_impl" : 11,
-        "./utils" : 12
+        "./log4ts": 7,
+        "./log4ts_impl": 8,
+        "./timeseries": 10,
+        "./timeseries_impl": 11,
+        "./utils": 12
     }],
-    7 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    7: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var LogLevel;
-        !function(Level) {
+        ! function(Level) {
             /** @type {string} */
             Level[Level.TRACE = 0] = "TRACE";
             /** @type {string} */
@@ -1143,7 +1135,7 @@
              * @return {?}
              */
             function getLevel(iLogLevel) {
-                switch(iLogLevel) {
+                switch (iLogLevel) {
                     case "TRACE":
                         return Level.TRACE;
                     case "DEBUG":
@@ -1166,9 +1158,9 @@
             Level.fromString = getLevel;
         })(LogLevel = expectedNumberOfNonCommentArgs.LogLevel || (expectedNumberOfNonCommentArgs.LogLevel = {}));
     }, {}],
-    8 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    8: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var data_user = require("tslib");
         var selfClosing = require("./utils");
@@ -1225,47 +1217,47 @@
                 return level >= this.level;
             }, Logger.prototype.handler = function(msg, name) {
                 var log = this;
-                return{
+                return {
                     /**
                      * @param {string} type
                      * @return {?}
                      */
-                    trace : function(type) {
+                    trace: function(type) {
                         throw log.trace(msg, type, name), type;
                     },
                     /**
                      * @param {string} type
                      * @return {?}
                      */
-                    debug : function(type) {
+                    debug: function(type) {
                         throw log.debug(msg, type, name), type;
                     },
                     /**
                      * @param {string} text
                      * @return {?}
                      */
-                    info : function(text) {
+                    info: function(text) {
                         throw log.info(msg, text, name), text;
                     },
                     /**
                      * @param {string} type
                      * @return {?}
                      */
-                    warn : function(type) {
+                    warn: function(type) {
                         throw log.warn(msg, type, name), type;
                     },
                     /**
                      * @param {string} type
                      * @return {?}
                      */
-                    error : function(type) {
+                    error: function(type) {
                         throw log.error(msg, type, name), type;
                     },
                     /**
                      * @param {?} err
                      * @return {?}
                      */
-                    fatal : function(err) {
+                    fatal: function(err) {
                         throw log.fatal(msg, err, name), err;
                     }
                 };
@@ -1364,7 +1356,7 @@
                 /** @type {Function} */
                 log = obj.level <= self.LogLevel.TRACE ? console.trace || console.log : obj.level <= self.LogLevel.DEBUG ? console.debug || console.log : obj.level <= self.LogLevel.INFO ? console.log : obj.level <= self.LogLevel.WARN ? console.warn : console.error;
                 log.apply(console, ["[" + obj.logger + "]: " + self.LogLevel[obj.level] + " : " + obj.message, obj.exception, obj.extra].filter(function(dataAndEvents) {
-                    return!!dataAndEvents;
+                    return !!dataAndEvents;
                 }));
             }, expectedNumberOfNonCommentArgs;
         }(camelKey);
@@ -1373,8 +1365,7 @@
             /**
              * @return {undefined}
              */
-            function _t() {
-            }
+            function _t() {}
             return _t.createRootLogger = function(dataAndEvents, LEVEL_LIST, r, elm, deepDataAndEvents) {
                 if (void 0 === deepDataAndEvents) {
                     /** @type {boolean} */
@@ -1424,8 +1415,7 @@
                 this.promise = (new Promise(function(resolve, dataAndEvents) {
                     /** @type {Object} */
                     promise.resolve = resolve;
-                })).then(function() {
-                });
+                })).then(function() {});
             }
             return render;
         }();
@@ -1467,7 +1457,7 @@
             }, clone.prototype._incSkippedCounter = function() {
                 if (!this._skippedCounter) {
                     this._skippedCounter = new Splice(self.LogLevel.WARN, "Messages was skipped due to buffer overflow", "log4ts_impl.LogQueue", Date.now(), void 0, {
-                        count : 0
+                        count: 0
                     });
                 }
                 this._skippedCounter.extra.count++;
@@ -1501,7 +1491,7 @@
                     var camelKey = e.event.extra || {};
                     if (!camelKey.appendRetries) {
                         camelKey = e.event.extra = Object.assign({
-                            appendRetries : 1
+                            appendRetries: 1
                         }, camelKey);
                     }
                     ++camelKey.appendRetries;
@@ -1516,8 +1506,7 @@
             /**
              * @return {undefined}
              */
-            function $Element() {
-            }
+            function $Element() {}
             return $Element.prototype.append = function(op) {
                 return Promise.resolve();
             }, $Element;
@@ -1541,7 +1530,7 @@
                 return this._fetch(this._prepareData(op));
             }, clone.prototype._toObject = function(expectedNumberOfNonCommentArgs) {
                 return void 0 === expectedNumberOfNonCommentArgs || (null === expectedNumberOfNonCommentArgs || expectedNumberOfNonCommentArgs instanceof Object && !Array.isArray(expectedNumberOfNonCommentArgs)) ? expectedNumberOfNonCommentArgs : {
-                    extra : expectedNumberOfNonCommentArgs
+                    extra: expectedNumberOfNonCommentArgs
                 };
             }, clone.prototype._parseException = function(slide) {
                 if (slide) {
@@ -1552,27 +1541,27 @@
                     var message = void 0 === msg ? "Unknown error message" : msg;
                     var stack = e.stack;
                     var expectedNumberOfNonCommentArgs = data_user.__rest(e, ["name", "message", "stack"]);
-                    return{
-                        exceptionPart : {
-                            exception : {
-                                name : an,
-                                message : message,
-                                stack : stack
+                    return {
+                        exceptionPart: {
+                            exception: {
+                                name: an,
+                                message: message,
+                                stack: stack
                             }
                         },
-                        exceptionDetailsPart : Object.keys(expectedNumberOfNonCommentArgs).length > 0 ? {
-                            exceptionDetails : expectedNumberOfNonCommentArgs
+                        exceptionDetailsPart: Object.keys(expectedNumberOfNonCommentArgs).length > 0 ? {
+                            exceptionDetails: expectedNumberOfNonCommentArgs
                         } : {}
                     };
                 }
-                return{
-                    exceptionPart : {},
-                    exceptionDetailsPart : {}
+                return {
+                    exceptionPart: {},
+                    exceptionDetailsPart: {}
                 };
             }, clone.prototype._prepareData = function(data) {
                 /** @type {({context: ??}|{})} */
                 var actualKey = data.context ? {
-                    context : data.context
+                    context: data.context
                 } : {};
                 var table = this._parseException(data.exception);
                 var attributes = table.exceptionPart;
@@ -1580,14 +1569,14 @@
                 /** @type {string} */
                 var err = JSON.stringify(Object.assign({}, camelKey, this._toObject(data.extra)));
                 var b = Object.assign({
-                    message : data.message,
-                    logger : data.logger,
-                    level : self.LogLevel[data.level],
-                    application : this._appName,
-                    version : this._appVersion,
-                    env : this._env
+                    message: data.message,
+                    logger: data.logger,
+                    level: self.LogLevel[data.level],
+                    application: this._appName,
+                    version: this._appVersion,
+                    env: this._env
                 }, actualKey, attributes, "{}" !== err && {
-                    details : err
+                    details: err
                 });
                 return JSON.stringify(b, null, "");
             }, clone;
@@ -1605,14 +1594,13 @@
             function expectedNumberOfNonCommentArgs(url, fake, graphics, capture, xhr) {
                 return camelKey.call(this, fake, graphics, capture, function(reqData) {
                     return xhr(url, {
-                        method : "POST",
-                        cache : "no-cache",
-                        headers : {
-                            "Content-Type" : "application/json"
+                        method: "POST",
+                        cache: "no-cache",
+                        headers: {
+                            "Content-Type": "application/json"
                         },
-                        body : reqData
-                    }).then(function() {
-                    });
+                        body: reqData
+                    }).then(function() {});
                 }) || this;
             }
             return data_user.__extends(expectedNumberOfNonCommentArgs, camelKey), expectedNumberOfNonCommentArgs;
@@ -1633,11 +1621,10 @@
                 var deliminator = dataAndEvents + "/log?json=";
                 return _this = camelKey.call(this, fake, graphics, capture, function(i) {
                     return $transition(deliminator + encodeURIComponent(i), {
-                        mode : "no-cors",
-                        method : "get",
-                        cache : "no-cache"
-                    }).then(function() {
-                    });
+                        mode: "no-cors",
+                        method: "get",
+                        cache: "no-cache"
+                    }).then(function() {});
                 }) || this;
             }
             return data_user.__extends(expectedNumberOfNonCommentArgs, camelKey), expectedNumberOfNonCommentArgs;
@@ -1647,8 +1634,7 @@
             /**
              * @return {undefined}
              */
-            function self() {
-            }
+            function self() {}
             return self.getRootLogger = function() {
                 return self._rootLogger || (self._rootLogger = self._createDefaultRootLogger(), self._rootLogger.warn("Using DEFAULT root logger")), self._rootLogger;
             }, self.configure = function(type) {
@@ -1661,15 +1647,15 @@
         }();
         expectedNumberOfNonCommentArgs.LoggingConfig = LoggingConfig;
     }, {
-        "./crash_logger" : 5,
-        "./log4ts" : 7,
-        "./ring_buffer" : 9,
-        "./utils" : 12,
-        tslib : "tslib"
+        "./crash_logger": 5,
+        "./log4ts": 7,
+        "./ring_buffer": 9,
+        "./utils": 12,
+        tslib: "tslib"
     }],
-    9 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    9: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var RingBuffer = function() {
             /**
@@ -1688,29 +1674,29 @@
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this._isFull ? this._buffer.length : (this._end - this._start + this._buffer.length) % this._buffer.length;
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), Object.defineProperty(self.prototype, "isEmpty", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return 0 === this.size;
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), Object.defineProperty(self.prototype, "isFull", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this._isFull;
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), self.prototype.push = function(o) {
                 if (this.isFull) {
                     if (!this.allowOverflow) {
@@ -1740,20 +1726,20 @@
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this.isEmpty ? void 0 : this._buffer[this._start];
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), Object.defineProperty(self.prototype, "last", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this.isEmpty ? void 0 : this._buffer[0 === this._end ? this.capacity - 1 : this._end - 1];
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), self.prototype.clear = function() {
                 /** @type {Array} */
                 this._buffer = new Array(this.capacity);
@@ -1775,12 +1761,12 @@
                         /** @type {number} */
                         var n = 0;
                         var i = this._start;
-                        for (;i < this.capacity;++i, ++n) {
+                        for (; i < this.capacity; ++i, ++n) {
                             out[n] = this._buffer[i];
                         }
                         /** @type {number} */
                         i = 0;
-                        for (;i < this._end;++i, ++n) {
+                        for (; i < this._end; ++i, ++n) {
                             out[n] = this._buffer[i];
                         }
                     }
@@ -1790,14 +1776,14 @@
         }();
         expectedNumberOfNonCommentArgs.RingBuffer = RingBuffer;
     }, {}],
-    10 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    10: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
     }, {}],
-    11 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    11: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var data_user = require("tslib");
         var selfClosing = require("./utils");
@@ -1825,35 +1811,35 @@
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     var offset = this.name.lastIndexOf(".");
                     var arg = this.name.substring(0, offset === -1 ? 0 : offset);
                     return "" === arg ? void 0 : new self(arg, this.timersSink, this.countersSink);
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), Object.defineProperty(self.prototype, "root", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     var offset = this.name.indexOf(".");
                     var arg = this.name.substring(0, offset === -1 ? 0 : offset);
                     return "" === arg ? this : new self(arg, this.timersSink, this.countersSink);
                 },
-                enumerable : true,
-                configurable : true
+                enumerable: true,
+                configurable: true
             }), self.prototype._createName = function(name) {
                 return this.name + "." + name;
             }, self.prototype.start = function() {
                 /** @type {number} */
                 var length = Date.now();
                 var ret = this;
-                return{
+                return {
                     /**
                      * @return {undefined}
                      */
-                    stop : function() {
+                    stop: function() {
                         ret.recordTime(Date.now() - length);
                     }
                 };
@@ -1866,8 +1852,7 @@
                 } finally {
                     try {
                         event.stop();
-                    } catch (e) {
-                    }
+                    } catch (e) {}
                 }
             }, self.prototype.increment = function(a) {
                 if (void 0 === a) {
@@ -1943,8 +1928,8 @@
                      */
                     var run = function() {
                         self._fetch(which, {
-                            mode : "no-cors",
-                            cache : "no-cache"
+                            mode: "no-cors",
+                            cache: "no-cache"
                         })["catch"](function(key) {
                             if (i++ < charLen) {
                                 setTimeout(run, 5E3 * i);
@@ -1978,8 +1963,7 @@
             /**
              * @return {undefined}
              */
-            function context() {
-            }
+            function context() {}
             return context.getRootMetric = function() {
                 return context._metricsRoot || (console.warn("[WARNING] Using default timeseries implementation."), context._metricsRoot = new log(console.log)), context._metricsRoot;
             }, context.configure = function(clear) {
@@ -1988,10 +1972,10 @@
         }();
         expectedNumberOfNonCommentArgs.MetricsConfig = MetricsConfig;
     }, {
-        "./utils" : 12,
-        tslib : "tslib"
+        "./utils": 12,
+        tslib: "tslib"
     }],
-    12 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    12: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Object} value
          * @return {undefined}
@@ -2005,10 +1989,10 @@
             }
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var defer;
-        !function(on) {
+        ! function(on) {
             /**
              * @param {boolean} e
              * @return {?}
@@ -2022,7 +2006,7 @@
             on.isErrorLike = fn;
         }(defer = expectedNumberOfNonCommentArgs.ErrorLike || (expectedNumberOfNonCommentArgs.ErrorLike = {}));
         var EventProps;
-        !function(dataAndEvents) {
+        ! function(dataAndEvents) {
             /**
              * @param {Object} err
              * @return {?}
@@ -2038,7 +2022,7 @@
              */
             function next(obj, result, signal_eof) {
                 if (!obj) {
-                    return{};
+                    return {};
                 }
                 var qs = {};
                 /** @type {function (Object): Array.<string>} */
@@ -2072,119 +2056,119 @@
         /** @type {function (Object): undefined} */
         expectedNumberOfNonCommentArgs.validateName = url;
     }, {}],
-    13 : [function($sanitize, module, dataAndEvents) {
+    13: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/array/from"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/array/from"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/array/from" : 36
+        "core-js/library/fn/array/from": 36
     }],
-    14 : [function($sanitize, module, dataAndEvents) {
+    14: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/get-iterator"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/get-iterator"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/get-iterator" : 37
+        "core-js/library/fn/get-iterator": 37
     }],
-    15 : [function($sanitize, module, dataAndEvents) {
+    15: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/is-iterable"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/is-iterable"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/is-iterable" : 38
+        "core-js/library/fn/is-iterable": 38
     }],
-    16 : [function($sanitize, module, dataAndEvents) {
+    16: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/json/stringify"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/json/stringify"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/json/stringify" : 39
+        "core-js/library/fn/json/stringify": 39
     }],
-    17 : [function($sanitize, module, dataAndEvents) {
+    17: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/assign"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/assign"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/assign" : 40
+        "core-js/library/fn/object/assign": 40
     }],
-    18 : [function($sanitize, module, dataAndEvents) {
+    18: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/create"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/create"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/create" : 41
+        "core-js/library/fn/object/create": 41
     }],
-    19 : [function($sanitize, module, dataAndEvents) {
+    19: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/define-property"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/define-property"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/define-property" : 42
+        "core-js/library/fn/object/define-property": 42
     }],
-    20 : [function($sanitize, module, dataAndEvents) {
+    20: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/get-own-property-symbols"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/get-own-property-symbols"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/get-own-property-symbols" : 43
+        "core-js/library/fn/object/get-own-property-symbols": 43
     }],
-    21 : [function($sanitize, module, dataAndEvents) {
+    21: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/get-prototype-of"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/get-prototype-of"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/get-prototype-of" : 44
+        "core-js/library/fn/object/get-prototype-of": 44
     }],
-    22 : [function($sanitize, module, dataAndEvents) {
+    22: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/keys"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/keys"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/keys" : 45
+        "core-js/library/fn/object/keys": 45
     }],
-    23 : [function($sanitize, module, dataAndEvents) {
+    23: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/set-prototype-of"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/set-prototype-of"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/set-prototype-of" : 46
+        "core-js/library/fn/object/set-prototype-of": 46
     }],
-    24 : [function($sanitize, module, dataAndEvents) {
+    24: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/promise"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/promise"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/promise" : 47
+        "core-js/library/fn/promise": 47
     }],
-    25 : [function($sanitize, module, dataAndEvents) {
+    25: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/symbol"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/symbol"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/symbol" : 48
+        "core-js/library/fn/symbol": 48
     }],
-    26 : [function($sanitize, module, dataAndEvents) {
+    26: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/symbol/iterator"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/symbol/iterator"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/symbol/iterator" : 49
+        "core-js/library/fn/symbol/iterator": 49
     }],
-    27 : [function(dataAndEvents, deepDataAndEvents, __exports__) {
+    27: [function(dataAndEvents, deepDataAndEvents, __exports__) {
         /** @type {boolean} */
         __exports__.__esModule = true;
         /**
@@ -2198,14 +2182,14 @@
             }
         };
     }, {}],
-    28 : [function(require, dataAndEvents, __exports__) {
+    28: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {?} value
          * @return {?}
          */
         function appendModelPrefix(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -2221,7 +2205,7 @@
             function defineProperty(value, obj) {
                 /** @type {number} */
                 var i = 0;
-                for (;i < obj.length;i++) {
+                for (; i < obj.length; i++) {
                     var property = obj[i];
                     property.enumerable = property.enumerable || false;
                     /** @type {boolean} */
@@ -2238,16 +2222,16 @@
             };
         }();
     }, {
-        "../core-js/object/define-property" : 19
+        "../core-js/object/define-property": 19
     }],
-    29 : [function(require, dataAndEvents, __exports__) {
+    29: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {?} value
          * @return {?}
          */
         function appendModelPrefix(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -2262,23 +2246,23 @@
          */
         __exports__["default"] = function(obj, key, value) {
             return key in obj ? (0, fullOtherName["default"])(obj, key, {
-                value : value,
-                enumerable : true,
-                configurable : true,
-                writable : true
+                value: value,
+                enumerable: true,
+                configurable: true,
+                writable: true
             }) : obj[key] = value, obj;
         };
     }, {
-        "../core-js/object/define-property" : 19
+        "../core-js/object/define-property": 19
     }],
-    30 : [function(require, dataAndEvents, __exports__) {
+    30: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {?} type
          * @return {?}
          */
         function create(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /** @type {boolean} */
@@ -2299,11 +2283,11 @@
                 throw new TypeError("Super expression must either be null or a function, not " + ("undefined" === typeof b ? "undefined" : (0, conf["default"])(b)));
             }
             ret.prototype = (0, socket["default"])(b && b.prototype, {
-                constructor : {
-                    value : ret,
-                    enumerable : false,
-                    writable : true,
-                    configurable : true
+                constructor: {
+                    value: ret,
+                    enumerable: false,
+                    writable: true,
+                    configurable: true
                 }
             });
             if (b) {
@@ -2316,18 +2300,18 @@
             }
         };
     }, {
-        "../core-js/object/create" : 18,
-        "../core-js/object/set-prototype-of" : 23,
-        "../helpers/typeof" : 34
+        "../core-js/object/create": 18,
+        "../core-js/object/set-prototype-of": 23,
+        "../helpers/typeof": 34
     }],
-    31 : [function(proceed, dataAndEvents, __exports__) {
+    31: [function(proceed, dataAndEvents, __exports__) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -2343,19 +2327,19 @@
             if (!dataAndEvents) {
                 throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
             }
-            return!callback || "object" !== ("undefined" === typeof callback ? "undefined" : (0, iterator["default"])(callback)) && "function" !== typeof callback ? dataAndEvents : callback;
+            return !callback || "object" !== ("undefined" === typeof callback ? "undefined" : (0, iterator["default"])(callback)) && "function" !== typeof callback ? dataAndEvents : callback;
         };
     }, {
-        "../helpers/typeof" : 34
+        "../helpers/typeof": 34
     }],
-    32 : [function(require, dataAndEvents, __exports__) {
+    32: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {?} value
          * @return {?}
          */
         function h(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -2381,8 +2365,7 @@
                 try {
                     var node;
                     var exports = (0, elem["default"])(expectedNumberOfNonCommentArgs);
-                    for (;!(callback2 = (node = exports.next()).done) && (buffer.push(node.value), !i || buffer.length !== i);callback2 = true) {
-                    }
+                    for (; !(callback2 = (node = exports.next()).done) && (buffer.push(node.value), !i || buffer.length !== i); callback2 = true) {}
                 } catch (fn) {
                     /** @type {boolean} */
                     _d = true;
@@ -2413,17 +2396,17 @@
             };
         }();
     }, {
-        "../core-js/get-iterator" : 14,
-        "../core-js/is-iterable" : 15
+        "../core-js/get-iterator": 14,
+        "../core-js/is-iterable": 15
     }],
-    33 : [function(require, dataAndEvents, __exports__) {
+    33: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {?} value
          * @return {?}
          */
         function appendModelPrefix(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -2440,24 +2423,24 @@
                 var name = 0;
                 /** @type {Array} */
                 var old = Array(expectedNumberOfNonCommentArgs.length);
-                for (;name < expectedNumberOfNonCommentArgs.length;name++) {
+                for (; name < expectedNumberOfNonCommentArgs.length; name++) {
                     old[name] = expectedNumberOfNonCommentArgs[name];
                 }
                 return old;
             }
-            return(0, fullOtherName["default"])(expectedNumberOfNonCommentArgs);
+            return (0, fullOtherName["default"])(expectedNumberOfNonCommentArgs);
         };
     }, {
-        "../core-js/array/from" : 13
+        "../core-js/array/from": 13
     }],
-    34 : [function($, dataAndEvents, __exports__) {
+    34: [function($, dataAndEvents, __exports__) {
         /**
          * @param {?} name
          * @return {?}
          */
         function group(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         /** @type {boolean} */
@@ -2479,46 +2462,46 @@
             return protoProps && ("function" === typeof schema["default"] && (protoProps.constructor === schema["default"] && protoProps !== schema["default"].prototype)) ? "symbol" : "undefined" === typeof protoProps ? "undefined" : ownProp(protoProps);
         };
     }, {
-        "../core-js/symbol" : 25,
-        "../core-js/symbol/iterator" : 26
+        "../core-js/symbol": 25,
+        "../core-js/symbol/iterator": 26
     }],
-    35 : [function(factory, module, dataAndEvents) {
+    35: [function(factory, module, dataAndEvents) {
         module.exports = factory("regenerator-runtime");
     }, {
-        "regenerator-runtime" : 145
+        "regenerator-runtime": 145
     }],
-    36 : [function($sanitize, opts, dataAndEvents) {
+    36: [function($sanitize, opts, dataAndEvents) {
         $sanitize("../../modules/es6.string.iterator");
         $sanitize("../../modules/es6.array.from");
         opts.exports = $sanitize("../../modules/_core").Array.from;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.array.from" : 125,
-        "../../modules/es6.string.iterator" : 135
+        "../../modules/_core": 57,
+        "../../modules/es6.array.from": 125,
+        "../../modules/es6.string.iterator": 135
     }],
-    37 : [function(factory, module, dataAndEvents) {
+    37: [function(factory, module, dataAndEvents) {
         factory("../modules/web.dom.iterable");
         factory("../modules/es6.string.iterator");
         module.exports = factory("../modules/core.get-iterator");
     }, {
-        "../modules/core.get-iterator" : 123,
-        "../modules/es6.string.iterator" : 135,
-        "../modules/web.dom.iterable" : 139
+        "../modules/core.get-iterator": 123,
+        "../modules/es6.string.iterator": 135,
+        "../modules/web.dom.iterable": 139
     }],
-    38 : [function(factory, module, dataAndEvents) {
+    38: [function(factory, module, dataAndEvents) {
         factory("../modules/web.dom.iterable");
         factory("../modules/es6.string.iterator");
         module.exports = factory("../modules/core.is-iterable");
     }, {
-        "../modules/core.is-iterable" : 124,
-        "../modules/es6.string.iterator" : 135,
-        "../modules/web.dom.iterable" : 139
+        "../modules/core.is-iterable": 124,
+        "../modules/es6.string.iterator": 135,
+        "../modules/web.dom.iterable": 139
     }],
-    39 : [function($sanitize, module, dataAndEvents) {
+    39: [function($sanitize, module, dataAndEvents) {
         var S = $sanitize("../../modules/_core");
         var newArgs = S.JSON || (S.JSON = {
             /** @type {function (this:JSONType, *, (Array.<string>|function (string, *): *|null)=, (number|string)=): string} */
-            stringify : JSON.stringify
+            stringify: JSON.stringify
         });
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -2528,16 +2511,16 @@
             return newArgs.stringify.apply(newArgs, arguments);
         };
     }, {
-        "../../modules/_core" : 57
+        "../../modules/_core": 57
     }],
-    40 : [function($sanitize, module, dataAndEvents) {
+    40: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.assign");
         module.exports = $sanitize("../../modules/_core").Object.assign;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.assign" : 127
+        "../../modules/_core": 57,
+        "../../modules/es6.object.assign": 127
     }],
-    41 : [function($sanitize, module, dataAndEvents) {
+    41: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.create");
         var Obj = $sanitize("../../modules/_core").Object;
         /**
@@ -2549,10 +2532,10 @@
             return Obj.create(expectedNumberOfNonCommentArgs, key);
         };
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.create" : 128
+        "../../modules/_core": 57,
+        "../../modules/es6.object.create": 128
     }],
-    42 : [function($sanitize, module, dataAndEvents) {
+    42: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.define-property");
         var shims = $sanitize("../../modules/_core").Object;
         /**
@@ -2565,73 +2548,73 @@
             return shims.defineProperty(expectedNumberOfNonCommentArgs, key, opt_attributes);
         };
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.define-property" : 129
+        "../../modules/_core": 57,
+        "../../modules/es6.object.define-property": 129
     }],
-    43 : [function($sanitize, module, dataAndEvents) {
+    43: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.symbol");
         module.exports = $sanitize("../../modules/_core").Object.getOwnPropertySymbols;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.symbol" : 136
+        "../../modules/_core": 57,
+        "../../modules/es6.symbol": 136
     }],
-    44 : [function($sanitize, module, dataAndEvents) {
+    44: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.get-prototype-of");
         module.exports = $sanitize("../../modules/_core").Object.getPrototypeOf;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.get-prototype-of" : 130
+        "../../modules/_core": 57,
+        "../../modules/es6.object.get-prototype-of": 130
     }],
-    45 : [function($sanitize, config, dataAndEvents) {
+    45: [function($sanitize, config, dataAndEvents) {
         $sanitize("../../modules/es6.object.keys");
         config.exports = $sanitize("../../modules/_core").Object.keys;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.keys" : 131
+        "../../modules/_core": 57,
+        "../../modules/es6.object.keys": 131
     }],
-    46 : [function($sanitize, module, dataAndEvents) {
+    46: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.set-prototype-of");
         module.exports = $sanitize("../../modules/_core").Object.setPrototypeOf;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.set-prototype-of" : 132
+        "../../modules/_core": 57,
+        "../../modules/es6.object.set-prototype-of": 132
     }],
-    47 : [function(require, module, dataAndEvents) {
+    47: [function(require, module, dataAndEvents) {
         require("../modules/es6.object.to-string");
         require("../modules/es6.string.iterator");
         require("../modules/web.dom.iterable");
         require("../modules/es6.promise");
         module.exports = require("../modules/_core").Promise;
     }, {
-        "../modules/_core" : 57,
-        "../modules/es6.object.to-string" : 133,
-        "../modules/es6.promise" : 134,
-        "../modules/es6.string.iterator" : 135,
-        "../modules/web.dom.iterable" : 139
+        "../modules/_core": 57,
+        "../modules/es6.object.to-string": 133,
+        "../modules/es6.promise": 134,
+        "../modules/es6.string.iterator": 135,
+        "../modules/web.dom.iterable": 139
     }],
-    48 : [function($sanitize, module, dataAndEvents) {
+    48: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.symbol");
         $sanitize("../../modules/es6.object.to-string");
         $sanitize("../../modules/es7.symbol.async-iterator");
         $sanitize("../../modules/es7.symbol.observable");
         module.exports = $sanitize("../../modules/_core").Symbol;
     }, {
-        "../../modules/_core" : 57,
-        "../../modules/es6.object.to-string" : 133,
-        "../../modules/es6.symbol" : 136,
-        "../../modules/es7.symbol.async-iterator" : 137,
-        "../../modules/es7.symbol.observable" : 138
+        "../../modules/_core": 57,
+        "../../modules/es6.object.to-string": 133,
+        "../../modules/es6.symbol": 136,
+        "../../modules/es7.symbol.async-iterator": 137,
+        "../../modules/es7.symbol.observable": 138
     }],
-    49 : [function($sanitize, module, dataAndEvents) {
+    49: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.string.iterator");
         $sanitize("../../modules/web.dom.iterable");
         module.exports = $sanitize("../../modules/_wks-ext").f("iterator");
     }, {
-        "../../modules/_wks-ext" : 120,
-        "../../modules/es6.string.iterator" : 135,
-        "../../modules/web.dom.iterable" : 139
+        "../../modules/_wks-ext": 120,
+        "../../modules/es6.string.iterator": 135,
+        "../../modules/web.dom.iterable": 139
     }],
-    50 : [function(dataAndEvents, module, deepDataAndEvents) {
+    50: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @return {?}
@@ -2643,14 +2626,13 @@
             return expectedNumberOfNonCommentArgs;
         };
     }, {}],
-    51 : [function(dataAndEvents, module, deepDataAndEvents) {
+    51: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @return {undefined}
          */
-        module.exports = function() {
-        };
+        module.exports = function() {};
     }, {}],
-    52 : [function(dataAndEvents, module, deepDataAndEvents) {
+    52: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} key
@@ -2665,7 +2647,7 @@
             return expectedNumberOfNonCommentArgs;
         };
     }, {}],
-    53 : [function(require, module, dataAndEvents) {
+    53: [function(require, module, dataAndEvents) {
         var getActual = require("./_is-object");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -2678,9 +2660,9 @@
             return expectedNumberOfNonCommentArgs;
         };
     }, {
-        "./_is-object" : 77
+        "./_is-object": 77
     }],
-    54 : [function(require, module, dataAndEvents) {
+    54: [function(require, module, dataAndEvents) {
         var matcher = require("./_to-iobject");
         var assert = require("./_to-length");
         var debug = require("./_to-index");
@@ -2695,27 +2677,27 @@
                 var ms = assert(elements.length);
                 var s = debug(start, ms);
                 if (expectedNumberOfNonCommentArgs && any !== any) {
-                    for (;ms > s;) {
+                    for (; ms > s;) {
                         if (token = elements[s++], token !== token) {
                             return true;
                         }
                     }
                 } else {
-                    for (;ms > s;s++) {
+                    for (; ms > s; s++) {
                         if ((expectedNumberOfNonCommentArgs || s in elements) && elements[s] === any) {
                             return expectedNumberOfNonCommentArgs || (s || 0);
                         }
                     }
                 }
-                return!expectedNumberOfNonCommentArgs && -1;
+                return !expectedNumberOfNonCommentArgs && -1;
             };
         };
     }, {
-        "./_to-index" : 112,
-        "./_to-iobject" : 114,
-        "./_to-length" : 115
+        "./_to-index": 112,
+        "./_to-iobject": 114,
+        "./_to-length": 115
     }],
-    55 : [function(require, module, dataAndEvents) {
+    55: [function(require, module, dataAndEvents) {
         var getActual = require("./_cof");
         var camelKey = require("./_wks")("toStringTag");
         /** @type {boolean} */
@@ -2730,8 +2712,7 @@
         var dataAttr = function(data, key) {
             try {
                 return data[key];
-            } catch (e) {
-            }
+            } catch (e) {}
         };
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -2744,10 +2725,10 @@
             return void 0 === expectedNumberOfNonCommentArgs ? "Undefined" : null === expectedNumberOfNonCommentArgs ? "Null" : "string" === typeof(data = dataAttr(obj = Object(expectedNumberOfNonCommentArgs), camelKey)) ? data : nativeIsArray ? getActual(obj) : "Object" === (hash = getActual(obj)) && "function" === typeof obj.callee ? "Arguments" : hash;
         };
     }, {
-        "./_cof" : 56,
-        "./_wks" : 121
+        "./_cof": 56,
+        "./_wks": 121
     }],
-    56 : [function(dataAndEvents, module, deepDataAndEvents) {
+    56: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (this:*): string} */
         var ostring = {}.toString;
         /**
@@ -2758,15 +2739,15 @@
             return ostring.call(expectedNumberOfNonCommentArgs).slice(8, -1);
         };
     }, {}],
-    57 : [function(dataAndEvents, $, deepDataAndEvents) {
+    57: [function(dataAndEvents, $, deepDataAndEvents) {
         var core = $.exports = {
-            version : "2.4.0"
+            version: "2.4.0"
         };
         if ("number" === typeof __e) {
             __e = core;
         }
     }, {}],
-    58 : [function(require, module, dataAndEvents) {
+    58: [function(require, module, dataAndEvents) {
         var a = require("./_object-dp");
         var getActual = require("./_property-desc");
         /**
@@ -2783,10 +2764,10 @@
             }
         };
     }, {
-        "./_object-dp" : 90,
-        "./_property-desc" : 101
+        "./_object-dp": 90,
+        "./_property-desc": 101
     }],
-    59 : [function(require, module, dataAndEvents) {
+    59: [function(require, module, dataAndEvents) {
         var getActual = require("./_a-function");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -2798,7 +2779,7 @@
             if (getActual(expectedNumberOfNonCommentArgs), void 0 === key) {
                 return expectedNumberOfNonCommentArgs;
             }
-            switch(opt_attributes) {
+            switch (opt_attributes) {
                 case 1:
                     return function(fake) {
                         return expectedNumberOfNonCommentArgs.call(key, fake);
@@ -2817,9 +2798,9 @@
             };
         };
     }, {
-        "./_a-function" : 50
+        "./_a-function": 50
     }],
-    60 : [function(dataAndEvents, module, deepDataAndEvents) {
+    60: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @return {?}
@@ -2831,22 +2812,22 @@
             return expectedNumberOfNonCommentArgs;
         };
     }, {}],
-    61 : [function($sanitize, module, dataAndEvents) {
+    61: [function($sanitize, module, dataAndEvents) {
         /** @type {boolean} */
         module.exports = !$sanitize("./_fails")(function() {
             return 7 !== Object.defineProperty({}, "a", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_fails" : 66
+        "./_fails": 66
     }],
-    62 : [function($sanitize, module, dataAndEvents) {
+    62: [function($sanitize, module, dataAndEvents) {
         var isHostMethod = $sanitize("./_is-object");
         var document = $sanitize("./_global").document;
         var is = isHostMethod(document) && isHostMethod(document.createElement);
@@ -2858,14 +2839,14 @@
             return is ? document.createElement(expectedNumberOfNonCommentArgs) : {};
         };
     }, {
-        "./_global" : 68,
-        "./_is-object" : 77
+        "./_global": 68,
+        "./_is-object": 77
     }],
-    63 : [function(dataAndEvents, module, deepDataAndEvents) {
+    63: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {Array.<string>} */
         module.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
     }, {}],
-    64 : [function(require, module, dataAndEvents) {
+    64: [function(require, module, dataAndEvents) {
         var inspect = require("./_object-keys");
         var nodes = require("./_object-gops");
         var cfg = require("./_object-pie");
@@ -2882,7 +2863,7 @@
                 var filter = cfg.f;
                 /** @type {number} */
                 var index = 0;
-                for (;items.length > index;) {
+                for (; items.length > index;) {
                     if (filter.call(expectedNumberOfNonCommentArgs, v = items[index++])) {
                         str.push(v);
                     }
@@ -2891,11 +2872,11 @@
             return str;
         };
     }, {
-        "./_object-gops" : 95,
-        "./_object-keys" : 98,
-        "./_object-pie" : 99
+        "./_object-gops": 95,
+        "./_object-keys": 98,
+        "./_object-pie": 99
     }],
-    65 : [function(require, module, dataAndEvents) {
+    65: [function(require, module, dataAndEvents) {
         var e = require("./_global");
         var helper = require("./_core");
         var extend = require("./_ctx");
@@ -2944,7 +2925,7 @@
                          */
                         var map = function(min2, reject, opt_obj) {
                             if (this instanceof old) {
-                                switch(arguments.length) {
+                                switch (arguments.length) {
                                     case 0:
                                         return new old;
                                     case 1:
@@ -2990,25 +2971,25 @@
         /** @type {function (Object, string, ?): undefined} */
         module.exports = data;
     }, {
-        "./_core" : 57,
-        "./_ctx" : 59,
-        "./_global" : 68,
-        "./_hide" : 70
+        "./_core": 57,
+        "./_ctx": 59,
+        "./_global": 68,
+        "./_hide": 70
     }],
-    66 : [function(dataAndEvents, module, deepDataAndEvents) {
+    66: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @return {?}
          */
         module.exports = function(expectedNumberOfNonCommentArgs) {
             try {
-                return!!expectedNumberOfNonCommentArgs();
+                return !!expectedNumberOfNonCommentArgs();
             } catch (e) {
                 return true;
             }
         };
     }, {}],
-    67 : [function(require, module, e) {
+    67: [function(require, module, e) {
         var getActual = require("./_ctx");
         var test = require("./_iter-call");
         var swap = require("./_is-array-iter");
@@ -3034,14 +3015,14 @@
             }
             if (swap(value)) {
                 tagSeparatorIndex = assert(expectedNumberOfNonCommentArgs.length);
-                for (;tagSeparatorIndex > index;index++) {
+                for (; tagSeparatorIndex > index; index++) {
                     if (result = key ? fn(objDisplay(object = expectedNumberOfNonCommentArgs[index])[0], object[1]) : fn(expectedNumberOfNonCommentArgs[index]), result === resultUS || result === resultCommaDecimal) {
                         return result;
                     }
                 }
             } else {
                 context = value.call(expectedNumberOfNonCommentArgs);
-                for (;!(object = context.next()).done;) {
+                for (; !(object = context.next()).done;) {
                     if (result = test(context, fn, object.value, key), result === resultUS || result === resultCommaDecimal) {
                         return result;
                     }
@@ -3051,20 +3032,20 @@
         e.BREAK = resultUS;
         e.RETURN = resultCommaDecimal;
     }, {
-        "./_an-object" : 53,
-        "./_ctx" : 59,
-        "./_is-array-iter" : 75,
-        "./_iter-call" : 78,
-        "./_to-length" : 115,
-        "./core.get-iterator-method" : 122
+        "./_an-object": 53,
+        "./_ctx": 59,
+        "./_is-array-iter": 75,
+        "./_iter-call": 78,
+        "./_to-length": 115,
+        "./core.get-iterator-method": 122
     }],
-    68 : [function(dataAndEvents, module, deepDataAndEvents) {
+    68: [function(dataAndEvents, module, deepDataAndEvents) {
         var global = module.exports = "undefined" !== typeof window && window.Math === Math ? window : "undefined" !== typeof self && self.Math === Math ? self : Function("return this")();
         if ("number" === typeof __g) {
             __g = global;
         }
     }, {}],
-    69 : [function(dataAndEvents, module, deepDataAndEvents) {
+    69: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (this:Object, *): boolean} */
         var has = {}.hasOwnProperty;
         /**
@@ -3076,7 +3057,7 @@
             return has.call(expectedNumberOfNonCommentArgs, key);
         };
     }, {}],
-    70 : [function(require, module, dataAndEvents) {
+    70: [function(require, module, dataAndEvents) {
         var a = require("./_object-dp");
         var getActual = require("./_property-desc");
         /** @type {function (Object, string, ?): ?} */
@@ -3086,33 +3067,33 @@
             return expectedNumberOfNonCommentArgs[key] = opt_attributes, expectedNumberOfNonCommentArgs;
         };
     }, {
-        "./_descriptors" : 61,
-        "./_object-dp" : 90,
-        "./_property-desc" : 101
+        "./_descriptors": 61,
+        "./_object-dp": 90,
+        "./_property-desc": 101
     }],
-    71 : [function($sanitize, module, dataAndEvents) {
+    71: [function($sanitize, module, dataAndEvents) {
         module.exports = $sanitize("./_global").document && document.documentElement;
     }, {
-        "./_global" : 68
+        "./_global": 68
     }],
-    72 : [function($sanitize, module, dataAndEvents) {
+    72: [function($sanitize, module, dataAndEvents) {
         /** @type {boolean} */
         module.exports = !$sanitize("./_descriptors") && !$sanitize("./_fails")(function() {
             return 7 !== Object.defineProperty($sanitize("./_dom-create")("div"), "a", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_descriptors" : 61,
-        "./_dom-create" : 62,
-        "./_fails" : 66
+        "./_descriptors": 61,
+        "./_dom-create": 62,
+        "./_fails": 66
     }],
-    73 : [function(dataAndEvents, module, deepDataAndEvents) {
+    73: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} key
@@ -3122,7 +3103,7 @@
         module.exports = function(expectedNumberOfNonCommentArgs, key, opt_attributes) {
             /** @type {boolean} */
             var un = void 0 === opt_attributes;
-            switch(key.length) {
+            switch (key.length) {
                 case 0:
                     return un ? expectedNumberOfNonCommentArgs() : expectedNumberOfNonCommentArgs.call(opt_attributes);
                 case 1:
@@ -3137,16 +3118,16 @@
             return expectedNumberOfNonCommentArgs.apply(opt_attributes, key);
         };
     }, {}],
-    74 : [function(require, module, dataAndEvents) {
+    74: [function(require, module, dataAndEvents) {
         var getActual = require("./_cof");
         /** @type {Function} */
         module.exports = Object("z").propertyIsEnumerable(0) ? Object : function(expectedNumberOfNonCommentArgs) {
             return "String" === getActual(expectedNumberOfNonCommentArgs) ? expectedNumberOfNonCommentArgs.split("") : Object(expectedNumberOfNonCommentArgs);
         };
     }, {
-        "./_cof" : 56
+        "./_cof": 56
     }],
-    75 : [function(require, module, dataAndEvents) {
+    75: [function(require, module, dataAndEvents) {
         var nodes = require("./_iterators");
         var expression = require("./_wks")("iterator");
         var e = Array.prototype;
@@ -3158,19 +3139,19 @@
             return void 0 !== expectedNumberOfNonCommentArgs && (nodes.Array === expectedNumberOfNonCommentArgs || e[expression] === expectedNumberOfNonCommentArgs);
         };
     }, {
-        "./_iterators" : 83,
-        "./_wks" : 121
+        "./_iterators": 83,
+        "./_wks": 121
     }],
-    76 : [function(require, module, dataAndEvents) {
+    76: [function(require, module, dataAndEvents) {
         var getActual = require("./_cof");
         /** @type {function (*): boolean} */
         module.exports = Array.isArray || function(expectedNumberOfNonCommentArgs) {
             return "Array" === getActual(expectedNumberOfNonCommentArgs);
         };
     }, {
-        "./_cof" : 56
+        "./_cof": 56
     }],
-    77 : [function(dataAndEvents, module, deepDataAndEvents) {
+    77: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @return {?}
@@ -3179,7 +3160,7 @@
             return "object" === typeof expectedNumberOfNonCommentArgs ? null !== expectedNumberOfNonCommentArgs : "function" === typeof expectedNumberOfNonCommentArgs;
         };
     }, {}],
-    78 : [function(require, module, dataAndEvents) {
+    78: [function(require, module, dataAndEvents) {
         var getActual = require("./_an-object");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -3197,9 +3178,9 @@
             }
         };
     }, {
-        "./_an-object" : 53
+        "./_an-object": 53
     }],
-    79 : [function(require, module, dataAndEvents) {
+    79: [function(require, module, dataAndEvents) {
         var getActual = require("./_object-create");
         var objDisplay = require("./_property-desc");
         var inspect = require("./_set-to-string-tag");
@@ -3215,18 +3196,18 @@
          */
         module.exports = function(expectedNumberOfNonCommentArgs, key, opt_attributes) {
             expectedNumberOfNonCommentArgs.prototype = getActual(proto, {
-                next : objDisplay(1, opt_attributes)
+                next: objDisplay(1, opt_attributes)
             });
             inspect(expectedNumberOfNonCommentArgs, key + " Iterator");
         };
     }, {
-        "./_hide" : 70,
-        "./_object-create" : 89,
-        "./_property-desc" : 101,
-        "./_set-to-string-tag" : 106,
-        "./_wks" : 121
+        "./_hide": 70,
+        "./_object-create": 89,
+        "./_property-desc": 101,
+        "./_set-to-string-tag": 106,
+        "./_wks": 121
     }],
-    80 : [function(require, module, dataAndEvents) {
+    80: [function(require, module, dataAndEvents) {
         var Block = require("./_library");
         var group = require("./_export");
         var getActual = require("./_redefine");
@@ -3274,7 +3255,7 @@
                 if (!retval && key in obj) {
                     return obj[key];
                 }
-                switch(key) {
+                switch (key) {
                     case a:
                         return function() {
                             return new opt_attributes(this, key);
@@ -3303,9 +3284,9 @@
                     return object.call(this);
                 }))), Block && !chai || (!retval && (!lists && obj[key]) || set(obj, key, info)), qs[value] = info, qs[i] = val, data) {
                 if (context = {
-                        values : err ? info : callback(type),
-                        keys : t ? info : callback(a),
-                        entries : result
+                        values: err ? info : callback(type),
+                        keys: t ? info : callback(a),
+                        entries: result
                     }, chai) {
                     for (match in context) {
                         if (!(match in obj)) {
@@ -3319,18 +3300,18 @@
             return context;
         };
     }, {
-        "./_export" : 65,
-        "./_has" : 69,
-        "./_hide" : 70,
-        "./_iter-create" : 79,
-        "./_iterators" : 83,
-        "./_library" : 85,
-        "./_object-gpo" : 96,
-        "./_redefine" : 103,
-        "./_set-to-string-tag" : 106,
-        "./_wks" : 121
+        "./_export": 65,
+        "./_has": 69,
+        "./_hide": 70,
+        "./_iter-create": 79,
+        "./_iterators": 83,
+        "./_library": 85,
+        "./_object-gpo": 96,
+        "./_redefine": 103,
+        "./_set-to-string-tag": 106,
+        "./_wks": 121
     }],
-    81 : [function($sanitize, module, dataAndEvents) {
+    81: [function($sanitize, module, dataAndEvents) {
         var prop = $sanitize("./_wks")("iterator");
         /** @type {boolean} */
         var defaultMessage = false;
@@ -3346,8 +3327,7 @@
             Array.from(expectedNumberOfNonCommentArgs, function() {
                 throw 2;
             });
-        } catch (e) {
-        }
+        } catch (e) {}
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} key
@@ -3367,8 +3347,8 @@
                  * @return {?}
                  */
                 stream.next = function() {
-                    return{
-                        done : str = true
+                    return {
+                        done: str = true
                     };
                 };
                 /**
@@ -3378,30 +3358,29 @@
                     return stream;
                 };
                 expectedNumberOfNonCommentArgs(originalEvent);
-            } catch (e) {
-            }
+            } catch (e) {}
             return str;
         };
     }, {
-        "./_wks" : 121
+        "./_wks": 121
     }],
-    82 : [function(dataAndEvents, module, deepDataAndEvents) {
+    82: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} key
          * @return {?}
          */
         module.exports = function(expectedNumberOfNonCommentArgs, key) {
-            return{
-                value : key,
-                done : !!expectedNumberOfNonCommentArgs
+            return {
+                value: key,
+                done: !!expectedNumberOfNonCommentArgs
             };
         };
     }, {}],
-    83 : [function(dataAndEvents, module, deepDataAndEvents) {
+    83: [function(dataAndEvents, module, deepDataAndEvents) {
         module.exports = {};
     }, {}],
-    84 : [function(require, module, dataAndEvents) {
+    84: [function(require, module, dataAndEvents) {
         var inspect = require("./_object-keys");
         var flag = require("./_to-iobject");
         /**
@@ -3416,21 +3395,21 @@
             var len = str.length;
             /** @type {number} */
             var j = 0;
-            for (;len > j;) {
+            for (; len > j;) {
                 if (obj[c = str[j++]] === key) {
                     return c;
                 }
             }
         };
     }, {
-        "./_object-keys" : 98,
-        "./_to-iobject" : 114
+        "./_object-keys": 98,
+        "./_to-iobject": 114
     }],
-    85 : [function(dataAndEvents, module, deepDataAndEvents) {
+    85: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {boolean} */
         module.exports = true;
     }, {}],
-    86 : [function(require, module, dataAndEvents) {
+    86: [function(require, module, dataAndEvents) {
         var camelKey = require("./_uid")("meta");
         var visit = require("./_is-object");
         var hasOwnProperty = require("./_has");
@@ -3451,9 +3430,9 @@
          */
         var isString = function(expectedNumberOfNonCommentArgs) {
             dataAttr(expectedNumberOfNonCommentArgs, camelKey, {
-                value : {
-                    i : "O" + ++O,
-                    w : {}
+                value: {
+                    i: "O" + ++O,
+                    w: {}
                 }
             });
         };
@@ -3502,23 +3481,23 @@
             return FREEZE && (NEED.NEED && (HOP(walkers) && (!hasOwnProperty(walkers, camelKey) && isString(walkers)))), walkers;
         };
         var NEED = module.exports = {
-            KEY : camelKey,
-            NEED : false,
+            KEY: camelKey,
+            NEED: false,
             /** @type {function (string, ?): ?} */
-            fastKey : toString,
+            fastKey: toString,
             /** @type {function (Object, ?): ?} */
-            getWeak : isEmpty,
+            getWeak: isEmpty,
             /** @type {function (Object): ?} */
-            onFreeze : with_walkers
+            onFreeze: with_walkers
         };
     }, {
-        "./_fails" : 66,
-        "./_has" : 69,
-        "./_is-object" : 77,
-        "./_object-dp" : 90,
-        "./_uid" : 118
+        "./_fails": 66,
+        "./_has": 69,
+        "./_is-object": 77,
+        "./_object-dp": 90,
+        "./_uid": 118
     }],
-    87 : [function($sanitize, module, dataAndEvents) {
+    87: [function($sanitize, module, dataAndEvents) {
         var expectedNumberOfNonCommentArgs = $sanitize("./_global");
         var proceed = $sanitize("./_task").set;
         var Store = expectedNumberOfNonCommentArgs.MutationObserver || expectedNumberOfNonCommentArgs.WebKitMutationObserver;
@@ -3544,7 +3523,7 @@
                         d.exit();
                     }
                 }
-                for (;head;) {
+                for (; head;) {
                     fn = head.fn;
                     head = head.next;
                     try {
@@ -3572,7 +3551,7 @@
                     /** @type {Text} */
                     var node = document.createTextNode("");
                     (new Store(init)).observe(node, {
-                        characterData : true
+                        characterData: true
                     });
                     /**
                      * @return {undefined}
@@ -3603,8 +3582,8 @@
             return function(fn) {
                 var next = {
                     /** @type {Function} */
-                    fn : fn,
-                    next : void 0
+                    fn: fn,
+                    next: void 0
                 };
                 if (ret) {
                     ret.next = next;
@@ -3617,11 +3596,11 @@
             };
         };
     }, {
-        "./_cof" : 56,
-        "./_global" : 68,
-        "./_task" : 111
+        "./_cof": 56,
+        "./_global": 68,
+        "./_task": 111
     }],
-    88 : [function(require, module, dataAndEvents) {
+    88: [function(require, module, dataAndEvents) {
         var helper = require("./_object-keys");
         var a = require("./_object-gops");
         var cfg = require("./_object-pie");
@@ -3646,14 +3625,14 @@
             var current = 1;
             var f = a.f;
             var filter = cfg.f;
-            for (;argLength > current;) {
+            for (; argLength > current;) {
                 var property;
                 var element = inspect(arguments[current++]);
                 var objectProperties = f ? helper(element).concat(f(element)) : helper(element);
                 var ln = objectProperties.length;
                 /** @type {number} */
                 var multiplication = 0;
-                for (;ln > multiplication;) {
+                for (; ln > multiplication;) {
                     if (filter.call(element, property = objectProperties[multiplication++])) {
                         node[property] = element[property];
                     }
@@ -3662,14 +3641,14 @@
             return node;
         } : getNames_;
     }, {
-        "./_fails" : 66,
-        "./_iobject" : 74,
-        "./_object-gops" : 95,
-        "./_object-keys" : 98,
-        "./_object-pie" : 99,
-        "./_to-object" : 116
+        "./_fails": 66,
+        "./_iobject": 74,
+        "./_object-gops": 95,
+        "./_object-keys": 98,
+        "./_object-pie": 99,
+        "./_to-object": 116
     }],
-    89 : [function(select, module, dataAndEvents) {
+    89: [function(select, module, dataAndEvents) {
         var definition = select("./_an-object");
         var promote = select("./_object-dps");
         var tokenized = select("./_enum-bug-keys");
@@ -3677,8 +3656,7 @@
         /**
          * @return {undefined}
          */
-        var context = function() {
-        };
+        var context = function() {};
         /** @type {string} */
         var pname = "prototype";
         /**
@@ -3702,7 +3680,7 @@
             d.write(prefix + "script" + name + "document.F=Object" + prefix + "/script" + name);
             d.close();
             run = d.F;
-            for (;index--;) {
+            for (; index--;) {
                 delete run[pname][tokenized[index]];
             }
             return run();
@@ -3713,14 +3691,14 @@
             return null !== expectedNumberOfNonCommentArgs ? (context[pname] = definition(expectedNumberOfNonCommentArgs), originalEvent = new context, context[pname] = null, originalEvent[prop] = expectedNumberOfNonCommentArgs) : originalEvent = run(), void 0 === key ? originalEvent : promote(originalEvent, key);
         };
     }, {
-        "./_an-object" : 53,
-        "./_dom-create" : 62,
-        "./_enum-bug-keys" : 63,
-        "./_html" : 71,
-        "./_object-dps" : 91,
-        "./_shared-key" : 107
+        "./_an-object": 53,
+        "./_dom-create": 62,
+        "./_enum-bug-keys": 63,
+        "./_html": 71,
+        "./_object-dps": 91,
+        "./_shared-key": 107
     }],
-    90 : [function(require, dataAndEvents, entry) {
+    90: [function(require, dataAndEvents, entry) {
         var getActual = require("./_an-object");
         var Block = require("./_ie8-dom-define");
         var i = require("./_to-primitive");
@@ -3731,8 +3709,7 @@
             if (getActual(expectedNumberOfNonCommentArgs), key = i(key, true), getActual(opt_attributes), Block) {
                 try {
                     return setDescriptor(expectedNumberOfNonCommentArgs, key, opt_attributes);
-                } catch (e) {
-                }
+                } catch (e) {}
             }
             if ("get" in opt_attributes || "set" in opt_attributes) {
                 throw TypeError("Accessors not supported!");
@@ -3740,12 +3717,12 @@
             return "value" in opt_attributes && (expectedNumberOfNonCommentArgs[key] = opt_attributes.value), expectedNumberOfNonCommentArgs;
         };
     }, {
-        "./_an-object" : 53,
-        "./_descriptors" : 61,
-        "./_ie8-dom-define" : 72,
-        "./_to-primitive" : 117
+        "./_an-object": 53,
+        "./_descriptors": 61,
+        "./_ie8-dom-define": 72,
+        "./_to-primitive": 117
     }],
-    91 : [function(require, module, dataAndEvents) {
+    91: [function(require, module, dataAndEvents) {
         var argv = require("./_object-dp");
         var getActual = require("./_an-object");
         var i = require("./_object-keys");
@@ -3757,18 +3734,18 @@
             var count = faces.length;
             /** @type {number} */
             var offset = 0;
-            for (;count > offset;) {
+            for (; count > offset;) {
                 argv.f(expectedNumberOfNonCommentArgs, f = faces[offset++], key[f]);
             }
             return expectedNumberOfNonCommentArgs;
         };
     }, {
-        "./_an-object" : 53,
-        "./_descriptors" : 61,
-        "./_object-dp" : 90,
-        "./_object-keys" : 98
+        "./_an-object": 53,
+        "./_descriptors": 61,
+        "./_object-dp": 90,
+        "./_object-keys": 98
     }],
-    92 : [function(require, dataAndEvents, entry) {
+    92: [function(require, dataAndEvents, entry) {
         var module = require("./_object-pie");
         var nodes = require("./_property-desc");
         var getActual = require("./_to-iobject");
@@ -3782,23 +3759,22 @@
             if (expectedNumberOfNonCommentArgs = getActual(expectedNumberOfNonCommentArgs), key = i(key, true), Block) {
                 try {
                     return getOwnPropertyDescriptor(expectedNumberOfNonCommentArgs, key);
-                } catch (e) {
-                }
+                } catch (e) {}
             }
             if (hasOwn(expectedNumberOfNonCommentArgs, key)) {
                 return nodes(!module.f.call(expectedNumberOfNonCommentArgs, key), expectedNumberOfNonCommentArgs[key]);
             }
         };
     }, {
-        "./_descriptors" : 61,
-        "./_has" : 69,
-        "./_ie8-dom-define" : 72,
-        "./_object-pie" : 99,
-        "./_property-desc" : 101,
-        "./_to-iobject" : 114,
-        "./_to-primitive" : 117
+        "./_descriptors": 61,
+        "./_has": 69,
+        "./_ie8-dom-define": 72,
+        "./_object-pie": 99,
+        "./_property-desc": 101,
+        "./_to-iobject": 114,
+        "./_to-primitive": 117
     }],
-    93 : [function(symbol, mod, dataAndEvents) {
+    93: [function(symbol, mod, dataAndEvents) {
         var a = symbol("./_to-iobject");
         var f = symbol("./_object-gopn").f;
         /** @type {function (this:*): string} */
@@ -3824,10 +3800,10 @@
             return models && "[object Window]" === ostring.call(expectedNumberOfNonCommentArgs) ? tryIt(expectedNumberOfNonCommentArgs) : f(a(expectedNumberOfNonCommentArgs));
         };
     }, {
-        "./_object-gopn" : 94,
-        "./_to-iobject" : 114
+        "./_object-gopn": 94,
+        "./_to-iobject": 114
     }],
-    94 : [function(toArray, dataAndEvents, entry) {
+    94: [function(toArray, dataAndEvents, entry) {
         var dataAttr = toArray("./_object-keys-internal");
         var camelKey = toArray("./_enum-bug-keys").concat("length", "prototype");
         /** @type {function (Object): Array.<string>} */
@@ -3835,13 +3811,13 @@
             return dataAttr(expectedNumberOfNonCommentArgs, camelKey);
         };
     }, {
-        "./_enum-bug-keys" : 63,
-        "./_object-keys-internal" : 97
+        "./_enum-bug-keys": 63,
+        "./_object-keys-internal": 97
     }],
-    95 : [function(dataAndEvents, deepDataAndEvents, object) {
+    95: [function(dataAndEvents, deepDataAndEvents, object) {
         object.f = Object.getOwnPropertySymbols;
     }, {}],
-    96 : [function(require, module, dataAndEvents) {
+    96: [function(require, module, dataAndEvents) {
         var hasKey = require("./_has");
         var getActual = require("./_to-object");
         var type = require("./_shared-key")("IE_PROTO");
@@ -3851,11 +3827,11 @@
             return expectedNumberOfNonCommentArgs = getActual(expectedNumberOfNonCommentArgs), hasKey(expectedNumberOfNonCommentArgs, type) ? expectedNumberOfNonCommentArgs[type] : "function" === typeof expectedNumberOfNonCommentArgs.constructor && expectedNumberOfNonCommentArgs instanceof expectedNumberOfNonCommentArgs.constructor ? expectedNumberOfNonCommentArgs.constructor.prototype : expectedNumberOfNonCommentArgs instanceof Object ? objectProto : null;
         };
     }, {
-        "./_has" : 69,
-        "./_shared-key" : 107,
-        "./_to-object" : 116
+        "./_has": 69,
+        "./_shared-key": 107,
+        "./_to-object": 116
     }],
-    97 : [function(require, module, dataAndEvents) {
+    97: [function(require, module, dataAndEvents) {
         var getActual = require("./_has");
         var flag = require("./_to-iobject");
         var walk = require("./_array-includes")(false);
@@ -3879,7 +3855,7 @@
                     }
                 }
             }
-            for (;key.length > bs;) {
+            for (; key.length > bs;) {
                 if (getActual(obj, k = key[bs++])) {
                     if (!~walk(ret, k)) {
                         ret.push(k);
@@ -3889,12 +3865,12 @@
             return ret;
         };
     }, {
-        "./_array-includes" : 54,
-        "./_has" : 69,
-        "./_shared-key" : 107,
-        "./_to-iobject" : 114
+        "./_array-includes": 54,
+        "./_has": 69,
+        "./_shared-key": 107,
+        "./_to-iobject": 114
     }],
-    98 : [function($sanitize, module, dataAndEvents) {
+    98: [function($sanitize, module, dataAndEvents) {
         var dataAttr = $sanitize("./_object-keys-internal");
         var camelKey = $sanitize("./_enum-bug-keys");
         /** @type {function (Object): Array.<string>} */
@@ -3902,14 +3878,14 @@
             return dataAttr(expectedNumberOfNonCommentArgs, camelKey);
         };
     }, {
-        "./_enum-bug-keys" : 63,
-        "./_object-keys-internal" : 97
+        "./_enum-bug-keys": 63,
+        "./_object-keys-internal": 97
     }],
-    99 : [function(dataAndEvents, deepDataAndEvents, entry) {
+    99: [function(dataAndEvents, deepDataAndEvents, entry) {
         /** @type {function (this:Object, string): boolean} */
         entry.f = {}.propertyIsEnumerable;
     }, {}],
-    100 : [function(require, module, dataAndEvents) {
+    100: [function(require, module, dataAndEvents) {
         var inspect = require("./_export");
         var util = require("./_core");
         var getActual = require("./_fails");
@@ -3927,26 +3903,26 @@
             }), "Object", r20);
         };
     }, {
-        "./_core" : 57,
-        "./_export" : 65,
-        "./_fails" : 66
+        "./_core": 57,
+        "./_export": 65,
+        "./_fails": 66
     }],
-    101 : [function(dataAndEvents, module, deepDataAndEvents) {
+    101: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} key
          * @return {?}
          */
         module.exports = function(expectedNumberOfNonCommentArgs, key) {
-            return{
-                enumerable : !(1 & expectedNumberOfNonCommentArgs),
-                configurable : !(2 & expectedNumberOfNonCommentArgs),
-                writable : !(4 & expectedNumberOfNonCommentArgs),
-                value : key
+            return {
+                enumerable: !(1 & expectedNumberOfNonCommentArgs),
+                configurable: !(2 & expectedNumberOfNonCommentArgs),
+                writable: !(4 & expectedNumberOfNonCommentArgs),
+                value: key
             };
         };
     }, {}],
-    102 : [function($sanitize, module, dataAndEvents) {
+    102: [function($sanitize, module, dataAndEvents) {
         var dataAttr = $sanitize("./_hide");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -3966,14 +3942,14 @@
             return expectedNumberOfNonCommentArgs;
         };
     }, {
-        "./_hide" : 70
+        "./_hide": 70
     }],
-    103 : [function(factory, module, dataAndEvents) {
+    103: [function(factory, module, dataAndEvents) {
         module.exports = factory("./_hide");
     }, {
-        "./_hide" : 70
+        "./_hide": 70
     }],
-    104 : [function(require, c, dataAndEvents) {
+    104: [function(require, c, dataAndEvents) {
         var forIn = require("./_is-object");
         var baseCreateCallback = require("./_an-object");
         /**
@@ -3987,7 +3963,7 @@
             }
         };
         c.exports = {
-            set : Object.setPrototypeOf || ("__proto__" in {} ? function(value, err, func) {
+            set: Object.setPrototypeOf || ("__proto__" in {} ? function(value, err, func) {
                 try {
                     func = require("./_ctx")(Function.call, require("./_object-gopd").f(Object.prototype, "__proto__").set, 2);
                     func(value, []);
@@ -4002,15 +3978,15 @@
                 };
             }({}, false) : void 0),
             /** @type {function (Object, Object): undefined} */
-            check : forOwn
+            check: forOwn
         };
     }, {
-        "./_an-object" : 53,
-        "./_ctx" : 59,
-        "./_is-object" : 77,
-        "./_object-gopd" : 92
+        "./_an-object": 53,
+        "./_ctx": 59,
+        "./_is-object": 77,
+        "./_object-gopd": 92
     }],
-    105 : [function(require, module, dataAndEvents) {
+    105: [function(require, module, dataAndEvents) {
         var Block = require("./_global");
         var nodes = require("./_core");
         var ret = require("./_object-dp");
@@ -4026,11 +4002,11 @@
                 if (rreturn) {
                     if (!rreturn[camelKey]) {
                         ret.f(rreturn, camelKey, {
-                            configurable : true,
+                            configurable: true,
                             /**
                              * @return {?}
                              */
-                            get : function() {
+                            get: function() {
                                 return this;
                             }
                         });
@@ -4039,13 +4015,13 @@
             }
         };
     }, {
-        "./_core" : 57,
-        "./_descriptors" : 61,
-        "./_global" : 68,
-        "./_object-dp" : 90,
-        "./_wks" : 121
+        "./_core": 57,
+        "./_descriptors": 61,
+        "./_global": 68,
+        "./_object-dp": 90,
+        "./_wks": 121
     }],
-    106 : [function(require, module, dataAndEvents) {
+    106: [function(require, module, dataAndEvents) {
         var setDescriptor = require("./_object-dp").f;
         var getActual = require("./_has");
         var camelKey = require("./_wks")("toStringTag");
@@ -4059,18 +4035,18 @@
             if (expectedNumberOfNonCommentArgs) {
                 if (!getActual(expectedNumberOfNonCommentArgs = opt_attributes ? expectedNumberOfNonCommentArgs : expectedNumberOfNonCommentArgs.prototype, camelKey)) {
                     setDescriptor(expectedNumberOfNonCommentArgs, camelKey, {
-                        configurable : true,
-                        value : key
+                        configurable: true,
+                        value: key
                     });
                 }
             }
         };
     }, {
-        "./_has" : 69,
-        "./_object-dp" : 90,
-        "./_wks" : 121
+        "./_has": 69,
+        "./_object-dp": 90,
+        "./_wks": 121
     }],
-    107 : [function(require, module, dataAndEvents) {
+    107: [function(require, module, dataAndEvents) {
         var key = require("./_shared")("keys");
         var getActual = require("./_uid");
         /**
@@ -4081,10 +4057,10 @@
             return key[expectedNumberOfNonCommentArgs] || (key[expectedNumberOfNonCommentArgs] = getActual(expectedNumberOfNonCommentArgs));
         };
     }, {
-        "./_shared" : 108,
-        "./_uid" : 118
+        "./_shared": 108,
+        "./_uid": 118
     }],
-    108 : [function(require, module, dataAndEvents) {
+    108: [function(require, module, dataAndEvents) {
         var nodes = require("./_global");
         /** @type {string} */
         var i = "__core-js_shared__";
@@ -4097,9 +4073,9 @@
             return store[expectedNumberOfNonCommentArgs] || (store[expectedNumberOfNonCommentArgs] = {});
         };
     }, {
-        "./_global" : 68
+        "./_global": 68
     }],
-    109 : [function(require, module, dataAndEvents) {
+    109: [function(require, module, dataAndEvents) {
         var getActual = require("./_an-object");
         var inspect = require("./_a-function");
         var prop = require("./_wks")("species");
@@ -4114,11 +4090,11 @@
             return void 0 === obj || void 0 === (a = getActual(obj)[prop]) ? key : inspect(a);
         };
     }, {
-        "./_a-function" : 50,
-        "./_an-object" : 53,
-        "./_wks" : 121
+        "./_a-function": 50,
+        "./_an-object": 53,
+        "./_wks": 121
     }],
-    110 : [function(getCallback, module, dataAndEvents) {
+    110: [function(getCallback, module, dataAndEvents) {
         var func = getCallback("./_to-integer");
         var callback = getCallback("./_defined");
         /**
@@ -4138,10 +4114,10 @@
             };
         };
     }, {
-        "./_defined" : 60,
-        "./_to-integer" : 113
+        "./_defined": 60,
+        "./_to-integer": 113
     }],
-    111 : [function(require, c, dataAndEvents) {
+    111: [function(require, c, dataAndEvents) {
         var callback;
         var channel;
         var thisArg;
@@ -4188,7 +4164,7 @@
                 var args = [];
                 /** @type {number} */
                 var i = 1;
-                for (;arguments.length > i;) {
+                for (; arguments.length > i;) {
                     args.push(arguments[i++]);
                 }
                 return a[++pdataCur] = function() {
@@ -4245,18 +4221,18 @@
             }
         }
         c.exports = {
-            set : last,
-            clear : nonCommentArg
+            set: last,
+            clear: nonCommentArg
         };
     }, {
-        "./_cof" : 56,
-        "./_ctx" : 59,
-        "./_dom-create" : 62,
-        "./_global" : 68,
-        "./_html" : 71,
-        "./_invoke" : 73
+        "./_cof": 56,
+        "./_ctx": 59,
+        "./_dom-create": 62,
+        "./_global": 68,
+        "./_html": 71,
+        "./_invoke": 73
     }],
-    112 : [function(require, module, dataAndEvents) {
+    112: [function(require, module, dataAndEvents) {
         var getActual = require("./_to-integer");
         /** @type {function (...[*]): number} */
         var log = Math.max;
@@ -4271,9 +4247,9 @@
             return expectedNumberOfNonCommentArgs = getActual(expectedNumberOfNonCommentArgs), expectedNumberOfNonCommentArgs < 0 ? log(expectedNumberOfNonCommentArgs + key, 0) : inspect(expectedNumberOfNonCommentArgs, key);
         };
     }, {
-        "./_to-integer" : 113
+        "./_to-integer": 113
     }],
-    113 : [function(dataAndEvents, module, deepDataAndEvents) {
+    113: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (*): number} */
         var ceil = Math.ceil;
         /** @type {function (*): number} */
@@ -4286,7 +4262,7 @@
             return isNaN(expectedNumberOfNonCommentArgs = +expectedNumberOfNonCommentArgs) ? 0 : (expectedNumberOfNonCommentArgs > 0 ? floor : ceil)(expectedNumberOfNonCommentArgs);
         };
     }, {}],
-    114 : [function(require, module, dataAndEvents) {
+    114: [function(require, module, dataAndEvents) {
         var format = require("./_iobject");
         var getActual = require("./_defined");
         /**
@@ -4297,10 +4273,10 @@
             return format(getActual(expectedNumberOfNonCommentArgs));
         };
     }, {
-        "./_defined" : 60,
-        "./_iobject" : 74
+        "./_defined": 60,
+        "./_iobject": 74
     }],
-    115 : [function(require, module, dataAndEvents) {
+    115: [function(require, module, dataAndEvents) {
         var getActual = require("./_to-integer");
         /** @type {function (...[*]): number} */
         var nativeMin = Math.min;
@@ -4312,9 +4288,9 @@
             return expectedNumberOfNonCommentArgs > 0 ? nativeMin(getActual(expectedNumberOfNonCommentArgs), 9007199254740991) : 0;
         };
     }, {
-        "./_to-integer" : 113
+        "./_to-integer": 113
     }],
-    116 : [function(require, module, dataAndEvents) {
+    116: [function(require, module, dataAndEvents) {
         var getActual = require("./_defined");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -4324,9 +4300,9 @@
             return Object(getActual(expectedNumberOfNonCommentArgs));
         };
     }, {
-        "./_defined" : 60
+        "./_defined": 60
     }],
-    117 : [function(require, module, dataAndEvents) {
+    117: [function(require, module, dataAndEvents) {
         var getActual = require("./_is-object");
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -4351,9 +4327,9 @@
             throw TypeError("Can't convert object to primitive value");
         };
     }, {
-        "./_is-object" : 77
+        "./_is-object": 77
     }],
-    118 : [function(dataAndEvents, module, deepDataAndEvents) {
+    118: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {number} */
         var count = 0;
         /** @type {number} */
@@ -4366,7 +4342,7 @@
             return "Symbol(".concat(void 0 === expectedNumberOfNonCommentArgs ? "" : expectedNumberOfNonCommentArgs, ")_", (++count + id).toString(36));
         };
     }, {}],
-    119 : [function(require, module, dataAndEvents) {
+    119: [function(require, module, dataAndEvents) {
         var nodes = require("./_global");
         var runtime = require("./_core");
         var Block = require("./_library");
@@ -4381,24 +4357,24 @@
             if (!("_" === expectedNumberOfNonCommentArgs.charAt(0))) {
                 if (!(expectedNumberOfNonCommentArgs in obj)) {
                     getActual(obj, expectedNumberOfNonCommentArgs, {
-                        value : argv.f(expectedNumberOfNonCommentArgs)
+                        value: argv.f(expectedNumberOfNonCommentArgs)
                     });
                 }
             }
         };
     }, {
-        "./_core" : 57,
-        "./_global" : 68,
-        "./_library" : 85,
-        "./_object-dp" : 90,
-        "./_wks-ext" : 120
+        "./_core": 57,
+        "./_global": 68,
+        "./_library": 85,
+        "./_object-dp": 90,
+        "./_wks-ext": 120
     }],
-    120 : [function(trim, dataAndEvents, el) {
+    120: [function(trim, dataAndEvents, el) {
         el.f = trim("./_wks");
     }, {
-        "./_wks" : 121
+        "./_wks": 121
     }],
-    121 : [function(require, module, dataAndEvents) {
+    121: [function(require, module, dataAndEvents) {
         var store = require("./_shared")("wks");
         var Block = require("./_uid");
         var Symbol = require("./_global").Symbol;
@@ -4410,11 +4386,11 @@
         };
         self.store = store;
     }, {
-        "./_global" : 68,
-        "./_shared" : 108,
-        "./_uid" : 118
+        "./_global": 68,
+        "./_shared": 108,
+        "./_uid": 118
     }],
-    122 : [function(require, module, dataAndEvents) {
+    122: [function(require, module, dataAndEvents) {
         var getActual = require("./_classof");
         var implementation = require("./_wks")("iterator");
         var objectTypes = require("./_iterators");
@@ -4425,12 +4401,12 @@
             }
         };
     }, {
-        "./_classof" : 55,
-        "./_core" : 57,
-        "./_iterators" : 83,
-        "./_wks" : 121
+        "./_classof": 55,
+        "./_core": 57,
+        "./_iterators": 83,
+        "./_wks": 121
     }],
-    123 : [function(require, module, dataAndEvents) {
+    123: [function(require, module, dataAndEvents) {
         var nodes = require("./_an-object");
         var getActual = require("./core.get-iterator-method");
         /** @type {function (string): ?} */
@@ -4442,11 +4418,11 @@
             return nodes(fn.call(expectedNumberOfNonCommentArgs));
         };
     }, {
-        "./_an-object" : 53,
-        "./_core" : 57,
-        "./core.get-iterator-method" : 122
+        "./_an-object": 53,
+        "./_core": 57,
+        "./core.get-iterator-method": 122
     }],
-    124 : [function(require, module, dataAndEvents) {
+    124: [function(require, module, dataAndEvents) {
         var helper = require("./_classof");
         var func = require("./_wks")("iterator");
         var tags = require("./_iterators");
@@ -4456,12 +4432,12 @@
             return void 0 !== t[func] || ("@@iterator" in t || tags.hasOwnProperty(helper(t)));
         };
     }, {
-        "./_classof" : 55,
-        "./_core" : 57,
-        "./_iterators" : 83,
-        "./_wks" : 121
+        "./_classof": 55,
+        "./_core": 57,
+        "./_iterators": 83,
+        "./_wks": 121
     }],
-    125 : [function(require, dataAndEvents, deepDataAndEvents) {
+    125: [function(require, dataAndEvents, deepDataAndEvents) {
         var makeIterator = require("./_ctx");
         var expr = require("./_export");
         var getActual = require("./_to-object");
@@ -4477,7 +4453,7 @@
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            from : function(expectedNumberOfNonCommentArgs) {
+            from: function(expectedNumberOfNonCommentArgs) {
                 var l;
                 var result;
                 var _ref;
@@ -4495,13 +4471,13 @@
                 if (value && (callback = makeIterator(callback, len > 2 ? arguments[2] : void 0, 2)), void 0 === ret || Buffer === Array && merge(ret)) {
                     l = expect(elems.length);
                     result = new Buffer(l);
-                    for (;l > i;i++) {
+                    for (; l > i; i++) {
                         assert(result, i, value ? callback(elems[i], i) : elems[i]);
                     }
                 } else {
                     cur = ret.call(elems);
                     result = new Buffer;
-                    for (;!(_ref = cur.next()).done;i++) {
+                    for (; !(_ref = cur.next()).done; i++) {
                         assert(result, i, value ? indexOf(cur, callback, [_ref.value, i], true) : _ref.value);
                     }
                 }
@@ -4509,17 +4485,17 @@
             }
         });
     }, {
-        "./_create-property" : 58,
-        "./_ctx" : 59,
-        "./_export" : 65,
-        "./_is-array-iter" : 75,
-        "./_iter-call" : 78,
-        "./_iter-detect" : 81,
-        "./_to-length" : 115,
-        "./_to-object" : 116,
-        "./core.get-iterator-method" : 122
+        "./_create-property": 58,
+        "./_ctx": 59,
+        "./_export": 65,
+        "./_is-array-iter": 75,
+        "./_iter-call": 78,
+        "./_iter-detect": 81,
+        "./_to-length": 115,
+        "./_to-object": 116,
+        "./core.get-iterator-method": 122
     }],
-    126 : [function(require, module, dataAndEvents) {
+    126: [function(require, module, dataAndEvents) {
         var isArray = require("./_add-to-unscopables");
         var fn = require("./_iter-step");
         var nodes = require("./_iterators");
@@ -4535,48 +4511,48 @@
             var EMPTY = this._k;
             /** @type {number} */
             var i = this._i++;
-            return!arr || i >= arr.length ? (this._t = void 0, fn(1)) : "keys" === EMPTY ? fn(0, i) : "values" === EMPTY ? fn(0, arr[i]) : fn(0, [i, arr[i]]);
+            return !arr || i >= arr.length ? (this._t = void 0, fn(1)) : "keys" === EMPTY ? fn(0, i) : "values" === EMPTY ? fn(0, arr[i]) : fn(0, [i, arr[i]]);
         }, "values");
         nodes.Arguments = nodes.Array;
         isArray("keys");
         isArray("values");
         isArray("entries");
     }, {
-        "./_add-to-unscopables" : 51,
-        "./_iter-define" : 80,
-        "./_iter-step" : 82,
-        "./_iterators" : 83,
-        "./_to-iobject" : 114
+        "./_add-to-unscopables": 51,
+        "./_iter-define": 80,
+        "./_iter-step": 82,
+        "./_iterators": 83,
+        "./_to-iobject": 114
     }],
-    127 : [function(prim, dataAndEvents, deepDataAndEvents) {
+    127: [function(prim, dataAndEvents, deepDataAndEvents) {
         var d = prim("./_export");
         d(d.S + d.F, "Object", {
-            assign : prim("./_object-assign")
+            assign: prim("./_object-assign")
         });
     }, {
-        "./_export" : 65,
-        "./_object-assign" : 88
+        "./_export": 65,
+        "./_object-assign": 88
     }],
-    128 : [function(require, dataAndEvents, deepDataAndEvents) {
+    128: [function(require, dataAndEvents, deepDataAndEvents) {
         var isKind = require("./_export");
         isKind(isKind.S, "Object", {
-            create : require("./_object-create")
+            create: require("./_object-create")
         });
     }, {
-        "./_export" : 65,
-        "./_object-create" : 89
+        "./_export": 65,
+        "./_object-create": 89
     }],
-    129 : [function(require, dataAndEvents, deepDataAndEvents) {
+    129: [function(require, dataAndEvents, deepDataAndEvents) {
         var expr = require("./_export");
         expr(expr.S + expr.F * !require("./_descriptors"), "Object", {
-            defineProperty : require("./_object-dp").f
+            defineProperty: require("./_object-dp").f
         });
     }, {
-        "./_descriptors" : 61,
-        "./_export" : 65,
-        "./_object-dp" : 90
+        "./_descriptors": 61,
+        "./_export": 65,
+        "./_object-dp": 90
     }],
-    130 : [function(require, dataAndEvents, deepDataAndEvents) {
+    130: [function(require, dataAndEvents, deepDataAndEvents) {
         var condition = require("./_to-object");
         var when = require("./_object-gpo");
         require("./_object-sap")("getPrototypeOf", function() {
@@ -4585,11 +4561,11 @@
             };
         });
     }, {
-        "./_object-gpo" : 96,
-        "./_object-sap" : 100,
-        "./_to-object" : 116
+        "./_object-gpo": 96,
+        "./_object-sap": 100,
+        "./_to-object": 116
     }],
-    131 : [function(require, dataAndEvents, deepDataAndEvents) {
+    131: [function(require, dataAndEvents, deepDataAndEvents) {
         var HOP = require("./_to-object");
         var getActual = require("./_object-keys");
         require("./_object-sap")("keys", function() {
@@ -4598,22 +4574,21 @@
             };
         });
     }, {
-        "./_object-keys" : 98,
-        "./_object-sap" : 100,
-        "./_to-object" : 116
+        "./_object-keys": 98,
+        "./_object-sap": 100,
+        "./_to-object": 116
     }],
-    132 : [function(require, dataAndEvents, deepDataAndEvents) {
+    132: [function(require, dataAndEvents, deepDataAndEvents) {
         var isKind = require("./_export");
         isKind(isKind.S, "Object", {
-            setPrototypeOf : require("./_set-proto").set
+            setPrototypeOf: require("./_set-proto").set
         });
     }, {
-        "./_export" : 65,
-        "./_set-proto" : 104
+        "./_export": 65,
+        "./_set-proto": 104
     }],
-    133 : [function(dataAndEvents, deepDataAndEvents, ignoreMethodDoesntExist) {
-    }, {}],
-    134 : [function(require, dataAndEvents, deepDataAndEvents) {
+    133: [function(dataAndEvents, deepDataAndEvents, ignoreMethodDoesntExist) {}, {}],
+    134: [function(require, dataAndEvents, deepDataAndEvents) {
         var Moment;
         var Deferred;
         var S_NIL;
@@ -4640,19 +4615,17 @@
         /**
          * @return {undefined}
          */
-        var arg = function() {
-        };
+        var arg = function() {};
         /** @type {boolean} */
-        var result = !!function() {
+        var result = !! function() {
             try {
                 var me = Promise.resolve(1);
                 /** @type {function (?): undefined} */
                 var FakePromise = (me.constructor = {})[require("./_wks")("species")] = function(func) {
                     func(arg, arg);
                 };
-                return(domain || "function" === typeof PromiseRejectionEvent) && me.then(arg) instanceof FakePromise;
-            } catch (e) {
-            }
+                return (domain || "function" === typeof PromiseRejectionEvent) && me.then(arg) instanceof FakePromise;
+            } catch (e) {}
         }();
         /**
          * @param {number} a
@@ -4668,7 +4641,7 @@
          */
         var extend = function(object) {
             var length;
-            return!(!keys(object) || "function" !== typeof(length = object.then)) && length;
+            return !(!keys(object) || "function" !== typeof(length = object.then)) && length;
         };
         /**
          * @param {?} fn
@@ -4699,8 +4672,8 @@
             try {
                 errback();
             } catch (err) {
-                return{
-                    error : err
+                return {
+                    error: err
                 };
             }
         };
@@ -4767,7 +4740,7 @@
                             onComplete(val);
                         }
                     };
-                    for (;items.length > index;) {
+                    for (; items.length > index;) {
                         finish(items[index++]);
                     }
                     /** @type {Array} */
@@ -4798,8 +4771,8 @@
                         } else {
                             if (apc = expectedNumberOfNonCommentArgs.onunhandledrejection) {
                                 apc({
-                                    promise : el,
-                                    reason : type
+                                    promise: el,
+                                    reason: type
                                 });
                             } else {
                                 if (out = expectedNumberOfNonCommentArgs.console) {
@@ -4826,7 +4799,7 @@
             var items = t._a || t._c;
             /** @type {number} */
             var index = 0;
-            for (;items.length > index;) {
+            for (; items.length > index;) {
                 if (next = items[index++], next.fail || !test(next.promise)) {
                     return false;
                 }
@@ -4845,8 +4818,8 @@
                 } else {
                     if (onError = expectedNumberOfNonCommentArgs.onrejectionhandled) {
                         onError({
-                            promise : header,
-                            reason : header._v
+                            promise: header,
+                            reason: header._v
                         });
                     }
                 }
@@ -4889,8 +4862,8 @@
                     if (value = extend(h)) {
                         s(function() {
                             var expectedNumberOfNonCommentArgs = {
-                                _w : a,
-                                _d : false
+                                _w: a,
+                                _d: false
                             };
                             try {
                                 value.call(h, fn(e, expectedNumberOfNonCommentArgs, 1), fn(add, expectedNumberOfNonCommentArgs, 1));
@@ -4907,8 +4880,8 @@
                     }
                 } catch (name) {
                     add.call({
-                        _w : a,
-                        _d : false
+                        _w: a,
+                        _d: false
                     }, name);
                 }
             }
@@ -4952,7 +4925,7 @@
                  * @param {Function} result
                  * @return {?}
                  */
-                then : function(fn, result) {
+                then: function(fn, result) {
                     var p = then(callback(this, Promise));
                     return p.ok = "function" !== typeof fn || fn, p.fail = "function" === typeof result && result, p.domain = domain ? self.domain : void 0, this._c.push(p), this._a && this._a.push(p), this._s && push(this, false), p.promise;
                 },
@@ -4960,7 +4933,7 @@
                  * @param {Function} callback
                  * @return {?}
                  */
-                "catch" : function(callback) {
+                "catch": function(callback) {
                     return this.then(void 0, callback);
                 }
             });
@@ -4975,7 +4948,7 @@
             };
         }
         node(node.G + node.W + node.F * !result, {
-            Promise : Promise
+            Promise: Promise
         });
         require("./_set-to-string-tag")(Promise, app);
         require("./_set-species")(app);
@@ -4985,7 +4958,7 @@
              * @param {Object} silent
              * @return {?}
              */
-            reject : function(silent) {
+            reject: function(silent) {
                 var createDeferred = then(this);
                 var reject = createDeferred.reject;
                 return reject(silent), createDeferred.promise;
@@ -4996,7 +4969,7 @@
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            resolve : function(expectedNumberOfNonCommentArgs) {
+            resolve: function(expectedNumberOfNonCommentArgs) {
                 if (expectedNumberOfNonCommentArgs instanceof Promise && reject(expectedNumberOfNonCommentArgs.constructor, this)) {
                     return expectedNumberOfNonCommentArgs;
                 }
@@ -5012,7 +4985,7 @@
              * @param {?} obj
              * @return {?}
              */
-            all : function(obj) {
+            all: function(obj) {
                 var callback = this;
                 var deferred = then(callback);
                 var resolver = deferred.resolve;
@@ -5052,7 +5025,7 @@
              * @param {Array} initial
              * @return {?}
              */
-            race : function(initial) {
+            race: function(initial) {
                 var scope = this;
                 var result = then(scope);
                 var reject = result.reject;
@@ -5065,26 +5038,26 @@
             }
         });
     }, {
-        "./_a-function" : 50,
-        "./_an-instance" : 52,
-        "./_classof" : 55,
-        "./_core" : 57,
-        "./_ctx" : 59,
-        "./_export" : 65,
-        "./_for-of" : 67,
-        "./_global" : 68,
-        "./_is-object" : 77,
-        "./_iter-detect" : 81,
-        "./_library" : 85,
-        "./_microtask" : 87,
-        "./_redefine-all" : 102,
-        "./_set-species" : 105,
-        "./_set-to-string-tag" : 106,
-        "./_species-constructor" : 109,
-        "./_task" : 111,
-        "./_wks" : 121
+        "./_a-function": 50,
+        "./_an-instance": 52,
+        "./_classof": 55,
+        "./_core": 57,
+        "./_ctx": 59,
+        "./_export": 65,
+        "./_for-of": 67,
+        "./_global": 68,
+        "./_is-object": 77,
+        "./_iter-detect": 81,
+        "./_library": 85,
+        "./_microtask": 87,
+        "./_redefine-all": 102,
+        "./_set-species": 105,
+        "./_set-to-string-tag": 106,
+        "./_species-constructor": 109,
+        "./_task": 111,
+        "./_wks": 121
     }],
-    135 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    135: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         var fn = $sanitize("./_string-at")(true);
         $sanitize("./_iter-define")(String, "String", function(opt_message) {
             /** @type {string} */
@@ -5096,18 +5069,18 @@
             var list = this._t;
             var index = this._i;
             return index >= list.length ? {
-                value : void 0,
-                done : true
+                value: void 0,
+                done: true
             } : (result = fn(list, index), this._i += result.length, {
-                value : result,
-                done : false
+                value: result,
+                done: false
             });
         });
     }, {
-        "./_iter-define" : 80,
-        "./_string-at" : 110
+        "./_iter-define": 80,
+        "./_string-at": 110
     }],
-    136 : [function($, dataAndEvents, deepDataAndEvents) {
+    136: [function($, dataAndEvents, deepDataAndEvents) {
         var opts = $("./_global");
         var promote = $("./_has");
         var emptyJ = $("./_descriptors");
@@ -5159,9 +5132,9 @@
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return defineProperty(this, "a", {
-                        value : 7
+                        value: 7
                     }).a;
                 }
             })).a;
@@ -5199,7 +5172,7 @@
          */
         var setValue = function(expectedNumberOfNonCommentArgs, key, opt_attributes) {
             return expectedNumberOfNonCommentArgs === object && setValue(elems, key, opt_attributes), push(expectedNumberOfNonCommentArgs), key = parseFloat(key, true), push(opt_attributes), promote(keys, key) ? (opt_attributes.enumerable ? (promote(expectedNumberOfNonCommentArgs, camelKey) && (expectedNumberOfNonCommentArgs[camelKey][key] && (expectedNumberOfNonCommentArgs[camelKey][key] = false)), opt_attributes = isArray(opt_attributes, {
-                enumerable : css(0, false)
+                enumerable: css(0, false)
             })) : (promote(expectedNumberOfNonCommentArgs, camelKey) || defineProperty(expectedNumberOfNonCommentArgs, camelKey, css(1, {})), expectedNumberOfNonCommentArgs[camelKey][key] = true), callback(expectedNumberOfNonCommentArgs, key, opt_attributes)) : defineProperty(expectedNumberOfNonCommentArgs, key, opt_attributes);
         };
         /**
@@ -5214,7 +5187,7 @@
             /** @type {number} */
             var i = 0;
             var l = attrNames.length;
-            for (;l > i;) {
+            for (; l > i;) {
                 setValue(expectedNumberOfNonCommentArgs, name = attrNames[i++], key[name]);
             }
             return expectedNumberOfNonCommentArgs;
@@ -5234,7 +5207,7 @@
         var s = function(expectedNumberOfNonCommentArgs) {
             /** @type {boolean} */
             var E = propertyIsEnumerable.call(this, expectedNumberOfNonCommentArgs = parseFloat(expectedNumberOfNonCommentArgs, true));
-            return!(this === object && (promote(keys, expectedNumberOfNonCommentArgs) && !promote(elems, expectedNumberOfNonCommentArgs))) && (!(E || (!promote(this, expectedNumberOfNonCommentArgs) || (!promote(keys, expectedNumberOfNonCommentArgs) || promote(this, camelKey) && this[camelKey][expectedNumberOfNonCommentArgs]))) || E);
+            return !(this === object && (promote(keys, expectedNumberOfNonCommentArgs) && !promote(elems, expectedNumberOfNonCommentArgs))) && (!(E || (!promote(this, expectedNumberOfNonCommentArgs) || (!promote(keys, expectedNumberOfNonCommentArgs) || promote(this, camelKey) && this[camelKey][expectedNumberOfNonCommentArgs]))) || E);
         };
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
@@ -5244,7 +5217,7 @@
         var parse = function(expectedNumberOfNonCommentArgs, key) {
             if (expectedNumberOfNonCommentArgs = trim(expectedNumberOfNonCommentArgs), key = parseFloat(key, true), expectedNumberOfNonCommentArgs !== object || (!promote(keys, key) || promote(elems, key))) {
                 var found = indexOf(expectedNumberOfNonCommentArgs, key);
-                return!found || (!promote(keys, key) || (promote(expectedNumberOfNonCommentArgs, camelKey) && expectedNumberOfNonCommentArgs[camelKey][key] || (found.enumerable = true))), found;
+                return !found || (!promote(keys, key) || (promote(expectedNumberOfNonCommentArgs, camelKey) && expectedNumberOfNonCommentArgs[camelKey][key] || (found.enumerable = true))), found;
             }
         };
         /**
@@ -5258,7 +5231,7 @@
             var pos = [];
             /** @type {number} */
             var index = 0;
-            for (;items.length > index;) {
+            for (; items.length > index;) {
                 if (!promote(keys, cur = items[index++])) {
                     if (!(cur === camelKey)) {
                         if (!(cur === text)) {
@@ -5282,7 +5255,7 @@
             var rv = [];
             /** @type {number} */
             var idx = 0;
-            for (;path.length > idx;) {
+            for (; path.length > idx;) {
                 if (!!promote(keys, key = path[idx++])) {
                     if (!(chainable && !promote(object, key))) {
                         rv.push(keys[key]);
@@ -5317,9 +5290,9 @@
                     callback(this, storageKey, css(1, expectedNumberOfNonCommentArgs));
                 };
                 return emptyJ && (ownFlag && callback(object, storageKey, {
-                    configurable : true,
+                    configurable: true,
                     /** @type {function (Object): undefined} */
-                    set : fn
+                    set: fn
                 })), a(storageKey);
             };
             ok(options[key], "toString", function() {
@@ -5349,19 +5322,19 @@
             };
         }
         tile(tile.G + tile.W + tile.F * !symbol, {
-            Symbol : options
+            Symbol: options
         });
         /** @type {Array.<string>} */
         var str = "hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(",");
         /** @type {number} */
         var chars = 0;
-        for (;str.length > chars;) {
+        for (; str.length > chars;) {
             t(str[chars++]);
         }
         str = i(t.store);
         /** @type {number} */
         chars = 0;
-        for (;str.length > chars;) {
+        for (; str.length > chars;) {
             divSpan(str[chars++]);
         }
         tile(tile.S + tile.F * !symbol, "Symbol", {
@@ -5369,14 +5342,14 @@
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            "for" : function(expectedNumberOfNonCommentArgs) {
+            "for": function(expectedNumberOfNonCommentArgs) {
                 return promote(events, expectedNumberOfNonCommentArgs += "") ? events[expectedNumberOfNonCommentArgs] : events[expectedNumberOfNonCommentArgs] = options(expectedNumberOfNonCommentArgs);
             },
             /**
              * @param {string} key
              * @return {?}
              */
-            keyFor : function(key) {
+            keyFor: function(key) {
                 if (test(key)) {
                     return hasKey(events, key);
                 }
@@ -5385,44 +5358,44 @@
             /**
              * @return {undefined}
              */
-            useSetter : function() {
+            useSetter: function() {
                 /** @type {boolean} */
                 ownFlag = true;
             },
             /**
              * @return {undefined}
              */
-            useSimple : function() {
+            useSimple: function() {
                 /** @type {boolean} */
                 ownFlag = false;
             }
         });
         tile(tile.S + tile.F * !symbol, "Object", {
             /** @type {function (Object, string): ?} */
-            create : _each,
+            create: _each,
             /** @type {function (Object, string, ?): ?} */
-            defineProperty : setValue,
+            defineProperty: setValue,
             /** @type {function (Object, string): ?} */
-            defineProperties : iterator,
+            defineProperties: iterator,
             /** @type {function (Object, string): ?} */
-            getOwnPropertyDescriptor : parse,
+            getOwnPropertyDescriptor: parse,
             /** @type {function (Object): ?} */
-            getOwnPropertyNames : f,
+            getOwnPropertyNames: f,
             /** @type {function (Object): ?} */
-            getOwnPropertySymbols : next
+            getOwnPropertySymbols: next
         });
         if (expectedNumberOfNonCommentArgs) {
             tile(tile.S + tile.F * (!symbol || hidden(function() {
                 var expectedNumberOfNonCommentArgs = options();
                 return "[null]" !== fn([expectedNumberOfNonCommentArgs]) || ("{}" !== fn({
-                    a : expectedNumberOfNonCommentArgs
+                    a: expectedNumberOfNonCommentArgs
                 }) || "{}" !== fn(Object(expectedNumberOfNonCommentArgs)));
             })), "JSON", {
                 /**
                  * @param {Object} obj
                  * @return {?}
                  */
-                stringify : function(obj) {
+                stringify: function(obj) {
                     if (void 0 !== obj && !test(obj)) {
                         var handler;
                         var callback;
@@ -5430,7 +5403,7 @@
                         var args = [obj];
                         /** @type {number} */
                         var i = 1;
-                        for (;arguments.length > i;) {
+                        for (; arguments.length > i;) {
                             args.push(arguments[i++]);
                         }
                         return handler = args[1], "function" === typeof handler && (callback = handler), !callback && isString(handler) || (handler = function(node, res) {
@@ -5449,48 +5422,48 @@
         copy(Math, "Math", true);
         copy(opts.JSON, "JSON", true);
     }, {
-        "./_an-object" : 53,
-        "./_descriptors" : 61,
-        "./_enum-keys" : 64,
-        "./_export" : 65,
-        "./_fails" : 66,
-        "./_global" : 68,
-        "./_has" : 69,
-        "./_hide" : 70,
-        "./_is-array" : 76,
-        "./_keyof" : 84,
-        "./_library" : 85,
-        "./_meta" : 86,
-        "./_object-create" : 89,
-        "./_object-dp" : 90,
-        "./_object-gopd" : 92,
-        "./_object-gopn" : 94,
-        "./_object-gopn-ext" : 93,
-        "./_object-gops" : 95,
-        "./_object-keys" : 98,
-        "./_object-pie" : 99,
-        "./_property-desc" : 101,
-        "./_redefine" : 103,
-        "./_set-to-string-tag" : 106,
-        "./_shared" : 108,
-        "./_to-iobject" : 114,
-        "./_to-primitive" : 117,
-        "./_uid" : 118,
-        "./_wks" : 121,
-        "./_wks-define" : 119,
-        "./_wks-ext" : 120
+        "./_an-object": 53,
+        "./_descriptors": 61,
+        "./_enum-keys": 64,
+        "./_export": 65,
+        "./_fails": 66,
+        "./_global": 68,
+        "./_has": 69,
+        "./_hide": 70,
+        "./_is-array": 76,
+        "./_keyof": 84,
+        "./_library": 85,
+        "./_meta": 86,
+        "./_object-create": 89,
+        "./_object-dp": 90,
+        "./_object-gopd": 92,
+        "./_object-gopn": 94,
+        "./_object-gopn-ext": 93,
+        "./_object-gops": 95,
+        "./_object-keys": 98,
+        "./_object-pie": 99,
+        "./_property-desc": 101,
+        "./_redefine": 103,
+        "./_set-to-string-tag": 106,
+        "./_shared": 108,
+        "./_to-iobject": 114,
+        "./_to-primitive": 117,
+        "./_uid": 118,
+        "./_wks": 121,
+        "./_wks-define": 119,
+        "./_wks-ext": 120
     }],
-    137 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    137: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         $sanitize("./_wks-define")("asyncIterator");
     }, {
-        "./_wks-define" : 119
+        "./_wks-define": 119
     }],
-    138 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    138: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         $sanitize("./_wks-define")("observable");
     }, {
-        "./_wks-define" : 119
+        "./_wks-define": 119
     }],
-    139 : [function(require, dataAndEvents, deepDataAndEvents) {
+    139: [function(require, dataAndEvents, deepDataAndEvents) {
         require("./es6.array.iterator");
         var events = require("./_global");
         var getActual = require("./_hide");
@@ -5500,7 +5473,7 @@
         var def = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"];
         /** @type {number} */
         var n = 0;
-        for (;n < 5;n++) {
+        for (; n < 5; n++) {
             var name = def[n];
             var constructor = events[name];
             var obj = constructor && constructor.prototype;
@@ -5512,13 +5485,13 @@
             nodes[name] = nodes.Array;
         }
     }, {
-        "./_global" : 68,
-        "./_hide" : 70,
-        "./_iterators" : 83,
-        "./_wks" : 121,
-        "./es6.array.iterator" : 126
+        "./_global": 68,
+        "./_hide": 70,
+        "./_iterators": 83,
+        "./_wks": 121,
+        "./es6.array.iterator": 126
     }],
-    140 : [function(dataAndEvents, module, deepDataAndEvents) {
+    140: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @return {?}
          */
@@ -5602,11 +5575,11 @@
                 /** @type {boolean} */
                 draining = true;
                 var length = data.length;
-                for (;length;) {
+                for (; length;) {
                     received = data;
                     /** @type {Array} */
                     data = [];
-                    for (;++index < length;) {
+                    for (; ++index < length;) {
                         if (received) {
                             received[index].run();
                         }
@@ -5637,12 +5610,11 @@
         /**
          * @return {undefined}
          */
-        function tmp() {
-        }
+        function tmp() {}
         var type;
         var display;
         var process = module.exports = {};
-        !function() {
+        ! function() {
             try {
                 /** @type {Function} */
                 type = "function" === typeof setTimeout ? setTimeout : r;
@@ -5675,7 +5647,7 @@
             if (arguments.length > 1) {
                 /** @type {number} */
                 var i = 1;
-                for (;i < arguments.length;i++) {
+                for (; i < arguments.length; i++) {
                     x[i - 1] = arguments[i];
                 }
             }
@@ -5743,14 +5715,14 @@
             return 0;
         };
     }, {}],
-    141 : [function(factory, module, dataAndEvents) {
+    141: [function(factory, module, dataAndEvents) {
         module.exports = factory("./lib/effects");
     }, {
-        "./lib/effects" : 142
+        "./lib/effects": 142
     }],
-    142 : [function(matches, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    142: [function(matches, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.select = expectedNumberOfNonCommentArgs.cancel = expectedNumberOfNonCommentArgs.join = expectedNumberOfNonCommentArgs.fork = expectedNumberOfNonCommentArgs.cps = expectedNumberOfNonCommentArgs.apply = expectedNumberOfNonCommentArgs.call = expectedNumberOfNonCommentArgs.race = expectedNumberOfNonCommentArgs.put = expectedNumberOfNonCommentArgs.take = void 0;
         var options = matches("./internal/io");
@@ -5765,9 +5737,9 @@
         expectedNumberOfNonCommentArgs.cancel = options.cancel;
         expectedNumberOfNonCommentArgs.select = options.select;
     }, {
-        "./internal/io" : 143
+        "./internal/io": 143
     }],
-    143 : [function(Event, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    143: [function(Event, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Object} expectedNumberOfNonCommentArgs
          * @param {string} camelKey
@@ -5776,10 +5748,10 @@
          */
         function callback(expectedNumberOfNonCommentArgs, camelKey, session) {
             return camelKey in expectedNumberOfNonCommentArgs ? Object.defineProperty(expectedNumberOfNonCommentArgs, camelKey, {
-                value : session,
-                enumerable : true,
-                configurable : true,
-                writable : true
+                value: session,
+                enumerable: true,
+                configurable: true,
+                writable: true
             }) : expectedNumberOfNonCommentArgs[camelKey] = session, expectedNumberOfNonCommentArgs;
         }
         /**
@@ -5787,7 +5759,7 @@
          * @return {?}
          */
         function get(expectedNumberOfNonCommentArgs) {
-            return("*" === expectedNumberOfNonCommentArgs ? config.wildcard : self.is.array(expectedNumberOfNonCommentArgs) ? config.array : self.is.func(expectedNumberOfNonCommentArgs) ? config.predicate : config["default"])(expectedNumberOfNonCommentArgs);
+            return ("*" === expectedNumberOfNonCommentArgs ? config.wildcard : self.is.array(expectedNumberOfNonCommentArgs) ? config.array : self.is.func(expectedNumberOfNonCommentArgs) ? config.predicate : config["default"])(expectedNumberOfNonCommentArgs);
         }
         /**
          * @param {(Object|string)} id
@@ -5836,10 +5808,10 @@
                     expectedNumberOfNonCommentArgs = options.fn;
                 }
             }
-            return(0, self.check)(expectedNumberOfNonCommentArgs, self.is.func, r20), {
-                context : context,
-                fn : expectedNumberOfNonCommentArgs,
-                args : args
+            return (0, self.check)(expectedNumberOfNonCommentArgs, self.is.func, r20), {
+                context: context,
+                fn: expectedNumberOfNonCommentArgs,
+                args: args
             };
         }
         /**
@@ -5853,7 +5825,7 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             return cb(x, fn(expectedNumberOfNonCommentArgs, args));
@@ -5866,8 +5838,8 @@
         function describe(expectedNumberOfNonCommentArgs, name) {
             var typePattern = arguments.length <= 2 || void 0 === arguments[2] ? [] : arguments[2];
             return cb(x, fn({
-                context : expectedNumberOfNonCommentArgs,
-                fn : name
+                context: expectedNumberOfNonCommentArgs,
+                fn: name
             }, typePattern));
         }
         /**
@@ -5881,7 +5853,7 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             return cb(sel, fn(res, args));
@@ -5897,7 +5869,7 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             return cb(evt, fn(el, args));
@@ -5933,16 +5905,16 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             return 0 === arguments.length ? type = self.ident : (0, self.check)(type, self.is.func, restoreScript), cb(part, {
-                selector : type,
-                args : args
+                selector: type,
+                args: args
             });
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.asEffect = expectedNumberOfNonCommentArgs.SELECT_ARG_ERROR = expectedNumberOfNonCommentArgs.INVALID_PATTERN = expectedNumberOfNonCommentArgs.CANCEL_ARG_ERROR = expectedNumberOfNonCommentArgs.JOIN_ARG_ERROR = expectedNumberOfNonCommentArgs.FORK_ARG_ERROR = expectedNumberOfNonCommentArgs.CALL_FUNCTION_ARG_ERROR = void 0;
         var jQuery = function() {
@@ -5962,8 +5934,7 @@
                 try {
                     var node;
                     var exports = expectedNumberOfNonCommentArgs[Symbol.iterator]();
-                    for (;!(callback2 = (node = exports.next()).done) && (buffer.push(node.value), !i || buffer.length !== i);callback2 = true) {
-                    }
+                    for (; !(callback2 = (node = exports.next()).done) && (buffer.push(node.value), !i || buffer.length !== i); callback2 = true) {}
                 } catch (fn) {
                     /** @type {boolean} */
                     _d = true;
@@ -6058,14 +6029,14 @@
             /**
              * @return {?}
              */
-            wildcard : function() {
+            wildcard: function() {
                 return self.kTrue;
             },
             /**
              * @param {?} name
              * @return {?}
              */
-            "default" : function(name) {
+            "default": function(name) {
                 return function(v) {
                     return v.type === name;
                 };
@@ -6074,7 +6045,7 @@
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            array : function(expectedNumberOfNonCommentArgs) {
+            array: function(expectedNumberOfNonCommentArgs) {
                 return function(message) {
                     return expectedNumberOfNonCommentArgs.some(function(type) {
                         return type === message.type;
@@ -6085,7 +6056,7 @@
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            predicate : function(expectedNumberOfNonCommentArgs) {
+            predicate: function(expectedNumberOfNonCommentArgs) {
                 return function(deepDataAndEvents) {
                     return expectedNumberOfNonCommentArgs(deepDataAndEvents);
                 };
@@ -6103,70 +6074,70 @@
              * @param {Object} item
              * @return {?}
              */
-            take : function(item) {
+            take: function(item) {
                 return item && (item[key] && item[param]);
             },
             /**
              * @param {Object} data
              * @return {?}
              */
-            put : function(data) {
+            put: function(data) {
                 return data && (data[key] && data[r]);
             },
             /**
              * @param {Object} data
              * @return {?}
              */
-            race : function(data) {
+            race: function(data) {
                 return data && (data[key] && data[prop]);
             },
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
-            call : function(expectedNumberOfNonCommentArgs) {
+            call: function(expectedNumberOfNonCommentArgs) {
                 return expectedNumberOfNonCommentArgs && (expectedNumberOfNonCommentArgs[key] && expectedNumberOfNonCommentArgs[x]);
             },
             /**
              * @param {Object} matches
              * @return {?}
              */
-            cps : function(matches) {
+            cps: function(matches) {
                 return matches && (matches[key] && matches[sel]);
             },
             /**
              * @param {Object} options
              * @return {?}
              */
-            fork : function(options) {
+            fork: function(options) {
                 return options && (options[key] && options[evt]);
             },
             /**
              * @param {Object} args
              * @return {?}
              */
-            join : function(args) {
+            join: function(args) {
                 return args && (args[key] && args[status]);
             },
             /**
              * @param {Object} data
              * @return {?}
              */
-            cancel : function(data) {
+            cancel: function(data) {
                 return data && (data[key] && data[arg]);
             },
             /**
              * @param {string} object
              * @return {?}
              */
-            select : function(object) {
+            select: function(object) {
                 return object && (object[key] && object[part]);
             }
         };
     }, {
-        "./utils" : 144
+        "./utils": 144
     }],
-    144 : [function(callback, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    144: [function(callback, dataAndEvents, expectedNumberOfNonCommentArgs) {
         (function(exports) {
             /**
              * @param {?} object
@@ -6219,7 +6190,7 @@
                 var file = [];
                 /** @type {number} */
                 var i = 0;
-                for (;i < n;i++) {
+                for (; i < n; i++) {
                     file.push(resolve());
                 }
                 return file;
@@ -6230,7 +6201,7 @@
             function e() {
                 var seed = arguments.length <= 0 || void 0 === arguments[0] ? 0 : arguments[0];
                 return function() {
-                    return++seed;
+                    return ++seed;
                 };
             }
             /**
@@ -6252,12 +6223,12 @@
                 }
             }
             Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-                value : true
+                value: true
             });
             var defer = Object.assign || function(expectedNumberOfNonCommentArgs) {
                 /** @type {number} */
                 var i = 1;
-                for (;i < arguments.length;i++) {
+                for (; i < arguments.length; i++) {
                     var iterable = arguments[i];
                     var key;
                     for (key in iterable) {
@@ -6291,59 +6262,58 @@
             var sp = expectedNumberOfNonCommentArgs.TASK = throttledUpdate("TASK");
             var isDev = (expectedNumberOfNonCommentArgs.kTrue = function() {
                 return true;
-            }, expectedNumberOfNonCommentArgs.noop = function() {
-            }, expectedNumberOfNonCommentArgs.isDev = "undefined" !== typeof exports && (exports.env && "development" === exports.env.NODE_ENV));
+            }, expectedNumberOfNonCommentArgs.noop = function() {}, expectedNumberOfNonCommentArgs.isDev = "undefined" !== typeof exports && (exports.env && "development" === exports.env.NODE_ENV));
             var args = expectedNumberOfNonCommentArgs.is = {
                 /**
                  * @param {number} id
                  * @return {?}
                  */
-                undef : function(id) {
+                undef: function(id) {
                     return null === id || void 0 === id;
                 },
                 /**
                  * @param {Object} dataAndEvents
                  * @return {?}
                  */
-                notUndef : function(dataAndEvents) {
+                notUndef: function(dataAndEvents) {
                     return null !== dataAndEvents && void 0 !== dataAndEvents;
                 },
                 /**
                  * @param {Object} name
                  * @return {?}
                  */
-                func : function(name) {
+                func: function(name) {
                     return "function" === typeof name;
                 },
                 /** @type {function (*): boolean} */
-                array : Array.isArray,
+                array: Array.isArray,
                 /**
                  * @param {Object} obj
                  * @return {?}
                  */
-                promise : function(obj) {
+                promise: function(obj) {
                     return obj && args.func(obj.then);
                 },
                 /**
                  * @param {Object} obj
                  * @return {?}
                  */
-                iterator : function(obj) {
+                iterator: function(obj) {
                     return obj && (args.func(obj.next) && args.func(obj["throw"]));
                 },
                 /**
                  * @param {(Node|string)} p
                  * @return {?}
                  */
-                task : function(p) {
+                task: function(p) {
                     return p && p[sp];
                 }
             };
         }).call(this, callback("_process"));
     }, {
-        _process : 140
+        _process: 140
     }],
-    145 : [function(factory, module, dataAndEvents) {
+    145: [function(factory, module, dataAndEvents) {
         (function(override) {
             var expectedNumberOfNonCommentArgs = "object" === typeof override ? override : "object" === typeof window ? window : "object" === typeof self ? self : this;
             var value = expectedNumberOfNonCommentArgs.regeneratorRuntime && Object.getOwnPropertyNames(expectedNumberOfNonCommentArgs).indexOf("regeneratorRuntime") >= 0;
@@ -6359,11 +6329,11 @@
             }
         }).call(this, "undefined" !== typeof window ? window : {});
     }, {
-        "./runtime" : 146
+        "./runtime": 146
     }],
-    146 : [function(callback, exports, dataAndEvents) {
+    146: [function(callback, exports, dataAndEvents) {
         (function(data, override) {
-            !function(event) {
+            ! function(event) {
                 /**
                  * @param {Function} options
                  * @param {Function} event
@@ -6386,32 +6356,29 @@
                  */
                 function debug(msg, expectedNumberOfNonCommentArgs, arg) {
                     try {
-                        return{
-                            type : "normal",
-                            arg : msg.call(expectedNumberOfNonCommentArgs, arg)
+                        return {
+                            type: "normal",
+                            arg: msg.call(expectedNumberOfNonCommentArgs, arg)
                         };
                     } catch (param) {
-                        return{
-                            type : "throw",
-                            arg : param
+                        return {
+                            type: "throw",
+                            arg: param
                         };
                     }
                 }
                 /**
                  * @return {undefined}
                  */
-                function superClass() {
-                }
+                function superClass() {}
                 /**
                  * @return {undefined}
                  */
-                function method() {
-                }
+                function method() {}
                 /**
                  * @return {undefined}
                  */
-                function camelKey() {
-                }
+                function camelKey() {}
                 /**
                  * @param {Object} proto
                  * @return {undefined}
@@ -6534,9 +6501,9 @@
                                 if (type = opts.done ? html : width, data.arg === value) {
                                     continue;
                                 }
-                                return{
-                                    value : data.arg,
-                                    done : opts.done
+                                return {
+                                    value: data.arg,
+                                    done: opts.done
                                 };
                             }
                             if ("throw" === data.type) {
@@ -6581,7 +6548,7 @@
                  */
                 function addProperty(property) {
                     var vvar = {
-                        tryLoc : property[0]
+                        tryLoc: property[0]
                     };
                     if (1 in property) {
                         vvar.catchLoc = property[1];
@@ -6610,7 +6577,7 @@
                 function Class(expectedNumberOfNonCommentArgs) {
                     /** @type {Array} */
                     this.tryEntries = [{
-                        tryLoc : "root"
+                        tryLoc: "root"
                     }];
                     expectedNumberOfNonCommentArgs.forEach(addProperty, this);
                     this.reset(true);
@@ -6635,7 +6602,7 @@
                              * @return {?}
                              */
                             var list = function test() {
-                                for (;++j < expectedNumberOfNonCommentArgs.length;) {
+                                for (; ++j < expectedNumberOfNonCommentArgs.length;) {
                                     if (hasOwn.call(expectedNumberOfNonCommentArgs, j)) {
                                         return test.value = expectedNumberOfNonCommentArgs[j], test.done = false, test;
                                     }
@@ -6645,18 +6612,18 @@
                             return list.next = list;
                         }
                     }
-                    return{
+                    return {
                         /** @type {function (): ?} */
-                        next : cb
+                        next: cb
                     };
                 }
                 /**
                  * @return {?}
                  */
                 function cb() {
-                    return{
-                        value : arg,
-                        done : true
+                    return {
+                        value: arg,
+                        done: true
                     };
                 }
                 var arg;
@@ -6718,7 +6685,7 @@
                 self.isGeneratorFunction = function(conditions) {
                     /** @type {(Function|boolean|null)} */
                     var func = "function" === typeof conditions && conditions.constructor;
-                    return!!func && (func === method || "GeneratorFunction" === (func.displayName || func.name));
+                    return !!func && (func === method || "GeneratorFunction" === (func.displayName || func.name));
                 };
                 /**
                  * @param {Object} expectedNumberOfNonCommentArgs
@@ -6732,8 +6699,8 @@
                  * @return {?}
                  */
                 self.awrap = function(dataAndEvents) {
-                    return{
-                        __await : dataAndEvents
+                    return {
+                        __await: dataAndEvents
                     };
                 };
                 mix(init.prototype);
@@ -6772,26 +6739,27 @@
                     for (cur in expectedNumberOfNonCommentArgs) {
                         eventPath.push(cur);
                     }
-                    return eventPath.reverse(), function init() {
-                        for (;eventPath.length;) {
-                            var result = eventPath.pop();
-                            if (result in expectedNumberOfNonCommentArgs) {
-                                return init.value = result, init.done = false, init;
+                    return eventPath.reverse(),
+                        function init() {
+                            for (; eventPath.length;) {
+                                var result = eventPath.pop();
+                                if (result in expectedNumberOfNonCommentArgs) {
+                                    return init.value = result, init.done = false, init;
+                                }
                             }
-                        }
-                        return init.done = true, init;
-                    };
+                            return init.done = true, init;
+                        };
                 };
                 /** @type {function (Object): ?} */
                 self.values = val;
                 Class.prototype = {
                     /** @type {function (Object): undefined} */
-                    constructor : Class,
+                    constructor: Class,
                     /**
                      * @param {boolean} dataAndEvents
                      * @return {undefined}
                      */
-                    reset : function(dataAndEvents) {
+                    reset: function(dataAndEvents) {
                         if (this.prev = 0, this.next = 0, this.sent = this._sent = arg, this.done = false, this.delegate = null, this.method = "next", this.arg = arg, this.tryEntries.forEach(start), !dataAndEvents) {
                             var prop;
                             for (prop in this) {
@@ -6808,7 +6776,7 @@
                     /**
                      * @return {?}
                      */
-                    stop : function() {
+                    stop: function() {
                         /** @type {boolean} */
                         this.done = true;
                         var m = this.tryEntries[0];
@@ -6822,7 +6790,7 @@
                      * @param {?} value
                      * @return {?}
                      */
-                    dispatchException : function(value) {
+                    dispatchException: function(value) {
                         /**
                          * @param {string} e
                          * @param {boolean} signal_eof
@@ -6837,7 +6805,7 @@
                         var me = this;
                         /** @type {number} */
                         var unlock = this.tryEntries.length - 1;
-                        for (;unlock >= 0;--unlock) {
+                        for (; unlock >= 0; --unlock) {
                             var expectedNumberOfNonCommentArgs = this.tryEntries[unlock];
                             var msg = expectedNumberOfNonCommentArgs.completion;
                             if ("root" === expectedNumberOfNonCommentArgs.tryLoc) {
@@ -6877,10 +6845,10 @@
                      * @param {?} t
                      * @return {?}
                      */
-                    abrupt : function(type, t) {
+                    abrupt: function(type, t) {
                         /** @type {number} */
                         var unlock = this.tryEntries.length - 1;
-                        for (;unlock >= 0;--unlock) {
+                        for (; unlock >= 0; --unlock) {
                             var expectedNumberOfNonCommentArgs = this.tryEntries[unlock];
                             if (expectedNumberOfNonCommentArgs.tryLoc <= this.prev && (hasOwn.call(expectedNumberOfNonCommentArgs, "finallyLoc") && this.prev < expectedNumberOfNonCommentArgs.finallyLoc)) {
                                 var item = expectedNumberOfNonCommentArgs;
@@ -6905,7 +6873,7 @@
                      * @param {?} next
                      * @return {?}
                      */
-                    complete : function(token, next) {
+                    complete: function(token, next) {
                         if ("throw" === token.type) {
                             throw token.arg;
                         }
@@ -6915,10 +6883,10 @@
                      * @param {number} opt_attributes
                      * @return {?}
                      */
-                    finish : function(opt_attributes) {
+                    finish: function(opt_attributes) {
                         /** @type {number} */
                         var unlock = this.tryEntries.length - 1;
-                        for (;unlock >= 0;--unlock) {
+                        for (; unlock >= 0; --unlock) {
                             var httpServer = this.tryEntries[unlock];
                             if (httpServer.finallyLoc === opt_attributes) {
                                 return this.complete(httpServer.completion, httpServer.afterLoc), start(httpServer), value;
@@ -6929,10 +6897,10 @@
                      * @param {?} no
                      * @return {?}
                      */
-                    "catch" : function(no) {
+                    "catch": function(no) {
                         /** @type {number} */
                         var unlock = this.tryEntries.length - 1;
-                        for (;unlock >= 0;--unlock) {
+                        for (; unlock >= 0; --unlock) {
                             var httpServer = this.tryEntries[unlock];
                             if (httpServer.tryLoc === no) {
                                 var me = httpServer.completion;
@@ -6951,22 +6919,22 @@
                      * @param {?} deepDataAndEvents
                      * @return {?}
                      */
-                    delegateYield : function(expectedNumberOfNonCommentArgs, dataAndEvents, deepDataAndEvents) {
+                    delegateYield: function(expectedNumberOfNonCommentArgs, dataAndEvents, deepDataAndEvents) {
                         return this.delegate = {
-                            iterator : val(expectedNumberOfNonCommentArgs),
-                            resultName : dataAndEvents,
-                            nextLoc : deepDataAndEvents
+                            iterator: val(expectedNumberOfNonCommentArgs),
+                            resultName: dataAndEvents,
+                            nextLoc: deepDataAndEvents
                         }, "next" === this.method && (this.arg = arg), value;
                     }
                 };
             }("object" === typeof override ? override : "object" === typeof window ? window : "object" === typeof self ? self : this);
         }).call(this, callback("_process"), "undefined" !== typeof window ? window : {});
     }, {
-        _process : 140
+        _process: 140
     }],
-    147 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    147: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         require("extension-api/globals");
         var cfg = require("config");
@@ -6978,22 +6946,22 @@
         nodes.initGlobalExtensionApi(Block.createApi());
         require("universal/popup");
     }, {
-        config : 151,
-        "extension-api" : 159,
-        "extension-api/chrome" : 157,
-        "extension-api/globals" : 158,
-        "extension-api/web-extensions" : 166,
-        "universal/popup" : 217
+        config: 151,
+        "extension-api": 159,
+        "extension-api/chrome": 157,
+        "extension-api/globals": 158,
+        "extension-api/web-extensions": 166,
+        "universal/popup": 217
     }],
-    148 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    148: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var AppConfig;
         var nodes = require("stdlib");
         var config = require("./url");
         var module = require("./services");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
@@ -7003,11 +6971,11 @@
             function create(expectedNumberOfNonCommentArgs, key, opt_attributes) {
                 var camelKey = "prod" === key ? "https://f-log-extension.grammarly.io" : "qa" === key || "dev" === key ? "https://127.0.0.1:8000" : nodes.assertNever(key);
                 var actualKey = "prod" === key ? url : "qa" === key || "dev" === key ? "qagr.io" : nodes.assertNever(key);
-                return{
-                    url : config.UrlConfig.create(url, camelKey, opt_attributes),
-                    gnar : module.GnarConfig.create(expectedNumberOfNonCommentArgs, actualKey),
-                    felog : module.FelogConfig.create(expectedNumberOfNonCommentArgs),
-                    extensionId : extensionId
+                return {
+                    url: config.UrlConfig.create(url, camelKey, opt_attributes),
+                    gnar: module.GnarConfig.create(expectedNumberOfNonCommentArgs, actualKey),
+                    felog: module.FelogConfig.create(expectedNumberOfNonCommentArgs),
+                    extensionId: extensionId
                 };
             }
             /** @type {string} */
@@ -7018,17 +6986,17 @@
             exports.create = create;
         }(AppConfig = expectedNumberOfNonCommentArgs.AppConfig || (expectedNumberOfNonCommentArgs.AppConfig = {}));
     }, {
-        "./services" : 153,
-        "./url" : 155,
-        stdlib : 201
+        "./services": 153,
+        "./url": 155,
+        stdlib: 201
     }],
-    149 : [function(topic, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    149: [function(topic, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var BuildInfo;
         var out = topic("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
@@ -7045,15 +7013,15 @@
                 var l = expectedNumberOfNonCommentArgs + "." + key + "." + opt_attributes;
                 /** @type {string} */
                 var min = ["prod" !== value ? value : null, num !== index ? num : null].filter(function(dataAndEvents) {
-                    return!!dataAndEvents;
+                    return !!dataAndEvents;
                 }).join(".");
-                return{
-                    version : l,
-                    fullVersion : l + "-" + [index, min].filter(function(g) {
+                return {
+                    version: l,
+                    fullVersion: l + "-" + [index, min].filter(function(g) {
                         return "" !== g;
                     }).join("/"),
-                    commitHash : visitor,
-                    gitBranch : object
+                    commitHash: visitor,
+                    gitBranch: object
                 };
             }
             /**
@@ -7064,17 +7032,16 @@
              */
             function detectBrowser(browser, value, o) {
                 try {
-                    switch(browser) {
+                    switch (browser) {
                         case "safari":
-                            switch(value) {
+                            switch (value) {
                                 case "bg":
                                     ;
                                 case "popup":
                                     return o.safari.extension.displayVersion;
                                 default:
                                     return;
-                            }
-                            ;
+                            };
                         case "chrome":
                             return o.chrome.runtime.getManifest().version;
                         case "firefox":
@@ -7094,15 +7061,15 @@
             exports.getManifestVersion = detectBrowser;
         }(BuildInfo = expectedNumberOfNonCommentArgs.BuildInfo || (expectedNumberOfNonCommentArgs.BuildInfo = {}));
     }, {
-        stdlib : 201
+        stdlib: 201
     }],
-    150 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    150: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var TargetBrowser;
         var Block = require("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
@@ -7123,7 +7090,7 @@
             exports.detect = detect;
         }(TargetBrowser = expectedNumberOfNonCommentArgs.TargetBrowser || (expectedNumberOfNonCommentArgs.TargetBrowser = {}));
         var TargetEnv;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
@@ -7135,7 +7102,7 @@
             exports.create = create;
         }(TargetEnv = expectedNumberOfNonCommentArgs.TargetEnv || (expectedNumberOfNonCommentArgs.TargetEnv = {}));
         var TargetContext;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
@@ -7170,7 +7137,7 @@
             exports.detect = promise;
         }(TargetContext = expectedNumberOfNonCommentArgs.TargetContext || (expectedNumberOfNonCommentArgs.TargetContext = {}));
         var BundleInfo;
-        !function(settings) {
+        ! function(settings) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
@@ -7178,19 +7145,19 @@
              * @return {?}
              */
             function row(expectedNumberOfNonCommentArgs, key, opt_attributes) {
-                return{
-                    browser : expectedNumberOfNonCommentArgs,
-                    env : key,
-                    context : opt_attributes
+                return {
+                    browser: expectedNumberOfNonCommentArgs,
+                    env: key,
+                    context: opt_attributes
                 };
             }
             /** @type {function (Object, string, ?): ?} */
             settings.create = row;
         }(BundleInfo = expectedNumberOfNonCommentArgs.BundleInfo || (expectedNumberOfNonCommentArgs.BundleInfo = {}));
     }, {
-        stdlib : 201
+        stdlib: 201
     }],
-    151 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    151: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Object} iterable
          * @return {undefined}
@@ -7220,7 +7187,7 @@
             window.GR_CFG = proto.get();
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         enumerate(require("./app"));
         enumerate(require("./build"));
@@ -7243,16 +7210,16 @@
         /** @type {function (Object, string, (Object|boolean|number|string)): undefined} */
         expectedNumberOfNonCommentArgs.initGlobal = reset;
     }, {
-        "./app" : 148,
-        "./build" : 149,
-        "./bundle" : 150,
-        "./mainConfig" : 152,
-        "./services" : 153,
-        "./system" : 154,
-        "./url" : 155,
-        stdlib : 201
+        "./app": 148,
+        "./build": 149,
+        "./bundle": 150,
+        "./mainConfig": 152,
+        "./services": 153,
+        "./system": 154,
+        "./url": 155,
+        stdlib: 201
     }],
-    152 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    152: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         (function(p) {
             /**
              * @param {?} name
@@ -7260,13 +7227,13 @@
              */
             function ondata(name) {
                 return name && name.__esModule ? name : {
-                    "default" : name
+                    "default": name
                 };
             }
             var name = $("babel-runtime/helpers/slicedToArray");
             var quoteNeeded = ondata(name);
             Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-                value : true
+                value: true
             });
             var ProcessEnv;
             var $window = $("./app");
@@ -7274,7 +7241,7 @@
             var game = $("./system");
             var article = $("./bundle");
             var collection = $("stdlib");
-            !function(self) {
+            ! function(self) {
                 /**
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @param {string} key
@@ -7286,14 +7253,14 @@
                  * @return {?}
                  */
                 function row(expectedNumberOfNonCommentArgs, key, opt_attributes, val, value, index, align) {
-                    return{
-                        env : expectedNumberOfNonCommentArgs,
-                        major_number : key,
-                        build_number : opt_attributes,
-                        release_number : val,
-                        git_branch : value,
-                        git_commit : index,
-                        popup_url : align
+                    return {
+                        env: expectedNumberOfNonCommentArgs,
+                        major_number: key,
+                        build_number: opt_attributes,
+                        release_number: val,
+                        git_branch: value,
+                        git_commit: index,
+                        popup_url: align
                     };
                 }
                 /**
@@ -7308,7 +7275,7 @@
                 self.fromBrowserify = onComplete;
             }(ProcessEnv = expectedNumberOfNonCommentArgs.ProcessEnv || (expectedNumberOfNonCommentArgs.ProcessEnv = {}));
             var MainConfig;
-            !function(exports) {
+            ! function(exports) {
                 /**
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @param {string} value
@@ -7351,11 +7318,11 @@
                     var next = args[0];
                     var actualKey = args[1];
                     var attributes = args[2];
-                    return{
-                        buildInfo : book.BuildInfo.create(next, actualKey, attributes, expectedNumberOfNonCommentArgs, camelKey, opt_attributes.git_branch, opt_attributes.git_commit),
-                        bundleInfo : article.BundleInfo.create(expectedNumberOfNonCommentArgs, camelKey, value),
-                        appConfig : $window.AppConfig.create(expectedNumberOfNonCommentArgs, camelKey, opt_attributes.popup_url),
-                        systemInfo : game.SystemInfo.create(expectedNumberOfNonCommentArgs, window)
+                    return {
+                        buildInfo: book.BuildInfo.create(next, actualKey, attributes, expectedNumberOfNonCommentArgs, camelKey, opt_attributes.git_branch, opt_attributes.git_commit),
+                        bundleInfo: article.BundleInfo.create(expectedNumberOfNonCommentArgs, camelKey, value),
+                        appConfig: $window.AppConfig.create(expectedNumberOfNonCommentArgs, camelKey, opt_attributes.popup_url),
+                        systemInfo: game.SystemInfo.create(expectedNumberOfNonCommentArgs, window)
                     };
                 }
                 /** @type {function (Object, string, ?): ?} */
@@ -7363,73 +7330,73 @@
             }(MainConfig = expectedNumberOfNonCommentArgs.MainConfig || (expectedNumberOfNonCommentArgs.MainConfig = {}));
         }).call(this, $("_process"));
     }, {
-        "./app" : 148,
-        "./build" : 149,
-        "./bundle" : 150,
-        "./system" : 154,
-        _process : 140,
-        "babel-runtime/helpers/slicedToArray" : 32,
-        stdlib : 201
+        "./app": 148,
+        "./build": 149,
+        "./bundle": 150,
+        "./system": 154,
+        _process: 140,
+        "babel-runtime/helpers/slicedToArray": 32,
+        stdlib: 201
     }],
-    153 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    153: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var GnarConfig;
         var assert = require("stdlib");
-        !function(settings) {
+        ! function(settings) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
              * @return {?}
              */
             function row(expectedNumberOfNonCommentArgs, key) {
-                return{
-                    appName : assert.assertNonNull(browser[expectedNumberOfNonCommentArgs], "gnar app name"),
-                    url : "https://gnar." + key,
-                    domain : "." + key
+                return {
+                    appName: assert.assertNonNull(browser[expectedNumberOfNonCommentArgs], "gnar app name"),
+                    url: "https://gnar." + key,
+                    domain: "." + key
                 };
             }
             var browser = {
-                chrome : "chromeExt",
-                firefox : "firefoxExt",
-                safari : "safariExt",
-                edge : "edgeExt"
+                chrome: "chromeExt",
+                firefox: "firefoxExt",
+                safari: "safariExt",
+                edge: "edgeExt"
             };
             /** @type {function (Object, string): ?} */
             settings.create = row;
         }(GnarConfig = expectedNumberOfNonCommentArgs.GnarConfig || (expectedNumberOfNonCommentArgs.GnarConfig = {}));
         var FelogConfig;
-        !function(el) {
+        ! function(el) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
             function node(expectedNumberOfNonCommentArgs) {
-                return{
-                    appName : assert.assertNonNull(browser[expectedNumberOfNonCommentArgs], "felog app name")
+                return {
+                    appName: assert.assertNonNull(browser[expectedNumberOfNonCommentArgs], "felog app name")
                 };
             }
             var browser = {
-                chrome : "extensionChrome",
-                firefox : "extensionFirefox",
-                safari : "extensionSafari",
-                edge : "extensionEdge"
+                chrome: "extensionChrome",
+                firefox: "extensionFirefox",
+                safari: "extensionSafari",
+                edge: "extensionEdge"
             };
             /** @type {function (Object): ?} */
             el.create = node;
         }(FelogConfig = expectedNumberOfNonCommentArgs.FelogConfig || (expectedNumberOfNonCommentArgs.FelogConfig = {}));
     }, {
-        stdlib : 201
+        stdlib: 201
     }],
-    154 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    154: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var Hash;
         var drop = require("./bundle");
         var Block = require("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
@@ -7437,10 +7404,10 @@
              */
             function detect(expectedNumberOfNonCommentArgs, key) {
                 var paramType = drop.TargetBrowser.detect(key) || "other";
-                return{
-                    type : paramType,
-                    isWE : "firefox" === expectedNumberOfNonCommentArgs ? Block.try_(function() {
-                        return!!firefox.runtime;
+                return {
+                    type: paramType,
+                    isWE: "firefox" === expectedNumberOfNonCommentArgs ? Block.try_(function() {
+                        return !!firefox.runtime;
                     }, function(dataAndEvents) {
                         return false;
                     }) : "chrome" === expectedNumberOfNonCommentArgs || "edge" === expectedNumberOfNonCommentArgs
@@ -7450,45 +7417,45 @@
             exports.create = detect;
         }(Hash = expectedNumberOfNonCommentArgs.BrowserInfo || (expectedNumberOfNonCommentArgs.BrowserInfo = {}));
         var keys;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
              */
             function create(expectedNumberOfNonCommentArgs) {
-                return{
-                    isWindows : expectedNumberOfNonCommentArgs.navigator.appVersion.indexOf("Win") !== -1
+                return {
+                    isWindows: expectedNumberOfNonCommentArgs.navigator.appVersion.indexOf("Win") !== -1
                 };
             }
             /** @type {function (Object): ?} */
             exports.create = create;
         }(keys = expectedNumberOfNonCommentArgs.OsInfo || (expectedNumberOfNonCommentArgs.OsInfo = {}));
         var SystemInfo;
-        !function(settings) {
+        ! function(settings) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {Object} key
              * @return {?}
              */
             function row(expectedNumberOfNonCommentArgs, key) {
-                return{
-                    browser : Hash.create(expectedNumberOfNonCommentArgs, key),
-                    os : keys.create(key)
+                return {
+                    browser: Hash.create(expectedNumberOfNonCommentArgs, key),
+                    os: keys.create(key)
                 };
             }
             /** @type {function (Object, Object): ?} */
             settings.create = row;
         }(SystemInfo = expectedNumberOfNonCommentArgs.SystemInfo || (expectedNumberOfNonCommentArgs.SystemInfo = {}));
     }, {
-        "./bundle" : 150,
-        stdlib : 201
+        "./bundle": 150,
+        stdlib: 201
     }],
-    155 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    155: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var UrlConfig;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @param {string} key
@@ -7506,41 +7473,41 @@
                 var appPathRoute = "https://auth." + expectedNumberOfNonCommentArgs + "/v3";
                 /** @type {string} */
                 var saveEmailFeedback = "https://emailfeedback." + expectedNumberOfNonCommentArgs;
-                return{
-                    app : rootPath,
-                    appPersonalDictionary : rootPath + "/profile/dictionary",
-                    capi : "wss://capi." + expectedNumberOfNonCommentArgs + "/freews",
-                    dapiMimic : dapiMimic + "/api/mimic",
-                    dapiProps : dapiMimic + "/api/props",
-                    editorDictionary : rootPath + "/profile/dictionary",
-                    dictionary : "https://capi." + expectedNumberOfNonCommentArgs + "/api/defs",
-                    docs : rootPath + "/docs",
-                    docsApi : "https://dox." + expectedNumberOfNonCommentArgs + "/documents",
-                    authCreatePage : appPathRoute + "/redirect-anonymous?location=" + authPath + "/after_install_page",
-                    userOrAnonymous : appPathRoute + "/user/oranonymous",
-                    authSignin : appPathRoute + "/login",
-                    authSignup : appPathRoute + "/signup",
-                    signin : authPath + "/signin",
-                    signup : authPath + "/signup",
-                    resetPassword : authPath + "/resetpassword",
-                    saveEmailFeedback : saveEmailFeedback + "/api/feedback/",
-                    newFelog : key,
-                    referral : authPath + "/referral?page=extension",
-                    welcomeC : authPath + "/extension-success",
-                    upgrade : authPath + "/upgrade",
-                    uninstall : authPath + "/extension-uninstall",
-                    terms : authPath + "/terms",
-                    policy : authPath + "/privacy-policy",
-                    pageConfigUrl : "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
-                    popupUrl : opt_attributes,
-                    grammarlyDomain : expectedNumberOfNonCommentArgs
+                return {
+                    app: rootPath,
+                    appPersonalDictionary: rootPath + "/profile/dictionary",
+                    capi: "wss://capi." + expectedNumberOfNonCommentArgs + "/freews",
+                    dapiMimic: dapiMimic + "/api/mimic",
+                    dapiProps: dapiMimic + "/api/props",
+                    editorDictionary: rootPath + "/profile/dictionary",
+                    dictionary: "https://capi." + expectedNumberOfNonCommentArgs + "/api/defs",
+                    docs: rootPath + "/docs",
+                    docsApi: "https://dox." + expectedNumberOfNonCommentArgs + "/documents",
+                    authCreatePage: appPathRoute + "/redirect-anonymous?location=" + authPath + "/after_install_page",
+                    userOrAnonymous: appPathRoute + "/user/oranonymous",
+                    authSignin: appPathRoute + "/login",
+                    authSignup: appPathRoute + "/signup",
+                    signin: authPath + "/signin",
+                    signup: authPath + "/signup",
+                    resetPassword: authPath + "/resetpassword",
+                    saveEmailFeedback: saveEmailFeedback + "/api/feedback/",
+                    newFelog: key,
+                    referral: authPath + "/referral?page=extension",
+                    welcomeC: authPath + "/extension-success",
+                    upgrade: authPath + "/upgrade",
+                    uninstall: authPath + "/extension-uninstall",
+                    terms: authPath + "/terms",
+                    policy: authPath + "/privacy-policy",
+                    pageConfigUrl: "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
+                    popupUrl: opt_attributes,
+                    grammarlyDomain: expectedNumberOfNonCommentArgs
                 };
             }
             /** @type {function (Object, string, ?): ?} */
             exports.create = init;
         }(UrlConfig = expectedNumberOfNonCommentArgs.UrlConfig || (expectedNumberOfNonCommentArgs.UrlConfig = {}));
     }, {}],
-    156 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    156: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Function} reject
          * @param {?} callback
@@ -7554,19 +7521,19 @@
             }
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (Function, ?): undefined} */
         expectedNumberOfNonCommentArgs.handleChromeError = map;
     }, {}],
-    157 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    157: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function parseInt(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -7605,7 +7572,7 @@
                 /** @type {number} */
                 var i = 0;
                 m = (0, row["default"])(expectedNumberOfNonCommentArgs);
-                for (;i < m.length;i++) {
+                for (; i < m.length; i++) {
                     if (a.indexOf(m[i]) < 0) {
                         obj[m[i]] = expectedNumberOfNonCommentArgs[m[i]];
                     }
@@ -7614,7 +7581,7 @@
             return obj;
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var emptyJ = $("./message/bg");
         var $spy = $("./message/content");
@@ -7631,34 +7598,34 @@
             function bindToTabHandler(errorName) {
                 (0, code["default"])(this, bindToTabHandler);
                 this.port = chrome.runtime.connect({
-                    name : errorName
+                    name: errorName
                 });
             }
-            return(0, type["default"])(bindToTabHandler, [{
-                key : "onMessage",
+            return (0, type["default"])(bindToTabHandler, [{
+                key: "onMessage",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this.port.onMessage.addListener(name);
                 }
             }, {
-                key : "onDisconnect",
+                key: "onDisconnect",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this.port.onDisconnect.addListener(name);
                 }
             }, {
-                key : "postMessage",
+                key: "postMessage",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this.port.postMessage(name);
                 }
             }]), bindToTabHandler;
@@ -7682,40 +7649,40 @@
                         if (data.tab.url) {
                             if (data.tab.id) {
                                 this.sender.tab = {
-                                    url : data.tab.url,
-                                    id : data.tab.id,
-                                    active : data.tab.active
+                                    url: data.tab.url,
+                                    id: data.tab.id,
+                                    active: data.tab.active
                                 };
                             }
                         }
                     }
                 }
             }
-            return(0, type["default"])(next, [{
-                key : "onMessage",
+            return (0, type["default"])(next, [{
+                key: "onMessage",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._port.onMessage.addListener(name);
                 }
             }, {
-                key : "onDisconnect",
+                key: "onDisconnect",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._port.onDisconnect.addListener(name);
                 }
             }, {
-                key : "postMessage",
+                key: "postMessage",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._port.postMessage(name);
                 }
             }]), next;
@@ -7727,12 +7694,12 @@
             (0, code["default"])(this, create);
             this.tabs = new $src.ChromeTabsApiImpl;
             this.notification = {
-                kind : "web-extension",
+                kind: "web-extension",
                 /**
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @return {?}
                  */
-                create : function(expectedNumberOfNonCommentArgs) {
+                create: function(expectedNumberOfNonCommentArgs) {
                     return $window.SafePromise.create(function(proceed, n) {
                         var rvar = expectedNumberOfNonCommentArgs.onClicked;
                         var optgroup = expectedNumberOfNonCommentArgs.onButtonClicked;
@@ -7740,7 +7707,7 @@
                         var data = chrome.notifications;
                         var element = handler.guid();
                         data.create(element, (0, ret["default"])({
-                            type : "basic"
+                            type: "basic"
                         }, oldconfig), function() {
                             source.handleChromeError(function() {
                                 if (void 0 !== rvar) {
@@ -7758,7 +7725,7 @@
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @return {?}
                  */
-                clear : function(expectedNumberOfNonCommentArgs) {
+                clear: function(expectedNumberOfNonCommentArgs) {
                     return $window.SafePromise.create(function(cb, n) {
                         chrome.notifications.clear(expectedNumberOfNonCommentArgs, function(outErr) {
                             source.handleChromeError(function() {
@@ -7769,12 +7736,12 @@
                 }
             };
             this.cookies = {
-                kind : "web-extension",
+                kind: "web-extension",
                 /**
                  * @param {string} key
                  * @return {?}
                  */
-                get : function(key) {
+                get: function(key) {
                     return $window.SafePromise.create(function(cb, n) {
                         return chrome.cookies.get(key, function(outErr) {
                             return source.handleChromeError(function() {
@@ -7787,7 +7754,7 @@
                  * @param {?} key
                  * @return {?}
                  */
-                remove : function(key) {
+                remove: function(key) {
                     return new bp["default"](function($sanitize, n) {
                         return chrome.cookies.remove(key, function() {
                             return source.handleChromeError(function() {
@@ -7800,7 +7767,7 @@
                  * @param {?} context
                  * @return {?}
                  */
-                getAll : function(context) {
+                getAll: function(context) {
                     return $window.SafePromise.create(function(cb, n) {
                         return chrome.cookies.getAll(context, function(outErr) {
                             return source.handleChromeError(function() {
@@ -7813,7 +7780,7 @@
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @return {?}
                  */
-                set : function(expectedNumberOfNonCommentArgs) {
+                set: function(expectedNumberOfNonCommentArgs) {
                     return $window.SafePromise.create(function(cb, n) {
                         return chrome.cookies.set(expectedNumberOfNonCommentArgs, function(outErr) {
                             return source.handleChromeError(function() {
@@ -7827,7 +7794,7 @@
                  * @param {?} next
                  * @return {undefined}
                  */
-                watch : function(target, next) {
+                watch: function(target, next) {
                     chrome.cookies.onChanged.addListener(function(options) {
                         var self = options.cookie;
                         var async = options.cause;
@@ -7852,29 +7819,29 @@
             };
             this.preferences = curElem.preferencesApi.windowLocalStorage;
             this.button = {
-                kind : "web-extension",
+                kind: "web-extension",
                 /**
                  * @param {?} text
                  * @return {undefined}
                  */
-                setBadge : function(text) {
+                setBadge: function(text) {
                     chrome.browserAction.setBadgeText({
-                        text : text
+                        text: text
                     });
                 },
                 /**
                  * @param {boolean} suffix
                  * @return {undefined}
                  */
-                setIconByName : function(suffix) {
+                setIconByName: function(suffix) {
                     /** @type {string} */
                     var start = "./src/icon/icon";
                     /** @type {string} */
                     var end = suffix ? "-" + suffix : "";
                     chrome.browserAction.setIcon({
-                        path : {
-                            16 : start + "16" + end + ".png",
-                            32 : start + "32" + end + ".png"
+                        path: {
+                            16: start + "16" + end + ".png",
+                            32: start + "32" + end + ".png"
                         }
                     });
                 },
@@ -7882,9 +7849,9 @@
                  * @param {string} opt_attributes
                  * @return {undefined}
                  */
-                setBadgeBackgroundColor : function(opt_attributes) {
+                setBadgeBackgroundColor: function(opt_attributes) {
                     chrome.browserAction.setBadgeBackgroundColor({
-                        color : opt_attributes
+                        color: opt_attributes
                     });
                 }
             };
@@ -7892,7 +7859,7 @@
                 /**
                  * @return {undefined}
                  */
-                uninstallSelf : function() {
+                uninstallSelf: function() {
                     chrome.management.uninstallSelf();
                 }
             };
@@ -7907,34 +7874,33 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.createApi = array;
     }, {
-        "./chrome-util" : 156,
-        "./message/bg" : 161,
-        "./message/content" : 162,
-        "./tabs/chrome" : 165,
-        "./web-extensions" : 166,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/get-own-property-symbols" : 20,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "lib/util" : 198,
-        stdlib : 201
+        "./chrome-util": 156,
+        "./message/bg": 161,
+        "./message/content": 162,
+        "./tabs/chrome": 165,
+        "./web-extensions": 166,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/get-own-property-symbols": 20,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/defineProperty": 29,
+        "lib/util": 198,
+        stdlib: 201
     }],
-    158 : [function(dataAndEvents, deepDataAndEvents, ctx) {
+    158: [function(dataAndEvents, deepDataAndEvents, ctx) {
         Object.defineProperty(ctx, "__esModule", {
-            value : true
+            value: true
         });
         window.firefox = window.browser;
         try {
             window.firefox = browser;
-        } catch (e) {
-        }
+        } catch (e) {}
         window.edge = window.browser;
         window.chrome = window.chrome;
         ctx["default"] = void 0;
     }, {}],
-    159 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    159: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Object} helper
          * @return {undefined}
@@ -7964,7 +7930,7 @@
             return assert.assertNonNull(window.extensionApi, "extension api was not initialized");
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var assert = require("stdlib");
         getChildren(require("./interface"));
@@ -7973,27 +7939,27 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.getGlobalExtensionApi = getGlobalExtensionApi;
     }, {
-        "./interface" : 160,
-        stdlib : 201
+        "./interface": 160,
+        stdlib: 201
     }],
-    160 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    160: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.ports = {
-            bridge : "bridge",
-            background : "message:to-priv",
-            broadcast : "message:to-non-priv"
+            bridge: "bridge",
+            background: "message:to-priv",
+            broadcast: "message:to-non-priv"
         };
     }, {}],
-    161 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    161: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -8034,7 +8000,7 @@
         var error = $("babel-runtime/helpers/createClass");
         var handlers = Event(error);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var emptyJ = $("./helpers");
         var handler = $("lib/util");
@@ -8061,7 +8027,7 @@
                 this.kind = "background-message-api";
                 this._callbacks = {};
                 this._tabPorts = {
-                    popup : []
+                    popup: []
                 };
                 this._messageHelper = new emptyJ.MessageHelperImpl;
                 /**
@@ -8088,9 +8054,9 @@
                         var link = d.url;
                         if (id) {
                             return init(link) ? console.warn("toFocussed not allowed for popup when it open like regular tab", type, keepData) : void $._sendMessageToPorts(id.toString(), {
-                                type : type,
-                                content : keepData,
-                                callid : handler.guid()
+                                type: type,
+                                content: keepData,
+                                callid: handler.guid()
                             });
                         }
                     });
@@ -8113,9 +8079,9 @@
                                 if (requestUrl) {
                                     if (requestUrl.indexOf("chrome-extension:") === -1) {
                                         $._sendMessageToPorts(id.toString(), {
-                                            type : type,
-                                            callid : handler.guid(),
-                                            content : message
+                                            type: type,
+                                            callid: handler.guid(),
+                                            content: message
                                         });
                                     }
                                 }
@@ -8130,9 +8096,9 @@
                                     var url = tab.url;
                                     var active = tab.active;
                                     callback({
-                                        id : expectedNumberOfNonCommentArgs.SETTINGS_TAB_ID,
-                                        url : url,
-                                        active : active
+                                        id: expectedNumberOfNonCommentArgs.SETTINGS_TAB_ID,
+                                        url: url,
+                                        active: active
                                     });
                                 });
                             }
@@ -8174,8 +8140,8 @@
                                         if (url) {
                                             if (0 === url.indexOf("http")) {
                                                 $._messageHelper.fire("tab-connected", {
-                                                    tab : name,
-                                                    url : url
+                                                    tab: name,
+                                                    url: url
                                                 });
                                             }
                                         }
@@ -8218,8 +8184,8 @@
                                          */
                                         var restoreScript = function(elem) {
                                             return self.postMessage({
-                                                content : elem,
-                                                callid : id
+                                                content: elem,
+                                                callid: id
                                             });
                                         };
                                         $._messageHelper.fire(fn, e, restoreScript, options && options.tab ? options.tab.id : -1);
@@ -8228,8 +8194,8 @@
                                         $._getActiveTab().then(function(request) {
                                             var requestUrl = request.url;
                                             e.content = {
-                                                tab : expectedNumberOfNonCommentArgs.SETTINGS_TAB_ID,
-                                                url : requestUrl
+                                                tab: expectedNumberOfNonCommentArgs.SETTINGS_TAB_ID,
+                                                url: requestUrl
                                             };
                                             next(e);
                                         });
@@ -8243,8 +8209,8 @@
                 };
                 callback(this._initPortListener);
             }
-            return(0, handlers["default"])(off, [{
-                key : "sendTo",
+            return (0, handlers["default"])(off, [{
+                key: "sendTo",
                 /**
                  * @param {string} name
                  * @param {string} event
@@ -8253,16 +8219,16 @@
                  * @param {?} callback
                  * @return {?}
                  */
-                value : function(name, event, error, fn, callback) {
+                value: function(name, event, error, fn, callback) {
                     var set = this._tabPorts[name];
                     if (!set || !set.length) {
                         return void(callback && callback({
-                            message : "no ports on specified tabId"
+                            message: "no ports on specified tabId"
                         }));
                     }
                     var msg = {
-                        type : event,
-                        content : error
+                        type: event,
+                        content: error
                     };
                     if (fn) {
                         if ("function" === typeof fn) {
@@ -8276,35 +8242,35 @@
                     });
                 }
             }, {
-                key : "listen",
+                key: "listen",
                 /**
                  * @param {string} name
                  * @param {string} events
                  * @return {undefined}
                  */
-                value : function(name, events) {
+                value: function(name, events) {
                     this._messageHelper.listen(name, events);
                 }
             }]), off;
         }();
         expectedNumberOfNonCommentArgs.GenericBackgroundMessageApiImpl = GenericBackgroundMessageApiImpl;
     }, {
-        "../interface" : 160,
-        "./helpers" : 163,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        config : 151,
-        "lib/util" : 198,
-        stdlib : 201
+        "../interface": 160,
+        "./helpers": 163,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        config: 151,
+        "lib/util": 198,
+        stdlib: 201
     }],
-    162 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    162: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -8344,7 +8310,7 @@
         var type = $("babel-runtime/helpers/createClass");
         var event = Event(type);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var $window = $("stdlib");
         var emptyJ = $("./helpers");
@@ -8373,7 +8339,7 @@
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     return self._emit(self.backgroundPort, "bg").apply(null, args);
@@ -8388,7 +8354,7 @@
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     return self._emit(self.broadcastPort, "tabs").apply(null, args);
@@ -8489,8 +8455,8 @@
                                 throw new Error("fail reply to bg page - connection lost");
                             }
                             self.backgroundPort.postMessage({
-                                content : h,
-                                callid : id
+                                content: h,
+                                callid: id
                             });
                         });
                     }
@@ -8525,9 +8491,9 @@
                                 throw new Error("lost connection to " + child + " port");
                             }
                             data.postMessage({
-                                type : paramType,
-                                callid : i,
-                                content : h
+                                type: paramType,
+                                callid: i,
+                                content: h
                             });
                         } catch (failuresLink) {
                             if (!on) {
@@ -8575,21 +8541,21 @@
                         /**
                          * @return {?}
                          */
-                        postMessage : function() {
+                        postMessage: function() {
                             var task = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                             var options = {
-                                data : task,
-                                name : key
+                                data: task,
+                                name: key
                             };
                             return document.dispatchEvent(new CustomEvent("grammarly:action", {
-                                detail : options
+                                detail: options
                             }));
                         },
                         /**
                          * @param {Function} recurring
                          * @return {undefined}
                          */
-                        onMessage : function(recurring) {
+                        onMessage: function(recurring) {
                             /** @type {Function} */
                             self._proxyPortsStorage[key].success = recurring;
                         },
@@ -8597,14 +8563,14 @@
                          * @param {Function} e
                          * @return {undefined}
                          */
-                        onDisconnect : function(e) {
+                        onDisconnect: function(e) {
                             /** @type {Function} */
                             self._proxyPortsStorage[key].error = e;
                         },
                         /**
                          * @return {undefined}
                          */
-                        removeMessageListeners : function() {
+                        removeMessageListeners: function() {
                             document.removeEventListener("grammarly:message", completed);
                             document.removeEventListener("grammarly:error", handler);
                         }
@@ -8631,34 +8597,34 @@
                     self.broadcastPort = self._initProxyPort(me.ports.broadcast, null, self._checkHealth);
                 });
             }
-            return(0, event["default"])(onMessage, [{
-                key : "listen",
+            return (0, event["default"])(onMessage, [{
+                key: "listen",
                 /**
                  * @param {string} name
                  * @param {string} events
                  * @return {undefined}
                  */
-                value : function(name, events) {
+                value: function(name, events) {
                     this._messageHelper.listen(name, events);
                 }
             }, {
-                key : "toFocused",
+                key: "toFocused",
                 /**
                  * @param {string} name
                  * @param {Object} event
                  * @return {?}
                  */
-                value : function(name, event) {
+                value: function(name, event) {
                     var map = this;
                     return $window.SafePromise.create(function(it) {
                         if (!map.port) {
                             throw new Error("lost connection to bg page");
                         }
                         map.port.postMessage({
-                            method : "message.toFocussed",
-                            params : {
-                                type : name,
-                                content : event
+                            method: "message.toFocussed",
+                            params: {
+                                type: name,
+                                content: event
                             }
                         });
                         it();
@@ -8670,21 +8636,21 @@
         /** @type {function (): undefined} */
         expectedNumberOfNonCommentArgs.hacksForCompatibility = init;
     }, {
-        "../interface" : 160,
-        "./helpers" : 163,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "lib/util" : 198,
-        stdlib : 201
+        "../interface": 160,
+        "./helpers": 163,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "lib/util": 198,
+        stdlib: 201
     }],
-    163 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    163: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -8723,8 +8689,8 @@
                     }
                     groups[name].push({
                         /** @type {Function} */
-                        data : object,
-                        callback : item
+                        data: object,
+                        callback: item
                     });
                 }
             }
@@ -8747,11 +8713,11 @@
             }
             var testSource = {};
             var groups = {};
-            return{
+            return {
                 /** @type {function (string, Function, Object): undefined} */
-                emit : emit,
+                emit: emit,
                 /** @type {function (string, Function): undefined} */
-                on : add
+                on: add
             };
         }
         var selector = require("babel-runtime/core-js/get-iterator");
@@ -8759,14 +8725,13 @@
         var type = require("babel-runtime/helpers/classCallCheck");
         var event = Event(type);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var i = require("lib/config");
         /**
          * @return {undefined}
          */
-        var opt_fromIndex = function() {
-        };
+        var opt_fromIndex = function() {};
         /**
          * @return {undefined}
          */
@@ -8791,9 +8756,9 @@
                 } else {
                     self._queue[event] = self._queue[event] || [];
                     self._queue[event].push({
-                        content : obj,
-                        callback : fromIndex,
-                        sender : target
+                        content: obj,
+                        callback: fromIndex,
+                        sender: target
                     });
                 }
             };
@@ -8853,7 +8818,7 @@
                     try {
                         var res;
                         var exports = (0, elem["default"])(destElements);
-                        for (;!(callback2 = (res = exports.next()).done);callback2 = true) {
+                        for (; !(callback2 = (res = exports.next()).done); callback2 = true) {
                             var data = res.value;
                             try {
                                 keepData(data.content, data.callback, data.sender);
@@ -8892,18 +8857,18 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.emitter = module;
     }, {
-        "babel-runtime/core-js/get-iterator" : 14,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "lib/config" : 167
+        "babel-runtime/core-js/get-iterator": 14,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "lib/config": 167
     }],
-    164 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    164: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function $(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -8912,20 +8877,20 @@
          * @return {?}
          */
         function initialize(client, selector) {
-            return{
-                get : client.get.bind(client),
-                set : client.set.bind(client),
-                getAll : client.getAll.bind(client),
-                remove : client.remove.bind(client),
+            return {
+                get: client.get.bind(client),
+                set: client.set.bind(client),
+                getAll: client.getAll.bind(client),
+                remove: client.remove.bind(client),
                 /**
                  * @return {?}
                  */
-                removeAll : function() {
+                removeAll: function() {
                     return init(this, void 0, void 0, elem["default"].mark(function end() {
                         var result;
                         return elem["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return self.next = 2, client.getAll();
                                     case 2:
@@ -8963,7 +8928,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, opt_attributes, nodeLength, element) {
-            return new (nodeLength || (nodeLength = c["default"]))(function(iterator, $timeout) {
+            return new(nodeLength || (nodeLength = c["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -9003,12 +8968,12 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var response;
         var util = require("stdlib");
         var _ = require("lodash");
-        !function(e) {
+        ! function(e) {
             /** @type {string} */
             e[e.success = 0] = "success";
             /** @type {string} */
@@ -9017,7 +8982,7 @@
             e[e.alreadyMigrated = 2] = "alreadyMigrated";
         }(response = expectedNumberOfNonCommentArgs.StorageMigrationResult || (expectedNumberOfNonCommentArgs.StorageMigrationResult = {}));
         var special;
-        !function(dataAndEvents) {
+        ! function(dataAndEvents) {
             /** @type {string} */
             dataAndEvents[dataAndEvents.nonEmptyMigration = 0] = "nonEmptyMigration";
             /** @type {string} */
@@ -9055,28 +9020,28 @@
                     return completed === arr._migrationFlagKey;
                 });
             }
-            return(0, h["default"])(setValue, [{
-                key : "_getMigrated",
+            return (0, h["default"])(setValue, [{
+                key: "_getMigrated",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var arr = this;
                     return this._destination.get(this._migrationFlagKey).then(function(completed) {
                         return completed === arr._migrationFlagSuccessfulValue;
                     });
                 }
             }, {
-                key : "_setMigrated",
+                key: "_setMigrated",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, elem["default"].mark(function startServer() {
                         var code;
                         return elem["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return self.next = 2, this._destination.set(this._migrationFlagKey, this._migrationFlagSuccessfulValue);
                                     case 2:
@@ -9098,18 +9063,18 @@
                     }));
                 }
             }, {
-                key : "_runMigration",
+                key: "_runMigration",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, elem["default"].mark(function end() {
                         var target;
                         var selector;
                         var that = this;
                         return elem["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return util.assert(!this._migrationInProgress, "migration already in progress"), this._migrationInProgress = true, self.prev = 2, self.next = 5, this._source.getAll();
                                     case 5:
@@ -9148,21 +9113,23 @@
                                         return self.stop();
                                 }
                             }
-                        }, end, this, [[2, 24]]);
+                        }, end, this, [
+                            [2, 24]
+                        ]);
                     }));
                 }
             }, {
-                key : "ensureMigrationCompleted",
+                key: "ensureMigrationCompleted",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, elem["default"].mark(function end() {
                         var type;
                         var msg;
                         return elem["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return self.next = 2, this._getMigrated();
                                     case 2:
@@ -9200,22 +9167,22 @@
         }();
         expectedNumberOfNonCommentArgs.StorageMigration = StorageMigration;
     }, {
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/regenerator" : 35,
-        lodash : "lodash",
-        stdlib : 201
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/regenerator": 35,
+        lodash: "lodash",
+        stdlib: 201
     }],
-    165 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    165: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var type = require("babel-runtime/helpers/classCallCheck");
@@ -9223,7 +9190,7 @@
         var nodes = require("babel-runtime/helpers/createClass");
         var result = Event(nodes);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var store = require("../chrome-util");
         var config = require("stdlib");
@@ -9236,18 +9203,18 @@
                 /** @type {string} */
                 this.kind = "web-extension";
             }
-            return(0, result["default"])(onTimeout, [{
-                key : "open",
+            return (0, result["default"])(onTimeout, [{
+                key: "open",
                 /**
                  * @param {string} name
                  * @param {string} color
                  * @return {?}
                  */
-                value : function(name, color) {
+                value: function(name, color) {
                     return config.SafePromise.create(function(cb, newValue) {
                         chrome.tabs.create({
-                            url : name,
-                            active : color
+                            url: name,
+                            active: color
                         }, function(outErr) {
                             store.handleChromeError(function() {
                                 return cb(outErr);
@@ -9256,15 +9223,15 @@
                     });
                 }
             }, {
-                key : "updateCurrent",
+                key: "updateCurrent",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     return config.SafePromise.create(function(cb, newValue) {
                         chrome.tabs.update({
-                            url : name
+                            url: name
                         }, function(outErr) {
                             store.handleChromeError(function() {
                                 return cb(outErr);
@@ -9273,23 +9240,23 @@
                     });
                 }
             }, {
-                key : "getActiveTab",
+                key: "getActiveTab",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return config.SafePromise.create(function(fn, newValue) {
                         var model = chrome.tabs;
                         model.query({
-                            active : true,
-                            lastFocusedWindow : true
+                            active: true,
+                            lastFocusedWindow: true
                         }, function(context) {
                             store.handleChromeError(function() {
                                 if (context && context.length) {
                                     fn(context[0]);
                                 } else {
                                     model.query({
-                                        active : true
+                                        active: true
                                     }, function(context) {
                                         store.handleChromeError(function() {
                                             fn(context[0]);
@@ -9301,11 +9268,11 @@
                     });
                 }
             }, {
-                key : "getAllTabs",
+                key: "getAllTabs",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return config.SafePromise.create(function(cb, newValue) {
                         return chrome.tabs.query({}, function(outErr) {
                             return store.handleChromeError(function() {
@@ -9315,11 +9282,11 @@
                     });
                 }
             }, {
-                key : "getActiveTabUrl",
+                key: "getActiveTabUrl",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var myOtherTabView = this;
                     return config.SafePromise.create(function(callback, newValue) {
                         return myOtherTabView.getActiveTab().then(function(req) {
@@ -9330,13 +9297,13 @@
                     });
                 }
             }, {
-                key : "onActiveTabChange",
+                key: "onActiveTabChange",
                 /**
                  * @param {string} name
                  * @param {?} newValue
                  * @return {undefined}
                  */
-                value : function(name, newValue) {
+                value: function(name, newValue) {
                     var myOtherTabView = this;
                     /**
                      * @param {?} opts
@@ -9369,9 +9336,9 @@
                     });
                     chrome.windows.onFocusChanged.addListener(function(windowId) {
                         return chrome.tabs.query({
-                            active : true,
-                            windowId : windowId,
-                            lastFocusedWindow : true
+                            active: true,
+                            windowId: windowId,
+                            lastFocusedWindow: true
                         }, function(dataAndEvents) {
                             return parseOptions(dataAndEvents[0]);
                         });
@@ -9381,12 +9348,12 @@
                     });
                 }
             }, {
-                key : "reload",
+                key: "reload",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     return config.SafePromise.create(function(cb, newValue) {
                         /**
                          * @return {?}
@@ -9407,19 +9374,19 @@
         }();
         expectedNumberOfNonCommentArgs.ChromeTabsApiImpl = ChromeTabsApiImpl;
     }, {
-        "../chrome-util" : 156,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        stdlib : 201
+        "../chrome-util": 156,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        stdlib: 201
     }],
-    166 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    166: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} s
          * @return {?}
          */
         function i(s) {
             return s && s.__esModule ? s : {
-                "default" : s
+                "default": s
             };
         }
         var selector = $("babel-runtime/helpers/defineProperty");
@@ -9438,7 +9405,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, args, config, self) {
-            return new (config || (config = paths["default"]))(function(iterator, $timeout) {
+            return new(config || (config = paths["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -9478,7 +9445,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var t = $("stdlib");
         var Wraith = $("./storage-migration");
@@ -9487,7 +9454,7 @@
         var $spy = $("./message/bg");
         expectedNumberOfNonCommentArgs.bgPreload = $spy.bgPreload;
         var preferencesApi;
-        !function(options) {
+        ! function(options) {
             /**
              * @return {?}
              */
@@ -9513,7 +9480,7 @@
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     return t.assert(value === true, "supposed to run data migration before accessing prefs with web-extensions API"), promise.then(function(one) {
@@ -9527,7 +9494,7 @@
                  * @param {string} key
                  * @return {?}
                  */
-                get : function(key) {
+                get: function(key) {
                     return t.SafePromise.sync(function() {
                         return window.localStorage.getItem(key);
                     });
@@ -9537,7 +9504,7 @@
                  * @param {string} key
                  * @return {?}
                  */
-                set : function(expectedNumberOfNonCommentArgs, key) {
+                set: function(expectedNumberOfNonCommentArgs, key) {
                     return t.SafePromise.sync(function() {
                         return window.localStorage.setItem(expectedNumberOfNonCommentArgs, key);
                     });
@@ -9545,10 +9512,10 @@
                 /**
                  * @return {?}
                  */
-                getAll : function() {
+                getAll: function() {
                     return t.SafePromise.sync(function() {
                         var employees = {};
-                        return(0, keys["default"])(window.localStorage).forEach(function(i) {
+                        return (0, keys["default"])(window.localStorage).forEach(function(i) {
                             /** @type {(null|string)} */
                             employees[i] = window.localStorage.getItem(i);
                         }), employees;
@@ -9558,7 +9525,7 @@
                  * @param {?} key
                  * @return {?}
                  */
-                remove : function(key) {
+                remove: function(key) {
                     return t.SafePromise.sync(function() {
                         return window.localStorage.removeItem(key);
                     });
@@ -9566,7 +9533,7 @@
                 /**
                  * @return {?}
                  */
-                removeAll : function() {
+                removeAll: function() {
                     return t.SafePromise.sync(function() {
                         return window.localStorage.clear();
                     });
@@ -9577,12 +9544,12 @@
                  * @param {string} cur
                  * @return {?}
                  */
-                get : function(cur) {
+                get: function(cur) {
                     return init(this, void 0, void 0, h["default"].mark(function next() {
                         var words;
                         return h["default"].wrap(function(stream) {
                             for (;;) {
-                                switch(stream.prev = stream.next) {
+                                switch (stream.prev = stream.next) {
                                     case 0:
                                         return stream.next = 2, firefox.storage.local.get(cur);
                                     case 2:
@@ -9601,30 +9568,30 @@
                  * @param {string} key
                  * @return {?}
                  */
-                set : function(expectedNumberOfNonCommentArgs, key) {
+                set: function(expectedNumberOfNonCommentArgs, key) {
                     return firefox.storage.local.set((0, elem["default"])({}, expectedNumberOfNonCommentArgs, key));
                 },
                 /**
                  * @return {?}
                  */
-                getAll : function() {
+                getAll: function() {
                     return firefox.storage.local.get(null);
                 },
                 /**
                  * @param {?} key
                  * @return {?}
                  */
-                remove : function(key) {
+                remove: function(key) {
                     return firefox.storage.local.remove(key);
                 },
                 /**
                  * @return {?}
                  */
-                removeAll : function() {
+                removeAll: function() {
                     return init(this, void 0, void 0, h["default"].mark(function end() {
                         return h["default"].wrap(function(current) {
                             for (;;) {
-                                switch(current.prev = current.next) {
+                                switch (current.prev = current.next) {
                                     case 0:
                                         return current.next = 2, firefox.storage.local.clear();
                                     case 2:
@@ -9644,37 +9611,37 @@
             /** @type {function (): ?} */
             options.ensureMigrationCompleted = rmDir;
             options.migrationAware = {
-                get : method("get"),
-                set : method("set"),
-                getAll : method("getAll"),
-                remove : method("remove"),
-                removeAll : method("removeAll")
+                get: method("get"),
+                set: method("set"),
+                getAll: method("getAll"),
+                remove: method("remove"),
+                removeAll: method("removeAll")
             };
         }(preferencesApi = expectedNumberOfNonCommentArgs.preferencesApi || (expectedNumberOfNonCommentArgs.preferencesApi = {}));
     }, {
-        "./message/bg" : 161,
-        "./message/content" : 162,
-        "./storage-migration" : 164,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/regenerator" : 35,
-        stdlib : 201
+        "./message/bg": 161,
+        "./message/content": 162,
+        "./storage-migration": 164,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/regenerator": 35,
+        stdlib: 201
     }],
-    167 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    167: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function ondata(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         var name = $("babel-runtime/helpers/toConsumableArray");
         var obj = ondata(name);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var link = $("spark-md5");
         var sandbox = $("config");
@@ -9701,7 +9668,12 @@
         /** @type {Array} */
         expectedNumberOfNonCommentArgs.restrictedAttrs = [].concat((0, obj["default"])(expectedNumberOfNonCommentArgs.grammarlyAttrs), ["readonly", "disabled"]);
         /** @type {Array} */
-        expectedNumberOfNonCommentArgs.customFieldsRestrictedAttrs = ["pm-container", ["class", "ProseMirror"], "data-synchrony", ["data-gramm", "false"], ["class", "redactor-layer"], ["class", "redactor-editor"], ["class", "redactor_box"], ["aria-label", "Search Facebook"]];
+        expectedNumberOfNonCommentArgs.customFieldsRestrictedAttrs = ["pm-container", ["class", "ProseMirror"], "data-synchrony", ["data-gramm", "false"],
+            ["class", "redactor-layer"],
+            ["class", "redactor-editor"],
+            ["class", "redactor_box"],
+            ["aria-label", "Search Facebook"]
+        ];
         /** @type {Array} */
         expectedNumberOfNonCommentArgs.allRestrictedAttrs = [].concat((0, obj["default"])(expectedNumberOfNonCommentArgs.restrictedAttrs), (0, obj["default"])(expectedNumberOfNonCommentArgs.customFieldsRestrictedAttrs));
         /** @type {string} */
@@ -9711,19 +9683,19 @@
         /** @type {boolean} */
         expectedNumberOfNonCommentArgs.development = "127.0.0.1:3117" === document.location.host;
     }, {
-        "./newConfig" : 172,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        config : 151,
-        "spark-md5" : "spark-md5"
+        "./newConfig": 172,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        config: 151,
+        "spark-md5": "spark-md5"
     }],
-    168 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    168: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} data
          * @return {?}
          */
         function fire(data) {
             return data && data.__esModule ? data : {
-                "default" : data
+                "default": data
             };
         }
         /**
@@ -9731,7 +9703,7 @@
          */
         function subscribe() {
             var console = {
-                log : config._f
+                log: config._f
             };
             methods.forEach(function(name) {
                 console[name] = old[name];
@@ -9764,17 +9736,16 @@
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     try {
                         canvasPath.push({
-                            method : name,
-                            args : args
+                            method: name,
+                            args: args
                         });
                         old[name]((0, item["default"])(args));
-                    } catch (e) {
-                    }
+                    } catch (e) {}
                 };
             });
             scope.console = console;
@@ -9792,7 +9763,7 @@
         var memory = require("babel-runtime/helpers/toConsumableArray");
         var __exports__ = fire(memory);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var config = require("./util");
         var nodes = require("./message");
@@ -9811,19 +9782,19 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.flushLog = e;
     }, {
-        "./message" : 171,
-        "./util" : 198,
-        "babel-runtime/core-js/json/stringify" : 16,
-        "babel-runtime/helpers/toConsumableArray" : 33
+        "./message": 171,
+        "./util": 198,
+        "babel-runtime/core-js/json/stringify": 16,
+        "babel-runtime/helpers/toConsumableArray": 33
     }],
-    169 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    169: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function create(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -9856,9 +9827,9 @@
                 root.removeChild(self.el);
                 t.unmountComponentAtNode(self.el);
             }), {
-                component : comp,
-                remove : self.remove.bind(self),
-                el : self.el
+                component: comp,
+                remove: self.remove.bind(self),
+                el: self.el
             };
         }
         /**
@@ -9872,7 +9843,7 @@
             var diffX = 0;
             /** @type {Object} */
             var c = inSender;
-            for (;c.parentNode && diffX < x;) {
+            for (; c.parentNode && diffX < x;) {
                 if ("string" !== typeof callback && callback === c) {
                     return true;
                 }
@@ -9889,7 +9860,7 @@
          * @return {?}
          */
         function hasClass(element, target) {
-            return!(!element || void 0 === element.className) && element.classList.contains(target);
+            return !(!element || void 0 === element.className) && element.classList.contains(target);
         }
         /**
          * @param {HTMLElement} elm
@@ -9914,7 +9885,7 @@
                 var codeSegments = name.split(" ");
                 /** @type {number} */
                 var i = 0;
-                for (;i < codeSegments.length;i++) {
+                for (; i < codeSegments.length; i++) {
                     node.classList.add(codeSegments[i]);
                 }
             }
@@ -9939,7 +9910,7 @@
          */
         function query(node, selector) {
             var pn = node.parentNode;
-            for (;null !== pn;) {
+            for (; null !== pn;) {
                 if (matchesSelector(pn, selector)) {
                     return pn;
                 }
@@ -9953,7 +9924,7 @@
          */
         function onBlur(target) {
             var pn = target.parentNode;
-            for (;null !== pn;) {
+            for (; null !== pn;) {
                 if (finishEditing(pn)) {
                     return pn;
                 }
@@ -9978,7 +9949,7 @@
                 return false;
             }
             var f = node.matches || (node.msMatchesSelector || (node.matchesSelector || (node.webkitMatchesSelector || node.mozMatchesSelector)));
-            return!!f && f.apply(node, [elem]);
+            return !!f && f.apply(node, [elem]);
         }
         /**
          * @param {?} elem
@@ -10007,17 +9978,17 @@
                 if (callback) {
                     var value = elem[key] || [];
                     return elem[key] = value, s ? (elem[key] = value.filter(function(listener) {
-                        return!(listener.event === keepData && listener.cb === callback);
+                        return !(listener.event === keepData && listener.cb === callback);
                     }), elem.removeEventListener(keepData, callback, bool)) : (value.push({
-                        event : keepData,
+                        event: keepData,
                         /** @type {Function} */
-                        cb : callback
+                        cb: callback
                     }), elem.addEventListener(keepData, callback, bool)), {
-                        el : elem,
-                        event : keepData,
+                        el: elem,
+                        event: keepData,
                         /** @type {Function} */
-                        cb : callback,
-                        bubble : bool
+                        cb: callback,
+                        bubble: bool
                     };
                 }
             }
@@ -10052,7 +10023,7 @@
                 /**
                  * @return {?}
                  */
-                off : function() {
+                off: function() {
                     return callback.apply(expectedNumberOfNonCommentArgs, [name, func, b]);
                 }
             };
@@ -10112,7 +10083,7 @@
             var args = Array(expectedNumberOfNonCommentArgs);
             /** @type {number} */
             var $_i = 0;
-            for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+            for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                 args[$_i] = arguments[$_i];
             }
             return args.reduce(function(flat, el) {
@@ -10211,9 +10182,10 @@
         function bindEvents(el, expectedNumberOfNonCommentArgs) {
             if (expectedNumberOfNonCommentArgs && el) {
                 var opacity = css(el, (0, m["default"])(expectedNumberOfNonCommentArgs));
-                return css(el, expectedNumberOfNonCommentArgs), function() {
-                    return css(el, opacity);
-                };
+                return css(el, expectedNumberOfNonCommentArgs),
+                    function() {
+                        return css(el, opacity);
+                    };
             }
         }
         /**
@@ -10223,7 +10195,7 @@
          */
         function visit(node, el) {
             var pn = node.parentNode;
-            for (;null !== pn;) {
+            for (; null !== pn;) {
                 if (pn.tagName === el) {
                     return pn;
                 }
@@ -10239,7 +10211,7 @@
          */
         function nth(elem, i, a) {
             var cur = elem.parentNode;
-            for (;null !== cur;) {
+            for (; null !== cur;) {
                 if (cur.dataset && (cur.dataset[i] && cur.dataset[i] === a)) {
                     return cur;
                 }
@@ -10261,7 +10233,7 @@
          */
         function parent(elem, selector) {
             var parent = elem.parentNode;
-            for (;null !== parent;) {
+            for (; null !== parent;) {
                 if (hasClass(parent, selector)) {
                     return parent;
                 }
@@ -10280,7 +10252,7 @@
             }
             /** @type {Object} */
             var node = el;
-            for (;node.parentNode;) {
+            for (; node.parentNode;) {
                 if (hasClass(node, value)) {
                     return node;
                 }
@@ -10306,7 +10278,7 @@
             }
             /** @type {Object} */
             var c = m3;
-            for (;c.parentNode;) {
+            for (; c.parentNode;) {
                 if (f === c.parentNode) {
                     return c;
                 }
@@ -10347,7 +10319,7 @@
             elem = elem || document;
             /** @type {Object} */
             var target = element;
-            for (;target;) {
+            for (; target;) {
                 if (target === elem) {
                     return true;
                 }
@@ -10363,10 +10335,10 @@
             var evt = void 0;
             var win = void 0;
             var Events = {
-                ctrl : false,
-                meta : false,
-                shift : false,
-                alt : false
+                ctrl: false,
+                meta: false,
+                shift: false,
+                alt: false
             };
             var e = _.extend(Events, event);
             try {
@@ -10435,11 +10407,11 @@
                             var args = Array(len > 1 ? len - 1 : 0);
                             /** @type {number} */
                             var i = 1;
-                            for (;i < len;i++) {
+                            for (; i < len; i++) {
                                 args[i - 1] = arguments[i];
                             }
                             return 1 === args.length ? classes.getPropertyValue(args[0]) : args.reduce(function(deepDataAndEvents, prop) {
-                                return(0, conf["default"])({}, deepDataAndEvents, (0, elem["default"])({}, prop, classes.getPropertyValue(prop)));
+                                return (0, conf["default"])({}, deepDataAndEvents, (0, elem["default"])({}, prop, classes.getPropertyValue(prop)));
                             }, {});
                         }
                     }
@@ -10466,7 +10438,7 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             if (args.length > 0) {
@@ -10487,9 +10459,9 @@
             /** @type {Element} */
             var el = document.createElement("fakeelement");
             var testSource = {
-                animation : "animationend",
-                MozAnimation : "animationend",
-                WebkitAnimation : "webkitAnimationEnd"
+                animation: "animationend",
+                MozAnimation: "animationend",
+                WebkitAnimation: "webkitAnimationEnd"
             };
             var name;
             for (name in testSource) {
@@ -10505,9 +10477,9 @@
             /** @type {Element} */
             var el = document.createElement("fakeelement");
             var transitions = {
-                transition : "transitionend",
-                MozTransition : "transitionend",
-                WebkitTransition : "webkitTransitionEnd"
+                transition: "transitionend",
+                MozTransition: "transitionend",
+                WebkitTransition: "webkitTransitionEnd"
             };
             var t;
             for (t in transitions) {
@@ -10587,7 +10559,7 @@
         var html = require("babel-runtime/core-js/object/keys");
         var m = create(html);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var t = require("react-dom");
         var _ = require("lodash");
@@ -10636,13 +10608,13 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.cs = get;
         var cssNumber = {
-            "column-count" : 1,
-            columns : 1,
-            "font-weight" : 1,
-            "line-height" : 1,
-            opacity : 1,
-            "z-index" : 1,
-            zoom : 1
+            "column-count": 1,
+            columns: 1,
+            "font-weight": 1,
+            "line-height": 1,
+            opacity: 1,
+            "z-index": 1,
+            zoom: 1
         };
         /** @type {function (string, number): ?} */
         expectedNumberOfNonCommentArgs.maybeAddPx = maybeAddPx;
@@ -10709,23 +10681,23 @@
         /** @type {function (Object, ?): ?} */
         expectedNumberOfNonCommentArgs.closestEl = $$;
     }, {
-        "./util" : 198,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/helpers/defineProperty" : 29,
-        dompurify : "dompurify",
-        lodash : "lodash",
-        "react-dom" : "react-dom",
-        stdlib : 201
+        "./util": 198,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/helpers/defineProperty": 29,
+        dompurify: "dompurify",
+        lodash: "lodash",
+        "react-dom": "react-dom",
+        stdlib: 201
     }],
-    170 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    170: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -10741,7 +10713,7 @@
                     var r;
                     return event["default"].wrap(function(self) {
                         for (;;) {
-                            switch(self.prev = self.next) {
+                            switch (self.prev = self.next) {
                                 case 0:
                                     return tref = setTimeout(function() {
                                         return sibling.getActiveTabUrl().then(cb);
@@ -10811,7 +10783,7 @@
             var codeSegments = document.getElementsByTagName("link");
             /** @type {number} */
             var i = 0;
-            for (;i < codeSegments.length;i++) {
+            for (; i < codeSegments.length; i++) {
                 var anchor = codeSegments[i];
                 /** @type {string} */
                 var str = '"' + anchor.getAttribute("rel") + '"';
@@ -10835,7 +10807,7 @@
          * @return {?}
          */
         var setup = function(expectedNumberOfNonCommentArgs, args, selector, self) {
-            return new (selector || (selector = groupedSelectors["default"]))(function(success, indexOf) {
+            return new(selector || (selector = groupedSelectors["default"]))(function(success, indexOf) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -10875,7 +10847,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var d = require("./util");
         var Block = require("./page-config/defaults");
@@ -10905,26 +10877,26 @@
          * @return {?}
          */
         expectedNumberOfNonCommentArgs.isJiraSite = function() {
-            return/\.atlassian\.net/.test(s());
+            return /\.atlassian\.net/.test(s());
         };
         /**
          * @return {?}
          */
         expectedNumberOfNonCommentArgs.isBlackboardSite = function() {
-            return/\.blackboard\.com/.test(s());
+            return /\.blackboard\.com/.test(s());
         };
         /** @type {function (Object): ?} */
         expectedNumberOfNonCommentArgs.getUrl = checkLocation;
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.getFavicon = load;
     }, {
-        "./page-config/defaults" : 176,
-        "./util" : 198,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/regenerator" : 35,
-        stdlib : 201
+        "./page-config/defaults": 176,
+        "./util": 198,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/regenerator": 35,
+        stdlib: 201
     }],
-    171 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    171: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         (function(message) {
             /**
              * @param {?} s
@@ -10932,7 +10904,7 @@
              */
             function walk(s) {
                 return s && s.__esModule ? s : {
-                    "default" : s
+                    "default": s
                 };
             }
             /**
@@ -10952,7 +10924,7 @@
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     callback.apply(this, args);
@@ -10980,7 +10952,7 @@
                             try {
                                 var elem;
                                 var ret = (0, result["default"])(spec);
-                                for (;!(callback2 = (elem = ret.next()).done);callback2 = true) {
+                                for (; !(callback2 = (elem = ret.next()).done); callback2 = true) {
                                     var parent = elem.value;
                                     parent.apply(void 0, arguments);
                                 }
@@ -11033,7 +11005,7 @@
              */
             function update(event) {
                 try {
-                    switch(self.kind) {
+                    switch (self.kind) {
                         case "background-message-api":
                             self.broadcast(event, {});
                             break;
@@ -11052,13 +11024,12 @@
             function write(stream, errorCallback) {
                 var eventData = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 var target = arguments[3];
-                var result = target || function() {
-                };
+                var result = target || function() {};
                 try {
                     if (!stream) {
                         throw TypeError("emitTo can't be used without destination point");
                     }
-                    switch(self.kind) {
+                    switch (self.kind) {
                         case "background-message-api":
                             self.sendTo(stream, errorCallback, eventData, result);
                             break;
@@ -11089,7 +11060,7 @@
              */
             function resolve(type, name, prop) {
                 try {
-                    switch(self.kind) {
+                    switch (self.kind) {
                         case "content-script-message-api":
                             self.broadcastBackground(type, name, prop);
                             break;
@@ -11109,7 +11080,7 @@
                 var selector = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1E4;
                 var a = new h["default"](function(which, next) {
                     try {
-                        switch(self.kind) {
+                        switch (self.kind) {
                             case "content-script-message-api":
                                 self.broadcastBackground(type, key, which, next);
                                 break;
@@ -11130,7 +11101,7 @@
             var nodes = require("babel-runtime/core-js/get-iterator");
             var result = walk(nodes);
             Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-                value : true
+                value: true
             });
             var _ = require("lodash");
             var flag = require("emitter");
@@ -11138,10 +11109,10 @@
             var handler = require("./dom");
             var Block = require("extension-api");
             var e = message && (message.env && message.env.SANDBOX) ? {
-                message : {
-                    broadcastBackground : config._f,
-                    listen : config._f,
-                    toFocused : config._f
+                message: {
+                    broadcastBackground: config._f,
+                    listen: config._f,
+                    toFocused: config._f
                 }
             } : Block.getGlobalExtensionApi();
             var self = e.message;
@@ -11173,21 +11144,21 @@
             expectedNumberOfNonCommentArgs.promiseBackground = setup;
         }).call(this, require("_process"));
     }, {
-        "./dom" : 169,
-        "./util" : 198,
-        _process : 140,
-        "babel-runtime/core-js/get-iterator" : 14,
-        "babel-runtime/core-js/promise" : 24,
-        emitter : "emitter",
-        "extension-api" : 159,
-        lodash : "lodash"
+        "./dom": 169,
+        "./util": 198,
+        _process: 140,
+        "babel-runtime/core-js/get-iterator": 14,
+        "babel-runtime/core-js/promise": 24,
+        emitter: "emitter",
+        "extension-api": 159,
+        lodash: "lodash"
     }],
-    172 : [function(Application, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    172: [function(Application, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @return {?}
          */
         function isTestsMode() {
-            return!!window.__extensionTestsMode;
+            return !!window.__extensionTestsMode;
         }
         /**
          * @return {?}
@@ -11256,7 +11227,7 @@
             return self.buildInfo.version;
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var sandbox = Application("config");
         var self = sandbox.getGlobal();
@@ -11290,16 +11261,16 @@
         expectedNumberOfNonCommentArgs.gnarAppName = self.appConfig.gnar.appName;
         expectedNumberOfNonCommentArgs.GRAMMARLY_DOMAIN = self.appConfig.url.grammarlyDomain;
     }, {
-        config : 151
+        config: 151
     }],
-    173 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    173: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function parseInt(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var one = require("babel-runtime/core-js/object/keys");
@@ -11315,7 +11286,7 @@
         var json = require("babel-runtime/helpers/inherits");
         var h = parseInt(json);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var lang = require("lib/util");
         var request = require("./defaults");
@@ -11333,31 +11304,31 @@
                     return config.load();
                 }, config;
             }
-            return(0, h["default"])(process, deepDataAndEvents), (0, type["default"])(process, [{
-                key : "getByPage",
+            return (0, h["default"])(process, deepDataAndEvents), (0, type["default"])(process, [{
+                key: "getByPage",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     var nType = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : module.getUrl();
                     if (name) {
                         var itemName = (0, column["default"])(name).find(function(expected) {
-                            return(new RegExp(expected)).test(nType);
+                            return (new RegExp(expected)).test(nType);
                         });
                         return itemName ? name[itemName] : void 0;
                     }
                 }
             }, {
-                key : "get",
+                key: "get",
                 /**
                  * @param {string} name
                  * @param {?} newValue
                  * @return {?}
                  */
-                value : function(name, newValue) {
+                value: function(name, newValue) {
                     var page = this.config.pageConfig[name] || (this.config.subdomains.find(function(s) {
-                        return(new RegExp("\\." + lang.escapeRegExp(s.domain) + "$")).test(name);
+                        return (new RegExp("\\." + lang.escapeRegExp(s.domain) + "$")).test(name);
                     }) || this.config.partials.find(function(res) {
                         return name.includes(res.domain);
                     }));
@@ -11369,12 +11340,12 @@
                     return i.enabled = i.enabled !== false, i;
                 }
             }, {
-                key : "toReload",
+                key: "toReload",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     return 0 === name.indexOf("http") && request.SITES_TO_RELOAD.some(function(B) {
                         return name.includes(B);
                     });
@@ -11383,25 +11354,25 @@
         }(Block.ConfigLoader);
         expectedNumberOfNonCommentArgs.Config = Config;
     }, {
-        "./config-loader" : 174,
-        "./defaults" : 176,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/location" : 170,
-        "lib/util" : 198
+        "./config-loader": 174,
+        "./defaults": 176,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/location": 170,
+        "lib/util": 198
     }],
-    174 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    174: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var reset = $("babel-runtime/regenerator");
@@ -11420,7 +11391,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, opt_attributes, nodeLength, element) {
-            return new (nodeLength || (nodeLength = event["default"]))(function(iterator, $timeout) {
+            return new(nodeLength || (nodeLength = event["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -11460,7 +11431,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var $window = $("./localforage");
         var collection = $("lib/request");
@@ -11485,17 +11456,17 @@
                 (0, targets["default"])(this, restoreScript);
                 this._prefs = elem;
             }
-            return(0, elem["default"])(restoreScript, [{
-                key : "init",
+            return (0, elem["default"])(restoreScript, [{
+                key: "init",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, __exports__["default"].mark(function end() {
                         var config;
                         return __exports__["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return dd.Profiler.start("pageConfig_init"), config = void 0, self.next = 4, this.isSkipConfig();
                                     case 4:
@@ -11526,15 +11497,15 @@
                     }));
                 }
             }, {
-                key : "isSkipConfig",
+                key: "isSkipConfig",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, __exports__["default"].mark(function end() {
                         return __exports__["default"].wrap(function(stream) {
                             for (;;) {
-                                switch(stream.prev = stream.next) {
+                                switch (stream.prev = stream.next) {
                                     case 0:
                                         if (stream.t0 = false, !stream.t0) {
                                             /** @type {number} */
@@ -11556,11 +11527,11 @@
                     }));
                 }
             }, {
-                key : "load",
+                key: "load",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, __exports__["default"].mark(function end() {
                         var result;
                         var n;
@@ -11568,7 +11539,7 @@
                         var sec;
                         return __exports__["default"].wrap(function(current) {
                             for (;;) {
-                                switch(current.prev = current.next) {
+                                switch (current.prev = current.next) {
                                     case 0:
                                         if (result = this.meta.config, n = result.date, i = result.interval, !(n + i > Date.now())) {
                                             /** @type {number} */
@@ -11588,20 +11559,20 @@
                     }));
                 }
             }, {
-                key : "updateFromCDN",
+                key: "updateFromCDN",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, __exports__["default"].mark(function next() {
                         var type;
                         var keys;
                         return __exports__["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return type = void 0, self.prev = 1, self.next = 4, collection.fetch(emptyJ.URLS.pageConfigUrl, {
-                                            timeout : timedout
+                                            timeout: timedout
                                         });
                                     case 4:
                                         if (type = self.sent, obj.isValid(type)) {
@@ -11631,20 +11602,22 @@
                                         return self.stop();
                                 }
                             }
-                        }, next, this, [[1, 11]]);
+                        }, next, this, [
+                            [1, 11]
+                        ]);
                     }));
                 }
             }, {
-                key : "loadFromStorage",
+                key: "loadFromStorage",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, __exports__["default"].mark(function next() {
                         var e;
                         return __exports__["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         return self.prev = 0, self.next = 3, $window.localforage.getItem("config");
                                     case 3:
@@ -11671,58 +11644,60 @@
                                         return self.stop();
                                 }
                             }
-                        }, next, this, [[0, 12]]);
+                        }, next, this, [
+                            [0, 12]
+                        ]);
                     }));
                 }
             }, {
-                key : "save",
+                key: "save",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     var interval = name.interval;
                     var protocolVersion = name.protocolVersion;
                     var ver = name.version;
                     $window.localforage.setItem("config", name);
                     this.fireVersionUpdate(ver, this.meta.config.version);
                     this.meta.set({
-                        date : this.getCurrentTimestamp(),
-                        status : "success",
-                        interval : interval,
-                        protocolVersion : protocolVersion,
-                        version : ver
+                        date: this.getCurrentTimestamp(),
+                        status: "success",
+                        interval: interval,
+                        protocolVersion: protocolVersion,
+                        version: ver
                     });
                     console.info("Config: new config saved to local storage successfully:", name.version, name);
                 }
             }, {
-                key : "saveOnError",
+                key: "saveOnError",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     var options = this.meta.config;
                     var interval = options.interval;
                     var protocolVersion = options.protocolVersion;
                     var version = options.version;
                     this.meta.set({
-                        date : this.getCurrentTimestamp(),
-                        status : "failed",
-                        interval : interval,
-                        protocolVersion : protocolVersion,
-                        version : version,
-                        info : name
+                        date: this.getCurrentTimestamp(),
+                        status: "failed",
+                        interval: interval,
+                        protocolVersion: protocolVersion,
+                        version: version,
+                        info: name
                     });
                 }
             }, {
-                key : "fireVersionUpdate",
+                key: "fireVersionUpdate",
                 /**
                  * @param {string} name
                  * @param {undefined} deepDataAndEvents
                  * @return {undefined}
                  */
-                value : function(name, deepDataAndEvents) {
+                value: function(name, deepDataAndEvents) {
                     if (name) {
                         if (deepDataAndEvents !== name) {
                             _this.logger.pageConfigUpdated(deepDataAndEvents, name);
@@ -11730,54 +11705,54 @@
                     }
                 }
             }, {
-                key : "getCurrentTimestamp",
+                key: "getCurrentTimestamp",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return Date.now();
                 }
             }, {
-                key : "config",
+                key: "config",
                 /**
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @return {undefined}
                  */
-                set : function(expectedNumberOfNonCommentArgs) {
+                set: function(expectedNumberOfNonCommentArgs) {
                     expectedNumberOfNonCommentArgs = expectedNumberOfNonCommentArgs || {};
                     this._config = $src.decorateConfig(expectedNumberOfNonCommentArgs);
                 },
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this._config;
                 }
             }]), restoreScript;
         }();
         expectedNumberOfNonCommentArgs.ConfigLoader = ConfigLoader;
     }, {
-        "./decorator" : 175,
-        "./localforage" : 178,
-        "./meta" : 179,
-        "./utils" : 180,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/regenerator" : 35,
-        "lib/config" : 167,
-        "lib/profiler" : 181,
-        "lib/request" : 182,
-        "lib/tracking" : 192
+        "./decorator": 175,
+        "./localforage": 178,
+        "./meta": 179,
+        "./utils": 180,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/regenerator": 35,
+        "lib/config": 167,
+        "lib/profiler": 181,
+        "lib/request": 182,
+        "lib/tracking": 192
     }],
-    175 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    175: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function $(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -11786,7 +11761,7 @@
          */
         function get_mangled(keepData) {
             var pageConfig = lodash.merge({
-                pageConfig : {}
+                pageConfig: {}
             }, keepData);
             return pageConfig.pageConfig || (pageConfig.pageConfig = {}), pageConfig;
         }
@@ -11808,7 +11783,7 @@
         var one = require("babel-runtime/helpers/createClass");
         var column = $(one);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var module = require("../config");
         var Block = require("./defaults");
@@ -11823,22 +11798,22 @@
             function onTimeout() {
                 (0, target["default"])(this, onTimeout);
             }
-            return(0, column["default"])(onTimeout, null, [{
-                key : "decorate",
+            return (0, column["default"])(onTimeout, null, [{
+                key: "decorate",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     return name = name || {}, name = this.filterByVersion(name), name = this.withDefault(name), name = this.parseBooleans(name), name = this.parseBrowserValues(name), name = this.filterInvalidPageRegexp(name), name = this.collectSubdomains(name), name = this.collectPartials(name);
                 }
             }, {
-                key : "withDefault",
+                key: "withDefault",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     name = get_mangled(name);
                     var obj1 = Block.PAGE_CONFIG && Block.PAGE_CONFIG.pageConfig || {};
                     if (!Block.OVERRIDE_PAGE_CONFIG) {
@@ -11847,47 +11822,47 @@
                     return name.pageConfig = lodash.merge({}, obj1, name.pageConfig), name;
                 }
             }, {
-                key : "filterByVersion",
+                key: "filterByVersion",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     var gotErr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : module.getVersion();
                     name = get_mangled(name);
                     var ret = name.pageConfig;
                     return name.pageConfig = (0, result["default"])(ret).filter(function(i) {
                         var cfg = ret[i];
                         var ver = cfg.version;
-                        return!ver || ("*" === ver || 1 !== assert.versionComparator(gotErr, ver));
+                        return !ver || ("*" === ver || 1 !== assert.versionComparator(gotErr, ver));
                     }).reduce(function(deepDataAndEvents, $conditional) {
-                        return(0, elem["default"])({}, deepDataAndEvents, (0, type["default"])({}, $conditional, name.pageConfig[$conditional]));
+                        return (0, elem["default"])({}, deepDataAndEvents, (0, type["default"])({}, $conditional, name.pageConfig[$conditional]));
                     }, {}), name;
                 }
             }, {
-                key : "parseBooleans",
+                key: "parseBooleans",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     /**
                      * @param {?} value
                      * @return {?}
                      */
                     function array(value) {
-                        return!(value === false || "false" === value);
+                        return !(value === false || "false" === value);
                     }
                     /**
                      * @param {?} arg
                      * @return {?}
                      */
                     function $(arg) {
-                        return!!arg && array(arg);
+                        return !!arg && array(arg);
                     }
                     name = get_mangled(name);
                     var state = name.pageConfig;
-                    return(0, result["default"])(state).forEach(function(n) {
+                    return (0, result["default"])(state).forEach(function(n) {
                         if (!state[n]) {
                             state[n] = {};
                         }
@@ -11903,16 +11878,16 @@
                     }), name;
                 }
             }, {
-                key : "parseBrowserValues",
+                key: "parseBrowserValues",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     var core_rnotwhite = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : assert.getBrowser();
                     name = get_mangled(name);
                     var commands = name.pageConfig;
-                    return(0, result["default"])(commands).map(function(name) {
+                    return (0, result["default"])(commands).map(function(name) {
                         var options = commands[name] && commands[name].disabledBrowsers;
                         if (options) {
                             if (options.includes(core_rnotwhite)) {
@@ -11923,15 +11898,15 @@
                     }), name;
                 }
             }, {
-                key : "filterInvalidPageRegexp",
+                key: "filterInvalidPageRegexp",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     name = get_mangled(name);
                     var proto = name.pageConfig;
-                    return(0, result["default"])(proto).forEach(function(fnName) {
+                    return (0, result["default"])(proto).forEach(function(fnName) {
                         var fn = proto[fnName];
                         if (fn.pages) {
                             fn.pages = (0, result["default"])(fn.pages).filter(function(punctuation) {
@@ -11941,18 +11916,18 @@
                                     return false;
                                 }
                             }).reduce(function(deepDataAndEvents, key) {
-                                return(0, elem["default"])({}, deepDataAndEvents, (0, type["default"])({}, key, fn.pages[key]));
+                                return (0, elem["default"])({}, deepDataAndEvents, (0, type["default"])({}, key, fn.pages[key]));
                             }, {});
                         }
                     }), name;
                 }
             }, {
-                key : "collectSubdomains",
+                key: "collectSubdomains",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     name = get_mangled(name);
                     var ret = name.pageConfig;
                     /** @type {Array} */
@@ -11961,8 +11936,8 @@
                         name.subdomains = (0, result["default"])(ret).filter(function(fnName) {
                             return ret[fnName].matchSubdomains;
                         }).map(function(lang) {
-                            return(0, elem["default"])({
-                                domain : lang
+                            return (0, elem["default"])({
+                                domain: lang
                             }, ret[lang]);
                         });
                     } catch (err) {
@@ -11971,12 +11946,12 @@
                     return name;
                 }
             }, {
-                key : "collectPartials",
+                key: "collectPartials",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     name = get_mangled(name);
                     var ret = name.pageConfig;
                     /** @type {Array} */
@@ -11985,8 +11960,8 @@
                         name.partials = (0, result["default"])(ret).filter(function(fnName) {
                             return ret[fnName].matchInclusions;
                         }).map(function(lang) {
-                            return(0, elem["default"])({
-                                domain : lang
+                            return (0, elem["default"])({
+                                domain: lang
                             }, ret[lang]);
                         });
                     } catch (err) {
@@ -12000,24 +11975,24 @@
         /** @type {function (Object): ?} */
         expectedNumberOfNonCommentArgs.decorateConfig = decorate;
     }, {
-        "../config" : 167,
-        "../util" : 198,
-        "./defaults" : 176,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/defineProperty" : 29,
-        lodash : "lodash"
+        "../config": 167,
+        "../util": 198,
+        "./defaults": 176,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/defineProperty": 29,
+        lodash: "lodash"
     }],
-    176 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    176: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var tpl;
@@ -12026,7 +12001,7 @@
         var selector = require("babel-runtime/helpers/toConsumableArray");
         var elem = Event(selector);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var util = require("lodash");
         var rep = require("lib/config");
@@ -12039,16 +12014,16 @@
         /** @type {Array} */
         expectedNumberOfNonCommentArgs.HTML_GHOST_SITES = ["twitter.com"].concat((0, elem["default"])(expectedNumberOfNonCommentArgs.FACEBOOK_SITES));
         expectedNumberOfNonCommentArgs.CUSTOM_UNSUPPORTED_MESSAGES = {
-            "drive.google.com" : {
-                title : "Google Drive",
-                message : 'We hope to support Google Drive apps<br/> in the future, but for now please use your</br> <a class="openGrammarly" href="' + rep.URLS.app + '">Grammarly Editor</a>.'
+            "drive.google.com": {
+                title: "Google Drive",
+                message: 'We hope to support Google Drive apps<br/> in the future, but for now please use your</br> <a class="openGrammarly" href="' + rep.URLS.app + '">Grammarly Editor</a>.'
             },
-            "docs.google.com" : {
-                title : "Google Drive",
-                message : 'We hope to support Google Drive apps<br/> in the future, but for now please use your</br> <a class="openGrammarly" href="' + rep.URLS.app + '">Grammarly Editor</a>.'
+            "docs.google.com": {
+                title: "Google Drive",
+                message: 'We hope to support Google Drive apps<br/> in the future, but for now please use your</br> <a class="openGrammarly" href="' + rep.URLS.app + '">Grammarly Editor</a>.'
             },
-            "chrome.google.com" : {
-                title : "Web Store"
+            "chrome.google.com": {
+                title: "Web Store"
             }
         };
         /** @type {number} */
@@ -12059,141 +12034,141 @@
         expectedNumberOfNonCommentArgs.PAGE_CONFIG_UPDATE_INTERVALS = [6E5, expectedNumberOfNonCommentArgs.PAGE_CONFIG_DEFAULT_INTERVAL, 36E5, 108E5, 432E5, 864E5, 31536E6];
         expectedNumberOfNonCommentArgs.OVERRIDE_PAGE_CONFIG = {};
         expectedNumberOfNonCommentArgs.PAGE_CONFIG_INTERNAL = (tpl = {
-            version : {
-                enabled : false,
-                servicePage : true
+            version: {
+                enabled: false,
+                servicePage: true
             },
-            extensions : {
-                enabled : false,
-                servicePage : true
+            extensions: {
+                enabled: false,
+                servicePage: true
             },
-            settings : {
-                enabled : false,
-                servicePage : true
+            settings: {
+                enabled: false,
+                servicePage: true
             },
-            "com.safari.grammarlyspellcheckergrammarchecker" : {
-                enabled : false,
-                matchInclusions : true,
-                servicePage : true
+            "com.safari.grammarlyspellcheckergrammarchecker": {
+                enabled: false,
+                matchInclusions: true,
+                servicePage: true
             }
         }, (0, event["default"])(tpl, "app." + rep.GRAMMARLY_DOMAIN, {
-            enabled : false,
-            grammarlyEditor : true
+            enabled: false,
+            grammarlyEditor: true
         }), (0, event["default"])(tpl, "linkedin.com", {
-            pages : {
-                "/messaging" : {
-                    afterReplaceEvents : ["input"]
+            pages: {
+                "/messaging": {
+                    afterReplaceEvents: ["input"]
                 }
             }
         }), (0, event["default"])(tpl, "plus.google.com", {
-            afterReplaceEvents : ["keyup"],
-            minFieldHeight : 0,
-            minFieldWidth : 0
+            afterReplaceEvents: ["keyup"],
+            minFieldHeight: 0,
+            minFieldWidth: 0
         }), (0, event["default"])(tpl, "facebook.com", {
-            minFieldHeight : 0,
-            fields : [{
-                name : "caption_text"
+            minFieldHeight: 0,
+            fields: [{
+                name: "caption_text"
             }]
         }), (0, event["default"])(tpl, "mail.google.com", {
-            fields : [{
-                name : "to"
+            fields: [{
+                name: "to"
             }, {
-                name : "cc"
+                name: "cc"
             }, {
-                name : "bcc"
+                name: "bcc"
             }, {
-                className : "vO"
+                className: "vO"
             }],
-            subframes : false
+            subframes: false
         }), (0, event["default"])(tpl, "drive.google.com", {
-            track : true
+            track: true
         }), (0, event["default"])(tpl, "docs.google.com", {
-            track : true
+            track: true
         }), (0, event["default"])(tpl, "app.asana.com", {
-            fields : [{
-                className : "task-row-text-input"
+            fields: [{
+                className: "task-row-text-input"
             }]
         }), (0, event["default"])(tpl, "tumblr.com", {
-            fields : [{
-                attr : ["aria-label", "Post title"]
+            fields: [{
+                attr: ["aria-label", "Post title"]
             }, {
-                attr : ["aria-label", "Type or paste a URL"]
+                attr: ["aria-label", "Type or paste a URL"]
             }]
         }), (0, event["default"])(tpl, "chrome.google.com", {
-            dontShowDisabledBadge : true
+            dontShowDisabledBadge: true
         }), (0, event["default"])(tpl, "airbnb.com", {
-            fields : [{
-                attr : ["id", "question"]
+            fields: [{
+                attr: ["id", "question"]
             }]
         }), tpl);
         var sourceProperty = {
-            "hootsuite.com" : {
-                enabled : false
+            "hootsuite.com": {
+                enabled: false
             },
-            "chrome.google.com" : {
-                enabled : false
+            "chrome.google.com": {
+                enabled: false
             },
-            "facebook.com" : {
-                enabled : true,
-                pages : {
-                    ".*/notes" : {
-                        enabled : false
+            "facebook.com": {
+                enabled: true,
+                pages: {
+                    ".*/notes": {
+                        enabled: false
                     }
                 }
             },
-            "onedrive.live.com" : {
-                enabled : false
+            "onedrive.live.com": {
+                enabled: false
             },
-            "docs.com" : {
-                enabled : false
+            "docs.com": {
+                enabled: false
             },
-            "sp.docs.com" : {
-                enabled : false
+            "sp.docs.com": {
+                enabled: false
             },
-            "docs.google.com" : {
-                enabled : false
+            "docs.google.com": {
+                enabled: false
             },
-            "drive.google.com" : {
-                enabled : false
+            "drive.google.com": {
+                enabled: false
             },
-            "texteditor.nsspot.net" : {
-                enabled : false
+            "texteditor.nsspot.net": {
+                enabled: false
             },
-            "jsbin.com" : {
-                enabled : false
+            "jsbin.com": {
+                enabled: false
             },
-            "jsfiddle.net" : {
-                enabled : false
+            "jsfiddle.net": {
+                enabled: false
             },
-            "quora.com" : {
-                enabled : false
+            "quora.com": {
+                enabled: false
             },
-            "paper.dropbox.com" : {
-                enabled : false
+            "paper.dropbox.com": {
+                enabled: false
             },
-            "mail.live.com" : {
-                enabled : false,
-                matchInclusions : true
+            "mail.live.com": {
+                enabled: false,
+                matchInclusions: true
             },
-            "imperavi.com" : {
-                enabled : false
+            "imperavi.com": {
+                enabled: false
             },
-            "usecanvas.com" : {
-                enabled : false
+            "usecanvas.com": {
+                enabled: false
             }
         };
         expectedNumberOfNonCommentArgs.PAGE_CONFIG = {
-            pageConfig : util.merge({}, sourceProperty, expectedNumberOfNonCommentArgs.PAGE_CONFIG_INTERNAL)
+            pageConfig: util.merge({}, sourceProperty, expectedNumberOfNonCommentArgs.PAGE_CONFIG_INTERNAL)
         };
     }, {
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        "lib/config" : 167,
-        lodash : "lodash"
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        "lib/config": 167,
+        lodash: "lodash"
     }],
-    177 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    177: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var jasmine = require("./config-base");
         var Block = require("universal/bg/prefs");
@@ -12201,24 +12176,24 @@
         var name = new Block.PrefsImpl(nodes.getGlobalExtensionApi().preferences);
         expectedNumberOfNonCommentArgs.pageConfig = new jasmine.Config(name);
     }, {
-        "./config-base" : 173,
-        "extension-api" : 159,
-        "universal/bg/prefs" : 204
+        "./config-base": 173,
+        "extension-api": 159,
+        "universal/bg/prefs": 204
     }],
-    178 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    178: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var value = proceed("babel-runtime/core-js/promise");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {string} */
         var errorName = "Grammarly";
@@ -12230,10 +12205,10 @@
         try {
             client = proceed("localforage");
             client.config({
-                name : errorName,
-                version : CORDOVA_JS_BUILD_LABEL,
-                size : 4194304,
-                storeName : publicInterfaceName
+                name: errorName,
+                version: CORDOVA_JS_BUILD_LABEL,
+                size: 4194304,
+                storeName: publicInterfaceName
             });
         } catch (key) {
             console.error("Fallback to memory storage", key);
@@ -12243,7 +12218,7 @@
                  * @param {string} key
                  * @return {?}
                  */
-                getItem : function(key) {
+                getItem: function(key) {
                     return iterator["default"].resolve($cookies[key]);
                 },
                 /**
@@ -12251,13 +12226,13 @@
                  * @param {Object} expectedNumberOfNonCommentArgs
                  * @return {?}
                  */
-                setItem : function(key, expectedNumberOfNonCommentArgs) {
+                setItem: function(key, expectedNumberOfNonCommentArgs) {
                     return $cookies[key] = expectedNumberOfNonCommentArgs, iterator["default"].resolve(expectedNumberOfNonCommentArgs);
                 },
                 /**
                  * @return {undefined}
                  */
-                clear : function() {
+                clear: function() {
                     $cookies = {};
                     iterator["default"].resolve(true);
                 }
@@ -12265,17 +12240,17 @@
         }
         expectedNumberOfNonCommentArgs.localforage = client;
     }, {
-        "babel-runtime/core-js/promise" : 24,
-        localforage : "localforage"
+        "babel-runtime/core-js/promise": 24,
+        localforage: "localforage"
     }],
-    179 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    179: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function create(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var type = $("babel-runtime/regenerator");
@@ -12294,7 +12269,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, args, path, self) {
-            return new (path || (path = keys["default"]))(function(iterator, $timeout) {
+            return new(path || (path = keys["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -12334,7 +12309,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var $window = $("./localforage");
         var me = $("./utils");
@@ -12347,17 +12322,17 @@
             function onTimeout() {
                 (0, m["default"])(this, onTimeout);
             }
-            return(0, elem["default"])(onTimeout, [{
-                key : "load",
+            return (0, elem["default"])(onTimeout, [{
+                key: "load",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return init(this, void 0, void 0, socket["default"].mark(function end() {
                         var expectedNumberOfNonCommentArgs;
                         return socket["default"].wrap(function(stream) {
                             for (;;) {
-                                switch(stream.prev = stream.next) {
+                                switch (stream.prev = stream.next) {
                                     case 0:
                                         return stream.next = 2, $window.localforage.getItem(storageKey);
                                     case 2:
@@ -12372,12 +12347,12 @@
                     }));
                 }
             }, {
-                key : "set",
+                key: "set",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     var self = name || {};
                     var protocolVersion = self.protocolVersion;
                     var v = self.version;
@@ -12386,41 +12361,41 @@
                     var d = self.date;
                     var i = self.interval;
                     return this._meta = {
-                        date : Number(d) || 0,
-                        interval : me.getInterval(Number(i)),
-                        protocolVersion : protocolVersion,
-                        version : v,
-                        status : status,
-                        info : info
+                        date: Number(d) || 0,
+                        interval: me.getInterval(Number(i)),
+                        protocolVersion: protocolVersion,
+                        version: v,
+                        status: status,
+                        info: info
                     }, $window.localforage.setItem(storageKey, this._meta);
                 }
             }, {
-                key : "config",
+                key: "config",
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return this._meta;
                 }
             }]), onTimeout;
         }();
         expectedNumberOfNonCommentArgs.Meta = Meta;
     }, {
-        "./localforage" : 178,
-        "./utils" : 180,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/regenerator" : 35
+        "./localforage": 178,
+        "./utils": 180,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/regenerator": 35
     }],
-    180 : [function(parse, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    180: [function(parse, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} options
          * @return {?}
          */
         function readFile(options) {
             return options && options.__esModule ? options : {
-                "default" : options
+                "default": options
             };
         }
         /**
@@ -12442,7 +12417,7 @@
         var url = parse("babel-runtime/core-js/object/keys");
         var input = readFile(url);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var obj = parse("./defaults");
         /** @type {function (Function): ?} */
@@ -12450,17 +12425,17 @@
         /** @type {function (number): ?} */
         expectedNumberOfNonCommentArgs.getInterval = dir;
     }, {
-        "./defaults" : 176,
-        "babel-runtime/core-js/object/keys" : 22
+        "./defaults": 176,
+        "babel-runtime/core-js/object/keys": 22
     }],
-    181 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    181: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} selector
          * @return {?}
          */
         function $(selector) {
             return selector && selector.__esModule ? selector : {
-                "default" : selector
+                "default": selector
             };
         }
         var html = require("babel-runtime/regenerator");
@@ -12479,7 +12454,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, opt_attributes, nodeLength, element) {
-            return new (nodeLength || (nodeLength = type["default"]))(function(iterator, $timeout) {
+            return new(nodeLength || (nodeLength = type["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -12519,7 +12494,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var element = require("lib/timers");
         var common = require("lib/tracking");
@@ -12542,13 +12517,13 @@
                     var args = Array(len > 1 ? len - 1 : 0);
                     /** @type {number} */
                     var i = 1;
-                    for (;i < len;i++) {
+                    for (; i < len; i++) {
                         args[i - 1] = arguments[i];
                     }
                     return init(cb, void 0, void 0, h["default"].mark(function end() {
                         return h["default"].wrap(function(current) {
                             for (;;) {
-                                switch(current.prev = current.next) {
+                                switch (current.prev = current.next) {
                                     case 0:
                                         return current.abrupt("return", this._track.apply(this, [false, eventName].concat(args)));
                                     case 1:
@@ -12571,13 +12546,13 @@
                     var args = Array(len > 1 ? len - 1 : 0);
                     /** @type {number} */
                     var i = 1;
-                    for (;i < len;i++) {
+                    for (; i < len; i++) {
                         args[i - 1] = arguments[i];
                     }
                     return init(cb, void 0, void 0, h["default"].mark(function end() {
                         return h["default"].wrap(function(current) {
                             for (;;) {
-                                switch(current.prev = current.next) {
+                                switch (current.prev = current.next) {
                                     case 0:
                                         return current.abrupt("return", this._track.apply(this, [true, c].concat(args)));
                                     case 1:
@@ -12601,14 +12576,14 @@
                     var a = Array(len > 2 ? len - 2 : 0);
                     /** @type {number} */
                     var i = 2;
-                    for (;i < len;i++) {
+                    for (; i < len; i++) {
                         a[i - 2] = arguments[i];
                     }
                     return init(cb, void 0, void 0, h["default"].mark(function initialize() {
                         var o;
                         return h["default"].wrap(function(self) {
                             for (;;) {
-                                switch(self.prev = self.next) {
+                                switch (self.prev = self.next) {
                                     case 0:
                                         if (o = n.name + (requested ? "__sync" : ""), element.timers.start(o), self.prev = 2, !requested) {
                                             /** @type {number} */
@@ -12636,44 +12611,46 @@
                                         return self.stop();
                                 }
                             }
-                        }, initialize, this, [[2, 11, 14, 17]]);
+                        }, initialize, this, [
+                            [2, 11, 14, 17]
+                        ]);
                     }));
                 };
             }
-            return(0, result["default"])(initialize, [{
-                key : "start",
+            return (0, result["default"])(initialize, [{
+                key: "start",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     element.timers.start(name);
                 }
             }, {
-                key : "stop",
+                key: "stop",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this.timings[name] = element.timers.stop(name);
                 }
             }], [{
-                key : "start",
+                key: "start",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     element.timers.start(name);
                 }
             }, {
-                key : "stop",
+                key: "stop",
                 /**
                  * @param {string} name
                  * @return {?}
                  */
-                value : function(name) {
+                value: function(name) {
                     var otherKey = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3E4;
                     var key = element.timers.stop(name);
                     return key > otherKey && (console.warn("profiler_" + name + "_time_exceeded", key), "pageConfig_init" === name && common.logger.tooLongPageConfigInit(key), "updateUser" === name && common.logger.tooLongUserUpdateTime(key)), key;
@@ -12682,21 +12659,21 @@
         }();
         expectedNumberOfNonCommentArgs.Profiler = Profiler;
     }, {
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/regenerator" : 35,
-        "lib/timers" : 186,
-        "lib/tracking" : 192
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/regenerator": 35,
+        "lib/timers": 186,
+        "lib/tracking": 192
     }],
-    182 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    182: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -12741,11 +12718,11 @@
              */
             function next(response) {
                 return response.ok ? response[options.isText ? "text" : "json"]() : response.text().then(function(reqData) {
-                    throw{
-                        name : "RequestError",
-                        body : reqData,
-                        statusCode : response.status,
-                        message : response.statusText
+                    throw {
+                        name: "RequestError",
+                        body: reqData,
+                        statusCode: response.status,
+                        message: response.statusText
                     };
                 });
             }
@@ -12793,7 +12770,7 @@
         var value = require("babel-runtime/core-js/json/stringify");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var _ = require("lodash");
         var data = require("./util");
@@ -12805,7 +12782,7 @@
             helper.on("fetch", function(unknown, done) {
                 return resolve(unknown).then(done, function(err) {
                     return done({
-                        error : err.message
+                        error: err.message
                     });
                 });
             });
@@ -12817,21 +12794,21 @@
         /** @type {function (Object): ?} */
         expectedNumberOfNonCommentArgs.paramStr = log;
     }, {
-        "./config" : 167,
-        "./message" : 171,
-        "./util" : 198,
-        "babel-runtime/core-js/json/stringify" : 16,
-        "babel-runtime/core-js/promise" : 24,
-        lodash : "lodash"
+        "./config": 167,
+        "./message": 171,
+        "./util": 198,
+        "babel-runtime/core-js/json/stringify": 16,
+        "babel-runtime/core-js/promise": 24,
+        lodash: "lodash"
     }],
-    183 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    183: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function parse(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -12862,7 +12839,7 @@
         var string = require("babel-runtime/core-js/object/keys");
         var ast = parse(string);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var _ = require("lodash");
         var helper = require("lib/util");
@@ -12874,33 +12851,33 @@
          * @return {?}
          */
         expectedNumberOfNonCommentArgs.bindActions = function(expectedNumberOfNonCommentArgs, cb) {
-            return(0, ast["default"])(expectedNumberOfNonCommentArgs).filter(function(timeoutKey) {
+            return (0, ast["default"])(expectedNumberOfNonCommentArgs).filter(function(timeoutKey) {
                 return expectedNumberOfNonCommentArgs[timeoutKey];
             }).reduce(function(deepDataAndEvents, method) {
-                return(0, result["default"])(deepDataAndEvents, (0, elem["default"])({}, method, function() {
+                return (0, result["default"])(deepDataAndEvents, (0, elem["default"])({}, method, function() {
                     var args = expectedNumberOfNonCommentArgs[method].apply(expectedNumberOfNonCommentArgs, arguments);
                     var sync = "undefined" === typeof args.sync || args.sync;
                     return cb((0, result["default"])({}, args, {
-                        sync : sync
+                        sync: sync
                     }));
                 }));
             }, {});
         };
     }, {
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "lib/util" : 198,
-        lodash : "lodash"
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/helpers/defineProperty": 29,
+        "lib/util": 198,
+        lodash: "lodash"
     }],
-    184 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    184: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -12919,7 +12896,7 @@
                 var d = data.page || (data.config || {});
                 var domain = d.domain;
                 return test.sync && router.emitBackground("dispatch", (0, iterator["default"])({}, test, {
-                    domain : domain
+                    domain: domain
                 })), test.type === type ? (0, iterator["default"])({}, data, test.data) : callback ? callback(data, test) : data;
             };
             var that = ret.createStore(init, {}, ret.applyMiddleware(rreturn));
@@ -12927,19 +12904,19 @@
             return router.on("state", function(task) {
                 nodes.asyncCall(function() {
                     return that.dispatch({
-                        type : type,
-                        data : task
+                        type: type,
+                        data: task
                     });
                 }, 0);
             }), self.observeStore(that, now), {
-                store : that,
-                actions : actions
+                store: that,
+                actions: actions
             };
         }
         var value = require("babel-runtime/core-js/object/assign");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var getActual = require("redux-logger");
         var ret = require("redux");
@@ -12948,45 +12925,45 @@
         var self = require("./helpers");
         var nodes = require("../util");
         var rreturn = getActual({
-            level : "debug",
+            level: "debug",
             /**
              * @return {?}
              */
-            collapsed : function() {
+            collapsed: function() {
                 return true;
             },
             /**
              * @return {?}
              */
-            predicate : function() {
+            predicate: function() {
                 return false;
             }
         });
         /** @type {string} */
         var type = "store/SYNC";
         var event = {
-            page : {},
-            connection : {}
+            page: {},
+            connection: {}
         };
         /** @type {function (Function): ?} */
         expectedNumberOfNonCommentArgs.createMirrorStore = create;
     }, {
-        "../util" : 198,
-        "./helpers" : 183,
-        "babel-runtime/core-js/object/assign" : 17,
-        "lib/message" : 171,
-        redux : "redux",
-        "redux-logger" : "redux-logger",
-        "universal/bg/store" : 214
+        "../util": 198,
+        "./helpers": 183,
+        "babel-runtime/core-js/object/assign": 17,
+        "lib/message": 171,
+        redux: "redux",
+        "redux-logger": "redux-logger",
+        "universal/bg/store": 214
     }],
-    185 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    185: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} node
          * @return {?}
          */
         function walk(node) {
             return node && node.__esModule ? node : {
-                "default" : node
+                "default": node
             };
         }
         /**
@@ -13010,7 +12987,7 @@
             function stringify(cl) {
                 /** @type {Array} */
                 var numbers = [];
-                return(0, result["default"])(cl, function(dataAndEvents, i) {
+                return (0, result["default"])(cl, function(dataAndEvents, i) {
                     if ("object" === ("undefined" === typeof i ? "undefined" : (0, type["default"])(i)) && null !== i) {
                         if (numbers.indexOf(i) !== -1) {
                             return;
@@ -13064,8 +13041,8 @@
              */
             function callback(field) {
                 utils.emitBackground("set-localforage", {
-                    key : field.key,
-                    value : field.value
+                    key: field.key,
+                    value: field.value
                 }, function(funcToCall) {
                     return self.emitDomEvent("localforage", funcToCall);
                 });
@@ -13077,11 +13054,11 @@
             function prop(type) {
                 var key = type.key;
                 utils.emitBackground("get-pref", {
-                    key : key
+                    key: key
                 }, function(x) {
                     return self.emitDomEvent("pref", {
-                        key : key,
-                        value : x
+                        key: key,
+                        value: x
                     });
                 });
             }
@@ -13093,8 +13070,8 @@
                 var name = property.key;
                 var value = property.value;
                 utils.emitBackground("set-pref", {
-                    key : name,
-                    value : value
+                    key: name,
+                    value: value
                 });
             }
             /**
@@ -13121,7 +13098,7 @@
         var nodes = require("babel-runtime/core-js/json/stringify");
         var result = walk(nodes);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var self = require("./dom");
         var utils = require("./message");
@@ -13129,15 +13106,15 @@
         /** @type {function (): undefined} */
         expectedNumberOfNonCommentArgs.api = create;
     }, {
-        "./console" : 168,
-        "./dom" : 169,
-        "./message" : 171,
-        "babel-runtime/core-js/json/stringify" : 16,
-        "babel-runtime/helpers/typeof" : 34
+        "./console": 168,
+        "./dom": 169,
+        "./message": 171,
+        "babel-runtime/core-js/json/stringify": 16,
+        "babel-runtime/helpers/typeof": 34
     }],
-    186 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    186: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var cache = {};
         expectedNumberOfNonCommentArgs.timers = {
@@ -13145,7 +13122,7 @@
              * @param {string} label
              * @return {undefined}
              */
-            start : function(label) {
+            start: function(label) {
                 /** @type {number} */
                 cache[label] = Date.now();
             },
@@ -13153,7 +13130,7 @@
              * @param {string} label
              * @return {?}
              */
-            stop : function(label) {
+            stop: function(label) {
                 var $label = this.passed(label);
                 return delete cache[label], $label;
             },
@@ -13161,19 +13138,19 @@
              * @param {?} id
              * @return {?}
              */
-            passed : function(id) {
+            passed: function(id) {
                 return id && cache[id] ? Date.now() - cache[id] : 0;
             }
         };
     }, {}],
-    187 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    187: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} context
          * @return {?}
          */
         function getAll(context) {
             return context && context.__esModule ? context : {
-                "default" : context
+                "default": context
             };
         }
         /**
@@ -13196,14 +13173,13 @@
             return setup(this, void 0, void 0, __exports__["default"].mark(function end() {
                 return __exports__["default"].wrap(function(current) {
                     for (;;) {
-                        switch(current.prev = current.next) {
+                        switch (current.prev = current.next) {
                             case 0:
                                 try {
                                     config.tracker().gnar = cb();
                                 } catch (ex) {
                                     common.logger.gnarClientInitFail(ex && ex.message);
-                                }
-                                ;
+                                };
                             case 1:
                                 ;
                             case "end":
@@ -13234,9 +13210,9 @@
             var e = collection.dapi;
             var domain = url.getDomain();
             var extendedOptionsWithExpiresDate = {
-                path : "/",
-                domain : domain,
-                expires : new Date((new Date).setFullYear((new Date).getFullYear() + 1))
+                path: "/",
+                domain: domain,
+                expires: new Date((new Date).setFullYear((new Date).getFullYear() + 1))
             };
             filter("__fngrprnt__", e);
         }
@@ -13252,7 +13228,7 @@
          * @return {?}
          */
         var setup = function(expectedNumberOfNonCommentArgs, args, opt_attributes, self) {
-            return new (opt_attributes || (opt_attributes = result["default"]))(function(iterator, fail) {
+            return new(opt_attributes || (opt_attributes = result["default"]))(function(iterator, fail) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -13292,7 +13268,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var makeIterator = require("cookie");
         var url = require("../location");
@@ -13314,7 +13290,7 @@
             return setup(void 0, void 0, void 0, __exports__["default"].mark(function end() {
                 return __exports__["default"].wrap(function(stream) {
                     for (;;) {
-                        switch(stream.prev = stream.next) {
+                        switch (stream.prev = stream.next) {
                             case 0:
                                 return stream.prev = 0, stream.next = 3, config.tracker().gnar.getContainerId();
                             case 3:
@@ -13327,29 +13303,31 @@
                                 return stream.stop();
                         }
                     }
-                }, end, this, [[0, 6]]);
+                }, end, this, [
+                    [0, 6]
+                ]);
             }));
         };
     }, {
-        "../config" : 167,
-        "../location" : 170,
-        "../util" : 198,
-        "./logger" : 193,
-        "./tracker" : 196,
-        "@grammarly-npm/gnarclientweb" : 3,
-        "@grammarly-npm/telemetry.ts" : 6,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/regenerator" : 35,
-        cookie : "cookie"
+        "../config": 167,
+        "../location": 170,
+        "../util": 198,
+        "./logger": 193,
+        "./tracker": 196,
+        "@grammarly-npm/gnarclientweb": 3,
+        "@grammarly-npm/telemetry.ts": 6,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/regenerator": 35,
+        cookie: "cookie"
     }],
-    188 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    188: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function h(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -13363,7 +13341,7 @@
             var result = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 result[i - 1] = arguments[i];
             }
             /**
@@ -13377,7 +13355,7 @@
                 Block.asyncCall(function() {
                     var _ref1;
                     try {
-                        switch(send(expectedNumberOfNonCommentArgs, result), expectedNumberOfNonCommentArgs) {
+                        switch (send(expectedNumberOfNonCommentArgs, result), expectedNumberOfNonCommentArgs) {
                             case options.CALL_HANDLER_ID:
                                 var message = result[0];
                                 /** @type {Array.<?>} */
@@ -13414,8 +13392,8 @@
                     return finish("timeout call through bg page");
                 }, quietMillis);
                 self.emitBackground("tracking-call", {
-                    msg : expectedNumberOfNonCommentArgs,
-                    data : result
+                    msg: expectedNumberOfNonCommentArgs,
+                    data: result
                 }, add);
             }
         }
@@ -13454,7 +13432,7 @@
         var selector = require("babel-runtime/core-js/object/keys");
         var elem = h(selector);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var options;
         var self = require("../message");
@@ -13464,10 +13442,10 @@
         var player = require("../config");
         var entities = require("./felogClient");
         var c = require("lib/request");
-        !function(n) {
+        ! function(n) {
             var methods;
             var self = Block.isBg() ? new entities.DefaultFelogClient(player.URLS.newFelog, player.appName, player.getVersion(), player.ENV, c.fetch.bind(window)) : void 0;
-            !function(exports) {
+            ! function(exports) {
                 /**
                  * @param {?} ev
                  * @param {string} funcToCall
@@ -13536,7 +13514,7 @@
                 var args = Array(expectedNumberOfNonCommentArgs);
                 /** @type {number} */
                 var $_i = 0;
-                for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                     args[$_i] = arguments[$_i];
                 }
                 return parse.apply(void 0, [options.CALL_HANDLER_ID, i].concat(args));
@@ -13549,25 +13527,25 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.getLog = removex;
     }, {
-        "../config" : 167,
-        "../message" : 171,
-        "../util" : 198,
-        "./felogClient" : 190,
-        "./felogPixel" : 191,
-        "./tracker" : 196,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        "lib/request" : 182
+        "../config": 167,
+        "../message": 171,
+        "../util": 198,
+        "./felogClient": 190,
+        "./felogPixel": 191,
+        "./tracker": 196,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        "lib/request": 182
     }],
-    189 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    189: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -13584,14 +13562,14 @@
          */
         function send(opt_noCache, service, serviceName, url, keepData, m, millis, id, config) {
             var obj = {
-                message : m,
-                logger : keepData,
-                level : result.toFelogString(millis),
-                application : opt_noCache,
-                version : service,
-                userId : config && config.userId,
-                containerId : config && config.containerId,
-                env : serviceName
+                message: m,
+                logger: keepData,
+                level: result.toFelogString(millis),
+                application: opt_noCache,
+                version: service,
+                userId: config && config.userId,
+                containerId: config && config.containerId,
+                env: serviceName
             };
             return id && (obj.extra = id), url + "/log?json=" + encodeURIComponent((0, iterator["default"])(obj));
         }
@@ -13608,23 +13586,23 @@
          */
         function initialize(application, config, key, url, target, data, name, callback) {
             var obj = {
-                message : data,
-                logger : target,
-                level : result.toFelogString(name),
-                application : application,
-                version : config,
-                env : key,
-                extra_usage : callback
+                message: data,
+                logger: target,
+                level: result.toFelogString(name),
+                application: application,
+                version: config,
+                env: key,
+                extra_usage: callback
             };
             return url + "/log?json=" + encodeURIComponent((0, iterator["default"])(obj));
         }
         var value = proceed("babel-runtime/core-js/json/stringify");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var result;
-        !function(logging) {
+        ! function(logging) {
             /** @type {string} */
             logging[logging.INFO = 0] = "INFO";
             /** @type {string} */
@@ -13638,7 +13616,7 @@
              * @return {?}
              */
             function initialize(url) {
-                switch(url) {
+                switch (url) {
                     case logging.INFO:
                         return "INFO";
                     case logging.WARN:
@@ -13657,16 +13635,16 @@
         /** @type {function (string, string, ?, string, Object, string, string, ?): ?} */
         expectedNumberOfNonCommentArgs.felogUsageRequestUrl = initialize;
     }, {
-        "babel-runtime/core-js/json/stringify" : 16
+        "babel-runtime/core-js/json/stringify": 16
     }],
-    190 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    190: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var ready = require("babel-runtime/core-js/object/assign");
@@ -13676,7 +13654,7 @@
         var helper = require("babel-runtime/helpers/createClass");
         var update = $(helper);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var Block = require("@grammarly-npm/telemetry.ts/lib/timeseries_impl");
         var path = require("./felog");
@@ -13699,43 +13677,43 @@
                 this._env = x;
                 this._fetch = postProcess;
                 this._context = {
-                    userId : void 0,
-                    containerId : void 0
+                    userId: void 0,
+                    containerId: void 0
                 };
                 this._metrics = Block.MetricsStorage.createRoot(this._env + "." + this._appName, this._baseUrl, this._fetch);
             }
-            return(0, update["default"])(Renderer, [{
-                key : "setUserId",
+            return (0, update["default"])(Renderer, [{
+                key: "setUserId",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._context = (0, ret["default"])({}, this._context, {
-                        userId : name
+                        userId: name
                     });
                 }
             }, {
-                key : "setContainerId",
+                key: "setContainerId",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._context = (0, ret["default"])({}, this._context, {
-                        containerId : name
+                        containerId: name
                     });
                 }
             }, {
-                key : "getContext",
+                key: "getContext",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return this._context;
                 }
             }, {
-                key : "sendEvent",
+                key: "sendEvent",
                 /**
                  * @param {string} name
                  * @param {string} y
@@ -13743,17 +13721,15 @@
                  * @param {Object} attr
                  * @return {?}
                  */
-                value : function(name, y, millis, attr) {
+                value: function(name, y, millis, attr) {
                     return this._fetch(path.felogRequestUrl(this._appName, this._appVersion, this._env, this._baseUrl, name, y, millis, attr, this._context), {
-                        mode : "no-cors",
-                        method : "get",
-                        cache : "no-cache"
-                    }).then(function(dataAndEvents) {
-                    })["catch"](function(dataAndEvents) {
-                    });
+                        mode: "no-cors",
+                        method: "get",
+                        cache: "no-cache"
+                    }).then(function(dataAndEvents) {})["catch"](function(dataAndEvents) {});
                 }
             }, {
-                key : "sendUsageEvent",
+                key: "sendUsageEvent",
                 /**
                  * @param {string} name
                  * @param {string} f
@@ -13761,64 +13737,62 @@
                  * @param {Object} item
                  * @return {?}
                  */
-                value : function(name, f, y2, item) {
+                value: function(name, f, y2, item) {
                     var restoreScript = {
-                        domain : item.domain,
-                        accountType : item.accountType,
-                        fieldType : item.fieldType,
-                        fieldSupported : item.fieldSupported
+                        domain: item.domain,
+                        accountType: item.accountType,
+                        fieldType: item.fieldType,
+                        fieldSupported: item.fieldSupported
                     };
                     if (this._context.containerId || this._context.userId) {
                         var suiteView = (this._context.containerId || this._context.userId) + item.domain;
                         restoreScript.groupInfo = nodes.normalizedHashCode(suiteView, 1E9);
                     }
                     return this._fetch(path.felogUsageRequestUrl(this._appName, this._appVersion, this._env, this._baseUrl, name, f, y2, restoreScript), {
-                        mode : "no-cors",
-                        method : "get",
-                        cache : "no-cache"
-                    }).then(function(dataAndEvents) {
-                    })["catch"](function(dataAndEvents) {
-                    });
+                        mode: "no-cors",
+                        method: "get",
+                        cache: "no-cache"
+                    }).then(function(dataAndEvents) {})["catch"](function(dataAndEvents) {});
                 }
             }, {
-                key : "sendCounter",
+                key: "sendCounter",
                 /**
                  * @param {string} name
                  * @param {number} x
                  * @return {undefined}
                  */
-                value : function(name, x) {
+                value: function(name, x) {
                     this._metrics.getCounter(name).increment(x);
                 }
             }, {
-                key : "sendTimer",
+                key: "sendTimer",
                 /**
                  * @param {string} name
                  * @param {number} deepDataAndEvents
                  * @return {undefined}
                  */
-                value : function(name, deepDataAndEvents) {
+                value: function(name, deepDataAndEvents) {
                     this._metrics.getTimer(name).recordTime(deepDataAndEvents);
                 }
             }]), Renderer;
         }();
         expectedNumberOfNonCommentArgs.DefaultFelogClient = DefaultFelogClient;
     }, {
-        "./felog" : 189,
-        "@grammarly-npm/telemetry.ts/lib/timeseries_impl" : 11,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "lib/util" : 198
+        "./felog": 189,
+        "@grammarly-npm/telemetry.ts/lib/timeseries_impl": 11,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "lib/util": 198
     }],
-    191 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    191: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function removeNode(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         /**
@@ -13837,25 +13811,25 @@
         var node = require("babel-runtime/core-js/promise");
         var options = removeNode(node);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var args = require("../newConfig");
         var util = require("./felog");
         /** @type {function (?, string, string, ?, Object): ?} */
         expectedNumberOfNonCommentArgs.sendEventPixel = initialize;
     }, {
-        "../newConfig" : 172,
-        "./felog" : 189,
-        "babel-runtime/core-js/promise" : 24
+        "../newConfig": 172,
+        "./felog": 189,
+        "babel-runtime/core-js/promise": 24
     }],
-    192 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    192: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function ondata(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         /**
@@ -13895,7 +13869,7 @@
             var args = Array(len > 1 ? len - 1 : 0);
             /** @type {number} */
             var i = 1;
-            for (;i < len;i++) {
+            for (; i < len; i++) {
                 args[i - 1] = arguments[i];
             }
             if (m.isBg()) {
@@ -13904,12 +13878,12 @@
                 }
                 m.asyncCall(function() {
                     var expectedNumberOfNonCommentArgs;
-                    return(expectedNumberOfNonCommentArgs = windowEventHandlers)[e].apply(expectedNumberOfNonCommentArgs, args);
+                    return (expectedNumberOfNonCommentArgs = windowEventHandlers)[e].apply(expectedNumberOfNonCommentArgs, args);
                 }, 20);
             } else {
                 res.emitBackground("tracking-fire", {
-                    msg : e,
-                    data : args
+                    msg: e,
+                    data: args
                 });
             }
         }
@@ -13926,8 +13900,8 @@
                     clearInterval(ival);
                 }
                 var encoding = {
-                    gnar : d("gnar_containerId"),
-                    dapi : d("__fngrprnt__")
+                    gnar: d("gnar_containerId"),
+                    dapi: d("__fngrprnt__")
                 };
                 clearInterval(ival);
                 res.emitBackground("tracker-init", encoding);
@@ -13946,7 +13920,7 @@
         var name = $("babel-runtime/helpers/toConsumableArray");
         var obj = ondata(name);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var m = $("../util");
         var res = $("../message");
@@ -13964,16 +13938,16 @@
         /** @type {function (): undefined} */
         expectedNumberOfNonCommentArgs.initContentScript = ajax;
     }, {
-        "../message" : 171,
-        "../util" : 198,
-        "./bgonly" : 187,
-        "./call" : 188,
-        "./logger" : 193,
-        "./on" : 194,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        cookie : "cookie"
+        "../message": 171,
+        "../util": 198,
+        "./bgonly": 187,
+        "./call": 188,
+        "./logger": 193,
+        "./on": 194,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        cookie: "cookie"
     }],
-    193 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    193: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @return {undefined}
          */
@@ -13986,7 +13960,7 @@
             });
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var module = require("./call");
         var nodes = require("./telemetry");
@@ -13997,18 +13971,18 @@
             addEventListener();
         }
     }, {
-        "../newConfig" : 172,
-        "./call" : 188,
-        "./telemetry" : 195
+        "../newConfig": 172,
+        "./call": 188,
+        "./telemetry": 195
     }],
-    194 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    194: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function walk(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var r20;
@@ -14028,7 +14002,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, args, opt_attributes, self) {
-            return new (opt_attributes || (opt_attributes = h["default"]))(function(iterator, $timeout) {
+            return new(opt_attributes || (opt_attributes = h["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -14068,15 +14042,14 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var Block = require("../util");
         var $ = require("./call");
         var common = require("./logger");
         var preferences = require("universal/bg/prefs");
         var helper = require("extension-api");
-        expectedNumberOfNonCommentArgs.on = (r20 = {}, (0, t["default"])(r20, "activity-ping", function() {
-        }), (0, t["default"])(r20, "daily-ping", function(p, s) {
+        expectedNumberOfNonCommentArgs.on = (r20 = {}, (0, t["default"])(r20, "activity-ping", function() {}), (0, t["default"])(r20, "daily-ping", function(p, s) {
             return init(this, void 0, void 0, result["default"].mark(function next() {
                 var namespace;
                 var string;
@@ -14087,7 +14060,7 @@
                 var y;
                 return result["default"].wrap(function(stream) {
                     for (;;) {
-                        switch(stream.prev = stream.next) {
+                        switch (stream.prev = stream.next) {
                             case 0:
                                 if (p) {
                                     /** @type {number} */
@@ -14116,11 +14089,11 @@
             }));
         }), (0, t["default"])(r20, "app_signin_success", function(labelPlacement) {
             $.call("gnar.track", "userLoginForm/accepted", {
-                placement : labelPlacement
+                placement: labelPlacement
             });
         }), (0, t["default"])(r20, "app_signup_success", function(labelPlacement) {
             $.call("gnar.track", "userAccountSignupForm/accepted", {
-                placement : labelPlacement
+                placement: labelPlacement
             });
         }), (0, t["default"])(r20, "signin-error", function(e) {
             /** @type {string} */
@@ -14134,7 +14107,7 @@
             return init(this, void 0, void 0, result["default"].mark(function end() {
                 return result["default"].wrap(function(current) {
                     for (;;) {
-                        switch(current.prev = current.next) {
+                        switch (current.prev = current.next) {
                             case 0:
                                 $.call("gnar.track", "Account_Type_Selected");
                             case 1:
@@ -14147,7 +14120,7 @@
             }));
         }), (0, t["default"])(r20, "hook-clicked", function(deepDataAndEvents) {
             $.call("gnar.track", "upgradeHookClicked", {
-                placement : deepDataAndEvents
+                placement: deepDataAndEvents
             });
             common.logger.userUpgradeClick(deepDataAndEvents);
         }), (0, t["default"])(r20, "correct-btn-clicked", function() {
@@ -14156,23 +14129,22 @@
         }), (0, t["default"])(r20, "btn-disable-in-field", function(deepDataAndEvents) {
             $.call("gnar.track", "checkingInFieldToggled", {
                 /** @type {Function} */
-                enabled : deepDataAndEvents
+                enabled: deepDataAndEvents
             });
             common.logger.checkingToggledInField(deepDataAndEvents);
-        }), (0, t["default"])(r20, "button-change-state", function() {
-        }), (0, t["default"])(r20, "login-attempt", function(labelPlacement) {
+        }), (0, t["default"])(r20, "button-change-state", function() {}), (0, t["default"])(r20, "login-attempt", function(labelPlacement) {
             $.call("gnar.track", "signInClicked", {
-                placement : labelPlacement
+                placement: labelPlacement
             });
         }), (0, t["default"])(r20, "show-dictionary", function() {
             $.call("gnar.track", "showDictionary");
         }), (0, t["default"])(r20, "referral-shown", function(labelPlacement) {
             $.call("gnar.track", "referral/referralNotificationShown", {
-                placement : labelPlacement
+                placement: labelPlacement
             });
         }), (0, t["default"])(r20, "referral-clicked", function(labelPlacement) {
             $.call("gnar.track", "referral/referralButtonClicked", {
-                placement : labelPlacement
+                placement: labelPlacement
             });
         }), (0, t["default"])(r20, "tab-connected", function(filter, options, event, deepDataAndEvents, dataAndEvents) {
             var enabled = options.enabled;
@@ -14198,12 +14170,12 @@
                 if (!account.anonymous) {
                     if (depId) {
                         common.logger.unexpectedAnonymous({
-                            email : account.email,
-                            token : account.token,
-                            grauth : account.grauth,
-                            tokenEqualsGrauth : account.token === account.grauth,
-                            cookiesDisabled : deepDataAndEvents,
-                            reason : err
+                            email: account.email,
+                            token: account.token,
+                            grauth: account.grauth,
+                            tokenEqualsGrauth: account.token === account.grauth,
+                            cookiesDisabled: deepDataAndEvents,
+                            reason: err
                         });
                     }
                 }
@@ -14211,7 +14183,7 @@
         }), (0, t["default"])(r20, "set-dapi-prop", function(deepDataAndEvents, dataName) {
             if ("dialectWeak" === deepDataAndEvents) {
                 $.call("gnar.track", "languageWeakPreference", {
-                    dialect : dataName
+                    dialect: dataName
                 });
             }
             common.logger.dapiPropInitialized(deepDataAndEvents, dataName);
@@ -14219,7 +14191,7 @@
             var language = part.language;
             var body = part.dialectWeak;
             var data = {
-                language : language
+                language: language
             };
             if (body) {
                 /** @type {boolean} */
@@ -14252,12 +14224,12 @@
             $.call("gnar.track", "upgradeReferralInviteBtnClicked");
         }), (0, t["default"])(r20, "email-perception-popup-show", function(dataAndEvents) {
             $.call("gnar.track", "askForFeedback-popup-show", {
-                isFirstShown : dataAndEvents
+                isFirstShown: dataAndEvents
             });
             common.logger.emailPerceptionPopupShow();
         }), (0, t["default"])(r20, "email-perception-popup-cancel", function(dataAndEvents) {
             $.call("gnar.track", "askForFeedback-popup-cancel", {
-                isFirstShown : dataAndEvents
+                isFirstShown: dataAndEvents
             });
             common.logger.emailPerceptionPopupCancel();
         }), (0, t["default"])(r20, "email-perception-button-hover", function() {
@@ -14286,24 +14258,24 @@
             $.call("gnar.track", "onboardingTutorialLetsWrite-button-click");
         }), r20);
     }, {
-        "../util" : 198,
-        "./call" : 188,
-        "./logger" : 193,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/slicedToArray" : 32,
-        "babel-runtime/regenerator" : 35,
-        "extension-api" : 159,
-        "universal/bg/prefs" : 204
+        "../util": 198,
+        "./call": 188,
+        "./logger": 193,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/slicedToArray": 32,
+        "babel-runtime/regenerator": 35,
+        "extension-api": 159,
+        "universal/bg/prefs": 204
     }],
-    195 : [function(parse, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    195: [function(parse, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function String(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var obj = parse("babel-runtime/core-js/json/stringify");
@@ -14313,7 +14285,7 @@
         var url = parse("babel-runtime/helpers/createClass");
         var result = String(url);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var $$Log = parse("./felog");
         /** @type {number} */
@@ -14353,7 +14325,7 @@
                  */
                 this.differentStateDomain = function(dataAndEvents) {
                     self._send("cs.state.differentDomain", "received state for different domain", $$Log.LogLevel.INFO, {
-                        stateDomain : dataAndEvents
+                        stateDomain: dataAndEvents
                     });
                 };
                 /**
@@ -14362,7 +14334,7 @@
                  */
                 this.restoredBgConnection = function(dataAndEvents) {
                     self._send("cs.connection.bg.restored", "bg page connection restored", $$Log.LogLevel.INFO, {
-                        timeWithoutConnection : dataAndEvents
+                        timeWithoutConnection: dataAndEvents
                     });
                 };
                 /**
@@ -14383,7 +14355,7 @@
                  */
                 this.infinityCheckResetFail = function(delay) {
                     self._send("cs.connection.infiniteCheck.failed", "infinite check reset failed", $$Log.LogLevel.ERROR, {
-                        delay : delay
+                        delay: delay
                     });
                 };
                 /**
@@ -14392,7 +14364,7 @@
                  */
                 this.tooLongPageConfigInit = function(keepData) {
                     self._send("cs.pageConfig.init.exceeded", "page config init timeout", $$Log.LogLevel.WARN, {
-                        initTime : keepData
+                        initTime: keepData
                     });
                 };
                 /**
@@ -14401,7 +14373,7 @@
                  */
                 this.tooLongUserUpdateTime = function(keepData) {
                     self._send("bg.state.user.update.exceeded", "user state update took too long", $$Log.LogLevel.WARN, {
-                        updateTime : keepData
+                        updateTime: keepData
                     });
                 };
                 /**
@@ -14416,7 +14388,7 @@
                  */
                 this.restoreBgPageConnection = function(time) {
                     self._send("cs.gbutton.bg\u0421onnection.restored", "gbutton connection to bg page restored", $$Log.LogLevel.INFO, {
-                        time : time
+                        time: time
                     });
                 };
                 /**
@@ -14443,7 +14415,7 @@
                  */
                 this.signinClose = function(dataAndEvents) {
                     self._send("cs.signin.close", "sign in dialog closed", $$Log.LogLevel.INFO, {
-                        openTime : dataAndEvents
+                        openTime: dataAndEvents
                     });
                 };
                 /**
@@ -14459,8 +14431,8 @@
                  */
                 this.popupLoadError = function(output, errorName) {
                     self._send("cs.popup.load.error", "could not open pop-up editor", $$Log.LogLevel.ERROR, {
-                        message : output,
-                        name : errorName
+                        message: output,
+                        name: errorName
                     });
                 };
                 /**
@@ -14469,7 +14441,7 @@
                  */
                 this.loginNoBgPageConnection = function(output) {
                     self._send("debug.cs.connection.signin.bg.timeout", "can not connect to bg page on login", $$Log.LogLevel.INFO, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -14478,7 +14450,7 @@
                  */
                 this.pageConfigCDNError = function(output) {
                     self._send("cs.pageConfig.cdn.error", "could not read page config", $$Log.LogLevel.ERROR, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -14488,8 +14460,8 @@
                  */
                 this.pageConfigLocalStorageError = function(output, errorName) {
                     self._send("cs.pageConfig.localStorage.error", "could not read page config from localStorage", $$Log.LogLevel.INFO, {
-                        message : output,
-                        name : errorName
+                        message: output,
+                        name: errorName
                     });
                 };
                 /**
@@ -14499,8 +14471,8 @@
                  */
                 this.pageConfigUpdated = function(deepDataAndEvents, keepData) {
                     self._send("cs.pageConfig.updated", "page config updated", $$Log.LogLevel.INFO, {
-                        oldVersion : deepDataAndEvents,
-                        newVersion : keepData
+                        oldVersion: deepDataAndEvents,
+                        newVersion: keepData
                     });
                 };
                 /**
@@ -14515,7 +14487,7 @@
                  */
                 this.settingsUsupportedShow = function(keepData) {
                     self._send("settings.popup.state.unsupported.show", "page unsupported message shown", $$Log.LogLevel.INFO, {
-                        popupType : keepData
+                        popupType: keepData
                     });
                 };
                 /**
@@ -14524,7 +14496,7 @@
                  */
                 this.settingsPopupToggled = function(dataAndEvents) {
                     self._send("settings.popup.experiment.toggle", "settings popup disabled/enabled for experiment on /personalize page", $$Log.LogLevel.INFO, {
-                        isPopupDisabled : dataAndEvents
+                        isPopupDisabled: dataAndEvents
                     });
                 };
                 /**
@@ -14540,8 +14512,8 @@
                  */
                 this.capiNotAuthorizedLoop = function(dataAndEvents, deepDataAndEvents) {
                     self._send("debug.socket.notAuthorizedLoop", "could not authenticate on capi and auth", $$Log.LogLevel.INFO, {
-                        authDegradation : dataAndEvents,
-                        cookiesDisabled : deepDataAndEvents
+                        authDegradation: dataAndEvents,
+                        cookiesDisabled: deepDataAndEvents
                     });
                 };
                 /**
@@ -14556,7 +14528,7 @@
                  */
                 this.socketBgRestored = function(dataAndEvents) {
                     self._send("debug.bg.socket.restored", "capi session restored", $$Log.LogLevel.INFO, {
-                        tryCount : dataAndEvents
+                        tryCount: dataAndEvents
                     });
                 };
                 /**
@@ -14566,8 +14538,8 @@
                  */
                 this.socketBgReconnectFail = function(oauth_token, dataAndEvents) {
                     self._send("bg.socket.reconnect.fail", "could not restore ws connection", $$Log.LogLevel.WARN, {
-                        token : oauth_token,
-                        tryCount : dataAndEvents
+                        token: oauth_token,
+                        tryCount: dataAndEvents
                     });
                 };
                 /**
@@ -14582,7 +14554,7 @@
                  */
                 this.soketCsErrorMsg = function(output) {
                     self._send("cs.socket.errorMsg", "capi error", $$Log.LogLevel.WARN, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -14591,7 +14563,7 @@
                  */
                 this.gnarClientInitFail = function(output) {
                     self._send("gnar.bg.tracking.gnar.init.fail", "gnar init failed", $$Log.LogLevel.WARN, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -14612,7 +14584,7 @@
                  */
                 this.userUpgradeClick = function(deepDataAndEvents) {
                     self._send("cs.ui.action.upgradeClick", "upgrade hook clicked", $$Log.LogLevel.INFO, {
-                        placement : deepDataAndEvents
+                        placement: deepDataAndEvents
                     });
                 };
                 /**
@@ -14628,7 +14600,7 @@
                 this.checkingToggledInField = function(deepDataAndEvents) {
                     self._send("cs.ui.gbutton.toggleInField", "checking toggled in field", $$Log.LogLevel.INFO, {
                         /** @type {Function} */
-                        enabled : deepDataAndEvents
+                        enabled: deepDataAndEvents
                     });
                 };
                 /**
@@ -14638,8 +14610,8 @@
                  */
                 this.sessionInvalidated = function(err, dataAndEvents) {
                     self._send("bg.session.invalidated", "user session invalidated", $$Log.LogLevel.INFO, {
-                        reason : err,
-                        userChanged : dataAndEvents
+                        reason: err,
+                        userChanged: dataAndEvents
                     });
                 };
                 /**
@@ -14656,8 +14628,8 @@
                  */
                 this.dapiPropInitialized = function(deepDataAndEvents, i) {
                     self._send("bg.settings.dapi.prop.init", "save property to the DAPI", $$Log.LogLevel.INFO, {
-                        name : deepDataAndEvents,
-                        value : i
+                        name: deepDataAndEvents,
+                        value: i
                     });
                 };
                 /**
@@ -14667,8 +14639,8 @@
                  */
                 this.getDapiPropError = function(fieldName, reqData) {
                     self._send("bg.connection.dapi.getProp.error", "could not get dapi property", $$Log.LogLevel.WARN, {
-                        property : fieldName,
-                        body : reqData
+                        property: fieldName,
+                        body: reqData
                     });
                 };
                 /**
@@ -14678,8 +14650,8 @@
                  */
                 this.setDapiPropError = function(fieldName, reqData) {
                     self._send("bg.connection.dapi.setProp.error", "could not set dapi property", $$Log.LogLevel.WARN, {
-                        property : fieldName,
-                        body : reqData
+                        property: fieldName,
+                        body: reqData
                     });
                 };
                 /**
@@ -14689,7 +14661,7 @@
                 this.toggleExtensionDefs = function(_enabled) {
                     self._send("bg.settings.definitions.toggle", "definitions toggled for domain", $$Log.LogLevel.INFO, {
                         /** @type {Function} */
-                        enabled : _enabled
+                        enabled: _enabled
                     });
                 };
                 /**
@@ -14699,8 +14671,8 @@
                  */
                 this.toggleExtension = function(_enabled, labelPlacement) {
                     self._send("bg.settings.extension.toggle", "extension toggled for domain", $$Log.LogLevel.INFO, {
-                        enabled : _enabled,
-                        placement : labelPlacement
+                        enabled: _enabled,
+                        placement: labelPlacement
                     });
                 };
                 /**
@@ -14722,8 +14694,8 @@
                  */
                 this.cookieOverflow = function(size, deepDataAndEvents) {
                     self._send("debug.bg.state.cookie.overflow", "cookie is too big", $$Log.LogLevel.INFO, {
-                        size : size,
-                        biggestCookie : deepDataAndEvents
+                        size: size,
+                        biggestCookie: deepDataAndEvents
                     });
                 };
                 /**
@@ -14763,8 +14735,8 @@
                  */
                 this.bgPageStartFail = function(output, stack) {
                     self._send("bg.start.fail", "bg page start failed", $$Log.LogLevel.ERROR, {
-                        message : output,
-                        stack : stack
+                        message: output,
+                        stack: stack
                     });
                 };
                 /**
@@ -14773,7 +14745,7 @@
                  */
                 this.bgPageInitTimeout = function(dataAndEvents) {
                     self._send("bg.state.start.timeout", "bg page init timeout", $$Log.LogLevel.WARN, {
-                        initTime : dataAndEvents
+                        initTime: dataAndEvents
                     });
                 };
                 /**
@@ -14782,7 +14754,7 @@
                  */
                 this.bgPageInitFail = function(dataAndEvents) {
                     self._send("bg.state.init.fail", "bg page init failed", $$Log.LogLevel.ERROR, {
-                        initAttempts : dataAndEvents
+                        initAttempts: dataAndEvents
                     });
                 };
                 /**
@@ -14792,8 +14764,8 @@
                  */
                 this.extensionUpdated = function(currentVersion, dataAndEvents) {
                     self._send("bg.state.updated", "extension updated", $$Log.LogLevel.INFO, {
-                        currentVersion : currentVersion,
-                        previousVersion : dataAndEvents
+                        currentVersion: currentVersion,
+                        previousVersion: dataAndEvents
                     });
                 };
                 /**
@@ -14802,7 +14774,7 @@
                  */
                 this.extensionUpdateFail = function(dataAndEvents) {
                     self._send("bg.state.update.fail", "extension update failed", $$Log.LogLevel.INFO, {
-                        previousVersion : dataAndEvents
+                        previousVersion: dataAndEvents
                     });
                 };
                 /**
@@ -14817,7 +14789,7 @@
                  */
                 this.extensionInstall = function(key) {
                     self._send("bg.state.install", "extension installed", $$Log.LogLevel.INFO, {
-                        source : key
+                        source: key
                     });
                 };
                 /**
@@ -14826,7 +14798,7 @@
                  */
                 this.chromeForcedToUpdate = function(newVersion) {
                     self._send("bg.chrome.forcedToUpdate", "chrome forced update", $$Log.LogLevel.INFO, {
-                        newVersion : newVersion
+                        newVersion: newVersion
                     });
                 };
                 /**
@@ -14836,8 +14808,8 @@
                  */
                 this.chromeContentScriptLoadError = function(output, paramType) {
                     self._send("bg.chrome.cs.load.error", "content script execution error", $$Log.LogLevel.WARN, {
-                        message : output,
-                        type : paramType
+                        message: output,
+                        type: paramType
                     });
                 };
                 /**
@@ -14860,9 +14832,9 @@
                  */
                 this.fetchUserFail = function(err, reqData, statusCode) {
                     self._send("bg.user.fetch.fail", "failed to update user", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode,
-                        reason : err
+                        body: reqData,
+                        statusCode: statusCode,
+                        reason: err
                     });
                 };
                 /**
@@ -14872,8 +14844,8 @@
                  */
                 this.fetchMimicFail = function(reqData, statusCode) {
                     self._send("bg.user.mimic.fail", "mimic request failed", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode
+                        body: reqData,
+                        statusCode: statusCode
                     });
                 };
                 /**
@@ -14889,8 +14861,8 @@
                  */
                 this.fetchSettingsFail = function(reqData, statusCode) {
                     self._send("bg.user.settings.fail", "could not get settings from auth", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode
+                        body: reqData,
+                        statusCode: statusCode
                     });
                 };
                 /**
@@ -14899,7 +14871,7 @@
                  */
                 this.frequentCookieChanges = function(canceled) {
                     self._send("debug.cookie.onChange.error", "cookie change too frequent", $$Log.LogLevel.INFO, {
-                        canceled : canceled
+                        canceled: canceled
                     });
                 };
                 /**
@@ -14908,7 +14880,7 @@
                  */
                 this.initializePropFromDapi = function(errorName) {
                     self._send("bg.state.dapi.prop.initialize", "set property from dapi", $$Log.LogLevel.INFO, {
-                        name : errorName
+                        name: errorName
                     });
                 };
                 /**
@@ -14959,7 +14931,7 @@
                  */
                 this.saveEmailFeedbackError = function(reqData) {
                     self._send("bg.emailfeedback.save.error", "failed to save email feedback", $$Log.LogLevel.INFO, {
-                        body : reqData
+                        body: reqData
                     });
                 };
                 /**
@@ -14987,8 +14959,8 @@
                  */
                 this.proxyPortDisconnected = function(_port, err) {
                     self._sendWithProbability(which, "proxy.disconnect", "proxy port disconnected", $$Log.LogLevel.INFO, {
-                        port : _port,
-                        error : err
+                        port: _port,
+                        error: err
                     });
                 };
                 /**
@@ -14997,7 +14969,7 @@
                  */
                 this.unhandledBgPageException = function(obj) {
                     self._send("bg.unhandledException", "unhandled exception on background page", $$Log.LogLevel.ERROR, {
-                        message : obj.error ? obj.error.message : obj.message
+                        message: obj.error ? obj.error.message : obj.message
                     });
                 };
                 /**
@@ -15006,7 +14978,7 @@
                  */
                 this.unhandledBgPageRejection = function(obj) {
                     self._send("bg.unhandledRejection", "unhandled promise rejection on background page", $$Log.LogLevel.ERROR, {
-                        message : null !== obj.reason ? "string" === typeof obj.reason ? obj.reason : obj.reason.message : void 0
+                        message: null !== obj.reason ? "string" === typeof obj.reason ? obj.reason : obj.reason.message : void 0
                     });
                 };
                 /**
@@ -15021,7 +14993,7 @@
                  */
                 this.storageMigrationFailed = function(e) {
                     self._send("bg.storageMigration.failure", "storage migration failed", $$Log.LogLevel.ERROR, {
-                        message : e && e.message
+                        message: e && e.message
                     });
                 };
                 /**
@@ -15060,7 +15032,7 @@
                  */
                 this.synonymCardShowAction = function(dataAndEvents) {
                     self._sendWithProbability(onComplete, "cs.editor.synonym.show", "show synonymous card action", $$Log.LogLevel.INFO, {
-                        notFoundCard : dataAndEvents
+                        notFoundCard: dataAndEvents
                     });
                 };
                 /**
@@ -15069,7 +15041,7 @@
                  */
                 this.synonymCardHideAction = function(dataAndEvents) {
                     self._sendWithProbability(onComplete, "cs.editor.synonym.hide", "hide synonymous card action", $$Log.LogLevel.INFO, {
-                        notFoundCard : dataAndEvents
+                        notFoundCard: dataAndEvents
                     });
                 };
                 /**
@@ -15097,8 +15069,8 @@
                  */
                 this.couldNotParseTransform = function(dataAndEvents, deepDataAndEvents) {
                     self._send("cs.cards.transforms.parse.error", "Could not parse transform in inline cards", $$Log.LogLevel.WARN, {
-                        transformHTML : dataAndEvents,
-                        fallbackParseSuccessful : deepDataAndEvents
+                        transformHTML: dataAndEvents,
+                        fallbackParseSuccessful: deepDataAndEvents
                     });
                 };
                 /**
@@ -15108,8 +15080,8 @@
                  */
                 this.disabledTabLoad = function(deepDataAndEvents, dataAndEvents) {
                     self._sendUsage("usage.loadOnDisabledTab", "tab load event with disabled extension", $$Log.LogLevel.INFO, {
-                        domain : deepDataAndEvents,
-                        accountType : dataAndEvents
+                        domain: deepDataAndEvents,
+                        accountType: dataAndEvents
                     });
                 };
                 /**
@@ -15121,10 +15093,10 @@
                  */
                 this.initSession = function(domain, res, inType, req) {
                     self._sendUsage("usage.session.init", "init in the field", $$Log.LogLevel.INFO, {
-                        domain : domain,
-                        accountType : res,
-                        fieldType : inType,
-                        fieldSupported : req
+                        domain: domain,
+                        accountType: res,
+                        fieldType: inType,
+                        fieldSupported: req
                     });
                 };
                 /**
@@ -15135,14 +15107,14 @@
                  */
                 this.cardFirstInteraction = function(domain, dataAndEvents, inType) {
                     self._sendUsage("usage.card.interaction", "interaction with card in the field", $$Log.LogLevel.INFO, {
-                        domain : domain,
-                        accountType : dataAndEvents,
-                        fieldType : inType
+                        domain: domain,
+                        accountType: dataAndEvents,
+                        fieldType: inType
                     });
                 };
             }
-            return(0, result["default"])(clone, [{
-                key : "_send",
+            return (0, result["default"])(clone, [{
+                key: "_send",
                 /**
                  * @param {string} type
                  * @param {string} newValue
@@ -15150,7 +15122,7 @@
                  * @param {string} func
                  * @return {undefined}
                  */
-                value : function(type, newValue, thisValue, func) {
+                value: function(type, newValue, thisValue, func) {
                     var name = void 0;
                     try {
                         name = (0, h["default"])(func);
@@ -15161,14 +15133,14 @@
                     }
                     try {
                         this._sendFelog(type, newValue, thisValue, null !== func ? {
-                            json : name
+                            json: name
                         } : void 0);
                     } catch (error) {
                         console.warn("Failed to send felog for " + newValue + "@" + type + ": '" + error + "', '" + (error && error.message) + "'");
                     }
                 }
             }, {
-                key : "_sendUsage",
+                key: "_sendUsage",
                 /**
                  * @param {string} name
                  * @param {?} newValue
@@ -15176,11 +15148,11 @@
                  * @param {?} factor
                  * @return {undefined}
                  */
-                value : function(name, newValue, thisValue, factor) {
+                value: function(name, newValue, thisValue, factor) {
                     this._sendFelogUsage(name, newValue, thisValue, factor);
                 }
             }, {
-                key : "_sendWithProbability",
+                key: "_sendWithProbability",
                 /**
                  * @param {string} name
                  * @param {string} req
@@ -15189,61 +15161,61 @@
                  * @param {?} newValue
                  * @return {undefined}
                  */
-                value : function(name, req, o, callback, newValue) {
+                value: function(name, req, o, callback, newValue) {
                     if (name > Math.random()) {
                         this._send(req, o, callback, newValue);
                     }
                 }
             }, {
-                key : "setUserId",
+                key: "setUserId",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._setUserId(name);
                 }
             }, {
-                key : "setContainerId",
+                key: "setContainerId",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._setContainerId(name);
                 }
             }, {
-                key : "notificationShown",
+                key: "notificationShown",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._send("cs.notification.show", "show notification on the page", $$Log.LogLevel.INFO, {
-                        type : name
+                        type: name
                     });
                 }
             }, {
-                key : "notificationHide",
+                key: "notificationHide",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     this._send("cs.notification.hide", "hide notification on the page", $$Log.LogLevel.INFO, {
-                        type : name
+                        type: name
                     });
                 }
             }]), clone;
         }();
         expectedNumberOfNonCommentArgs.Telemetry = Telemetry;
     }, {
-        "./felog" : 189,
-        "babel-runtime/core-js/json/stringify" : 16,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28
+        "./felog": 189,
+        "babel-runtime/core-js/json/stringify": 16,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28
     }],
-    196 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    196: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @return {?}
          */
@@ -15251,12 +15223,12 @@
             return window.tracker = window.tracker || {}, window.tracker;
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.tracker = value;
     }, {}],
-    197 : [function(requestAnimFrame, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    197: [function(requestAnimFrame, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {string} url
          * @param {string} code
@@ -15337,7 +15309,7 @@
             return dataAndEvents + "&" + callFunc(funcToCall, condition);
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var req = requestAnimFrame("./newConfig");
         /** @type {function (string, string): ?} */
@@ -15359,16 +15331,16 @@
         /** @type {function (string, string, string): ?} */
         expectedNumberOfNonCommentArgs.addParamsToUpgradeURL = testWatchedByMultiple;
     }, {
-        "./newConfig" : 172
+        "./newConfig": 172
     }],
-    198 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    198: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -15378,7 +15350,7 @@
         function hasClass(selector) {
             /** @type {boolean} */
             var OPERA_QSAPI = ["freeeeeeee@grammarly.com", "premiumuser@grammarly.com"].indexOf(selector) !== -1;
-            return!OPERA_QSAPI && /^.*@grammarly.com$/.test(selector);
+            return !OPERA_QSAPI && /^.*@grammarly.com$/.test(selector);
         }
         /**
          * @return {?}
@@ -15391,7 +15363,7 @@
          * @return {?}
          */
         function isFunction(obj) {
-            return!!(obj && (obj.constructor && (obj.call && obj.apply)));
+            return !!(obj && (obj.constructor && (obj.call && obj.apply)));
         }
         /**
          * @param {?} key
@@ -15438,7 +15410,7 @@
          * @return {?}
          */
         function S4() {
-            return(65536 * (1 + Math.random()) | 0).toString(16).substring(1);
+            return (65536 * (1 + Math.random()) | 0).toString(16).substring(1);
         }
         /**
          * @return {?}
@@ -15449,8 +15421,7 @@
         /**
          * @return {undefined}
          */
-        function f() {
-        }
+        function f() {}
         /**
          * @return {?}
          */
@@ -15484,7 +15455,7 @@
          * @return {?}
          */
         function assert(qualifier) {
-            return/^[-!#$%&\'*+\\.\/0-9=?A-Z^_`a-z{|}~]+@[-!#$%&\'*+\\/0-9=?A-Z^_`a-z{|}~]+\.[-!#$%&\'*+\\.\/0-9=?A-Z^_`a-z{|}~]+$/.test(qualifier);
+            return /^[-!#$%&\'*+\\.\/0-9=?A-Z^_`a-z{|}~]+@[-!#$%&\'*+\\/0-9=?A-Z^_`a-z{|}~]+\.[-!#$%&\'*+\\.\/0-9=?A-Z^_`a-z{|}~]+$/.test(qualifier);
         }
         /**
          * @param {?} str
@@ -15535,15 +15506,15 @@
          * @return {?}
          */
         function onSuccess(res, expectedNumberOfNonCommentArgs) {
-            return(0, result["default"])(expectedNumberOfNonCommentArgs).reduce(function(deepDataAndEvents, method) {
-                return(0, h["default"])({}, deepDataAndEvents, (0, elem["default"])({}, method, function() {
+            return (0, result["default"])(expectedNumberOfNonCommentArgs).reduce(function(deepDataAndEvents, method) {
+                return (0, h["default"])({}, deepDataAndEvents, (0, elem["default"])({}, method, function() {
                     /** @type {number} */
                     var expectedNumberOfNonCommentArgs = arguments.length;
                     /** @type {Array} */
                     var args = Array(expectedNumberOfNonCommentArgs);
                     /** @type {number} */
                     var $_i = 0;
-                    for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                    for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                         args[$_i] = arguments[$_i];
                     }
                     return res.then(function() {
@@ -15599,8 +15570,7 @@
             /**
              * @return {undefined}
              */
-            var Type = function() {
-            };
+            var Type = function() {};
             return Type.prototype = extend(), Type;
         }
         /**
@@ -15629,15 +15599,15 @@
             /** @type {number} */
             var i = 0;
             var aLength = a.length;
-            for (;i < aLength;i++) {
+            for (; i < aLength; i++) {
                 if (a[i] > b[i]) {
                     return 1;
                 }
                 if (a[i] < b[i]) {
-                    return-1;
+                    return -1;
                 }
             }
-            return-1;
+            return -1;
         }
         /**
          * @return {?}
@@ -15646,7 +15616,7 @@
             return init(this, void 0, void 0, item["default"].mark(function init() {
                 return item["default"].wrap(function(stream) {
                     for (;;) {
-                        switch(stream.prev = stream.next) {
+                        switch (stream.prev = stream.next) {
                             case 0:
                                 if (d.isChrome() || d.isFF()) {
                                     /** @type {number} */
@@ -15670,7 +15640,9 @@
                                 return stream.stop();
                         }
                     }
-                }, init, this, [[2, 8]]);
+                }, init, this, [
+                    [2, 8]
+                ]);
             }));
         }
         /**
@@ -15716,11 +15688,11 @@
             var keys = [];
             /** @type {Array} */
             var arr = [];
-            return{
+            return {
                 /** @type {function (): ?} */
-                take : process,
+                take: process,
                 /** @type {function (?): undefined} */
-                put : flush
+                put: flush
             };
         }
         /**
@@ -15799,7 +15771,7 @@
          * @return {?}
          */
         var init = function(expectedNumberOfNonCommentArgs, args, config, self) {
-            return new (config || (config = options["default"]))(function(iterator, $timeout) {
+            return new(config || (config = options["default"]))(function(iterator, $timeout) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -15839,7 +15811,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var _ = require("lodash");
         var md5 = require("non-crypto-hash");
@@ -15954,24 +15926,24 @@
         /** @type {function (string): ?} */
         expectedNumberOfNonCommentArgs.escapeRegExp = escapeRegExp;
     }, {
-        "./newConfig" : 172,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        "babel-runtime/regenerator" : 35,
-        lodash : "lodash",
-        "non-crypto-hash" : "non-crypto-hash"
+        "./newConfig": 172,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        "babel-runtime/regenerator": 35,
+        lodash: "lodash",
+        "non-crypto-hash": "non-crypto-hash"
     }],
-    199 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    199: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -15981,7 +15953,7 @@
          */
         function init(fn, array) {
             var expectedNumberOfNonCommentArgs;
-            return(expectedNumberOfNonCommentArgs = []).concat.apply(expectedNumberOfNonCommentArgs, (0, c["default"])(array.map(fn)));
+            return (expectedNumberOfNonCommentArgs = []).concat.apply(expectedNumberOfNonCommentArgs, (0, c["default"])(array.map(fn)));
         }
         /**
          * @param {?} callback
@@ -15995,7 +15967,7 @@
             var cur = failing_message;
             /** @type {number} */
             var i = 0;
-            for (;i < codeSegments.length;i++) {
+            for (; i < codeSegments.length; i++) {
                 cur = callback(cur, codeSegments[i]);
                 eventPath.push(cur);
             }
@@ -16044,14 +16016,14 @@
             var j = 0;
             /** @type {number} */
             var i = 0;
-            for (;i < a.length;i++) {
+            for (; i < a.length; i++) {
                 if (fn(a[i])) {
                     t[k++] = a[i];
                 } else {
                     target[j++] = a[i];
                 }
             }
-            return[t, target];
+            return [t, target];
         }
         /**
          * @param {number} size
@@ -16063,13 +16035,15 @@
                 throw new Error("Invalid chunk size, expected > 0");
             }
             if (0 === filter.length) {
-                return[[]];
+                return [
+                    []
+                ];
             }
             /** @type {Array} */
             var resp = [];
             /** @type {number} */
             var i = 0;
-            for (;i < Math.ceil(filter.length / size);i++) {
+            for (; i < Math.ceil(filter.length / size); i++) {
                 resp.push(filter.slice(i * size, (i + 1) * size));
             }
             return resp;
@@ -16083,7 +16057,7 @@
             /** @type {Array} */
             var ret = [];
             var elems = fn(item);
-            for (;void 0 !== elems;) {
+            for (; void 0 !== elems;) {
                 ret.push(elems[0]);
                 elems = fn(elems[1]);
             }
@@ -16106,7 +16080,7 @@
         var complete = require("babel-runtime/helpers/toConsumableArray");
         var c = Event(complete);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (Function, Array): ?} */
         expectedNumberOfNonCommentArgs.flatMap = init;
@@ -16127,17 +16101,17 @@
         /** @type {function (Object, Object): ?} */
         expectedNumberOfNonCommentArgs.range = map;
     }, {
-        "babel-runtime/core-js/array/from" : 13,
-        "babel-runtime/helpers/toConsumableArray" : 33
+        "babel-runtime/core-js/array/from": 13,
+        "babel-runtime/helpers/toConsumableArray": 33
     }],
-    200 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    200: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -16172,7 +16146,7 @@
         var target = require("babel-runtime/helpers/inherits");
         var targets = Event(target);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var AssertionError = function(_super) {
             /**
@@ -16180,9 +16154,9 @@
              * @return {?}
              */
             function process(e) {
-                return(0, elem["default"])(this, process), (0, event["default"])(this, (process.__proto__ || (0, c["default"])(process)).call(this, "Assertion failed: " + (e ? "string" === typeof e ? e : e() : "(unnamed)")));
+                return (0, elem["default"])(this, process), (0, event["default"])(this, (process.__proto__ || (0, c["default"])(process)).call(this, "Assertion failed: " + (e ? "string" === typeof e ? e : e() : "(unnamed)")));
             }
-            return(0, targets["default"])(process, _super), process;
+            return (0, targets["default"])(process, _super), process;
         }(Error);
         expectedNumberOfNonCommentArgs.AssertionError = AssertionError;
         /** @type {function (boolean, string): undefined} */
@@ -16190,19 +16164,19 @@
         /** @type {function (number, string): ?} */
         expectedNumberOfNonCommentArgs.assertNonNull = fix;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31
     }],
-    201 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    201: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function parseInt(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -16279,7 +16253,7 @@
         var text = require("babel-runtime/helpers/createClass");
         var type = parseInt(text);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var chai = require("./assert");
         expectedNumberOfNonCommentArgs.assert = chai.assert;
@@ -16301,13 +16275,13 @@
                 /** @type {(Object|number)} */
                 this._getFallbackValue = elem;
             }
-            return(0, type["default"])(restoreScript, [{
-                key : "init",
+            return (0, type["default"])(restoreScript, [{
+                key: "init",
                 /**
                  * @param {Object} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     if (void 0 !== this._value) {
                         throw new Error("Global value already initialized.");
                     }
@@ -16315,11 +16289,11 @@
                     this._value = name;
                 }
             }, {
-                key : "get",
+                key: "get",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     if (void 0 === this._value) {
                         if (void 0 === this._getFallbackValue) {
                             throw new Error("Global value not initialized and no fallback value provided.");
@@ -16341,9 +16315,9 @@
              * @return {?}
              */
             function value(domain) {
-                return(0, row["default"])(this, value), (0, result["default"])(this, (value.__proto__ || (0, bp["default"])(value)).call(this, "Matching not exhaustive" + (domain ? ": unexpected value " + domain : "")));
+                return (0, row["default"])(this, value), (0, result["default"])(this, (value.__proto__ || (0, bp["default"])(value)).call(this, "Matching not exhaustive" + (domain ? ": unexpected value " + domain : "")));
             }
-            return(0, column["default"])(value, _super), value;
+            return (0, column["default"])(value, _super), value;
         }(Error);
         expectedNumberOfNonCommentArgs.MatchingNotExhaustiveError = Test;
         /** @type {function (string): ?} */
@@ -16355,24 +16329,24 @@
         /** @type {function (Function, Function): ?} */
         expectedNumberOfNonCommentArgs.try_ = exports;
     }, {
-        "./array" : 199,
-        "./assert" : 200,
-        "./object" : 202,
-        "./promise" : 203,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31
+        "./array": 199,
+        "./assert": 200,
+        "./object": 202,
+        "./promise": 203,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31
     }],
-    202 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    202: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -16382,7 +16356,7 @@
          */
         function onSuccess(handler, contacts) {
             var curJson = {};
-            return(0, iterator["default"])(contacts).forEach(function(key) {
+            return (0, iterator["default"])(contacts).forEach(function(key) {
                 return curJson[key] = handler(key, contacts[key]);
             }), curJson;
         }
@@ -16393,7 +16367,7 @@
          */
         function close(callback, options) {
             var internalValues = {};
-            return(0, iterator["default"])(options).forEach(function(key) {
+            return (0, iterator["default"])(options).forEach(function(key) {
                 if (callback(key, options[key])) {
                     internalValues[key] = options[key];
                 }
@@ -16404,7 +16378,7 @@
          * @return {?}
          */
         function values(expectedNumberOfNonCommentArgs) {
-            return(0, iterator["default"])(expectedNumberOfNonCommentArgs).map(function(timeoutKey) {
+            return (0, iterator["default"])(expectedNumberOfNonCommentArgs).map(function(timeoutKey) {
                 return expectedNumberOfNonCommentArgs[timeoutKey];
             });
         }
@@ -16413,14 +16387,14 @@
          * @return {?}
          */
         function pluck(collection) {
-            return(0, iterator["default"])(collection).map(function(method) {
-                return[method, collection[method]];
+            return (0, iterator["default"])(collection).map(function(method) {
+                return [method, collection[method]];
             });
         }
         var value = proceed("babel-runtime/core-js/object/keys");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (Function, Array): ?} */
         expectedNumberOfNonCommentArgs.map = onSuccess;
@@ -16431,25 +16405,25 @@
         /** @type {function (Array): ?} */
         expectedNumberOfNonCommentArgs.pairs = pluck;
     }, {
-        "babel-runtime/core-js/object/keys" : 22
+        "babel-runtime/core-js/object/keys": 22
     }],
-    203 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    203: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var value = proceed("babel-runtime/core-js/promise");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var SafePromise;
-        !function(calendar) {
+        ! function(calendar) {
             /**
              * @param {Object} expectedNumberOfNonCommentArgs
              * @return {?}
@@ -16469,20 +16443,20 @@
                     /** @type {(number|string)} */
                     error = err;
                 });
-                return{
-                    promise : getPromise,
+                return {
+                    promise: getPromise,
                     /**
                      * @param {Object} expectedNumberOfNonCommentArgs
                      * @return {undefined}
                      */
-                    resolve : function(expectedNumberOfNonCommentArgs) {
+                    resolve: function(expectedNumberOfNonCommentArgs) {
                         resolveWith(expectedNumberOfNonCommentArgs);
                     },
                     /**
                      * @param {Object} silent
                      * @return {undefined}
                      */
-                    reject : function(silent) {
+                    reject: function(silent) {
                         error(silent);
                     }
                 };
@@ -16504,16 +16478,16 @@
             calendar.sync = sync;
         }(SafePromise = expectedNumberOfNonCommentArgs.SafePromise || (expectedNumberOfNonCommentArgs.SafePromise = {}));
     }, {
-        "babel-runtime/core-js/promise" : 24
+        "babel-runtime/core-js/promise": 24
     }],
-    204 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    204: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var dom = require("babel-runtime/core-js/json/stringify");
@@ -16540,7 +16514,7 @@
          * @return {?}
          */
         var then = function(expectedNumberOfNonCommentArgs, opt_attributes, lastArrayIdSentFromServer, next) {
-            return new (lastArrayIdSentFromServer || (lastArrayIdSentFromServer = ret["default"]))(function(iterator, fail) {
+            return new(lastArrayIdSentFromServer || (lastArrayIdSentFromServer = ret["default"]))(function(iterator, fail) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -16580,7 +16554,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         /**
          * @param {string} elem
@@ -16592,7 +16566,7 @@
                 var data;
                 return result["default"].wrap(function(self) {
                     for (;;) {
-                        switch(self.prev = self.next) {
+                        switch (self.prev = self.next) {
                             case 0:
                                 return self.prev = 0, self.next = 3, data_user.get(elem);
                             case 3:
@@ -16623,7 +16597,9 @@
                                 return self.stop();
                         }
                     }
-                }, end, this, [[0, 11]]);
+                }, end, this, [
+                    [0, 11]
+                ]);
             }));
         };
         /**
@@ -16647,7 +16623,7 @@
                     var self = this;
                     return result["default"].wrap(function(self) {
                         for (;;) {
-                            switch(self.prev = self.next) {
+                            switch (self.prev = self.next) {
                                 case 0:
                                     if (_ = Array.isArray(expectedNumberOfNonCommentArgs), i = void 0, self.prev = 2, !_) {
                                         /** @type {number} */
@@ -16660,7 +16636,7 @@
                                 case 7:
                                     c = self.sent;
                                     i = expectedNumberOfNonCommentArgs.reduce(function(deepDataAndEvents, opt_obj2, eventName) {
-                                        return(0, option["default"])(deepDataAndEvents, (0, elements["default"])({}, opt_obj2, c[eventName]));
+                                        return (0, option["default"])(deepDataAndEvents, (0, elements["default"])({}, opt_obj2, c[eventName]));
                                     }, {});
                                     /** @type {number} */
                                     self.next = 15;
@@ -16689,7 +16665,9 @@
                                     return self.stop();
                             }
                         }
-                    }, initialize, this, [[2, 17]]);
+                    }, initialize, this, [
+                        [2, 17]
+                    ]);
                 }));
             };
             /**
@@ -16702,7 +16680,7 @@
                     var record = this;
                     return result["default"].wrap(function(node) {
                         for (;;) {
-                            switch(node.prev = node.next) {
+                            switch (node.prev = node.next) {
                                 case 0:
                                     if (null === expectedNumberOfNonCommentArgs || "object" !== ("undefined" === typeof expectedNumberOfNonCommentArgs ? "undefined" : (0, update["default"])(expectedNumberOfNonCommentArgs))) {
                                         /** @type {number} */
@@ -16733,7 +16711,9 @@
                                     return node.stop();
                             }
                         }
-                    }, test, this, [[5, 11]]);
+                    }, test, this, [
+                        [5, 11]
+                    ]);
                 }));
             };
             /**
@@ -16746,7 +16726,7 @@
                     var src;
                     return result["default"].wrap(function(self) {
                         for (;;) {
-                            switch(self.prev = self.next) {
+                            switch (self.prev = self.next) {
                                 case 0:
                                     return self.next = 2, this._api.getAll();
                                 case 2:
@@ -16759,8 +16739,7 @@
                                                 src = target[name];
                                                 /** @type {*} */
                                                 target[name] = src && JSON.parse(src);
-                                            } catch (e) {
-                                            }
+                                            } catch (e) {}
                                         }
                                     }
                                     return self.abrupt("return", target);
@@ -16800,49 +16779,49 @@
         /** @type {function (Object): undefined} */
         expectedNumberOfNonCommentArgs.PrefsImpl = PrefsImpl;
     }, {
-        "babel-runtime/core-js/json/stringify" : 16,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/core-js/object/keys" : 22,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/typeof" : 34,
-        "babel-runtime/regenerator" : 35
+        "babel-runtime/core-js/json/stringify": 16,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/core-js/object/keys": 22,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/typeof": 34,
+        "babel-runtime/regenerator": 35
     }],
-    205 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    205: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var value = require("babel-runtime/core-js/object/assign");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var helper = require("./user/actions");
         var nodes = require("./settings/actions");
         var Block = require("./connection/actions");
         expectedNumberOfNonCommentArgs.pureActions = (0, iterator["default"])({}, helper, Block, nodes);
     }, {
-        "./connection/actions" : 206,
-        "./settings/actions" : 208,
-        "./user/actions" : 212,
-        "babel-runtime/core-js/object/assign" : 17
+        "./connection/actions": 206,
+        "./settings/actions": 208,
+        "./user/actions": 212,
+        "babel-runtime/core-js/object/assign": 17
     }],
-    206 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    206: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {boolean} textStatus
          * @return {?}
          */
         function error(textStatus) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.UPDATE_CONNECTION,
-                data : textStatus
+            return {
+                type: expectedNumberOfNonCommentArgs.t.UPDATE_CONNECTION,
+                data: textStatus
             };
         }
         /**
@@ -16850,31 +16829,31 @@
          * @return {?}
          */
         function compileNode(o) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.ONLINE_STATE,
-                online : o
+            return {
+                type: expectedNumberOfNonCommentArgs.t.ONLINE_STATE,
+                online: o
             };
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.t = {
-            UPDATE_CONNECTION : "connection/UPDATE_CONNECTION",
-            ONLINE_STATE : "connection/ONLINE_STATE"
+            UPDATE_CONNECTION: "connection/UPDATE_CONNECTION",
+            ONLINE_STATE: "connection/ONLINE_STATE"
         };
         /** @type {function (boolean): ?} */
         expectedNumberOfNonCommentArgs.updateConnection = error;
         /** @type {function (?): ?} */
         expectedNumberOfNonCommentArgs.onlineConnection = compileNode;
     }, {}],
-    207 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    207: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function h(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -16886,13 +16865,13 @@
             var type = element.type;
             var names = element.data;
             var online = element.online;
-            switch(type) {
+            switch (type) {
                 case i18n.t.ONLINE_STATE:
-                    return(0, elem["default"])({}, best, {
-                        online : online
+                    return (0, elem["default"])({}, best, {
+                        online: online
                     });
                 case i18n.t.UPDATE_CONNECTION:
-                    return(0, elem["default"])({}, best, names);
+                    return (0, elem["default"])({}, best, names);
                 default:
                     return best;
             }
@@ -16900,31 +16879,31 @@
         var selector = require("babel-runtime/core-js/object/assign");
         var elem = h(selector);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var i18n = require("./actions");
         expectedNumberOfNonCommentArgs.defaultConnection = {
-            networkOffline : !window.navigator.onLine,
-            cookiesDisabled : navigator.cookieEnabled === false,
-            online : true
+            networkOffline: !window.navigator.onLine,
+            cookiesDisabled: navigator.cookieEnabled === false,
+            online: true
         };
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.connectionReducer = show;
     }, {
-        "./actions" : 206,
-        "babel-runtime/core-js/object/assign" : 17
+        "./actions": 206,
+        "babel-runtime/core-js/object/assign": 17
     }],
-    208 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    208: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} textStatus
          * @param {Object} request
          * @return {?}
          */
         function error(textStatus, request) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_DAPI_PROP,
-                propKey : textStatus,
-                data : request
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_DAPI_PROP,
+                propKey: textStatus,
+                data: request
             };
         }
         /**
@@ -16932,9 +16911,9 @@
          * @return {?}
          */
         function build(task) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.CHANGE_WEAK_DIALECT,
-                data : task
+            return {
+                type: expectedNumberOfNonCommentArgs.t.CHANGE_WEAK_DIALECT,
+                data: task
             };
         }
         /**
@@ -16942,9 +16921,9 @@
          * @return {?}
          */
         function getQuatertionFromEuler(z) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.CHANGE_STRONG_DIALECT,
-                data : z
+            return {
+                type: expectedNumberOfNonCommentArgs.t.CHANGE_STRONG_DIALECT,
+                data: z
             };
         }
         /**
@@ -16952,9 +16931,9 @@
          * @return {?}
          */
         function selector_sortOrder(b) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SETTINGS_INITIAL,
-                data : b
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SETTINGS_INITIAL,
+                data: b
             };
         }
         /**
@@ -16962,10 +16941,10 @@
          * @return {?}
          */
         function compileNode(o) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.TOGGLE_DEFS,
+            return {
+                type: expectedNumberOfNonCommentArgs.t.TOGGLE_DEFS,
                 /** @type {Function} */
-                enabledDefs : o
+                enabledDefs: o
             };
         }
         /**
@@ -16974,11 +16953,11 @@
          * @return {?}
          */
         function fn(value, b) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.TOGGLE_SITE,
-                domain : b,
+            return {
+                type: expectedNumberOfNonCommentArgs.t.TOGGLE_SITE,
+                domain: b,
                 /** @type {Function} */
-                enabled : value
+                enabled: value
             };
         }
         /**
@@ -16987,34 +16966,34 @@
          * @return {?}
          */
         function run(task, domain) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.TOGGLE_FIELD,
-                domain : domain,
-                data : task
+            return {
+                type: expectedNumberOfNonCommentArgs.t.TOGGLE_FIELD,
+                domain: domain,
+                data: task
             };
         }
         /**
          * @return {?}
          */
         function scanPunctuator() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SEEN_NEWS
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SEEN_NEWS
             };
         }
         /**
          * @return {?}
          */
         function buildRule() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SHOW_ONBOARDING
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SHOW_ONBOARDING
             };
         }
         /**
          * @return {?}
          */
         function compileOptions() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SEEN_ONBOARDING
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SEEN_ONBOARDING
             };
         }
         /**
@@ -17022,25 +17001,25 @@
          * @return {?}
          */
         function scheduleFunction(recurring) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SHOW_NEWS,
-                showNews : recurring
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SHOW_NEWS,
+                showNews: recurring
             };
         }
         /**
          * @return {?}
          */
         function findIndex() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SEEN_REFERRALS
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SEEN_REFERRALS
             };
         }
         /**
          * @return {?}
          */
         function escaped() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.CLICK_REFERRALS
+            return {
+                type: expectedNumberOfNonCommentArgs.t.CLICK_REFERRALS
             };
         }
         /**
@@ -17048,9 +17027,9 @@
          * @return {?}
          */
         function clone(dataAndEvents) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.TOGGLE_POPUP,
-                isPopupDisabled : dataAndEvents
+            return {
+                type: expectedNumberOfNonCommentArgs.t.TOGGLE_POPUP,
+                isPopupDisabled: dataAndEvents
             };
         }
         /**
@@ -17058,9 +17037,9 @@
          * @return {?}
          */
         function create(domain) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.ENABLE_EMAIL_FEEDBACK,
-                domain : domain
+            return {
+                type: expectedNumberOfNonCommentArgs.t.ENABLE_EMAIL_FEEDBACK,
+                domain: domain
             };
         }
         /**
@@ -17068,9 +17047,9 @@
          * @return {?}
          */
         function shuffle(obj) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SAVE_ANONYMOUS_PROPERTIES,
-                props : obj
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SAVE_ANONYMOUS_PROPERTIES,
+                props: obj
             };
         }
         /**
@@ -17078,27 +17057,27 @@
          * @return {?}
          */
         function report(failing_message) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SEEN_EMAIL_PERCEPTION_POPUP,
-                seenEmailPerceptionPopupDate : failing_message
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SEEN_EMAIL_PERCEPTION_POPUP,
+                seenEmailPerceptionPopupDate: failing_message
             };
         }
         /**
          * @return {?}
          */
         function kw() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_EMAIL_PERCEPTION_POPUP_STATE,
-                emailPerceptionPopupEnabled : false
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_EMAIL_PERCEPTION_POPUP_STATE,
+                emailPerceptionPopupEnabled: false
             };
         }
         /**
          * @return {?}
          */
         function scanVarargLiteral() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_EMAIL_PERCEPTION_POPUP_STATE,
-                emailPerceptionPopupEnabled : true
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_EMAIL_PERCEPTION_POPUP_STATE,
+                emailPerceptionPopupEnabled: true
             };
         }
         /**
@@ -17107,18 +17086,18 @@
          * @return {?}
          */
         function test(title, id) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SAVE_FEEDBACK_DATA,
-                subject : title,
-                docId : id
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SAVE_FEEDBACK_DATA,
+                subject: title,
+                docId: id
             };
         }
         /**
          * @return {?}
          */
         function diff_cleanupSemanticScore_() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.DISABLE_ON_TAB
+            return {
+                type: expectedNumberOfNonCommentArgs.t.DISABLE_ON_TAB
             };
         }
         /**
@@ -17126,42 +17105,43 @@
          * @return {?}
          */
         function request(domain) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SHOW_DISABLE_REMINDER,
-                domain : domain
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SHOW_DISABLE_REMINDER,
+                domain: domain
             };
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.t = {
-            SETTINGS_INITIAL : "settings/SETTINGS_INITIAL",
-            TOGGLE_DEFS : "settings/TOGGLE_DEFS",
-            TOGGLE_SITE : "settings/TOGGLE_SITE",
-            TOGGLE_FIELD : "settings/TOGGLE_FIELD",
-            TOGGLE_POPUP : "settings/TOGGLE_POPUP",
-            DISABLE_ON_TAB : "settings/DISABLE_ON_TAB",
-            SHOW_DISABLE_REMINDER : "settings/SHOW_DISABLE_REMINDER",
-            SHOW_NEWS : "settings/SHOW_NEWS",
-            SEEN_NEWS : "settings/SEEN_NEWS",
-            SEEN_REFERRALS : "settings/SEEN_REFERRALS",
-            CLICK_REFERRALS : "settings/CLICK_REFERRALS",
-            SHOW_ONBOARDING : "settings/SHOW_ONBOARDING",
-            SEEN_ONBOARDING : "settings/SEEN_ONBOARDING",
-            SET_DAPI_PROP : "settings/SET_DAPI_PROP",
-            CHANGE_WEAK_DIALECT : "settings/CHANGE_WEAK_DIALECT",
-            CHANGE_STRONG_DIALECT : "settings/CHANGE_STRONG_DIALECT",
-            SAVE_ANONYMOUS_PROPERTIES : "settings/SAVE_ANONYMOUS_PROPERTIES",
-            ENABLE_EMAIL_FEEDBACK : "settings/ENABLE_EMAIL_FEEDBACK",
-            SAVE_FEEDBACK_DATA : "settings/SAVE_FEEDBACK_DATA",
-            SEEN_EMAIL_PERCEPTION_POPUP : "settings/EMAIL_PERCEPTION_POPUP_SEEN",
-            SET_EMAIL_PERCEPTION_POPUP_STATE : "settings/SET_EMAIL_PERCEPTION_POPUP_STATE"
+            SETTINGS_INITIAL: "settings/SETTINGS_INITIAL",
+            TOGGLE_DEFS: "settings/TOGGLE_DEFS",
+            TOGGLE_SITE: "settings/TOGGLE_SITE",
+            TOGGLE_FIELD: "settings/TOGGLE_FIELD",
+            TOGGLE_POPUP: "settings/TOGGLE_POPUP",
+            DISABLE_ON_TAB: "settings/DISABLE_ON_TAB",
+            SHOW_DISABLE_REMINDER: "settings/SHOW_DISABLE_REMINDER",
+            SHOW_NEWS: "settings/SHOW_NEWS",
+            SEEN_NEWS: "settings/SEEN_NEWS",
+            SEEN_REFERRALS: "settings/SEEN_REFERRALS",
+            CLICK_REFERRALS: "settings/CLICK_REFERRALS",
+            SHOW_ONBOARDING: "settings/SHOW_ONBOARDING",
+            SEEN_ONBOARDING: "settings/SEEN_ONBOARDING",
+            SET_DAPI_PROP: "settings/SET_DAPI_PROP",
+            CHANGE_WEAK_DIALECT: "settings/CHANGE_WEAK_DIALECT",
+            CHANGE_STRONG_DIALECT: "settings/CHANGE_STRONG_DIALECT",
+            SAVE_ANONYMOUS_PROPERTIES: "settings/SAVE_ANONYMOUS_PROPERTIES",
+            ENABLE_EMAIL_FEEDBACK: "settings/ENABLE_EMAIL_FEEDBACK",
+            SAVE_FEEDBACK_DATA: "settings/SAVE_FEEDBACK_DATA",
+            SEEN_EMAIL_PERCEPTION_POPUP: "settings/EMAIL_PERCEPTION_POPUP_SEEN",
+            SET_EMAIL_PERCEPTION_POPUP_STATE: "settings/SET_EMAIL_PERCEPTION_POPUP_STATE"
         };
         /** @type {Array} */
         expectedNumberOfNonCommentArgs.DAPI_ACTIONS = [expectedNumberOfNonCommentArgs.t.CHANGE_WEAK_DIALECT, expectedNumberOfNonCommentArgs.t.CHANGE_STRONG_DIALECT];
         /** @type {Array} */
         expectedNumberOfNonCommentArgs.CACHED_ACTIONS = [expectedNumberOfNonCommentArgs.t.TOGGLE_DEFS, expectedNumberOfNonCommentArgs.t.TOGGLE_SITE, expectedNumberOfNonCommentArgs.t.TOGGLE_FIELD, expectedNumberOfNonCommentArgs.t.SEEN_NEWS, expectedNumberOfNonCommentArgs.t.SEEN_REFERRALS, expectedNumberOfNonCommentArgs.t.CLICK_REFERRALS, expectedNumberOfNonCommentArgs.t.SHOW_ONBOARDING, expectedNumberOfNonCommentArgs.t.SEEN_ONBOARDING, expectedNumberOfNonCommentArgs.t.SEEN_EMAIL_PERCEPTION_POPUP, expectedNumberOfNonCommentArgs.t.SET_EMAIL_PERCEPTION_POPUP_STATE,
-            expectedNumberOfNonCommentArgs.t.SHOW_DISABLE_REMINDER];
+            expectedNumberOfNonCommentArgs.t.SHOW_DISABLE_REMINDER
+        ];
         /** @type {function (?, Object): ?} */
         expectedNumberOfNonCommentArgs.setDapiProp = error;
         /** @type {function (Object): ?} */
@@ -17207,14 +17187,14 @@
         /** @type {function (string): ?} */
         expectedNumberOfNonCommentArgs.showDisableReminder = request;
     }, {}],
-    209 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    209: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} s
          * @return {?}
          */
         function walk(s) {
             return s && s.__esModule ? s : {
-                "default" : s
+                "default": s
             };
         }
         /**
@@ -17235,89 +17215,89 @@
             var bench = options.emailPerceptionPopupEnabled;
             var which = options.propKey;
             var r20 = data[domain] || {};
-            switch(type) {
+            switch (type) {
                 case i18n.t.SETTINGS_INITIAL:
-                    return(0, result["default"])({}, data, computed);
+                    return (0, result["default"])({}, data, computed);
                 case i18n.t.TOGGLE_DEFS:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            enabledDefs : async
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            enabledDefs: async
                         })
                     });
                 case i18n.t.TOGGLE_SITE:
-                    return(0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, r20, {
-                        enabled : enabled,
-                        disabledDate : enabled === true ? null : Date.now()
+                    return (0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, r20, {
+                        enabled: enabled,
+                        disabledDate: enabled === true ? null : Date.now()
                     })));
                 case i18n.t.TOGGLE_FIELD:
-                    return(0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, data[domain], {
-                        disabledFields : (0, result["default"])({}, r20.disabledFields, computed)
+                    return (0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, data[domain], {
+                        disabledFields: (0, result["default"])({}, r20.disabledFields, computed)
                     })));
                 case i18n.t.ENABLE_EMAIL_FEEDBACK:
-                    return(0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, data[domain], {
-                        emailFeedbackEnabled : true
+                    return (0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, data[domain], {
+                        emailFeedbackEnabled: true
                     })));
                 case i18n.t.SHOW_NEWS:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            showNews : successCb
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            showNews: successCb
                         })
                     });
                 case i18n.t.SHOW_ONBOARDING:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            showOnboarding : true
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            showOnboarding: true
                         })
                     });
                 case i18n.t.SEEN_ONBOARDING:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            showOnboarding : false
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            showOnboarding: false
                         })
                     });
                 case i18n.t.SEEN_EMAIL_PERCEPTION_POPUP:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            seenEmailPerceptionPopupDate : stackStartFunction
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            seenEmailPerceptionPopupDate: stackStartFunction
                         })
                     });
                 case i18n.t.SET_EMAIL_PERCEPTION_POPUP_STATE:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            emailPerceptionPopupEnabled : bench
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            emailPerceptionPopupEnabled: bench
                         })
                     });
                 case i18n.t.SEEN_NEWS:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            seenNewsVersion : Block.newsId
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            seenNewsVersion: Block.newsId
                         })
                     });
                 case i18n.t.TOGGLE_POPUP:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            isPopupDisabled : thisArg
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            isPopupDisabled: thisArg
                         })
                     });
                 case i18n.t.SEEN_REFERRALS:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            referralNewsBadge : true
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            referralNewsBadge: true
                         })
                     });
                 case i18n.t.CLICK_REFERRALS:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, {
-                            referralWasClicked : true
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, {
+                            referralWasClicked: true
                         })
                     });
                 case i18n.t.SET_DAPI_PROP:
-                    return(0, result["default"])({}, data, {
-                        common : (0, result["default"])({}, data.common, (0, h["default"])({}, which, computed))
+                    return (0, result["default"])({}, data, {
+                        common: (0, result["default"])({}, data.common, (0, h["default"])({}, which, computed))
                     });
                 case i18n.t.SHOW_DISABLE_REMINDER:
-                    return(0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, r20, {
-                        disabledDate : Date.now()
+                    return (0, result["default"])({}, data, (0, h["default"])({}, domain, (0, result["default"])({}, r20, {
+                        disabledDate: Date.now()
                     })));
                 default:
                     return data;
@@ -17328,46 +17308,46 @@
         var nodes = require("babel-runtime/core-js/object/assign");
         var result = walk(nodes);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var Block = require("lib/config");
         var i18n = require("./actions");
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.settingsReducer = update;
     }, {
-        "./actions" : 208,
-        "babel-runtime/core-js/object/assign" : 17,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "lib/config" : 167
+        "./actions": 208,
+        "babel-runtime/core-js/object/assign": 17,
+        "babel-runtime/helpers/defineProperty": 29,
+        "lib/config": 167
     }],
-    210 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    210: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {boolean} textStatus
          * @return {?}
          */
         function error(textStatus) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_ACTIVE_TAB,
-                data : textStatus
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_ACTIVE_TAB,
+                data: textStatus
             };
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.t = {
-            SET_ACTIVE_TAB : "tabs/SET_ACTIVE_TAB"
+            SET_ACTIVE_TAB: "tabs/SET_ACTIVE_TAB"
         };
         /** @type {function (boolean): ?} */
         expectedNumberOfNonCommentArgs.setActiveTab = error;
     }, {}],
-    211 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    211: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -17378,10 +17358,10 @@
             var event = arguments[1];
             var type = event.type;
             var active = event.data;
-            switch(type) {
+            switch (type) {
                 case val.t.SET_ACTIVE_TAB:
-                    return(0, iterator["default"])({}, best, {
-                        active : active
+                    return (0, iterator["default"])({}, best, {
+                        active: active
                     });
                 default:
                     return best;
@@ -17390,24 +17370,24 @@
         var value = proceed("babel-runtime/core-js/object/assign");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var val = proceed("./actions");
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.tabsReducer = show;
     }, {
-        "./actions" : 210,
-        "babel-runtime/core-js/object/assign" : 17
+        "./actions": 210,
+        "babel-runtime/core-js/object/assign": 17
     }],
-    212 : [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
+    212: [function(dataAndEvents, deepDataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {Object} textStatus
          * @return {?}
          */
         function error(textStatus) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_USER,
-                data : textStatus
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_USER,
+                data: textStatus
             };
         }
         /**
@@ -17415,9 +17395,9 @@
          * @return {?}
          */
         function fn(task) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SET_SETTINGS,
-                data : task
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SET_SETTINGS,
+                data: task
             };
         }
         /**
@@ -17425,27 +17405,27 @@
          * @return {?}
          */
         function sign(x) {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.SESSION_INVALIDATE,
-                reason : x
+            return {
+                type: expectedNumberOfNonCommentArgs.t.SESSION_INVALIDATE,
+                reason: x
             };
         }
         /**
          * @return {?}
          */
         function scanPunctuator() {
-            return{
-                type : expectedNumberOfNonCommentArgs.t.INC_FIXED
+            return {
+                type: expectedNumberOfNonCommentArgs.t.INC_FIXED
             };
         }
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         expectedNumberOfNonCommentArgs.t = {
-            SET_USER : "user/SET_USER",
-            SET_SETTINGS : "user/SET_SETTINGS",
-            SESSION_INVALIDATE : "user/SESSION_INVALIDATE",
-            INC_FIXED : "user/INC_FIXED"
+            SET_USER: "user/SET_USER",
+            SET_SETTINGS: "user/SET_SETTINGS",
+            SESSION_INVALIDATE: "user/SESSION_INVALIDATE",
+            INC_FIXED: "user/INC_FIXED"
         };
         /** @type {function (Object): ?} */
         expectedNumberOfNonCommentArgs.setUser = error;
@@ -17456,14 +17436,14 @@
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.incFixed = scanPunctuator;
     }, {}],
-    213 : [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    213: [function(proceed, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -17475,17 +17455,17 @@
             var type = event.type;
             var value = event.data;
             var config = void 0 === value ? {} : value;
-            switch(type) {
+            switch (type) {
                 case val.t.SET_USER:
                     return config;
                 case val.t.SET_SETTINGS:
-                    return(0, iterator["default"])({}, best, {
-                        settings : config
+                    return (0, iterator["default"])({}, best, {
+                        settings: config
                     });
                 case val.t.INC_FIXED:
                     var fixed_errors = best.fixed_errors + 1;
-                    return(0, iterator["default"])({}, best, {
-                        fixed_errors : fixed_errors
+                    return (0, iterator["default"])({}, best, {
+                        fixed_errors: fixed_errors
                     });
                 default:
                     return best;
@@ -17494,27 +17474,27 @@
         var value = proceed("babel-runtime/core-js/object/assign");
         var iterator = lookupIterator(value);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var val = proceed("./actions");
         expectedNumberOfNonCommentArgs.defaultUser = {
-            anonymous : true,
-            premium : false
+            anonymous: true,
+            premium: false
         };
         /** @type {function (): ?} */
         expectedNumberOfNonCommentArgs.userReducer = show;
     }, {
-        "./actions" : 212,
-        "babel-runtime/core-js/object/assign" : 17
+        "./actions": 212,
+        "babel-runtime/core-js/object/assign": 17
     }],
-    214 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    214: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function func(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         /**
@@ -17523,18 +17503,18 @@
          */
         function debug(msg) {
             var removeListener = device.combineReducers({
-                user : subject.userReducer,
-                tabs : emptyJ.tabsReducer,
-                settings : opts.settingsReducer,
-                connection : self.connectionReducer
+                user: subject.userReducer,
+                tabs: emptyJ.tabsReducer,
+                settings: opts.settingsReducer,
+                connection: self.connectionReducer
             });
             var proplist = log({
-                level : "debug",
-                colors : {
+                level: "debug",
+                colors: {
                     /**
                      * @return {?}
                      */
-                    title : function() {
+                    title: function() {
                         return "green";
                     }
                 }
@@ -17548,7 +17528,7 @@
         var name = $("babel-runtime/helpers/classCallCheck");
         var item = func(name);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var log = $("redux-logger");
         var device = $("redux");
@@ -17585,10 +17565,10 @@
                 var args = Array(expectedNumberOfNonCommentArgs);
                 /** @type {number} */
                 var $_i = 0;
-                for (;$_i < expectedNumberOfNonCommentArgs;$_i++) {
+                for (; $_i < expectedNumberOfNonCommentArgs; $_i++) {
                     args[$_i] = arguments[$_i];
                 }
-                return(proxy = me._store).runSaga.apply(proxy, [me._userSagas.externalUpdateUser.bind(me._userSagas)].concat(args)).done;
+                return (proxy = me._store).runSaga.apply(proxy, [me._userSagas.externalUpdateUser.bind(me._userSagas)].concat(args)).done;
             };
             /**
              * @param {string} object
@@ -17637,15 +17617,15 @@
                 };
                 this.actions = device.bindActionCreators(ctx.pureActions, this.store.dispatch);
             }
-            return(0, events["default"])(update, [{
-                key : "_startupFlow",
-                value : keys["default"].mark(function end() {
+            return (0, events["default"])(update, [{
+                key: "_startupFlow",
+                value: keys["default"].mark(function end() {
                     return keys["default"].wrap(function(current) {
                         for (;;) {
-                            switch(current.prev = current.next) {
+                            switch (current.prev = current.next) {
                                 case 0:
                                     return current.next = 2, [root.call([this._settingsSagas, this._settingsSagas.setInitialSettings]), root.call([$window.pageConfig, $window.pageConfig.init]), root.call([this._userSagas, this._userSagas.updateUser], {
-                                        failoverFromCache : true
+                                        failoverFromCache: true
                                     })];
                                 case 2:
                                     return current.next = 4, root.fork([this._connectionSagas, this._connectionSagas.monitorIsIncognito]);
@@ -17663,29 +17643,29 @@
         }();
         expectedNumberOfNonCommentArgs.StoreControllerImpl = StoreControllerImpl;
     }, {
-        "./state/actions" : 205,
-        "./state/connection/reducer" : 207,
-        "./state/settings/reducer" : 209,
-        "./state/tabs/reducer" : 211,
-        "./state/user/reducer" : 213,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/regenerator" : 35,
-        "lib/config" : 167,
-        "lib/page-config" : 177,
-        redux : "redux",
-        "redux-logger" : "redux-logger",
-        "redux-saga" : "redux-saga",
-        "redux-saga/effects" : 141
+        "./state/actions": 205,
+        "./state/connection/reducer": 207,
+        "./state/settings/reducer": 209,
+        "./state/tabs/reducer": 211,
+        "./state/user/reducer": 213,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/regenerator": 35,
+        "lib/config": 167,
+        "lib/page-config": 177,
+        redux: "redux",
+        "redux-logger": "redux-logger",
+        "redux-saga": "redux-saga",
+        "redux-saga/effects": 141
     }],
-    215 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    215: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var ready = require("babel-runtime/core-js/object/get-prototype-of");
@@ -17699,57 +17679,57 @@
         var helper = require("babel-runtime/helpers/inherits");
         var update = $(helper);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var assert = require("lib/dom");
         var args = require("lib/config");
         var test = require("lib/request");
         var o = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var Footer = function(deepDataAndEvents) {
             /**
@@ -17776,12 +17756,12 @@
                         me.props.openUrl(camelKey);
                     };
                     return test.fetch(args.URLS.docsApi, {
-                        data : {
-                            content : ""
+                        data: {
+                            content: ""
                         },
-                        method : "post",
-                        headers : {
-                            "Content-Type" : "application/json"
+                        method: "post",
+                        headers: {
+                            "Content-Type": "application/json"
                         }
                     }).then(function(li) {
                         var ul = li.id;
@@ -17789,87 +17769,87 @@
                     })["catch"](execute);
                 }, me;
             }
-            return(0, update["default"])(value, deepDataAndEvents), (0, elem["default"])(value, [{
-                key : "render",
+            return (0, update["default"])(value, deepDataAndEvents), (0, elem["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return dom.createElement("div", {
-                        className : o.footer
+                        className: o.footer
                     }, dom.createElement("span", {
-                        onClick : this.addDocument,
-                        className : assert.cs(o.new_document, o.footer_btn)
+                        onClick: this.addDocument,
+                        className: assert.cs(o.new_document, o.footer_btn)
                     }, "New Document"), dom.createElement("a", {
-                        href : args.URLS.app,
-                        target : "_blank",
-                        className : assert.cs(o.my_grammarly, o.footer_btn)
+                        href: args.URLS.app,
+                        target: "_blank",
+                        className: assert.cs(o.my_grammarly, o.footer_btn)
                     }, "My Grammarly"));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.Footer = Footer;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/config" : 167,
-        "lib/dom" : 169,
-        "lib/request" : 182,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/config": 167,
+        "lib/dom": 169,
+        "lib/request": 182,
+        react: "react"
     }],
-    216 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    216: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var Y = require("lib/dom");
         var rep = require("lib/config");
         var Block = require("lib/util");
         var o = {
-            header : "_0cc899-header",
-            logo : "_0cc899-logo",
-            chrome : "_0cc899-chrome",
-            safari : "_0cc899-safari",
-            firefox : "_0cc899-firefox"
+            header: "_0cc899-header",
+            logo: "_0cc899-logo",
+            chrome: "_0cc899-chrome",
+            safari: "_0cc899-safari",
+            firefox: "_0cc899-firefox"
         };
         /**
          * @return {?}
          */
         expectedNumberOfNonCommentArgs.Header = function() {
             return dom.createElement("div", {
-                className : o.header
+                className: o.header
             }, dom.createElement("a", {
-                target : "_blank",
-                href : rep.URLS.app,
-                className : Y.cs(o.logo, o[Block.getBrowser()])
+                target: "_blank",
+                href: rep.URLS.app,
+                className: Y.cs(o.logo, o[Block.getBrowser()])
             }));
         };
     }, {
-        "lib/config" : 167,
-        "lib/dom" : 169,
-        "lib/util" : 198,
-        react : "react"
+        "lib/config": 167,
+        "lib/dom": 169,
+        "lib/util": 198,
+        react: "react"
     }],
-    217 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    217: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         /** @type {(Element|null)} */
         window.IS_POPUP = document.querySelector(".popup");
         if (window.IS_POPUP) {
             $sanitize("./popup");
         }
     }, {
-        "./popup" : 219
+        "./popup": 219
     }],
-    218 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    218: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function parseInt(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -17885,7 +17865,7 @@
             var options = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             var force = options.force;
             self.emitDomEvent("update-window-size", {
-                force : force
+                force: force
             });
         }
         /**
@@ -17915,20 +17895,20 @@
              * @return {?}
              */
             var c = function(m3, force) {
-                return{
-                    actions : status
+                return {
+                    actions: status
                 };
             };
             var type = data.connect(restoreScript, c)(arg);
             flash.render(view.createElement(data.Provider, {
-                store : res
+                store: res
             }, view.createElement(type, {
                 /** @type {function (): undefined} */
-                close : close,
+                close: close,
                 /** @type {function (): undefined} */
-                resize : resize,
+                resize: resize,
                 /** @type {function (string): undefined} */
-                openUrl : fn
+                openUrl: fn
             })), document.querySelector(".popup"));
         }
         var name = $("babel-runtime/helpers/toConsumableArray");
@@ -17944,7 +17924,7 @@
         var date = $("babel-runtime/helpers/inherits");
         var result = parseInt(date);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var view = $("react");
         var flash = $("react-dom");
@@ -17960,25 +17940,25 @@
              * @return {?}
              */
             function value() {
-                return(0, bp["default"])(this, value), (0, type["default"])(this, (value.__proto__ || (0, ret["default"])(value)).apply(this, arguments));
+                return (0, bp["default"])(this, value), (0, type["default"])(this, (value.__proto__ || (0, ret["default"])(value)).apply(this, arguments));
             }
-            return(0, result["default"])(value, deepDataAndEvents), (0, target["default"])(value, [{
-                key : "componentDidUpdate",
+            return (0, result["default"])(value, deepDataAndEvents), (0, target["default"])(value, [{
+                key: "componentDidUpdate",
                 /**
                  * @return {undefined}
                  */
-                value : function() {
+                value: function() {
                     this.props.resize();
                 }
             }, {
-                key : "componentDidMount",
+                key: "componentDidMount",
                 /**
                  * @return {undefined}
                  */
-                value : function() {
+                value: function() {
                     var ret = this;
                     this.props.resize({
-                        force : true
+                        force: true
                     });
                     self.on.call(flash.findDOMNode(this), "click", function(evt) {
                         var t = evt.target;
@@ -17990,20 +17970,20 @@
                     });
                 }
             }, {
-                key : "componentWillMount",
+                key: "componentWillMount",
                 /**
                  * @return {undefined}
                  */
-                value : function() {
+                value: function() {
                     self.on.call(document, "popup-open", this.props.resize);
                 }
             }, {
-                key : "processHrefClick",
+                key: "processHrefClick",
                 /**
                  * @param {string} name
                  * @return {undefined}
                  */
-                value : function(name) {
+                value: function(name) {
                     var current = name.href;
                     var data = name.dataset;
                     var param = data.fire;
@@ -18016,11 +17996,11 @@
                     }
                 }
             }, {
-                key : "render",
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var context = this.props;
                     var parentModuleMap = context.user.anonymous;
                     var config = context.config;
@@ -18035,30 +18015,30 @@
         /** @type {function (Object, Object): undefined} */
         expectedNumberOfNonCommentArgs.renderMainView = success;
     }, {
-        "./settings" : 222,
-        "./signin" : 228,
-        "./unsupported" : 230,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "babel-runtime/helpers/toConsumableArray" : 33,
-        "lib/dom" : 169,
-        "lib/message" : 171,
-        "lib/tracking" : 192,
-        react : "react",
-        "react-dom" : "react-dom",
-        "react-redux" : "react-redux"
+        "./settings": 222,
+        "./signin": 228,
+        "./unsupported": 230,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "babel-runtime/helpers/toConsumableArray": 33,
+        "lib/dom": 169,
+        "lib/message": 171,
+        "lib/tracking": 192,
+        react: "react",
+        "react-dom": "react-dom",
+        "react-redux": "react-redux"
     }],
-    219 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    219: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -18072,7 +18052,7 @@
                 var text;
                 return iterator["default"].wrap(function(current) {
                     for (;;) {
-                        switch(current.prev = current.next) {
+                        switch (current.prev = current.next) {
                             case 0:
                                 /** @type {boolean} */
                                 isInitialized = false;
@@ -18090,10 +18070,10 @@
                                 node = that.store;
                                 text = that.actions;
                                 tab.emitBackground("tab-connected", {
-                                    tab : "popup"
+                                    tab: "popup"
                                 });
                                 browser.asyncCall(function() {
-                                    return!isInitialized && _self.logger.settingsPopupTimeout();
+                                    return !isInitialized && _self.logger.settingsPopupTimeout();
                                 }, 2E3);
                             case 6:
                                 ;
@@ -18143,7 +18123,7 @@
                 document.addEventListener("popup-open", function() {
                     debug(name.getState(), type);
                     tab.emitBackground("tab-connected", {
-                        tab : "popup"
+                        tab: "popup"
                     });
                 });
             } else {
@@ -18162,7 +18142,7 @@
          * @return {?}
          */
         var setup = function(expectedNumberOfNonCommentArgs, args, opt_attributes, self) {
-            return new (opt_attributes || (opt_attributes = keys["default"]))(function(iterator, fail) {
+            return new(opt_attributes || (opt_attributes = keys["default"]))(function(iterator, fail) {
                 /**
                  * @param {string} optgroup
                  * @return {undefined}
@@ -18202,7 +18182,7 @@
             });
         };
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var span = $("lib/dom");
         var tab = $("lib/message");
@@ -18218,24 +18198,24 @@
         /** @type {function (Object, Object): undefined} */
         expectedNumberOfNonCommentArgs.track = debug;
     }, {
-        "./main-view" : 218,
-        "babel-runtime/core-js/promise" : 24,
-        "babel-runtime/regenerator" : 35,
-        "lib/dom" : 169,
-        "lib/message" : 171,
-        "lib/store-mirror" : 184,
-        "lib/test-api" : 185,
-        "lib/tracking" : 192,
-        "lib/util" : 198
+        "./main-view": 218,
+        "babel-runtime/core-js/promise": 24,
+        "babel-runtime/regenerator": 35,
+        "lib/dom": 169,
+        "lib/message": 171,
+        "lib/store-mirror": 184,
+        "lib/test-api": 185,
+        "lib/tracking": 192,
+        "lib/util": 198
     }],
-    220 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    220: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var selector = require("babel-runtime/core-js/object/get-prototype-of");
@@ -18249,62 +18229,62 @@
         var c = require("babel-runtime/helpers/inherits");
         var h = $(c);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var self = require("lib/dom");
         var m = require("lib/tracking");
         var item = {
-            select_checkbox : "_a7c193-select_checkbox",
-            checkbox : "_a7c193-checkbox",
-            checkbox_check : "_a7c193-checkbox_check",
-            checkbox_check_round : "_a7c193-checkbox_check_round"
+            select_checkbox: "_a7c193-select_checkbox",
+            checkbox: "_a7c193-checkbox",
+            checkbox_check: "_a7c193-checkbox_check",
+            checkbox_check_round: "_a7c193-checkbox_check_round"
         };
         var el = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var DefsSwitcher = function(deepDataAndEvents) {
             /**
@@ -18318,56 +18298,56 @@
                     var value = event.target.checked;
                     lookupIterator(value);
                     m.fire("change-defs", {
-                        enabled : value
+                        enabled: value
                     });
                 }, me;
             }
-            return(0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "render",
+            return (0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var checked = this.props.enabledDefs;
                     var cls = self.cs(el.def_switcher, el.line, el.setting_item, checked ? el.on : el.off);
                     return dom.createElement("div", {
-                        className : cls
+                        className: cls
                     }, dom.createElement("label", {
-                        className : item.select_checkbox
+                        className: item.select_checkbox
                     }, "Show Definitions and Synonyms ", dom.createElement("br", null), "via Double Clicks (All Sites)", dom.createElement("input", {
-                        className : item.checkbox,
-                        onChange : this.onEnableDefsClick,
-                        checked : checked,
-                        type : "checkbox"
+                        className: item.checkbox,
+                        onChange: this.onEnableDefsClick,
+                        checked: checked,
+                        type: "checkbox"
                     }), dom.createElement("div", {
-                        className : item.checkbox_check
+                        className: item.checkbox_check
                     }, dom.createElement("div", {
-                        className : item.checkbox_check_round
+                        className: item.checkbox_check_round
                     }))), dom.createElement("div", {
-                        className : el.short_border
+                        className: el.short_border
                     }));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.DefsSwitcher = DefsSwitcher;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/tracking" : 192,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/tracking": 192,
+        react: "react"
     }],
-    221 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    221: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var selector = require("babel-runtime/core-js/object/get-prototype-of");
@@ -18381,14 +18361,14 @@
         var c = require("babel-runtime/helpers/inherits");
         var h = $(c);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var t = {
-            line : "_177733-line",
-            dialect_switcher : "_177733-dialect_switcher",
-            select : "_177733-select",
-            selectWrap : "_177733-selectWrap"
+            line: "_177733-line",
+            dialect_switcher: "_177733-dialect_switcher",
+            select: "_177733-select",
+            selectWrap: "_177733-selectWrap"
         };
         var assert = require("lib/dom");
         var model = require("lib/tracking");
@@ -18410,54 +18390,54 @@
                     var d = evt.target.value;
                     predicate(d);
                     model.fire("change-dialect", {
-                        language : d,
-                        dialectWeak : length
+                        language: d,
+                        dialectWeak: length
                     });
                 }, me;
             }
-            return(0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "render",
+            return (0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var x = this.props.dialectStrong || (this.props.dialectWeak || origValue);
                     var cls = assert.cs(t.line, t.dialect_switcher);
                     return dom.createElement("div", {
-                        className : cls
+                        className: cls
                     }, dom.createElement("span", null, "I write in"), dom.createElement("div", {
-                        className : t.selectWrap
+                        className: t.selectWrap
                     }, dom.createElement("select", {
-                        className : t.select,
-                        onChange : this.onDialectChange,
-                        value : x
+                        className: t.select,
+                        onChange: this.onDialectChange,
+                        value: x
                     }, dom.createElement("option", {
-                        value : origValue
+                        value: origValue
                     }, "American English"), dom.createElement("option", {
-                        value : progress
+                        value: progress
                     }, "British English"))));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.DialectLine = DialectLine;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/tracking" : 192,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/tracking": 192,
+        react: "react"
     }],
-    222 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    222: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function $(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         var tmpl = require("babel-runtime/helpers/defineProperty");
@@ -18473,7 +18453,7 @@
         var use = require("babel-runtime/helpers/inherits");
         var p = $(use);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var nodes = require("lib/dom");
@@ -18482,64 +18462,64 @@
         var node = require("./news");
         var defaults = require("./settings-content");
         var o = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var SettingsComponent = function(deepDataAndEvents) {
             /**
              * @return {?}
              */
             function value() {
-                return(0, c["default"])(this, value), (0, i["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
+                return (0, c["default"])(this, value), (0, i["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
             }
-            return(0, p["default"])(value, deepDataAndEvents), (0, opts["default"])(value, [{
-                key : "render",
+            return (0, p["default"])(value, deepDataAndEvents), (0, opts["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var r20;
                     var self = this.props;
                     var options = self.user;
@@ -18550,46 +18530,46 @@
                     var len = self.openUrl;
                     var cls = nodes.cs(o.gr_popup_settings, options.premium ? o.upgraded : o.free, (r20 = {}, (0, type["default"])(r20, o.not_supported, !cfg.enabled), (0, type["default"])(r20, o.no_fixes, !options.fixed_errors || isNaN(options.fixed_errors)), (0, type["default"])(r20, o.show_news, settings.showNews && cfg.enabled), (0, type["default"])(r20, o.has_favicon, !!activeTab.favIconUrl), r20));
                     return dom.createElement("div", {
-                        className : cls
+                        className: cls
                     }, dom.createElement("div", {
-                        className : o.content
+                        className: o.content
                     }, dom.createElement(child.Header, null), dom.createElement(node.News, {
-                        showNews : actions.showNews
+                        showNews: actions.showNews
                     }), dom.createElement(defaults.SettingsContent, {
-                        actions : actions,
-                        activeTab : activeTab,
-                        config : cfg,
-                        settings : settings,
-                        user : options
+                        actions: actions,
+                        activeTab: activeTab,
+                        config: cfg,
+                        settings: settings,
+                        user: options
                     }), dom.createElement(data.Footer, {
-                        openUrl : len
+                        openUrl: len
                     })));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.SettingsComponent = SettingsComponent;
     }, {
-        "../footer" : 215,
-        "../header" : 216,
-        "./news" : 223,
-        "./settings-content" : 225,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        react : "react"
+        "../footer": 215,
+        "../header": 216,
+        "./news": 223,
+        "./settings-content": 225,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        react: "react"
     }],
-    223 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    223: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var ready = require("babel-runtime/core-js/object/get-prototype-of");
@@ -18603,57 +18583,57 @@
         var selector = require("babel-runtime/helpers/inherits");
         var elem = $(selector);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var properties = require("spark-md5");
         var assert = require("lib/dom");
         var cmd = require("lib/config");
         var res = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var News = function(deepDataAndEvents) {
             /**
@@ -18666,22 +18646,22 @@
                     me.props.showNews(false);
                 }, me;
             }
-            return(0, elem["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "render",
+            return (0, elem["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return dom.createElement("div", {
-                        className : assert.cs(res.line, res.news)
+                        className: assert.cs(res.line, res.news)
                     }, dom.createElement("div", {
-                        onClick : this.closeNews,
-                        className : res.close_news
+                        onClick: this.closeNews,
+                        className: res.close_news
                     }), dom.createElement("div", {
-                        className : res.news_content
+                        className: res.news_content
                     }, dom.createElement("h2", null, "What's new in this update:"), dom.createElement("ul", null, cmd.news.map(function(id) {
                         return dom.createElement("li", {
-                            key : properties.hash(id)
+                            key: properties.hash(id)
                         }, id);
                     }))));
                 }
@@ -18689,24 +18669,24 @@
         }(dom.Component);
         expectedNumberOfNonCommentArgs.News = News;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/config" : 167,
-        "lib/dom" : 169,
-        react : "react",
-        "spark-md5" : "spark-md5"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/config": 167,
+        "lib/dom": 169,
+        react: "react",
+        "spark-md5": "spark-md5"
     }],
-    224 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    224: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var selector = require("babel-runtime/core-js/object/get-prototype-of");
@@ -18720,75 +18700,75 @@
         var c = require("babel-runtime/helpers/inherits");
         var h = $(c);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var assert = require("lib/dom");
         var Block = require("lib/config");
         var jQuery = require("lib/util");
         var item = {
-            wrap : "_adb6eb-wrap",
-            line : "_adb6eb-line",
-            description : "_adb6eb-description",
-            inviteLink : "_adb6eb-inviteLink",
-            popupLine : "_adb6eb-popupLine",
-            newLabel : "_adb6eb-newLabel",
-            popupLink : "_adb6eb-popupLink"
+            wrap: "_adb6eb-wrap",
+            line: "_adb6eb-line",
+            description: "_adb6eb-description",
+            inviteLink: "_adb6eb-inviteLink",
+            popupLine: "_adb6eb-popupLine",
+            newLabel: "_adb6eb-newLabel",
+            popupLink: "_adb6eb-popupLink"
         };
         var ReferralLine = function(deepDataAndEvents) {
             /**
              * @return {?}
              */
             function value() {
-                return(0, result["default"])(this, value), (0, obj["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
+                return (0, result["default"])(this, value), (0, obj["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
             }
-            return(0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "isRibbonShow",
+            return (0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "isRibbonShow",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var event = this.props;
                     var cur = event.extensionInstallDate;
                     var which = event.registrationDate;
                     return which && jQuery.pastDays(which) < 14 || cur && jQuery.pastDays(cur) < 7;
                 }
             }, {
-                key : "render",
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return dom.createElement("div", null, dom.createElement("div", {
-                        className : assert.cs("setting_item", item.popupLine)
+                        className: assert.cs("setting_item", item.popupLine)
                     }, dom.createElement("div", {
-                        className : "short_border top"
+                        className: "short_border top"
                     }), this.isRibbonShow() && dom.createElement("span", {
-                        className : item.newLabel
+                        className: item.newLabel
                     }, "New"), dom.createElement("span", null, "Get Premium for Free"), dom.createElement("a", {
-                        href : Block.URLS.referral,
-                        "data-fire" : "referral-clicked, menu",
-                        target : "_blank",
-                        className : item.popupLink
+                        href: Block.URLS.referral,
+                        "data-fire": "referral-clicked, menu",
+                        target: "_blank",
+                        className: item.popupLink
                     }, "Invite Friends")));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.ReferralLine = ReferralLine;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/config" : 167,
-        "lib/dom" : 169,
-        "lib/util" : 198,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/config": 167,
+        "lib/dom": 169,
+        "lib/util": 198,
+        react: "react"
     }],
-    225 : [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    225: [function($, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var t = $("react");
         var opt = $("./summary");
@@ -18807,41 +18787,41 @@
             var settings = self.settings;
             var session = self.user;
             return t.createElement("div", null, t.createElement(that.SiteSwitcher, {
-                domain : options.domain,
-                toggleSite : len.toggleSite,
-                enabledInConfig : options.enabled,
-                enabledInSettings : settings.enabled,
-                favicon : tab.favIconUrl
+                domain: options.domain,
+                toggleSite: len.toggleSite,
+                enabledInConfig: options.enabled,
+                enabledInSettings: settings.enabled,
+                favicon: tab.favIconUrl
             }), t.createElement(field.DefsSwitcher, {
-                enabledDefs : settings.enabledDefs,
-                toggleDefs : len.toggleDefs
+                enabledDefs: settings.enabledDefs,
+                toggleDefs: len.toggleDefs
             }), t.createElement(input.DialectLine, {
-                changeStrongDialect : len.changeStrongDialect,
-                dialectStrong : settings.dialectStrong,
-                dialectWeak : settings.dialectWeak
+                changeStrongDialect: len.changeStrongDialect,
+                dialectStrong: settings.dialectStrong,
+                dialectWeak: settings.dialectWeak
             }), t.createElement(opt.Summary, {
-                user : session
+                user: session
             }), session.referral && t.createElement(item.ReferralLine, {
-                extensionInstallDate : session.extensionInstallDate,
-                registrationDate : session.registrationDate
+                extensionInstallDate: session.extensionInstallDate,
+                registrationDate: session.registrationDate
             }));
         };
     }, {
-        "./defs-switcher" : 220,
-        "./dialect-line" : 221,
-        "./referral-line" : 224,
-        "./site-switcher" : 226,
-        "./summary" : 227,
-        react : "react"
+        "./defs-switcher": 220,
+        "./dialect-line": 221,
+        "./referral-line": 224,
+        "./site-switcher": 226,
+        "./summary": 227,
+        react: "react"
     }],
-    226 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    226: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var ready = require("babel-runtime/core-js/object/get-prototype-of");
@@ -18855,62 +18835,62 @@
         var c = require("babel-runtime/helpers/inherits");
         var h = $(c);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var self = require("lib/dom");
         var m = require("lib/tracking");
         var el = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var item = {
-            select_checkbox : "_a7c193-select_checkbox",
-            checkbox : "_a7c193-checkbox",
-            checkbox_check : "_a7c193-checkbox_check",
-            checkbox_check_round : "_a7c193-checkbox_check_round"
+            select_checkbox: "_a7c193-select_checkbox",
+            checkbox: "_a7c193-checkbox",
+            checkbox_check: "_a7c193-checkbox_check",
+            checkbox_check_round: "_a7c193-checkbox_check_round"
         };
         var SiteSwitcher = function(deepDataAndEvents) {
             /**
@@ -18926,17 +18906,17 @@
                     var value = event.target.checked;
                     extend(value, oldconfig);
                     m.fire("checking-toggled", {
-                        enabled : value,
-                        placement : "toolbar"
+                        enabled: value,
+                        placement: "toolbar"
                     });
                 }, self;
             }
-            return(0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "render",
+            return (0, h["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var options = this.props;
                     var type = options.enabledInConfig;
                     var value = options.enabledInSettings;
@@ -18947,53 +18927,53 @@
                     var _args = type ? "Check for Grammar and Spelling" : "Checking is not supported";
                     var cls = self.cs(el.site_switcher, el.line, el.setting_item, attrNames ? el.on : el.off);
                     return dom.createElement("div", {
-                        className : cls
+                        className: cls
                     }, dom.createElement("label", {
-                        className : item.select_checkbox
+                        className: item.select_checkbox
                     }, _args, dom.createElement("br", null), " ", dom.createElement("span", {
-                        className : el.domain
+                        className: el.domain
                     }, dom.createElement("span", {
-                        className : el.thin_text
+                        className: el.thin_text
                     }, "on"), "\u00a0", dom.createElement("span", {
-                        className : el.favicon
+                        className: el.favicon
                     }, dom.createElement("img", {
-                        width : "16px",
-                        height : "16px",
-                        src : icon
+                        width: "16px",
+                        height: "16px",
+                        src: icon
                     })), domain), dom.createElement("input", {
-                        className : item.checkbox,
-                        onChange : this.onEnableGrammarClick,
-                        checked : attrNames,
-                        type : "checkbox"
+                        className: item.checkbox,
+                        onChange: this.onEnableGrammarClick,
+                        checked: attrNames,
+                        type: "checkbox"
                     }), dom.createElement("div", {
-                        className : self.cs(item.checkbox_check, el.checkbox_check)
+                        className: self.cs(item.checkbox_check, el.checkbox_check)
                     }, dom.createElement("div", {
-                        className : item.checkbox_check_round
+                        className: item.checkbox_check_round
                     }))), dom.createElement("div", {
-                        className : el.short_border
+                        className: el.short_border
                     }));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.SiteSwitcher = SiteSwitcher;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/tracking" : 192,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/tracking": 192,
+        react: "react"
     }],
-    227 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    227: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var selector = require("babel-runtime/core-js/object/get-prototype-of");
@@ -19007,71 +18987,71 @@
         var items = require("babel-runtime/helpers/inherits");
         var option = $(items);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dh = require("react");
         var assert = require("lib/dom");
         var Block = require("lib/url");
         var self = require("lib/util");
         var res = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         var Summary = function(deepDataAndEvents) {
             /**
              * @return {?}
              */
             function value() {
-                return(0, result["default"])(this, value), (0, h["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
+                return (0, result["default"])(this, value), (0, h["default"])(this, (value.__proto__ || (0, elem["default"])(value)).apply(this, arguments));
             }
-            return(0, option["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
-                key : "render",
+            return (0, option["default"])(value, deepDataAndEvents), (0, update["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var js = this.props.user;
                     var parentModuleMap = js.premium;
                     var type = js.registrationDate;
@@ -19085,48 +19065,48 @@
                     /** @type {string} */
                     var failureMessage = charset ? "since " + charset : "";
                     return dh.createElement("div", {
-                        className : assert.cs(res.line, res.summary)
+                        className: assert.cs(res.line, res.summary)
                     }, dh.createElement("div", {
-                        className : res.errors
+                        className: res.errors
                     }, dh.createElement("span", {
-                        className : assert.cs(res.count, res.lblCount)
+                        className: assert.cs(res.count, res.lblCount)
                     }, toggleLink2), dh.createElement("span", {
-                        className : res.descr
+                        className: res.descr
                     }, parentName, " ", dh.createElement("span", {
-                        className : res.errorsLbl
+                        className: res.errorsLbl
                     }, detailFragment), " ", dh.createElement("span", {
-                        className : res.since
+                        className: res.since
                     }, failureMessage))), dh.createElement("div", {
-                        className : res.upgrade
+                        className: res.upgrade
                     }, dh.createElement("a", {
-                        href : Block.getUpgradeURL("upHook", "settingsToolbar"),
-                        "data-fire" : "hook-clicked, settings_toolbar",
-                        target : "_blank",
-                        className : res.upgrade_title
+                        href: Block.getUpgradeURL("upHook", "settingsToolbar"),
+                        "data-fire": "hook-clicked, settings_toolbar",
+                        target: "_blank",
+                        className: res.upgrade_title
                     }, "Go Premium to enable advanced fixes")));
                 }
             }]), value;
         }(dh.Component);
         expectedNumberOfNonCommentArgs.Summary = Summary;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/url" : 197,
-        "lib/util" : 198,
-        react : "react"
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/url": 197,
+        "lib/util": 198,
+        react: "react"
     }],
-    228 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    228: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} name
          * @return {?}
          */
         function walk(name) {
             return name && name.__esModule ? name : {
-                "default" : name
+                "default": name
             };
         }
         var nodes = require("babel-runtime/core-js/object/get-prototype-of");
@@ -19140,136 +19120,136 @@
         var main = require("babel-runtime/helpers/inherits");
         var settings = walk(main);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var $ = require("lib/dom");
         var Block = require("lib/url");
         var child = require("./header");
         var options = {
-            signin : "_eb0767-signin",
-            banner : "_eb0767-banner",
-            descr : "_eb0767-descr",
-            descr_title : "_eb0767-descr_title",
-            buttons : "_eb0767-buttons",
-            button : "_eb0767-button",
-            auth_button : "_eb0767-auth_button",
-            sign_up : "_eb0767-sign_up",
-            free : "_eb0767-free",
-            footer : "_eb0767-footer",
-            signin_link : "_eb0767-signin_link"
+            signin: "_eb0767-signin",
+            banner: "_eb0767-banner",
+            descr: "_eb0767-descr",
+            descr_title: "_eb0767-descr_title",
+            buttons: "_eb0767-buttons",
+            button: "_eb0767-button",
+            auth_button: "_eb0767-auth_button",
+            sign_up: "_eb0767-sign_up",
+            free: "_eb0767-free",
+            footer: "_eb0767-footer",
+            signin_link: "_eb0767-signin_link"
         };
         var SigninComponent = function(deepDataAndEvents) {
             /**
              * @return {?}
              */
             function value() {
-                return(0, type["default"])(this, value), (0, conf["default"])(this, (value.__proto__ || (0, result["default"])(value)).apply(this, arguments));
+                return (0, type["default"])(this, value), (0, conf["default"])(this, (value.__proto__ || (0, result["default"])(value)).apply(this, arguments));
             }
-            return(0, settings["default"])(value, deepDataAndEvents), (0, c["default"])(value, [{
-                key : "render",
+            return (0, settings["default"])(value, deepDataAndEvents), (0, c["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     return dom.createElement("div", {
-                        className : options.signin
+                        className: options.signin
                     }, dom.createElement(child.Header, null), dom.createElement("div", {
-                        className : options.content
+                        className: options.content
                     }, dom.createElement("div", {
-                        className : options.banner
+                        className: options.banner
                     }, "Grammarly is active, but", dom.createElement("br", null), "key features are missing"), dom.createElement("div", {
-                        className : options.descr
+                        className: options.descr
                     }, dom.createElement("div", {
-                        className : options.descr_title
+                        className: options.descr_title
                     }, "Sign up now to unlock the following:"), dom.createElement("ul", null, dom.createElement("li", null, "Enable/disable on preferred websites"), dom.createElement("li", null, "Store your personal dictionary"), dom.createElement("li", null, "Save and access your work from any computer"), dom.createElement("li", null, "Get weekly writing statistics and tips"))), dom.createElement("div", {
-                        className : options.buttons
+                        className: options.buttons
                     }, dom.createElement("a", {
-                        href : Block.getSignUpURL("signupHook", "toolbarMenu"),
-                        "data-fire" : "login-attempt, settings_toolbar_sign_up",
-                        target : "__blank",
-                        className : $.cs(options.button, options.auth_button),
-                        role : "button"
+                        href: Block.getSignUpURL("signupHook", "toolbarMenu"),
+                        "data-fire": "login-attempt, settings_toolbar_sign_up",
+                        target: "__blank",
+                        className: $.cs(options.button, options.auth_button),
+                        role: "button"
                     }, dom.createElement("span", {
-                        className : options.sign_up
+                        className: options.sign_up
                     }, "Sign Up"), dom.createElement("span", {
-                        className : options.free
+                        className: options.free
                     }, "It's free")))), dom.createElement("div", {
-                        className : options.footer
+                        className: options.footer
                     }, dom.createElement("div", {
-                        className : options.login_text
+                        className: options.login_text
                     }, "Already have an account? ", dom.createElement("a", {
-                        href : Block.getSignInURL(),
-                        "data-fire" : "login-attempt, settings_toolbar_sign_in",
-                        target : "__blank",
-                        className : options.signin_link
+                        href: Block.getSignInURL(),
+                        "data-fire": "login-attempt, settings_toolbar_sign_in",
+                        target: "__blank",
+                        className: options.signin_link
                     }, "Log in"))));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.SigninComponent = SigninComponent;
     }, {
-        "./header" : 216,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/url" : 197,
-        react : "react"
+        "./header": 216,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/url": 197,
+        react: "react"
     }],
-    229 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    229: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var assert = require("lib/dom");
         var args = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         /**
          * @return {?}
@@ -19287,20 +19267,20 @@
             var content = config.domain;
             var styles = config.customTitle;
             var offsetB = styles ? dom.createElement("span", null, " ", styles, " Not Supported") : dom.createElement("span", null, " ", dom.createElement("span", {
-                className : args.domain
+                className: args.domain
             }, content), " is Not Supported");
             return dom.createElement("div", {
-                className : parseUri()
+                className: parseUri()
             }, dom.createElement("span", {
-                className : args.unsupported_title
+                className: args.unsupported_title
             }, dom.createElement("span", {
-                className : args.favicon
+                className: args.favicon
             }, dom.createElement("img", {
-                width : "16px",
-                height : "16px",
-                src : file
+                width: "16px",
+                height: "16px",
+                src: file
             })), offsetB), dom.createElement("br", null), dom.createElement("span", null, "For technical reasons, we currently do not check your text on this version of\u00a0", dom.createElement("span", {
-                className : assert.cs(args.domain, args.domain_in_details)
+                className: assert.cs(args.domain, args.domain_in_details)
             }, content)));
         };
         /**
@@ -19315,18 +19295,18 @@
             var type = data.title;
             var obj = void 0 === type ? target : type;
             return dom.createElement("div", {
-                className : parseUri(args.unsupported_permanently)
+                className: parseUri(args.unsupported_permanently)
             }, dom.createElement("span", {
-                className : args.unsupported_title
+                className: args.unsupported_title
             }, dom.createElement("span", {
-                className : args.favicon
+                className: args.favicon
             }, dom.createElement("img", {
-                width : "16px",
-                height : "16px",
-                src : file
+                width: "16px",
+                height: "16px",
+                src: file
             })), " ", obj, " Not Supported"), dom.createElement("br", null), dom.createElement("span", {
-                dangerouslySetInnerHTML : {
-                    __html : method
+                dangerouslySetInnerHTML: {
+                    __html: method
                 }
             }));
         };
@@ -19338,19 +19318,19 @@
             var file = config.favicon;
             var content = config.domain;
             return dom.createElement("div", {
-                className : parseUri(args.unsupported_temporary)
+                className: parseUri(args.unsupported_temporary)
             }, dom.createElement("span", {
-                className : args.unsupported_title
+                className: args.unsupported_title
             }, "Checking Down on ", dom.createElement("span", {
-                className : args.favicon
+                className: args.favicon
             }, dom.createElement("img", {
-                width : "16px",
-                height : "16px",
-                src : file
+                width: "16px",
+                height: "16px",
+                src: file
             })), " ", dom.createElement("span", {
-                className : args.domain
+                className: args.domain
             }, content)), dom.createElement("br", null), dom.createElement("span", null, "There appears to be a temporary glitch affecting Grammarly's performance on\u00a0", dom.createElement("span", {
-                className : assert.cs(args.domain, args.domain_in_details)
+                className: assert.cs(args.domain, args.domain_in_details)
             }, content), ". Functionality should return soon."));
         };
         /**
@@ -19358,25 +19338,25 @@
          */
         expectedNumberOfNonCommentArgs.GrammarlyUnsupportedComponent = function() {
             return dom.createElement("div", {
-                className : parseUri(args.unsupported_grammarly)
+                className: parseUri(args.unsupported_grammarly)
             }, dom.createElement("span", {
-                className : "diamond"
+                className: "diamond"
             }), dom.createElement("span", {
-                className : "unsupported_title"
+                className: "unsupported_title"
             }, "You Can't Improve on Perfection"), dom.createElement("br", null), dom.createElement("span", null, "Naturally, Grammarly's browser extension is disabled while you use the Grammarly Editor."));
         };
     }, {
-        "lib/dom" : 169,
-        react : "react"
+        "lib/dom": 169,
+        react: "react"
     }],
-    230 : [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
+    230: [function(require, dataAndEvents, expectedNumberOfNonCommentArgs) {
         /**
          * @param {?} type
          * @return {?}
          */
         function $(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -19392,16 +19372,16 @@
             var name = void 0;
             var result = void 0;
             return silent ? (name = "grammarly_editor", result = dom.createElement(child.GrammarlyUnsupportedComponent, null)) : data && data.message ? (name = "custom_message", result = dom.createElement(child.CustomUnsupportedComponent, {
-                customMessage : data,
-                favicon : timeout,
-                domain : domain
+                customMessage: data,
+                favicon: timeout,
+                domain: domain
             })) : success ? (name = "temporary", result = dom.createElement(child.TemporaryUnsupportedComponent, {
-                favicon : timeout,
-                domain : domain
+                favicon: timeout,
+                domain: domain
             })) : (name = "default", result = dom.createElement(child.DefaultUnsupportedComponent, {
-                favicon : timeout,
-                domain : domain,
-                customTitle : data && data.title
+                favicon: timeout,
+                domain: domain,
+                customTitle: data && data.title
             })), common.logger.settingsUsupportedShow(name), result;
         }
         var ready = require("babel-runtime/helpers/defineProperty");
@@ -19417,7 +19397,7 @@
         var helper = require("babel-runtime/helpers/inherits");
         var update = $(helper);
         Object.defineProperty(expectedNumberOfNonCommentArgs, "__esModule", {
-            value : true
+            value: true
         });
         var dom = require("react");
         var common = require("lib/tracking");
@@ -19427,50 +19407,50 @@
         var node = require("../footer");
         var child = require("./components");
         var o = {
-            safari : "safari",
-            "gr-popup-wrapper" : "gr-popup-wrapper",
-            windows : "windows",
-            setting_item : "setting_item",
-            errors : "errors",
-            descr : "descr",
-            thin_text : "thin_text",
-            footer : "footer",
-            gr_popup_settings : "gr_popup_settings",
-            footer_btn : "footer_btn",
-            line : "line",
-            short_border : "short_border",
-            top : "top",
-            show_news : "show_news",
-            news : "news",
-            news_content : "news_content",
-            close_news : "close_news",
-            not_supported : "not_supported",
-            checkbox_check : "checkbox_check",
-            site_switcher : "site_switcher",
-            upgrade : "upgrade",
-            def_switcher : "def_switcher",
-            on : "on",
-            off : "off",
-            upgraded : "upgraded",
-            content : "content",
-            summary : "summary",
-            since : "since",
-            has_favicon : "has_favicon",
-            favicon : "favicon",
-            domain : "domain",
-            no_fixes : "no_fixes",
-            lblCount : "lblCount",
-            upgrade_title : "upgrade_title",
-            my_grammarly : "my_grammarly",
-            new_document : "new_document",
-            unsupported_site : "unsupported_site",
-            unsupported_item : "unsupported_item",
-            unsupported_title : "unsupported_title",
-            domain_in_details : "domain_in_details",
-            unsupported_temporary : "unsupported_temporary",
-            unsupported_permanently : "unsupported_permanently",
-            unsupported_grammarly : "unsupported_grammarly",
-            diamond : "diamond"
+            safari: "safari",
+            "gr-popup-wrapper": "gr-popup-wrapper",
+            windows: "windows",
+            setting_item: "setting_item",
+            errors: "errors",
+            descr: "descr",
+            thin_text: "thin_text",
+            footer: "footer",
+            gr_popup_settings: "gr_popup_settings",
+            footer_btn: "footer_btn",
+            line: "line",
+            short_border: "short_border",
+            top: "top",
+            show_news: "show_news",
+            news: "news",
+            news_content: "news_content",
+            close_news: "close_news",
+            not_supported: "not_supported",
+            checkbox_check: "checkbox_check",
+            site_switcher: "site_switcher",
+            upgrade: "upgrade",
+            def_switcher: "def_switcher",
+            on: "on",
+            off: "off",
+            upgraded: "upgraded",
+            content: "content",
+            summary: "summary",
+            since: "since",
+            has_favicon: "has_favicon",
+            favicon: "favicon",
+            domain: "domain",
+            no_fixes: "no_fixes",
+            lblCount: "lblCount",
+            upgrade_title: "upgrade_title",
+            my_grammarly: "my_grammarly",
+            new_document: "new_document",
+            unsupported_site: "unsupported_site",
+            unsupported_item: "unsupported_item",
+            unsupported_title: "unsupported_title",
+            domain_in_details: "domain_in_details",
+            unsupported_temporary: "unsupported_temporary",
+            unsupported_permanently: "unsupported_permanently",
+            unsupported_grammarly: "unsupported_grammarly",
+            diamond: "diamond"
         };
         /** @type {function (?): ?} */
         expectedNumberOfNonCommentArgs.getUnsupportedComponent = init;
@@ -19479,14 +19459,14 @@
              * @return {?}
              */
             function value() {
-                return(0, elem["default"])(this, value), (0, h["default"])(this, (value.__proto__ || (0, result["default"])(value)).apply(this, arguments));
+                return (0, elem["default"])(this, value), (0, h["default"])(this, (value.__proto__ || (0, result["default"])(value)).apply(this, arguments));
             }
-            return(0, update["default"])(value, deepDataAndEvents), (0, obj["default"])(value, [{
-                key : "render",
+            return (0, update["default"])(value, deepDataAndEvents), (0, obj["default"])(value, [{
+                key: "render",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     var me = this.props;
                     var opt = me.config;
                     var domain = opt.domain;
@@ -19495,35 +19475,35 @@
                     var retval = me.activeTab.favIconUrl;
                     var cls = assert.cs(o.gr_popup_settings, (0, ret["default"])({}, o.has_favicon, Boolean(retval)));
                     var md = init({
-                        domain : domain,
-                        favIconUrl : retval,
-                        temporary : ajax,
-                        grammarlyEditor : _type
+                        domain: domain,
+                        favIconUrl: retval,
+                        temporary: ajax,
+                        grammarlyEditor: _type
                     });
                     return dom.createElement("div", {
-                        className : cls
+                        className: cls
                     }, dom.createElement("div", {
-                        className : assert.cs(o.content, o.unsupported_site)
+                        className: assert.cs(o.content, o.unsupported_site)
                     }, dom.createElement(data.Header, null), md, dom.createElement(node.Footer, {
-                        openUrl : this.props.openUrl
+                        openUrl: this.props.openUrl
                     })));
                 }
             }]), value;
         }(dom.Component);
         expectedNumberOfNonCommentArgs.UnsupportedComponent = UnsupportedComponent;
     }, {
-        "../footer" : 215,
-        "../header" : 216,
-        "./components" : 229,
-        "babel-runtime/core-js/object/get-prototype-of" : 21,
-        "babel-runtime/helpers/classCallCheck" : 27,
-        "babel-runtime/helpers/createClass" : 28,
-        "babel-runtime/helpers/defineProperty" : 29,
-        "babel-runtime/helpers/inherits" : 30,
-        "babel-runtime/helpers/possibleConstructorReturn" : 31,
-        "lib/dom" : 169,
-        "lib/page-config/defaults" : 176,
-        "lib/tracking" : 192,
-        react : "react"
+        "../footer": 215,
+        "../header": 216,
+        "./components": 229,
+        "babel-runtime/core-js/object/get-prototype-of": 21,
+        "babel-runtime/helpers/classCallCheck": 27,
+        "babel-runtime/helpers/createClass": 28,
+        "babel-runtime/helpers/defineProperty": 29,
+        "babel-runtime/helpers/inherits": 30,
+        "babel-runtime/helpers/possibleConstructorReturn": 31,
+        "lib/dom": 169,
+        "lib/page-config/defaults": 176,
+        "lib/tracking": 192,
+        react: "react"
     }]
 }, {}, [147]);

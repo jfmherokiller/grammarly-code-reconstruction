@@ -1,4 +1,4 @@
-!function e$$12(t, n, r) {
+! function e$$12(t, n, r) {
     /**
      * @param {string} o
      * @param {?} dx
@@ -19,7 +19,7 @@
                 throw err.code = "MODULE_NOT_FOUND", err;
             }
             var module_ = n[o] = {
-                exports : {}
+                exports: {}
             };
             t[o][0].call(module_.exports, function(e) {
                 var n = t[o][1][e];
@@ -31,116 +31,116 @@
     var a = "function" == typeof require && require;
     /** @type {number} */
     var o = 0;
-    for (;o < r.length;o++) {
+    for (; o < r.length; o++) {
         s(r[o]);
     }
     return s;
 }({
-    1 : [function($sanitize, module, dataAndEvents) {
+    1: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/array/from"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/array/from"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/array/from" : 22
+        "core-js/library/fn/array/from": 22
     }],
-    2 : [function($sanitize, module, dataAndEvents) {
+    2: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/get-iterator"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/get-iterator"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/get-iterator" : 23
+        "core-js/library/fn/get-iterator": 23
     }],
-    3 : [function($sanitize, module, dataAndEvents) {
+    3: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/is-iterable"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/is-iterable"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/is-iterable" : 24
+        "core-js/library/fn/is-iterable": 24
     }],
-    4 : [function($sanitize, module, dataAndEvents) {
+    4: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/json/stringify"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/json/stringify"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/json/stringify" : 25
+        "core-js/library/fn/json/stringify": 25
     }],
-    5 : [function($sanitize, module, dataAndEvents) {
+    5: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/assign"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/assign"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/assign" : 26
+        "core-js/library/fn/object/assign": 26
     }],
-    6 : [function($sanitize, module, dataAndEvents) {
+    6: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/create"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/create"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/create" : 27
+        "core-js/library/fn/object/create": 27
     }],
-    7 : [function($sanitize, module, dataAndEvents) {
+    7: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/define-property"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/define-property"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/define-property" : 28
+        "core-js/library/fn/object/define-property": 28
     }],
-    8 : [function($sanitize, module, dataAndEvents) {
+    8: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/get-prototype-of"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/get-prototype-of"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/get-prototype-of" : 29
+        "core-js/library/fn/object/get-prototype-of": 29
     }],
-    9 : [function($sanitize, module, dataAndEvents) {
+    9: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/keys"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/keys"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/keys" : 30
+        "core-js/library/fn/object/keys": 30
     }],
-    10 : [function($sanitize, module, dataAndEvents) {
+    10: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/object/set-prototype-of"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/object/set-prototype-of"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/object/set-prototype-of" : 31
+        "core-js/library/fn/object/set-prototype-of": 31
     }],
-    11 : [function($sanitize, module, dataAndEvents) {
+    11: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/promise"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/promise"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/promise" : 32
+        "core-js/library/fn/promise": 32
     }],
-    12 : [function($sanitize, module, dataAndEvents) {
+    12: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/symbol"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/symbol"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/symbol" : 33
+        "core-js/library/fn/symbol": 33
     }],
-    13 : [function($sanitize, module, dataAndEvents) {
+    13: [function($sanitize, module, dataAndEvents) {
         module.exports = {
-            "default" : $sanitize("core-js/library/fn/symbol/iterator"),
-            __esModule : true
+            "default": $sanitize("core-js/library/fn/symbol/iterator"),
+            __esModule: true
         };
     }, {
-        "core-js/library/fn/symbol/iterator" : 34
+        "core-js/library/fn/symbol/iterator": 34
     }],
-    14 : [function(dataAndEvents, deepDataAndEvents, __exports__) {
+    14: [function(dataAndEvents, deepDataAndEvents, __exports__) {
         /** @type {boolean} */
         __exports__.__esModule = true;
         /**
@@ -154,14 +154,14 @@
             }
         };
     }, {}],
-    15 : [function(neighbours, dataAndEvents, __exports__) {
+    15: [function(neighbours, dataAndEvents, __exports__) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function url(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -177,7 +177,7 @@
             function defineProperty(value, obj) {
                 /** @type {number} */
                 var i = 0;
-                for (;i < obj.length;i++) {
+                for (; i < obj.length; i++) {
                     var property = obj[i];
                     property.enumerable = property.enumerable || false;
                     /** @type {boolean} */
@@ -194,16 +194,16 @@
             };
         }();
     }, {
-        "../core-js/object/define-property" : 7
+        "../core-js/object/define-property": 7
     }],
-    16 : [function(proceed, dataAndEvents, __exports__) {
+    16: [function(proceed, dataAndEvents, __exports__) {
         /**
          * @param {string} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -218,23 +218,23 @@
          */
         __exports__["default"] = function(obj, key, value) {
             return key in obj ? (0, iterator["default"])(obj, key, {
-                value : value,
-                enumerable : true,
-                configurable : true,
-                writable : true
+                value: value,
+                enumerable: true,
+                configurable: true,
+                writable: true
             }) : obj[key] = value, obj;
         };
     }, {
-        "../core-js/object/define-property" : 7
+        "../core-js/object/define-property": 7
     }],
-    17 : [function(require, dataAndEvents, __exports__) {
+    17: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {Object} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /** @type {boolean} */
@@ -255,11 +255,11 @@
                 throw new TypeError("Super expression must either be null or a function, not " + ("undefined" == typeof b ? "undefined" : (0, elem["default"])(b)));
             }
             ret.prototype = (0, c["default"])(b && b.prototype, {
-                constructor : {
-                    value : ret,
-                    enumerable : false,
-                    writable : true,
-                    configurable : true
+                constructor: {
+                    value: ret,
+                    enumerable: false,
+                    writable: true,
+                    configurable: true
                 }
             });
             if (b) {
@@ -272,18 +272,18 @@
             }
         };
     }, {
-        "../core-js/object/create" : 6,
-        "../core-js/object/set-prototype-of" : 10,
-        "../helpers/typeof" : 21
+        "../core-js/object/create": 6,
+        "../core-js/object/set-prototype-of": 10,
+        "../helpers/typeof": 21
     }],
-    18 : [function(proceed, dataAndEvents, __exports__) {
+    18: [function(proceed, dataAndEvents, __exports__) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -299,19 +299,19 @@
             if (!dataAndEvents) {
                 throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
             }
-            return!callback || "object" !== ("undefined" == typeof callback ? "undefined" : (0, iterator["default"])(callback)) && "function" != typeof callback ? dataAndEvents : callback;
+            return !callback || "object" !== ("undefined" == typeof callback ? "undefined" : (0, iterator["default"])(callback)) && "function" != typeof callback ? dataAndEvents : callback;
         };
     }, {
-        "../helpers/typeof" : 21
+        "../helpers/typeof": 21
     }],
-    19 : [function(get, dataAndEvents, __exports__) {
+    19: [function(get, dataAndEvents, __exports__) {
         /**
          * @param {string} id
          * @return {?}
          */
         function require(id) {
             return id && id.__esModule ? id : {
-                "default" : id
+                "default": id
             };
         }
         /** @type {boolean} */
@@ -337,8 +337,7 @@
                 try {
                     var p;
                     var ret = (0, conf["default"])(name);
-                    for (;!(callback2 = (p = ret.next()).done) && (parent.push(p.value), !height || parent.length !== height);callback2 = true) {
-                    }
+                    for (; !(callback2 = (p = ret.next()).done) && (parent.push(p.value), !height || parent.length !== height); callback2 = true) {}
                 } catch (fn) {
                     /** @type {boolean} */
                     r = true;
@@ -369,17 +368,17 @@
             };
         }();
     }, {
-        "../core-js/get-iterator" : 2,
-        "../core-js/is-iterable" : 3
+        "../core-js/get-iterator": 2,
+        "../core-js/is-iterable": 3
     }],
-    20 : [function(proceed, dataAndEvents, __exports__) {
+    20: [function(proceed, dataAndEvents, __exports__) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /** @type {boolean} */
@@ -396,24 +395,24 @@
                 var name = 0;
                 /** @type {Array} */
                 var old = Array(optgroup.length);
-                for (;name < optgroup.length;name++) {
+                for (; name < optgroup.length; name++) {
                     old[name] = optgroup[name];
                 }
                 return old;
             }
-            return(0, iterator["default"])(optgroup);
+            return (0, iterator["default"])(optgroup);
         };
     }, {
-        "../core-js/array/from" : 1
+        "../core-js/array/from": 1
     }],
-    21 : [function(require, dataAndEvents, __exports__) {
+    21: [function(require, dataAndEvents, __exports__) {
         /**
          * @param {Object} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /** @type {boolean} */
@@ -435,41 +434,41 @@
             return protoProps && ("function" == typeof schema["default"] && (protoProps.constructor === schema["default"] && protoProps !== schema["default"].prototype)) ? "symbol" : "undefined" == typeof protoProps ? "undefined" : ownProp(protoProps);
         };
     }, {
-        "../core-js/symbol" : 12,
-        "../core-js/symbol/iterator" : 13
+        "../core-js/symbol": 12,
+        "../core-js/symbol/iterator": 13
     }],
-    22 : [function($sanitize, opts, dataAndEvents) {
+    22: [function($sanitize, opts, dataAndEvents) {
         $sanitize("../../modules/es6.string.iterator");
         $sanitize("../../modules/es6.array.from");
         opts.exports = $sanitize("../../modules/_core").Array.from;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.array.from" : 110,
-        "../../modules/es6.string.iterator" : 120
+        "../../modules/_core": 42,
+        "../../modules/es6.array.from": 110,
+        "../../modules/es6.string.iterator": 120
     }],
-    23 : [function(factory, module, dataAndEvents) {
+    23: [function(factory, module, dataAndEvents) {
         factory("../modules/web.dom.iterable");
         factory("../modules/es6.string.iterator");
         module.exports = factory("../modules/core.get-iterator");
     }, {
-        "../modules/core.get-iterator" : 108,
-        "../modules/es6.string.iterator" : 120,
-        "../modules/web.dom.iterable" : 124
+        "../modules/core.get-iterator": 108,
+        "../modules/es6.string.iterator": 120,
+        "../modules/web.dom.iterable": 124
     }],
-    24 : [function(factory, module, dataAndEvents) {
+    24: [function(factory, module, dataAndEvents) {
         factory("../modules/web.dom.iterable");
         factory("../modules/es6.string.iterator");
         module.exports = factory("../modules/core.is-iterable");
     }, {
-        "../modules/core.is-iterable" : 109,
-        "../modules/es6.string.iterator" : 120,
-        "../modules/web.dom.iterable" : 124
+        "../modules/core.is-iterable": 109,
+        "../modules/es6.string.iterator": 120,
+        "../modules/web.dom.iterable": 124
     }],
-    25 : [function($sanitize, module, dataAndEvents) {
+    25: [function($sanitize, module, dataAndEvents) {
         var S = $sanitize("../../modules/_core");
         var newArgs = S.JSON || (S.JSON = {
             /** @type {function (this:JSONType, *, (Array.<string>|function (string, *): *|null)=, (number|string)=): string} */
-            stringify : JSON.stringify
+            stringify: JSON.stringify
         });
         /**
          * @param {Object} name
@@ -479,16 +478,16 @@
             return newArgs.stringify.apply(newArgs, arguments);
         };
     }, {
-        "../../modules/_core" : 42
+        "../../modules/_core": 42
     }],
-    26 : [function($sanitize, module, dataAndEvents) {
+    26: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.assign");
         module.exports = $sanitize("../../modules/_core").Object.assign;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.assign" : 112
+        "../../modules/_core": 42,
+        "../../modules/es6.object.assign": 112
     }],
-    27 : [function($sanitize, module, dataAndEvents) {
+    27: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.create");
         var handler = $sanitize("../../modules/_core").Object;
         /**
@@ -500,10 +499,10 @@
             return handler.create(name, ast);
         };
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.create" : 113
+        "../../modules/_core": 42,
+        "../../modules/es6.object.create": 113
     }],
-    28 : [function($sanitize, module, dataAndEvents) {
+    28: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.define-property");
         var t = $sanitize("../../modules/_core").Object;
         /**
@@ -516,66 +515,66 @@
             return t.defineProperty(name, ast, opt_attributes);
         };
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.define-property" : 114
+        "../../modules/_core": 42,
+        "../../modules/es6.object.define-property": 114
     }],
-    29 : [function($sanitize, module, dataAndEvents) {
+    29: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.get-prototype-of");
         module.exports = $sanitize("../../modules/_core").Object.getPrototypeOf;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.get-prototype-of" : 115
+        "../../modules/_core": 42,
+        "../../modules/es6.object.get-prototype-of": 115
     }],
-    30 : [function($sanitize, config, dataAndEvents) {
+    30: [function($sanitize, config, dataAndEvents) {
         $sanitize("../../modules/es6.object.keys");
         config.exports = $sanitize("../../modules/_core").Object.keys;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.keys" : 116
+        "../../modules/_core": 42,
+        "../../modules/es6.object.keys": 116
     }],
-    31 : [function($sanitize, module, dataAndEvents) {
+    31: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.object.set-prototype-of");
         module.exports = $sanitize("../../modules/_core").Object.setPrototypeOf;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.set-prototype-of" : 117
+        "../../modules/_core": 42,
+        "../../modules/es6.object.set-prototype-of": 117
     }],
-    32 : [function(require, module, dataAndEvents) {
+    32: [function(require, module, dataAndEvents) {
         require("../modules/es6.object.to-string");
         require("../modules/es6.string.iterator");
         require("../modules/web.dom.iterable");
         require("../modules/es6.promise");
         module.exports = require("../modules/_core").Promise;
     }, {
-        "../modules/_core" : 42,
-        "../modules/es6.object.to-string" : 118,
-        "../modules/es6.promise" : 119,
-        "../modules/es6.string.iterator" : 120,
-        "../modules/web.dom.iterable" : 124
+        "../modules/_core": 42,
+        "../modules/es6.object.to-string": 118,
+        "../modules/es6.promise": 119,
+        "../modules/es6.string.iterator": 120,
+        "../modules/web.dom.iterable": 124
     }],
-    33 : [function($sanitize, module, dataAndEvents) {
+    33: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.symbol");
         $sanitize("../../modules/es6.object.to-string");
         $sanitize("../../modules/es7.symbol.async-iterator");
         $sanitize("../../modules/es7.symbol.observable");
         module.exports = $sanitize("../../modules/_core").Symbol;
     }, {
-        "../../modules/_core" : 42,
-        "../../modules/es6.object.to-string" : 118,
-        "../../modules/es6.symbol" : 121,
-        "../../modules/es7.symbol.async-iterator" : 122,
-        "../../modules/es7.symbol.observable" : 123
+        "../../modules/_core": 42,
+        "../../modules/es6.object.to-string": 118,
+        "../../modules/es6.symbol": 121,
+        "../../modules/es7.symbol.async-iterator": 122,
+        "../../modules/es7.symbol.observable": 123
     }],
-    34 : [function($sanitize, module, dataAndEvents) {
+    34: [function($sanitize, module, dataAndEvents) {
         $sanitize("../../modules/es6.string.iterator");
         $sanitize("../../modules/web.dom.iterable");
         module.exports = $sanitize("../../modules/_wks-ext").f("iterator");
     }, {
-        "../../modules/_wks-ext" : 105,
-        "../../modules/es6.string.iterator" : 120,
-        "../../modules/web.dom.iterable" : 124
+        "../../modules/_wks-ext": 105,
+        "../../modules/es6.string.iterator": 120,
+        "../../modules/web.dom.iterable": 124
     }],
-    35 : [function(dataAndEvents, module, deepDataAndEvents) {
+    35: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @return {?}
@@ -587,14 +586,13 @@
             return name;
         };
     }, {}],
-    36 : [function(dataAndEvents, module, deepDataAndEvents) {
+    36: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @return {undefined}
          */
-        module.exports = function() {
-        };
+        module.exports = function() {};
     }, {}],
-    37 : [function(dataAndEvents, module, deepDataAndEvents) {
+    37: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @param {Object} key
@@ -609,7 +607,7 @@
             return name;
         };
     }, {}],
-    38 : [function(require, module, dataAndEvents) {
+    38: [function(require, module, dataAndEvents) {
         var inspect = require("./_is-object");
         /**
          * @param {Object} name
@@ -622,9 +620,9 @@
             return name;
         };
     }, {
-        "./_is-object" : 62
+        "./_is-object": 62
     }],
-    39 : [function(require, module, dataAndEvents) {
+    39: [function(require, module, dataAndEvents) {
         var tmpl = require("./_to-iobject");
         var assert = require("./_to-length");
         var debug = require("./_to-index");
@@ -639,27 +637,27 @@
                 var ms = assert(args.length);
                 var id = debug(msg, ms);
                 if (name && string != string) {
-                    for (;ms > id;) {
+                    for (; ms > id;) {
                         if (x = args[id++], x != x) {
                             return true;
                         }
                     }
                 } else {
-                    for (;ms > id;id++) {
+                    for (; ms > id; id++) {
                         if ((name || id in args) && args[id] === string) {
                             return name || (id || 0);
                         }
                     }
                 }
-                return!name && -1;
+                return !name && -1;
             };
         };
     }, {
-        "./_to-index" : 97,
-        "./_to-iobject" : 99,
-        "./_to-length" : 100
+        "./_to-index": 97,
+        "./_to-iobject": 99,
+        "./_to-length": 100
     }],
-    40 : [function(require, module, dataAndEvents) {
+    40: [function(require, module, dataAndEvents) {
         var getActual = require("./_cof");
         var camelKey = require("./_wks")("toStringTag");
         /** @type {boolean} */
@@ -674,8 +672,7 @@
         var dataAttr = function(data, key) {
             try {
                 return data[key];
-            } catch (n) {
-            }
+            } catch (n) {}
         };
         /**
          * @param {Object} name
@@ -688,10 +685,10 @@
             return void 0 === name ? "Undefined" : null === name ? "Null" : "string" == typeof(data = dataAttr(obj = Object(name), camelKey)) ? data : nativeIsArray ? getActual(obj) : "Object" == (hash = getActual(obj)) && "function" == typeof obj.callee ? "Arguments" : hash;
         };
     }, {
-        "./_cof" : 41,
-        "./_wks" : 106
+        "./_cof": 41,
+        "./_wks": 106
     }],
-    41 : [function(dataAndEvents, module, deepDataAndEvents) {
+    41: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (this:*): string} */
         var toString = {}.toString;
         /**
@@ -702,15 +699,15 @@
             return toString.call(name).slice(8, -1);
         };
     }, {}],
-    42 : [function(dataAndEvents, $, deepDataAndEvents) {
+    42: [function(dataAndEvents, $, deepDataAndEvents) {
         var o = $.exports = {
-            version : "2.4.0"
+            version: "2.4.0"
         };
         if ("number" == typeof __e) {
             __e = o;
         }
     }, {}],
-    43 : [function(require, module, dataAndEvents) {
+    43: [function(require, module, dataAndEvents) {
         var t = require("./_object-dp");
         var getActual = require("./_property-desc");
         /**
@@ -727,10 +724,10 @@
             }
         };
     }, {
-        "./_object-dp" : 75,
-        "./_property-desc" : 86
+        "./_object-dp": 75,
+        "./_property-desc": 86
     }],
-    44 : [function(require, module, dataAndEvents) {
+    44: [function(require, module, dataAndEvents) {
         var inspect = require("./_a-function");
         /**
          * @param {Object} name
@@ -742,7 +739,7 @@
             if (inspect(name), void 0 === key) {
                 return name;
             }
-            switch(opt_attributes) {
+            switch (opt_attributes) {
                 case 1:
                     return function(loc) {
                         return name.call(key, loc);
@@ -761,9 +758,9 @@
             };
         };
     }, {
-        "./_a-function" : 35
+        "./_a-function": 35
     }],
-    45 : [function(dataAndEvents, module, deepDataAndEvents) {
+    45: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @return {?}
@@ -775,22 +772,22 @@
             return name;
         };
     }, {}],
-    46 : [function($sanitize, module, dataAndEvents) {
+    46: [function($sanitize, module, dataAndEvents) {
         /** @type {boolean} */
         module.exports = !$sanitize("./_fails")(function() {
             return 7 != Object.defineProperty({}, "a", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_fails" : 51
+        "./_fails": 51
     }],
-    47 : [function(require, module, dataAndEvents) {
+    47: [function(require, module, dataAndEvents) {
         var isObject = require("./_is-object");
         var doc = require("./_global").document;
         var is_defun = isObject(doc) && isObject(doc.createElement);
@@ -802,14 +799,14 @@
             return is_defun ? doc.createElement(name) : {};
         };
     }, {
-        "./_global" : 53,
-        "./_is-object" : 62
+        "./_global": 53,
+        "./_is-object": 62
     }],
-    48 : [function(dataAndEvents, module, deepDataAndEvents) {
+    48: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {Array.<string>} */
         module.exports = "constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",");
     }, {}],
-    49 : [function(require, module, dataAndEvents) {
+    49: [function(require, module, dataAndEvents) {
         var inspect = require("./_object-keys");
         var b = require("./_object-gops");
         var cfg = require("./_object-pie");
@@ -826,7 +823,7 @@
                 var filter = cfg.f;
                 /** @type {number} */
                 var index = 0;
-                for (;items.length > index;) {
+                for (; items.length > index;) {
                     if (filter.call(name, v = items[index++])) {
                         str.push(v);
                     }
@@ -835,11 +832,11 @@
             return str;
         };
     }, {
-        "./_object-gops" : 80,
-        "./_object-keys" : 83,
-        "./_object-pie" : 84
+        "./_object-gops": 80,
+        "./_object-keys": 83,
+        "./_object-pie": 84
     }],
-    50 : [function(require, module, dataAndEvents) {
+    50: [function(require, module, dataAndEvents) {
         var item = require("./_global");
         var helper = require("./_core");
         var is = require("./_ctx");
@@ -888,7 +885,7 @@
                          */
                         var first = function(elem, returnDom, arr) {
                             if (this instanceof second) {
-                                switch(arguments.length) {
+                                switch (arguments.length) {
                                     case 0:
                                         return new second;
                                     case 1:
@@ -934,25 +931,25 @@
         /** @type {function (Object, Object, ?): undefined} */
         module.exports = proxy;
     }, {
-        "./_core" : 42,
-        "./_ctx" : 44,
-        "./_global" : 53,
-        "./_hide" : 55
+        "./_core": 42,
+        "./_ctx": 44,
+        "./_global": 53,
+        "./_hide": 55
     }],
-    51 : [function(dataAndEvents, module, deepDataAndEvents) {
+    51: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @return {?}
          */
         module.exports = function(name) {
             try {
-                return!!name();
+                return !!name();
             } catch (t) {
                 return true;
             }
         };
     }, {}],
-    52 : [function(require, module, e) {
+    52: [function(require, module, e) {
         var getActual = require("./_ctx");
         var test = require("./_iter-call");
         var swap = require("./_is-array-iter");
@@ -978,14 +975,14 @@
             }
             if (swap(formatter)) {
                 l = assert(name.length);
-                for (;l > i;i++) {
+                for (; l > i; i++) {
                     if (result = key ? fn(objDisplay(p = name[i])[0], p[1]) : fn(name[i]), result === resultUS || result === resultCommaDecimal) {
                         return result;
                     }
                 }
             } else {
                 curr = formatter.call(name);
-                for (;!(p = curr.next()).done;) {
+                for (; !(p = curr.next()).done;) {
                     if (result = test(curr, fn, p.value, key), result === resultUS || result === resultCommaDecimal) {
                         return result;
                     }
@@ -995,20 +992,20 @@
         e.BREAK = resultUS;
         e.RETURN = resultCommaDecimal;
     }, {
-        "./_an-object" : 38,
-        "./_ctx" : 44,
-        "./_is-array-iter" : 60,
-        "./_iter-call" : 63,
-        "./_to-length" : 100,
-        "./core.get-iterator-method" : 107
+        "./_an-object": 38,
+        "./_ctx": 44,
+        "./_is-array-iter": 60,
+        "./_iter-call": 63,
+        "./_to-length": 100,
+        "./core.get-iterator-method": 107
     }],
-    53 : [function(dataAndEvents, module, deepDataAndEvents) {
+    53: [function(dataAndEvents, module, deepDataAndEvents) {
         var o = module.exports = "undefined" != typeof window && window.Math == Math ? window : "undefined" != typeof self && self.Math == Math ? self : Function("return this")();
         if ("number" == typeof __g) {
             __g = o;
         }
     }, {}],
-    54 : [function(dataAndEvents, module, deepDataAndEvents) {
+    54: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (this:Object, *): boolean} */
         var has = {}.hasOwnProperty;
         /**
@@ -1020,7 +1017,7 @@
             return has.call(name, key);
         };
     }, {}],
-    55 : [function(require, module, dataAndEvents) {
+    55: [function(require, module, dataAndEvents) {
         var t = require("./_object-dp");
         var getActual = require("./_property-desc");
         /** @type {function (Object, Object, ?): ?} */
@@ -1030,33 +1027,33 @@
             return name[key] = opt_attributes, name;
         };
     }, {
-        "./_descriptors" : 46,
-        "./_object-dp" : 75,
-        "./_property-desc" : 86
+        "./_descriptors": 46,
+        "./_object-dp": 75,
+        "./_property-desc": 86
     }],
-    56 : [function($sanitize, module, dataAndEvents) {
+    56: [function($sanitize, module, dataAndEvents) {
         module.exports = $sanitize("./_global").document && document.documentElement;
     }, {
-        "./_global" : 53
+        "./_global": 53
     }],
-    57 : [function($sanitize, module, dataAndEvents) {
+    57: [function($sanitize, module, dataAndEvents) {
         /** @type {boolean} */
         module.exports = !$sanitize("./_descriptors") && !$sanitize("./_fails")(function() {
             return 7 != Object.defineProperty($sanitize("./_dom-create")("div"), "a", {
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return 7;
                 }
             }).a;
         });
     }, {
-        "./_descriptors" : 46,
-        "./_dom-create" : 47,
-        "./_fails" : 51
+        "./_descriptors": 46,
+        "./_dom-create": 47,
+        "./_fails": 51
     }],
-    58 : [function(dataAndEvents, module, deepDataAndEvents) {
+    58: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @param {Array} key
@@ -1066,7 +1063,7 @@
         module.exports = function(name, key, opt_attributes) {
             /** @type {boolean} */
             var o = void 0 === opt_attributes;
-            switch(key.length) {
+            switch (key.length) {
                 case 0:
                     return o ? name() : name.call(opt_attributes);
                 case 1:
@@ -1081,16 +1078,16 @@
             return name.apply(opt_attributes, key);
         };
     }, {}],
-    59 : [function($sanitize, module, dataAndEvents) {
+    59: [function($sanitize, module, dataAndEvents) {
         var ondata = $sanitize("./_cof");
         /** @type {Function} */
         module.exports = Object("z").propertyIsEnumerable(0) ? Object : function(name) {
             return "String" == ondata(name) ? name.split("") : Object(name);
         };
     }, {
-        "./_cof" : 41
+        "./_cof": 41
     }],
-    60 : [function(values, module, dataAndEvents) {
+    60: [function(values, module, dataAndEvents) {
         var v = values("./_iterators");
         var i = values("./_wks")("iterator");
         var ap = Array.prototype;
@@ -1102,19 +1099,19 @@
             return void 0 !== name && (v.Array === name || ap[i] === name);
         };
     }, {
-        "./_iterators" : 68,
-        "./_wks" : 106
+        "./_iterators": 68,
+        "./_wks": 106
     }],
-    61 : [function($sanitize, module, dataAndEvents) {
+    61: [function($sanitize, module, dataAndEvents) {
         var ondata = $sanitize("./_cof");
         /** @type {function (*): boolean} */
         module.exports = Array.isArray || function(name) {
             return "Array" == ondata(name);
         };
     }, {
-        "./_cof" : 41
+        "./_cof": 41
     }],
-    62 : [function(dataAndEvents, module, deepDataAndEvents) {
+    62: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @return {?}
@@ -1123,7 +1120,7 @@
             return "object" == typeof name ? null !== name : "function" == typeof name;
         };
     }, {}],
-    63 : [function(require, module, dataAndEvents) {
+    63: [function(require, module, dataAndEvents) {
         var getActual = require("./_an-object");
         /**
          * @param {Object} name
@@ -1141,9 +1138,9 @@
             }
         };
     }, {
-        "./_an-object" : 38
+        "./_an-object": 38
     }],
-    64 : [function(require, module, dataAndEvents) {
+    64: [function(require, module, dataAndEvents) {
         var getActual = require("./_object-create");
         var objDisplay = require("./_property-desc");
         var inspect = require("./_set-to-string-tag");
@@ -1159,18 +1156,18 @@
          */
         module.exports = function(name, key, opt_attributes) {
             name.prototype = getActual(proto, {
-                next : objDisplay(1, opt_attributes)
+                next: objDisplay(1, opt_attributes)
             });
             inspect(name, key + " Iterator");
         };
     }, {
-        "./_hide" : 55,
-        "./_object-create" : 74,
-        "./_property-desc" : 86,
-        "./_set-to-string-tag" : 91,
-        "./_wks" : 106
+        "./_hide": 55,
+        "./_object-create": 74,
+        "./_property-desc": 86,
+        "./_set-to-string-tag": 91,
+        "./_wks": 106
     }],
-    65 : [function(require, module, dataAndEvents) {
+    65: [function(require, module, dataAndEvents) {
         var Block = require("./_library");
         var inspect = require("./_export");
         var merge = require("./_redefine");
@@ -1218,7 +1215,7 @@
                 if (!retval && key in ret) {
                     return ret[key];
                 }
-                switch(key) {
+                switch (key) {
                     case text:
                         return function() {
                             return new opt_attributes(this, key);
@@ -1247,9 +1244,9 @@
                     return value.call(this);
                 }))), Block && !chai || (!retval && (!lists && ret[locals]) || b(ret, locals, result)), target[key] = result, target[i] = copy, input) {
                 if (obj = {
-                        values : err ? result : callback(length),
-                        keys : raw ? result : callback(text),
-                        entries : entries
+                        values: err ? result : callback(length),
+                        keys: raw ? result : callback(text),
+                        entries: entries
                     }, chai) {
                     for (child in obj) {
                         if (!(child in ret)) {
@@ -1263,18 +1260,18 @@
             return obj;
         };
     }, {
-        "./_export" : 50,
-        "./_has" : 54,
-        "./_hide" : 55,
-        "./_iter-create" : 64,
-        "./_iterators" : 68,
-        "./_library" : 70,
-        "./_object-gpo" : 81,
-        "./_redefine" : 88,
-        "./_set-to-string-tag" : 91,
-        "./_wks" : 106
+        "./_export": 50,
+        "./_has": 54,
+        "./_hide": 55,
+        "./_iter-create": 64,
+        "./_iterators": 68,
+        "./_library": 70,
+        "./_object-gpo": 81,
+        "./_redefine": 88,
+        "./_set-to-string-tag": 91,
+        "./_wks": 106
     }],
-    66 : [function($sanitize, module, dataAndEvents) {
+    66: [function($sanitize, module, dataAndEvents) {
         var prop = $sanitize("./_wks")("iterator");
         /** @type {boolean} */
         var defaultMessage = false;
@@ -1290,8 +1287,7 @@
             Array.from(optgroup, function() {
                 throw 2;
             });
-        } catch (s) {
-        }
+        } catch (s) {}
         /**
          * @param {Object} name
          * @param {Object} key
@@ -1311,8 +1307,8 @@
                  * @return {?}
                  */
                 stream.next = function() {
-                    return{
-                        done : str = true
+                    return {
+                        done: str = true
                     };
                 };
                 /**
@@ -1322,30 +1318,29 @@
                     return stream;
                 };
                 name(originalEvent);
-            } catch (c) {
-            }
+            } catch (c) {}
             return str;
         };
     }, {
-        "./_wks" : 106
+        "./_wks": 106
     }],
-    67 : [function(dataAndEvents, module, deepDataAndEvents) {
+    67: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @param {Object} key
          * @return {?}
          */
         module.exports = function(name, key) {
-            return{
-                value : key,
-                done : !!name
+            return {
+                value: key,
+                done: !!name
             };
         };
     }, {}],
-    68 : [function(dataAndEvents, module, deepDataAndEvents) {
+    68: [function(dataAndEvents, module, deepDataAndEvents) {
         module.exports = {};
     }, {}],
-    69 : [function(require, module, dataAndEvents) {
+    69: [function(require, module, dataAndEvents) {
         var getActual = require("./_object-keys");
         var inspect = require("./_to-iobject");
         /**
@@ -1360,21 +1355,21 @@
             var len = nodes.length;
             /** @type {number} */
             var i = 0;
-            for (;len > i;) {
+            for (; len > i;) {
                 if (obj[node = nodes[i++]] === key) {
                     return node;
                 }
             }
         };
     }, {
-        "./_object-keys" : 83,
-        "./_to-iobject" : 99
+        "./_object-keys": 83,
+        "./_to-iobject": 99
     }],
-    70 : [function(dataAndEvents, module, deepDataAndEvents) {
+    70: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {boolean} */
         module.exports = true;
     }, {}],
-    71 : [function(topic, module, dataAndEvents) {
+    71: [function(topic, module, dataAndEvents) {
         var ast = topic("./_uid")("meta");
         var out = topic("./_is-object");
         var reportError = topic("./_has");
@@ -1395,9 +1390,9 @@
          */
         var isString = function(optgroup) {
             setDescriptor(optgroup, ast, {
-                value : {
-                    i : "O" + ++O,
-                    w : {}
+                value: {
+                    i: "O" + ++O,
+                    w: {}
                 }
             });
         };
@@ -1446,23 +1441,23 @@
             return u && (NEED.NEED && (indexOf(e) && (!reportError(e, ast) && isString(e)))), e;
         };
         var NEED = module.exports = {
-            KEY : ast,
-            NEED : false,
+            KEY: ast,
+            NEED: false,
             /** @type {function (string, ?): ?} */
-            fastKey : toString,
+            fastKey: toString,
             /** @type {function (Object, ?): ?} */
-            getWeak : push,
+            getWeak: push,
             /** @type {function (Object): ?} */
-            onFreeze : error
+            onFreeze: error
         };
     }, {
-        "./_fails" : 51,
-        "./_has" : 54,
-        "./_is-object" : 62,
-        "./_object-dp" : 75,
-        "./_uid" : 103
+        "./_fails": 51,
+        "./_has": 54,
+        "./_is-object": 62,
+        "./_object-dp": 75,
+        "./_uid": 103
     }],
-    72 : [function(require, module, dataAndEvents) {
+    72: [function(require, module, dataAndEvents) {
         var global = require("./_global");
         var self = require("./_task").set;
         var Response = global.MutationObserver || global.WebKitMutationObserver;
@@ -1488,7 +1483,7 @@
                         d.exit();
                     }
                 }
-                for (;v;) {
+                for (; v;) {
                     headers = v.fn;
                     v = v.next;
                     try {
@@ -1516,7 +1511,7 @@
                     /** @type {Text} */
                     var node = document.createTextNode("");
                     (new Response(finish)).observe(node, {
-                        characterData : true
+                        characterData: true
                     });
                     /**
                      * @return {undefined}
@@ -1546,8 +1541,8 @@
             }
             return function(fn) {
                 var next = {
-                    fn : fn,
-                    next : void 0
+                    fn: fn,
+                    next: void 0
                 };
                 if (ret) {
                     ret.next = next;
@@ -1560,11 +1555,11 @@
             };
         };
     }, {
-        "./_cof" : 41,
-        "./_global" : 53,
-        "./_task" : 96
+        "./_cof": 41,
+        "./_global": 53,
+        "./_task": 96
     }],
-    73 : [function(require, module, dataAndEvents) {
+    73: [function(require, module, dataAndEvents) {
         var toArray = require("./_object-keys");
         var item = require("./_object-gops");
         var cfg = require("./_object-pie");
@@ -1589,14 +1584,14 @@
             var current = 1;
             var element = item.f;
             var filter = cfg.f;
-            for (;argLength > current;) {
+            for (; argLength > current;) {
                 var v;
                 var optgroup = inspect(arguments[current++]);
                 var second = element ? toArray(optgroup).concat(element(optgroup)) : toArray(optgroup);
                 var l = second.length;
                 /** @type {number} */
                 var i = 0;
-                for (;l > i;) {
+                for (; l > i;) {
                     if (filter.call(optgroup, v = second[i++])) {
                         c[v] = optgroup[v];
                     }
@@ -1605,14 +1600,14 @@
             return c;
         } : getNames_;
     }, {
-        "./_fails" : 51,
-        "./_iobject" : 59,
-        "./_object-gops" : 80,
-        "./_object-keys" : 83,
-        "./_object-pie" : 84,
-        "./_to-object" : 101
+        "./_fails": 51,
+        "./_iobject": 59,
+        "./_object-gops": 80,
+        "./_object-keys": 83,
+        "./_object-pie": 84,
+        "./_to-object": 101
     }],
-    74 : [function(require, module, dataAndEvents) {
+    74: [function(require, module, dataAndEvents) {
         var factory = require("./_an-object");
         var inspect = require("./_object-dps");
         var nodes = require("./_enum-bug-keys");
@@ -1620,8 +1615,7 @@
         /**
          * @return {undefined}
          */
-        var context = function() {
-        };
+        var context = function() {};
         /** @type {string} */
         var exports = "prototype";
         /**
@@ -1645,7 +1639,7 @@
             d.write(prefix + "script" + name + "document.F=Object" + prefix + "/script" + name);
             d.close();
             run = d.F;
-            for (;i--;) {
+            for (; i--;) {
                 delete run[exports][nodes[i]];
             }
             return run();
@@ -1656,14 +1650,14 @@
             return null !== name ? (context[exports] = factory(name), out = new context, context[exports] = null, out[n] = name) : out = run(), void 0 === key ? out : inspect(out, key);
         };
     }, {
-        "./_an-object" : 38,
-        "./_dom-create" : 47,
-        "./_enum-bug-keys" : 48,
-        "./_html" : 56,
-        "./_object-dps" : 76,
-        "./_shared-key" : 92
+        "./_an-object": 38,
+        "./_dom-create": 47,
+        "./_enum-bug-keys": 48,
+        "./_html": 56,
+        "./_object-dps": 76,
+        "./_shared-key": 92
     }],
-    75 : [function(require, dataAndEvents, entry) {
+    75: [function(require, dataAndEvents, entry) {
         var inspect = require("./_an-object");
         var Block = require("./_ie8-dom-define");
         var walk = require("./_to-primitive");
@@ -1674,8 +1668,7 @@
             if (inspect(name), ast = walk(ast, true), inspect(opt_attributes), Block) {
                 try {
                     return ondata(name, ast, opt_attributes);
-                } catch (c) {
-                }
+                } catch (c) {}
             }
             if ("get" in opt_attributes || "set" in opt_attributes) {
                 throw TypeError("Accessors not supported!");
@@ -1683,12 +1676,12 @@
             return "value" in opt_attributes && (name[ast] = opt_attributes.value), name;
         };
     }, {
-        "./_an-object" : 38,
-        "./_descriptors" : 46,
-        "./_ie8-dom-define" : 57,
-        "./_to-primitive" : 102
+        "./_an-object": 38,
+        "./_descriptors": 46,
+        "./_ie8-dom-define": 57,
+        "./_to-primitive": 102
     }],
-    76 : [function(require, module, dataAndEvents) {
+    76: [function(require, module, dataAndEvents) {
         var keys = require("./_object-dp");
         var inspect = require("./_an-object");
         var i = require("./_object-keys");
@@ -1700,18 +1693,18 @@
             var count = faces.length;
             /** @type {number} */
             var offset = 0;
-            for (;count > offset;) {
+            for (; count > offset;) {
                 keys.f(name, f = faces[offset++], key[f]);
             }
             return name;
         };
     }, {
-        "./_an-object" : 38,
-        "./_descriptors" : 46,
-        "./_object-dp" : 75,
-        "./_object-keys" : 83
+        "./_an-object": 38,
+        "./_descriptors": 46,
+        "./_object-dp": 75,
+        "./_object-keys": 83
     }],
-    77 : [function(require, dataAndEvents, entry) {
+    77: [function(require, dataAndEvents, entry) {
         var module = require("./_object-pie");
         var store = require("./_property-desc");
         var expect = require("./_to-iobject");
@@ -1725,23 +1718,22 @@
             if (name = expect(name), key = i(key, true), Block) {
                 try {
                     return getOwnPropertyDescriptor(name, key);
-                } catch (n) {
-                }
+                } catch (n) {}
             }
             if (inspect(name, key)) {
                 return store(!module.f.call(name, key), name[key]);
             }
         };
     }, {
-        "./_descriptors" : 46,
-        "./_has" : 54,
-        "./_ie8-dom-define" : 57,
-        "./_object-pie" : 84,
-        "./_property-desc" : 86,
-        "./_to-iobject" : 99,
-        "./_to-primitive" : 102
+        "./_descriptors": 46,
+        "./_has": 54,
+        "./_ie8-dom-define": 57,
+        "./_object-pie": 84,
+        "./_property-desc": 86,
+        "./_to-iobject": 99,
+        "./_to-primitive": 102
     }],
-    78 : [function(get_func, mod, dataAndEvents) {
+    78: [function(get_func, mod, dataAndEvents) {
         var func = get_func("./_to-iobject");
         var $ = get_func("./_object-gopn").f;
         /** @type {function (this:*): string} */
@@ -1767,10 +1759,10 @@
             return el && "[object Window]" == toString.call(name) ? next(name) : $(func(name));
         };
     }, {
-        "./_object-gopn" : 79,
-        "./_to-iobject" : 99
+        "./_object-gopn": 79,
+        "./_to-iobject": 99
     }],
-    79 : [function(toArray, dataAndEvents, entry) {
+    79: [function(toArray, dataAndEvents, entry) {
         var ondata = toArray("./_object-keys-internal");
         var val = toArray("./_enum-bug-keys").concat("length", "prototype");
         /** @type {function (Object): Array.<string>} */
@@ -1778,13 +1770,13 @@
             return ondata(name, val);
         };
     }, {
-        "./_enum-bug-keys" : 48,
-        "./_object-keys-internal" : 82
+        "./_enum-bug-keys": 48,
+        "./_object-keys-internal": 82
     }],
-    80 : [function(dataAndEvents, deepDataAndEvents, object) {
+    80: [function(dataAndEvents, deepDataAndEvents, object) {
         object.f = Object.getOwnPropertySymbols;
     }, {}],
-    81 : [function($sanitize, module, dataAndEvents) {
+    81: [function($sanitize, module, dataAndEvents) {
         var hasKey = $sanitize("./_has");
         var get_mangled = $sanitize("./_to-object");
         var type = $sanitize("./_shared-key")("IE_PROTO");
@@ -1794,11 +1786,11 @@
             return name = get_mangled(name), hasKey(name, type) ? name[type] : "function" == typeof name.constructor && name instanceof name.constructor ? name.constructor.prototype : name instanceof Object ? objectProto : null;
         };
     }, {
-        "./_has" : 54,
-        "./_shared-key" : 92,
-        "./_to-object" : 101
+        "./_has": 54,
+        "./_shared-key": 92,
+        "./_to-object": 101
     }],
-    82 : [function(require, module, dataAndEvents) {
+    82: [function(require, module, dataAndEvents) {
         var getActual = require("./_has");
         var inspect = require("./_to-iobject");
         var callback = require("./_array-includes")(false);
@@ -1822,7 +1814,7 @@
                     }
                 }
             }
-            for (;key.length > bs;) {
+            for (; key.length > bs;) {
                 if (getActual(obj, i = key[bs++])) {
                     if (!~callback(errors, i)) {
                         errors.push(i);
@@ -1832,12 +1824,12 @@
             return errors;
         };
     }, {
-        "./_array-includes" : 39,
-        "./_has" : 54,
-        "./_shared-key" : 92,
-        "./_to-iobject" : 99
+        "./_array-includes": 39,
+        "./_has": 54,
+        "./_shared-key": 92,
+        "./_to-iobject": 99
     }],
-    83 : [function(proceed, module, dataAndEvents) {
+    83: [function(proceed, module, dataAndEvents) {
         var ondata = proceed("./_object-keys-internal");
         var val = proceed("./_enum-bug-keys");
         /** @type {function (Object): Array.<string>} */
@@ -1845,14 +1837,14 @@
             return ondata(name, val);
         };
     }, {
-        "./_enum-bug-keys" : 48,
-        "./_object-keys-internal" : 82
+        "./_enum-bug-keys": 48,
+        "./_object-keys-internal": 82
     }],
-    84 : [function(dataAndEvents, deepDataAndEvents, entry) {
+    84: [function(dataAndEvents, deepDataAndEvents, entry) {
         /** @type {function (this:Object, string): boolean} */
         entry.f = {}.propertyIsEnumerable;
     }, {}],
-    85 : [function(require, module, dataAndEvents) {
+    85: [function(require, module, dataAndEvents) {
         var inspect = require("./_export");
         var util = require("./_core");
         var getActual = require("./_fails");
@@ -1870,26 +1862,26 @@
             }), "Object", cookies);
         };
     }, {
-        "./_core" : 42,
-        "./_export" : 50,
-        "./_fails" : 51
+        "./_core": 42,
+        "./_export": 50,
+        "./_fails": 51
     }],
-    86 : [function(dataAndEvents, module, deepDataAndEvents) {
+    86: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @param {Object} name
          * @param {Object} key
          * @return {?}
          */
         module.exports = function(name, key) {
-            return{
-                enumerable : !(1 & name),
-                configurable : !(2 & name),
-                writable : !(4 & name),
-                value : key
+            return {
+                enumerable: !(1 & name),
+                configurable: !(2 & name),
+                writable: !(4 & name),
+                value: key
             };
         };
     }, {}],
-    87 : [function(require, module, dataAndEvents) {
+    87: [function(require, module, dataAndEvents) {
         var inspect = require("./_hide");
         /**
          * @param {Object} name
@@ -1909,14 +1901,14 @@
             return name;
         };
     }, {
-        "./_hide" : 55
+        "./_hide": 55
     }],
-    88 : [function(factory, module, dataAndEvents) {
+    88: [function(factory, module, dataAndEvents) {
         module.exports = factory("./_hide");
     }, {
-        "./_hide" : 55
+        "./_hide": 55
     }],
-    89 : [function(require, c, dataAndEvents) {
+    89: [function(require, c, dataAndEvents) {
         var forIn = require("./_is-object");
         var baseCreateCallback = require("./_an-object");
         /**
@@ -1930,7 +1922,7 @@
             }
         };
         c.exports = {
-            set : Object.setPrototypeOf || ("__proto__" in {} ? function(value, err, func) {
+            set: Object.setPrototypeOf || ("__proto__" in {} ? function(value, err, func) {
                 try {
                     func = require("./_ctx")(Function.call, require("./_object-gopd").f(Object.prototype, "__proto__").set, 2);
                     func(value, []);
@@ -1945,15 +1937,15 @@
                 };
             }({}, false) : void 0),
             /** @type {function (Object, Object): undefined} */
-            check : forOwn
+            check: forOwn
         };
     }, {
-        "./_an-object" : 38,
-        "./_ctx" : 44,
-        "./_is-object" : 62,
-        "./_object-gopd" : 77
+        "./_an-object": 38,
+        "./_ctx": 44,
+        "./_is-object": 62,
+        "./_object-gopd": 77
     }],
-    90 : [function(require, module, dataAndEvents) {
+    90: [function(require, module, dataAndEvents) {
         var map = require("./_global");
         var helper = require("./_core");
         var doc = require("./_object-dp");
@@ -1969,11 +1961,11 @@
                 if (optgroup) {
                     if (!optgroup[ast]) {
                         doc.f(optgroup, ast, {
-                            configurable : true,
+                            configurable: true,
                             /**
                              * @return {?}
                              */
-                            get : function() {
+                            get: function() {
                                 return this;
                             }
                         });
@@ -1982,13 +1974,13 @@
             }
         };
     }, {
-        "./_core" : 42,
-        "./_descriptors" : 46,
-        "./_global" : 53,
-        "./_object-dp" : 75,
-        "./_wks" : 106
+        "./_core": 42,
+        "./_descriptors": 46,
+        "./_global": 53,
+        "./_object-dp": 75,
+        "./_wks": 106
     }],
-    91 : [function(require, module, dataAndEvents) {
+    91: [function(require, module, dataAndEvents) {
         var inspect = require("./_object-dp").f;
         var getActual = require("./_has");
         var ast = require("./_wks")("toStringTag");
@@ -2002,18 +1994,18 @@
             if (name) {
                 if (!getActual(name = opt_attributes ? name : name.prototype, ast)) {
                     inspect(name, ast, {
-                        configurable : true,
-                        value : key
+                        configurable: true,
+                        value: key
                     });
                 }
             }
         };
     }, {
-        "./_has" : 54,
-        "./_object-dp" : 75,
-        "./_wks" : 106
+        "./_has": 54,
+        "./_object-dp": 75,
+        "./_wks": 106
     }],
-    92 : [function($sanitize, module, dataAndEvents) {
+    92: [function($sanitize, module, dataAndEvents) {
         var context = $sanitize("./_shared")("keys");
         var definition = $sanitize("./_uid");
         /**
@@ -2024,10 +2016,10 @@
             return context[name] || (context[name] = definition(name));
         };
     }, {
-        "./_shared" : 93,
-        "./_uid" : 103
+        "./_shared": 93,
+        "./_uid": 103
     }],
-    93 : [function(createElement, module, dataAndEvents) {
+    93: [function(createElement, module, dataAndEvents) {
         var o = createElement("./_global");
         /** @type {string} */
         var oride = "__core-js_shared__";
@@ -2040,9 +2032,9 @@
             return old[name] || (old[name] = {});
         };
     }, {
-        "./_global" : 53
+        "./_global": 53
     }],
-    94 : [function(require, module, dataAndEvents) {
+    94: [function(require, module, dataAndEvents) {
         var inspect = require("./_an-object");
         var getActual = require("./_a-function");
         var part = require("./_wks")("species");
@@ -2057,11 +2049,11 @@
             return void 0 === bCtor || void 0 == (obj = inspect(bCtor)[part]) ? key : getActual(obj);
         };
     }, {
-        "./_a-function" : 35,
-        "./_an-object" : 38,
-        "./_wks" : 106
+        "./_a-function": 35,
+        "./_an-object": 38,
+        "./_wks": 106
     }],
-    95 : [function(getCallback, module, dataAndEvents) {
+    95: [function(getCallback, module, dataAndEvents) {
         var getIndex = getCallback("./_to-integer");
         var callback = getCallback("./_defined");
         /**
@@ -2081,10 +2073,10 @@
             };
         };
     }, {
-        "./_defined" : 45,
-        "./_to-integer" : 98
+        "./_defined": 45,
+        "./_to-integer": 98
     }],
-    96 : [function(require, c, dataAndEvents) {
+    96: [function(require, c, dataAndEvents) {
         var callback;
         var channel;
         var thisArg;
@@ -2131,7 +2123,7 @@
                 var args = [];
                 /** @type {number} */
                 var i = 1;
-                for (;arguments.length > i;) {
+                for (; arguments.length > i;) {
                     args.push(arguments[i++]);
                 }
                 return buf[++pdataCur] = function() {
@@ -2188,18 +2180,18 @@
             }
         }
         c.exports = {
-            set : pass,
-            clear : Benchmark
+            set: pass,
+            clear: Benchmark
         };
     }, {
-        "./_cof" : 41,
-        "./_ctx" : 44,
-        "./_dom-create" : 47,
-        "./_global" : 53,
-        "./_html" : 56,
-        "./_invoke" : 58
+        "./_cof": 41,
+        "./_ctx": 44,
+        "./_dom-create": 47,
+        "./_global": 53,
+        "./_html": 56,
+        "./_invoke": 58
     }],
-    97 : [function($filter, module, dataAndEvents) {
+    97: [function($filter, module, dataAndEvents) {
         var capitalize = $filter("./_to-integer");
         /** @type {function (...[*]): number} */
         var log = Math.max;
@@ -2214,9 +2206,9 @@
             return name = capitalize(name), name < 0 ? log(name + key, 0) : inspect(name, key);
         };
     }, {
-        "./_to-integer" : 98
+        "./_to-integer": 98
     }],
-    98 : [function(dataAndEvents, module, deepDataAndEvents) {
+    98: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {function (*): number} */
         var ceil = Math.ceil;
         /** @type {function (*): number} */
@@ -2229,7 +2221,7 @@
             return isNaN(name = +name) ? 0 : (name > 0 ? floor : ceil)(name);
         };
     }, {}],
-    99 : [function(require, module, dataAndEvents) {
+    99: [function(require, module, dataAndEvents) {
         var set = require("./_iobject");
         var inspect = require("./_defined");
         /**
@@ -2240,10 +2232,10 @@
             return set(inspect(name));
         };
     }, {
-        "./_defined" : 45,
-        "./_iobject" : 59
+        "./_defined": 45,
+        "./_iobject": 59
     }],
-    100 : [function(require, module, dataAndEvents) {
+    100: [function(require, module, dataAndEvents) {
         var inspect = require("./_to-integer");
         /** @type {function (...[*]): number} */
         var nativeMin = Math.min;
@@ -2255,9 +2247,9 @@
             return name > 0 ? nativeMin(inspect(name), 9007199254740991) : 0;
         };
     }, {
-        "./_to-integer" : 98
+        "./_to-integer": 98
     }],
-    101 : [function(require, module, dataAndEvents) {
+    101: [function(require, module, dataAndEvents) {
         var inspect = require("./_defined");
         /**
          * @param {Object} name
@@ -2267,9 +2259,9 @@
             return Object(inspect(name));
         };
     }, {
-        "./_defined" : 45
+        "./_defined": 45
     }],
-    102 : [function(require, module, dataAndEvents) {
+    102: [function(require, module, dataAndEvents) {
         var inspect = require("./_is-object");
         /**
          * @param {Object} name
@@ -2294,9 +2286,9 @@
             throw TypeError("Can't convert object to primitive value");
         };
     }, {
-        "./_is-object" : 62
+        "./_is-object": 62
     }],
-    103 : [function(dataAndEvents, module, deepDataAndEvents) {
+    103: [function(dataAndEvents, module, deepDataAndEvents) {
         /** @type {number} */
         var count = 0;
         /** @type {number} */
@@ -2309,7 +2301,7 @@
             return "Symbol(".concat(void 0 === name ? "" : name, ")_", (++count + id).toString(36));
         };
     }, {}],
-    104 : [function(require, module, dataAndEvents) {
+    104: [function(require, module, dataAndEvents) {
         var nodes = require("./_global");
         var runtime = require("./_core");
         var Block = require("./_library");
@@ -2324,24 +2316,24 @@
             if (!("_" == name.charAt(0))) {
                 if (!(name in optgroup)) {
                     getter(optgroup, name, {
-                        value : keys.f(name)
+                        value: keys.f(name)
                     });
                 }
             }
         };
     }, {
-        "./_core" : 42,
-        "./_global" : 53,
-        "./_library" : 70,
-        "./_object-dp" : 75,
-        "./_wks-ext" : 105
+        "./_core": 42,
+        "./_global": 53,
+        "./_library": 70,
+        "./_object-dp": 75,
+        "./_wks-ext": 105
     }],
-    105 : [function(trim, dataAndEvents, el) {
+    105: [function(trim, dataAndEvents, el) {
         el.f = trim("./_wks");
     }, {
-        "./_wks" : 106
+        "./_wks": 106
     }],
-    106 : [function(inspect, module, dataAndEvents) {
+    106: [function(inspect, module, dataAndEvents) {
         var store = inspect("./_shared")("wks");
         var str = inspect("./_uid");
         var conditions = inspect("./_global").Symbol;
@@ -2353,11 +2345,11 @@
         };
         self.store = store;
     }, {
-        "./_global" : 53,
-        "./_shared" : 93,
-        "./_uid" : 103
+        "./_global": 53,
+        "./_shared": 93,
+        "./_uid": 103
     }],
-    107 : [function(require, module, dataAndEvents) {
+    107: [function(require, module, dataAndEvents) {
         var getActual = require("./_classof");
         var implementation = require("./_wks")("iterator");
         var objectTypes = require("./_iterators");
@@ -2368,12 +2360,12 @@
             }
         };
     }, {
-        "./_classof" : 40,
-        "./_core" : 42,
-        "./_iterators" : 68,
-        "./_wks" : 106
+        "./_classof": 40,
+        "./_core": 42,
+        "./_iterators": 68,
+        "./_wks": 106
     }],
-    108 : [function(require, module, dataAndEvents) {
+    108: [function(require, module, dataAndEvents) {
         var getName = require("./_an-object");
         var filter = require("./core.get-iterator-method");
         /** @type {function (string): ?} */
@@ -2385,11 +2377,11 @@
             return getName(matched.call(elem));
         };
     }, {
-        "./_an-object" : 38,
-        "./_core" : 42,
-        "./core.get-iterator-method" : 107
+        "./_an-object": 38,
+        "./_core": 42,
+        "./core.get-iterator-method": 107
     }],
-    109 : [function(require, module, dataAndEvents) {
+    109: [function(require, module, dataAndEvents) {
         var helper = require("./_classof");
         var func = require("./_wks")("iterator");
         var tags = require("./_iterators");
@@ -2399,12 +2391,12 @@
             return void 0 !== t[func] || ("@@iterator" in t || tags.hasOwnProperty(helper(t)));
         };
     }, {
-        "./_classof" : 40,
-        "./_core" : 42,
-        "./_iterators" : 68,
-        "./_wks" : 106
+        "./_classof": 40,
+        "./_core": 42,
+        "./_iterators": 68,
+        "./_wks": 106
     }],
-    110 : [function(require, dataAndEvents, deepDataAndEvents) {
+    110: [function(require, dataAndEvents, deepDataAndEvents) {
         var makeIterator = require("./_ctx");
         var expr = require("./_export");
         var create = require("./_to-object");
@@ -2420,7 +2412,7 @@
              * @param {Object} name
              * @return {?}
              */
-            from : function(name) {
+            from: function(name) {
                 var val;
                 var first;
                 var input;
@@ -2438,13 +2430,13 @@
                 if (isFunction && (callback = makeIterator(callback, len > 2 ? arguments[2] : void 0, 2)), void 0 == matched || type == Array && getActual(matched)) {
                     val = assert(elem.length);
                     first = new type(val);
-                    for (;val > i;i++) {
+                    for (; val > i; i++) {
                         isArray(first, i, isFunction ? callback(elem[i], i) : elem[i]);
                     }
                 } else {
                     ret = matched.call(elem);
                     first = new type;
-                    for (;!(input = ret.next()).done;i++) {
+                    for (; !(input = ret.next()).done; i++) {
                         isArray(first, i, isFunction ? merge(ret, callback, [input.value, i], true) : input.value);
                     }
                 }
@@ -2452,17 +2444,17 @@
             }
         });
     }, {
-        "./_create-property" : 43,
-        "./_ctx" : 44,
-        "./_export" : 50,
-        "./_is-array-iter" : 60,
-        "./_iter-call" : 63,
-        "./_iter-detect" : 66,
-        "./_to-length" : 100,
-        "./_to-object" : 101,
-        "./core.get-iterator-method" : 107
+        "./_create-property": 43,
+        "./_ctx": 44,
+        "./_export": 50,
+        "./_is-array-iter": 60,
+        "./_iter-call": 63,
+        "./_iter-detect": 66,
+        "./_to-length": 100,
+        "./_to-object": 101,
+        "./core.get-iterator-method": 107
     }],
-    111 : [function(require, module, dataAndEvents) {
+    111: [function(require, module, dataAndEvents) {
         var isArray = require("./_add-to-unscopables");
         var _ = require("./_iter-step");
         var nodes = require("./_iterators");
@@ -2478,48 +2470,48 @@
             var incoming = this._k;
             /** @type {number} */
             var _ty = this._i++;
-            return!_col || _ty >= _col.length ? (this._t = void 0, _(1)) : "keys" == incoming ? _(0, _ty) : "values" == incoming ? _(0, _col[_ty]) : _(0, [_ty, _col[_ty]]);
+            return !_col || _ty >= _col.length ? (this._t = void 0, _(1)) : "keys" == incoming ? _(0, _ty) : "values" == incoming ? _(0, _col[_ty]) : _(0, [_ty, _col[_ty]]);
         }, "values");
         nodes.Arguments = nodes.Array;
         isArray("keys");
         isArray("values");
         isArray("entries");
     }, {
-        "./_add-to-unscopables" : 36,
-        "./_iter-define" : 65,
-        "./_iter-step" : 67,
-        "./_iterators" : 68,
-        "./_to-iobject" : 99
+        "./_add-to-unscopables": 36,
+        "./_iter-define": 65,
+        "./_iter-step": 67,
+        "./_iterators": 68,
+        "./_to-iobject": 99
     }],
-    112 : [function(parser, dataAndEvents, deepDataAndEvents) {
+    112: [function(parser, dataAndEvents, deepDataAndEvents) {
         var expr = parser("./_export");
         expr(expr.S + expr.F, "Object", {
-            assign : parser("./_object-assign")
+            assign: parser("./_object-assign")
         });
     }, {
-        "./_export" : 50,
-        "./_object-assign" : 73
+        "./_export": 50,
+        "./_object-assign": 73
     }],
-    113 : [function(require, dataAndEvents, deepDataAndEvents) {
+    113: [function(require, dataAndEvents, deepDataAndEvents) {
         var isKind = require("./_export");
         isKind(isKind.S, "Object", {
-            create : require("./_object-create")
+            create: require("./_object-create")
         });
     }, {
-        "./_export" : 50,
-        "./_object-create" : 74
+        "./_export": 50,
+        "./_object-create": 74
     }],
-    114 : [function(parser, dataAndEvents, deepDataAndEvents) {
+    114: [function(parser, dataAndEvents, deepDataAndEvents) {
         var expr = parser("./_export");
         expr(expr.S + expr.F * !parser("./_descriptors"), "Object", {
-            defineProperty : parser("./_object-dp").f
+            defineProperty: parser("./_object-dp").f
         });
     }, {
-        "./_descriptors" : 46,
-        "./_export" : 50,
-        "./_object-dp" : 75
+        "./_descriptors": 46,
+        "./_export": 50,
+        "./_object-dp": 75
     }],
-    115 : [function(require, dataAndEvents, deepDataAndEvents) {
+    115: [function(require, dataAndEvents, deepDataAndEvents) {
         var HOP = require("./_to-object");
         var getActual = require("./_object-gpo");
         require("./_object-sap")("getPrototypeOf", function() {
@@ -2528,11 +2520,11 @@
             };
         });
     }, {
-        "./_object-gpo" : 81,
-        "./_object-sap" : 85,
-        "./_to-object" : 101
+        "./_object-gpo": 81,
+        "./_object-sap": 85,
+        "./_to-object": 101
     }],
-    116 : [function(require, dataAndEvents, deepDataAndEvents) {
+    116: [function(require, dataAndEvents, deepDataAndEvents) {
         var getActual = require("./_to-object");
         var assert = require("./_object-keys");
         require("./_object-sap")("keys", function() {
@@ -2541,22 +2533,21 @@
             };
         });
     }, {
-        "./_object-keys" : 83,
-        "./_object-sap" : 85,
-        "./_to-object" : 101
+        "./_object-keys": 83,
+        "./_object-sap": 85,
+        "./_to-object": 101
     }],
-    117 : [function(require, dataAndEvents, deepDataAndEvents) {
+    117: [function(require, dataAndEvents, deepDataAndEvents) {
         var isKind = require("./_export");
         isKind(isKind.S, "Object", {
-            setPrototypeOf : require("./_set-proto").set
+            setPrototypeOf: require("./_set-proto").set
         });
     }, {
-        "./_export" : 50,
-        "./_set-proto" : 89
+        "./_export": 50,
+        "./_set-proto": 89
     }],
-    118 : [function(dataAndEvents, deepDataAndEvents, ignoreMethodDoesntExist) {
-    }, {}],
-    119 : [function(f, dataAndEvents, deepDataAndEvents) {
+    118: [function(dataAndEvents, deepDataAndEvents, ignoreMethodDoesntExist) {}, {}],
+    119: [function(f, dataAndEvents, deepDataAndEvents) {
         var Moment;
         var Deferred;
         var option;
@@ -2583,19 +2574,17 @@
         /**
          * @return {undefined}
          */
-        var resolved = function() {
-        };
+        var resolved = function() {};
         /** @type {boolean} */
-        var _tryInitOnFocus = !!function() {
+        var _tryInitOnFocus = !! function() {
             try {
                 var promise = model.resolve(1);
                 /** @type {function (?): undefined} */
                 var n = (promise.constructor = {})[f("./_wks")("species")] = function(require) {
                     require(resolved, resolved);
                 };
-                return(domain || "function" == typeof PromiseRejectionEvent) && promise.then(resolved) instanceof n;
-            } catch (o) {
-            }
+                return (domain || "function" == typeof PromiseRejectionEvent) && promise.then(resolved) instanceof n;
+            } catch (o) {}
         }();
         /**
          * @param {number} type
@@ -2611,7 +2600,7 @@
          */
         var unwrap = function(object) {
             var length;
-            return!(!isWrapper(object) || "function" != typeof(length = object.then)) && length;
+            return !(!isWrapper(object) || "function" != typeof(length = object.then)) && length;
         };
         /**
          * @param {?} resolve
@@ -2642,8 +2631,8 @@
             try {
                 func();
             } catch (err) {
-                return{
-                    error : err
+                return {
+                    error: err
                 };
             }
         };
@@ -2710,7 +2699,7 @@
                             callback(e);
                         }
                     };
-                    for (;items.length > index;) {
+                    for (; items.length > index;) {
                         finish(items[index++]);
                     }
                     /** @type {Array} */
@@ -2741,8 +2730,8 @@
                         } else {
                             if (cancelAnimationFrame = global.onunhandledrejection) {
                                 cancelAnimationFrame({
-                                    promise : data,
-                                    reason : err
+                                    promise: data,
+                                    reason: err
                                 });
                             } else {
                                 if (console = global.console) {
@@ -2769,7 +2758,7 @@
             var items = t._a || t._c;
             /** @type {number} */
             var index = 0;
-            for (;items.length > index;) {
+            for (; items.length > index;) {
                 if (next = items[index++], next.fail || !test(next.promise)) {
                     return false;
                 }
@@ -2788,8 +2777,8 @@
                 } else {
                     if (onError = global.onrejectionhandled) {
                         onError({
-                            promise : args,
-                            reason : args._v
+                            promise: args,
+                            reason: args._v
                         });
                     }
                 }
@@ -2832,8 +2821,8 @@
                     if (self = unwrap(b)) {
                         flush(function() {
                             var options = {
-                                _w : a,
-                                _d : false
+                                _w: a,
+                                _d: false
                             };
                             try {
                                 self.call(b, $(step, options, 1), $(add, options, 1));
@@ -2850,8 +2839,8 @@
                     }
                 } catch (modelsToAdd) {
                     add.call({
-                        _w : a,
-                        _d : false
+                        _w: a,
+                        _d: false
                     }, modelsToAdd);
                 }
             }
@@ -2895,7 +2884,7 @@
                  * @param {Object} onReject
                  * @return {?}
                  */
-                then : function(resolved, onReject) {
+                then: function(resolved, onReject) {
                     var test = then(callback(this, model));
                     return test.ok = "function" != typeof resolved || resolved, test.fail = "function" == typeof onReject && onReject, test.domain = domain ? process.domain : void 0, this._c.push(test), this._a && this._a.push(test), this._s && fn(this, false), test.promise;
                 },
@@ -2903,7 +2892,7 @@
                  * @param {Object} callback
                  * @return {?}
                  */
-                "catch" : function(callback) {
+                "catch": function(callback) {
                     return this.then(void 0, callback);
                 }
             });
@@ -2918,7 +2907,7 @@
             };
         }
         square(square.G + square.W + square.F * !_tryInitOnFocus, {
-            Promise : model
+            Promise: model
         });
         f("./_set-to-string-tag")(model, i);
         f("./_set-species")(i);
@@ -2928,7 +2917,7 @@
              * @param {?} reason
              * @return {?}
              */
-            reject : function(reason) {
+            reject: function(reason) {
                 var createDeferred = then(this);
                 var reject = createDeferred.reject;
                 return reject(reason), createDeferred.promise;
@@ -2939,7 +2928,7 @@
              * @param {Object} name
              * @return {?}
              */
-            resolve : function(name) {
+            resolve: function(name) {
                 if (name instanceof model && when(name.constructor, this)) {
                     return name;
                 }
@@ -2955,7 +2944,7 @@
              * @param {?} obj
              * @return {?}
              */
-            all : function(obj) {
+            all: function(obj) {
                 var resolved = this;
                 var deferred = then(resolved);
                 var resolver = deferred.resolve;
@@ -2995,7 +2984,7 @@
              * @param {?} initial
              * @return {?}
              */
-            race : function(initial) {
+            race: function(initial) {
                 var resolved = this;
                 var deferred = then(resolved);
                 var reject = deferred.reject;
@@ -3008,26 +2997,26 @@
             }
         });
     }, {
-        "./_a-function" : 35,
-        "./_an-instance" : 37,
-        "./_classof" : 40,
-        "./_core" : 42,
-        "./_ctx" : 44,
-        "./_export" : 50,
-        "./_for-of" : 52,
-        "./_global" : 53,
-        "./_is-object" : 62,
-        "./_iter-detect" : 66,
-        "./_library" : 70,
-        "./_microtask" : 72,
-        "./_redefine-all" : 87,
-        "./_set-species" : 90,
-        "./_set-to-string-tag" : 91,
-        "./_species-constructor" : 94,
-        "./_task" : 96,
-        "./_wks" : 106
+        "./_a-function": 35,
+        "./_an-instance": 37,
+        "./_classof": 40,
+        "./_core": 42,
+        "./_ctx": 44,
+        "./_export": 50,
+        "./_for-of": 52,
+        "./_global": 53,
+        "./_is-object": 62,
+        "./_iter-detect": 66,
+        "./_library": 70,
+        "./_microtask": 72,
+        "./_redefine-all": 87,
+        "./_set-species": 90,
+        "./_set-to-string-tag": 91,
+        "./_species-constructor": 94,
+        "./_task": 96,
+        "./_wks": 106
     }],
-    120 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    120: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         var filter = $sanitize("./_string-at")(true);
         $sanitize("./_iter-define")(String, "String", function(opt_message) {
             /** @type {string} */
@@ -3039,18 +3028,18 @@
             var arr = this._t;
             var i = this._i;
             return i >= arr.length ? {
-                value : void 0,
-                done : true
+                value: void 0,
+                done: true
             } : (val = filter(arr, i), this._i += val.length, {
-                value : val,
-                done : false
+                value: val,
+                done: false
             });
         });
     }, {
-        "./_iter-define" : 65,
-        "./_string-at" : 95
+        "./_iter-define": 65,
+        "./_string-at": 95
     }],
-    121 : [function(require, dataAndEvents, deepDataAndEvents) {
+    121: [function(require, dataAndEvents, deepDataAndEvents) {
         var opts = require("./_global");
         var func = require("./_has");
         var deep = require("./_descriptors");
@@ -3102,9 +3091,9 @@
                 /**
                  * @return {?}
                  */
-                get : function() {
+                get: function() {
                     return has(this, "a", {
-                        value : 7
+                        value: 7
                     }).a;
                 }
             })).a;
@@ -3142,7 +3131,7 @@
          */
         var get = function(name, key, opt_attributes) {
             return name === optgroup && get(rvar, key, opt_attributes), normalize(name), key = trim(key, true), normalize(opt_attributes), func(object, key) ? (opt_attributes.enumerable ? (func(name, ast) && (name[ast][key] && (name[ast][key] = false)), opt_attributes = expect(opt_attributes, {
-                enumerable : value(0, false)
+                enumerable: value(0, false)
             })) : (func(name, ast) || has(name, ast, value(1, {})), name[ast][key] = true), defineProperty(name, key, opt_attributes)) : has(name, key, opt_attributes);
         };
         /**
@@ -3157,7 +3146,7 @@
             /** @type {number} */
             var i = 0;
             var len = classNames.length;
-            for (;len > i;) {
+            for (; len > i;) {
                 get(name, className = classNames[i++], key[className]);
             }
             return name;
@@ -3177,7 +3166,7 @@
         var next = function(name) {
             /** @type {boolean} */
             var t = propertyIsEnumerable.call(this, name = trim(name, true));
-            return!(this === optgroup && (func(object, name) && !func(rvar, name))) && (!(t || (!func(this, name) || (!func(object, name) || func(this, ast) && this[ast][name]))) || t);
+            return !(this === optgroup && (func(object, name) && !func(rvar, name))) && (!(t || (!func(this, name) || (!func(object, name) || func(this, ast) && this[ast][name]))) || t);
         };
         /**
          * @param {Object} name
@@ -3187,7 +3176,7 @@
         var f = function(name, key) {
             if (name = encodeURIComponent(name), key = trim(key, true), name !== optgroup || (!func(object, key) || func(rvar, key))) {
                 var descriptor = print(name, key);
-                return!descriptor || (!func(object, key) || (func(name, ast) && name[ast][key] || (descriptor.enumerable = true))), descriptor;
+                return !descriptor || (!func(object, key) || (func(name, ast) && name[ast][key] || (descriptor.enumerable = true))), descriptor;
             }
         };
         /**
@@ -3201,7 +3190,7 @@
             var out = [];
             /** @type {number} */
             var i = 0;
-            for (;h.length > i;) {
+            for (; h.length > i;) {
                 if (!func(object, copies = h[i++])) {
                     if (!(copies == ast)) {
                         if (!(copies == KEY)) {
@@ -3225,7 +3214,7 @@
             var values = [];
             /** @type {number} */
             var idx = 0;
-            for (;path.length > idx;) {
+            for (; path.length > idx;) {
                 if (!!func(object, key = path[idx++])) {
                     if (!(prefix && !func(optgroup, key))) {
                         values.push(object[key]);
@@ -3260,9 +3249,9 @@
                     defineProperty(this, camelKey, value(1, name));
                 };
                 return deep && (copy && defineProperty(optgroup, camelKey, {
-                    configurable : true,
+                    configurable: true,
                     /** @type {function (Object): undefined} */
-                    set : add
+                    set: add
                 })), callback(camelKey);
             };
             inspect(options[key], "toString", function() {
@@ -3292,19 +3281,19 @@
             };
         }
         node(node.G + node.W + node.F * !symbol, {
-            Symbol : options
+            Symbol: options
         });
         /** @type {Array.<string>} */
         var str = "hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(",");
         /** @type {number} */
         var chars = 0;
-        for (;str.length > chars;) {
+        for (; str.length > chars;) {
             parse(str[chars++]);
         }
         str = toString(parse.store);
         /** @type {number} */
         chars = 0;
-        for (;str.length > chars;) {
+        for (; str.length > chars;) {
             helper(str[chars++]);
         }
         node(node.S + node.F * !symbol, "Symbol", {
@@ -3312,14 +3301,14 @@
              * @param {Object} optgroup
              * @return {?}
              */
-            "for" : function(optgroup) {
+            "for": function(optgroup) {
                 return func(self, optgroup += "") ? self[optgroup] : self[optgroup] = options(optgroup);
             },
             /**
              * @param {string} attributes
              * @return {?}
              */
-            keyFor : function(attributes) {
+            keyFor: function(attributes) {
                 if (_extend(attributes)) {
                     return b(self, attributes);
                 }
@@ -3328,44 +3317,44 @@
             /**
              * @return {undefined}
              */
-            useSetter : function() {
+            useSetter: function() {
                 /** @type {boolean} */
                 copy = true;
             },
             /**
              * @return {undefined}
              */
-            useSimple : function() {
+            useSimple: function() {
                 /** @type {boolean} */
                 copy = false;
             }
         });
         node(node.S + node.F * !symbol, "Object", {
             /** @type {function (Object, Object): ?} */
-            create : name,
+            create: name,
             /** @type {function (Object, Object, ?): ?} */
-            defineProperty : get,
+            defineProperty: get,
             /** @type {function (Object, Object): ?} */
-            defineProperties : set,
+            defineProperties: set,
             /** @type {function (Object, Object): ?} */
-            getOwnPropertyDescriptor : f,
+            getOwnPropertyDescriptor: f,
             /** @type {function (Object): ?} */
-            getOwnPropertyNames : add,
+            getOwnPropertyNames: add,
             /** @type {function (Object): ?} */
-            getOwnPropertySymbols : listener
+            getOwnPropertySymbols: listener
         });
         if (context) {
             node(node.S + node.F * (!symbol || getActual(function() {
                 var optgroup = options();
                 return "[null]" != fn([optgroup]) || ("{}" != fn({
-                    a : optgroup
+                    a: optgroup
                 }) || "{}" != fn(Object(optgroup)));
             })), "JSON", {
                 /**
                  * @param {Object} attributes
                  * @return {?}
                  */
-                stringify : function(attributes) {
+                stringify: function(attributes) {
                     if (void 0 !== attributes && !_extend(attributes)) {
                         var data;
                         var callback;
@@ -3373,7 +3362,7 @@
                         var args = [attributes];
                         /** @type {number} */
                         var i = 1;
-                        for (;arguments.length > i;) {
+                        for (; arguments.length > i;) {
                             args.push(arguments[i++]);
                         }
                         return data = args[1], "function" == typeof data && (callback = data), !callback && isString(data) || (data = function(key, data) {
@@ -3392,48 +3381,48 @@
         isUndefined(Math, "Math", true);
         isUndefined(opts.JSON, "JSON", true);
     }, {
-        "./_an-object" : 38,
-        "./_descriptors" : 46,
-        "./_enum-keys" : 49,
-        "./_export" : 50,
-        "./_fails" : 51,
-        "./_global" : 53,
-        "./_has" : 54,
-        "./_hide" : 55,
-        "./_is-array" : 61,
-        "./_keyof" : 69,
-        "./_library" : 70,
-        "./_meta" : 71,
-        "./_object-create" : 74,
-        "./_object-dp" : 75,
-        "./_object-gopd" : 77,
-        "./_object-gopn" : 79,
-        "./_object-gopn-ext" : 78,
-        "./_object-gops" : 80,
-        "./_object-keys" : 83,
-        "./_object-pie" : 84,
-        "./_property-desc" : 86,
-        "./_redefine" : 88,
-        "./_set-to-string-tag" : 91,
-        "./_shared" : 93,
-        "./_to-iobject" : 99,
-        "./_to-primitive" : 102,
-        "./_uid" : 103,
-        "./_wks" : 106,
-        "./_wks-define" : 104,
-        "./_wks-ext" : 105
+        "./_an-object": 38,
+        "./_descriptors": 46,
+        "./_enum-keys": 49,
+        "./_export": 50,
+        "./_fails": 51,
+        "./_global": 53,
+        "./_has": 54,
+        "./_hide": 55,
+        "./_is-array": 61,
+        "./_keyof": 69,
+        "./_library": 70,
+        "./_meta": 71,
+        "./_object-create": 74,
+        "./_object-dp": 75,
+        "./_object-gopd": 77,
+        "./_object-gopn": 79,
+        "./_object-gopn-ext": 78,
+        "./_object-gops": 80,
+        "./_object-keys": 83,
+        "./_object-pie": 84,
+        "./_property-desc": 86,
+        "./_redefine": 88,
+        "./_set-to-string-tag": 91,
+        "./_shared": 93,
+        "./_to-iobject": 99,
+        "./_to-primitive": 102,
+        "./_uid": 103,
+        "./_wks": 106,
+        "./_wks-define": 104,
+        "./_wks-ext": 105
     }],
-    122 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    122: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         $sanitize("./_wks-define")("asyncIterator");
     }, {
-        "./_wks-define" : 104
+        "./_wks-define": 104
     }],
-    123 : [function($sanitize, dataAndEvents, deepDataAndEvents) {
+    123: [function($sanitize, dataAndEvents, deepDataAndEvents) {
         $sanitize("./_wks-define")("observable");
     }, {
-        "./_wks-define" : 104
+        "./_wks-define": 104
     }],
-    124 : [function(require, dataAndEvents, deepDataAndEvents) {
+    124: [function(require, dataAndEvents, deepDataAndEvents) {
         require("./es6.array.iterator");
         var events = require("./_global");
         var getActual = require("./_hide");
@@ -3443,7 +3432,7 @@
         var layerNames = ["NodeList", "DOMTokenList", "MediaList", "StyleSheetList", "CSSRuleList"];
         /** @type {number} */
         var i = 0;
-        for (;i < 5;i++) {
+        for (; i < 5; i++) {
             var name = layerNames[i];
             var constructor = events[name];
             var obj = constructor && constructor.prototype;
@@ -3455,13 +3444,13 @@
             nodes[name] = nodes.Array;
         }
     }, {
-        "./_global" : 53,
-        "./_hide" : 55,
-        "./_iterators" : 68,
-        "./_wks" : 106,
-        "./es6.array.iterator" : 111
+        "./_global": 53,
+        "./_hide": 55,
+        "./_iterators": 68,
+        "./_wks": 106,
+        "./es6.array.iterator": 111
     }],
-    125 : [function(dataAndEvents, module, deepDataAndEvents) {
+    125: [function(dataAndEvents, module, deepDataAndEvents) {
         /**
          * @return {?}
          */
@@ -3545,11 +3534,11 @@
                 /** @type {boolean} */
                 b = true;
                 var length = data.length;
-                for (;length;) {
+                for (; length;) {
                     received = data;
                     /** @type {Array} */
                     data = [];
-                    for (;++index < length;) {
+                    for (; ++index < length;) {
                         if (received) {
                             received[index].run();
                         }
@@ -3580,12 +3569,11 @@
         /**
          * @return {undefined}
          */
-        function tmp() {
-        }
+        function tmp() {}
         var display;
         var state;
         var process = module.exports = {};
-        !function() {
+        ! function() {
             try {
                 /** @type {Function} */
                 display = "function" == typeof setTimeout ? setTimeout : none;
@@ -3618,7 +3606,7 @@
             if (arguments.length > 1) {
                 /** @type {number} */
                 var i = 1;
-                for (;i < arguments.length;i++) {
+                for (; i < arguments.length; i++) {
                     x[i - 1] = arguments[i];
                 }
             }
@@ -3686,14 +3674,14 @@
             return 0;
         };
     }, {}],
-    126 : [function($, dataAndEvents, optgroup) {
+    126: [function($, dataAndEvents, optgroup) {
         /**
          * @param {Object} type
          * @return {?}
          */
         function select(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -3726,8 +3714,8 @@
             function cb(msg) {
                 var r20 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 return document.dispatchEvent(new CustomEvent("grammarly:message", {
-                    detail : (0, elem["default"])({
-                        event : msg
+                    detail: (0, elem["default"])({
+                        event: msg
                     }, r20)
                 }));
             }
@@ -3747,12 +3735,12 @@
              */
             function initialize(name) {
                 var self = o.runtime.connect({
-                    name : name
+                    name: name
                 });
                 return self.onMessage.addListener(function(msg) {
                     return cb("message", {
-                        msg : msg,
-                        name : name
+                        msg: msg,
+                        name: name
                     });
                 }), self.onDisconnect.addListener(function() {
                     console.warn("port malfunction " + name);
@@ -3760,15 +3748,15 @@
                     rparentsprev.proxyPortDisconnected(name, err && err.message || "port malfunction: " + name);
                     completed();
                     document.dispatchEvent(new CustomEvent("grammarly:error", {
-                        detail : {
-                            event : "disconnect",
-                            name : name
+                        detail: {
+                            event: "disconnect",
+                            name: name
                         }
                     }));
                 }), self;
             }
             var oSpace = [self.ports.bridge, self.ports.background, self.ports.broadcast].reduce(function(deepDataAndEvents, node) {
-                return(0, elem["default"])({}, deepDataAndEvents, (0, keys["default"])({}, node, initialize(node)));
+                return (0, elem["default"])({}, deepDataAndEvents, (0, keys["default"])({}, node, initialize(node)));
             }, {});
             document.addEventListener("grammarly:action", handler);
             document.addEventListener("grammarly:ping", onTouchEnd);
@@ -3781,7 +3769,7 @@
         var selector = $("babel-runtime/core-js/object/assign");
         var elem = select(selector);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var sandbox = $("config");
         sandbox.initGlobal("chrome", "cs");
@@ -3789,32 +3777,29 @@
         var $spy = $("lib/tracking/telemetry");
         var self = $("extension-api/interface");
         var o = window.chrome || window.firefox;
-        var rparentsprev = new $spy.Telemetry(emptyJ.sendEventPixel, function() {
-        }, function() {
-        }, function() {
-        });
+        var rparentsprev = new $spy.Telemetry(emptyJ.sendEventPixel, function() {}, function() {}, function() {});
         if ("loading" === document.readyState) {
             document.addEventListener("DOMContentLoaded", initialize, false);
         } else {
             initialize();
         }
     }, {
-        "babel-runtime/core-js/object/assign" : 5,
-        "babel-runtime/helpers/defineProperty" : 16,
-        config : 130,
-        "extension-api/interface" : 135,
-        "lib/tracking/felogPixel" : 138,
-        "lib/tracking/telemetry" : 139
+        "babel-runtime/core-js/object/assign": 5,
+        "babel-runtime/helpers/defineProperty": 16,
+        config: 130,
+        "extension-api/interface": 135,
+        "lib/tracking/felogPixel": 138,
+        "lib/tracking/telemetry": 139
     }],
-    127 : [function(require, dataAndEvents, optgroup) {
+    127: [function(require, dataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var o;
         var nodes = require("stdlib");
         var config = require("./url");
         var module = require("./services");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @param {string} key
@@ -3824,11 +3809,11 @@
             function create(name, key, opt_attributes) {
                 var ast = "prod" === key ? "https://f-log-extension.grammarly.io" : "qa" === key || "dev" === key ? "https://127.0.0.1:8000" : nodes.assertNever(key);
                 var camelKey = "prod" === key ? optgroup : "qa" === key || "dev" === key ? "qagr.io" : nodes.assertNever(key);
-                return{
-                    url : config.UrlConfig.create(optgroup, ast, opt_attributes),
-                    gnar : module.GnarConfig.create(name, camelKey),
-                    felog : module.FelogConfig.create(name),
-                    extensionId : extensionId
+                return {
+                    url: config.UrlConfig.create(optgroup, ast, opt_attributes),
+                    gnar: module.GnarConfig.create(name, camelKey),
+                    felog: module.FelogConfig.create(name),
+                    extensionId: extensionId
                 };
             }
             /** @type {string} */
@@ -3839,17 +3824,17 @@
             exports.create = create;
         }(o = optgroup.AppConfig || (optgroup.AppConfig = {}));
     }, {
-        "./services" : 132,
-        "./url" : 134,
-        stdlib : 142
+        "./services": 132,
+        "./url": 134,
+        stdlib: 142
     }],
-    128 : [function(format, dataAndEvents, optgroup) {
+    128: [function(format, dataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var o;
         var f = format("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @param {Object} key
@@ -3866,15 +3851,15 @@
                 var l = name + "." + key + "." + opt_attributes;
                 /** @type {string} */
                 var min = ["prod" !== code ? code : null, num !== index ? num : null].filter(function(dataAndEvents) {
-                    return!!dataAndEvents;
+                    return !!dataAndEvents;
                 }).join(".");
-                return{
-                    version : l,
-                    fullVersion : l + "-" + [index, min].filter(function(g) {
+                return {
+                    version: l,
+                    fullVersion: l + "-" + [index, min].filter(function(g) {
                         return "" !== g;
                     }).join("/"),
-                    commitHash : id,
-                    gitBranch : type
+                    commitHash: id,
+                    gitBranch: type
                 };
             }
             /**
@@ -3885,17 +3870,16 @@
              */
             function detectBrowser(o, opt_attributes, browser) {
                 try {
-                    switch(o) {
+                    switch (o) {
                         case "safari":
-                            switch(opt_attributes) {
+                            switch (opt_attributes) {
                                 case "bg":
                                     ;
                                 case "popup":
                                     return browser.safari.extension.displayVersion;
                                 default:
                                     return;
-                            }
-                            ;
+                            };
                         case "chrome":
                             return browser.chrome.runtime.getManifest().version;
                         case "firefox":
@@ -3915,15 +3899,15 @@
             exports.getManifestVersion = detectBrowser;
         }(o = optgroup.BuildInfo || (optgroup.BuildInfo = {}));
     }, {
-        stdlib : 142
+        stdlib: 142
     }],
-    129 : [function($sanitize, dataAndEvents, optgroup) {
+    129: [function($sanitize, dataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var o;
         var data_priv = $sanitize("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @return {?}
@@ -3944,7 +3928,7 @@
             exports.detect = detect;
         }(o = optgroup.TargetBrowser || (optgroup.TargetBrowser = {}));
         var i;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @return {?}
@@ -3956,7 +3940,7 @@
             exports.create = create;
         }(i = optgroup.TargetEnv || (optgroup.TargetEnv = {}));
         var s;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @return {?}
@@ -3991,7 +3975,7 @@
             exports.detect = rename;
         }(s = optgroup.TargetContext || (optgroup.TargetContext = {}));
         var c;
-        !function(d) {
+        ! function(d) {
             /**
              * @param {Object} name
              * @param {Object} key
@@ -3999,19 +3983,19 @@
              * @return {?}
              */
             function data(name, key, opt_attributes) {
-                return{
-                    browser : name,
-                    env : key,
-                    context : opt_attributes
+                return {
+                    browser: name,
+                    env: key,
+                    context: opt_attributes
                 };
             }
             /** @type {function (Object, Object, ?): ?} */
             d.create = data;
         }(c = optgroup.BundleInfo || (optgroup.BundleInfo = {}));
     }, {
-        stdlib : 142
+        stdlib: 142
     }],
-    130 : [function(require, dataAndEvents, optgroup) {
+    130: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {Object} iterable
          * @return {undefined}
@@ -4041,7 +4025,7 @@
             window.GR_CFG = proto.get();
         }
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         enumerate(require("./app"));
         enumerate(require("./build"));
@@ -4064,16 +4048,16 @@
         /** @type {function (Object, Object, (Object|boolean|number|string)): undefined} */
         optgroup.initGlobal = process;
     }, {
-        "./app" : 127,
-        "./build" : 128,
-        "./bundle" : 129,
-        "./mainConfig" : 131,
-        "./services" : 132,
-        "./system" : 133,
-        "./url" : 134,
-        stdlib : 142
+        "./app": 127,
+        "./build": 128,
+        "./bundle": 129,
+        "./mainConfig": 131,
+        "./services": 132,
+        "./system": 133,
+        "./url": 134,
+        stdlib: 142
     }],
-    131 : [function($, dataAndEvents, optgroup) {
+    131: [function($, dataAndEvents, optgroup) {
         (function(p) {
             /**
              * @param {Object} value
@@ -4081,13 +4065,13 @@
              */
             function h(value) {
                 return value && value.__esModule ? value : {
-                    "default" : value
+                    "default": value
                 };
             }
             var selector = $("babel-runtime/helpers/slicedToArray");
             var elem = h(selector);
             Object.defineProperty(optgroup, "__esModule", {
-                value : true
+                value: true
             });
             var s;
             var $window = $("./app");
@@ -4095,7 +4079,7 @@
             var game = $("./system");
             var article = $("./bundle");
             var block = $("stdlib");
-            !function(exports) {
+            ! function(exports) {
                 /**
                  * @param {Object} name
                  * @param {Object} key
@@ -4107,14 +4091,14 @@
                  * @return {?}
                  */
                 function has(name, key, opt_attributes, property, c, target, attr) {
-                    return{
-                        env : name,
-                        major_number : key,
-                        build_number : opt_attributes,
-                        release_number : property,
-                        git_branch : c,
-                        git_commit : target,
-                        popup_url : attr
+                    return {
+                        env: name,
+                        major_number: key,
+                        build_number: opt_attributes,
+                        release_number: property,
+                        git_branch: c,
+                        git_commit: target,
+                        popup_url: attr
                     };
                 }
                 /**
@@ -4129,7 +4113,7 @@
                 exports.fromBrowserify = filter;
             }(s = optgroup.ProcessEnv || (optgroup.ProcessEnv = {}));
             var d;
-            !function(exports) {
+            ! function(exports) {
                 /**
                  * @param {Object} name
                  * @param {Object} attributes
@@ -4172,11 +4156,11 @@
                     var optgroup = ranges[0];
                     var camelKey = ranges[1];
                     var gl = ranges[2];
-                    return{
-                        buildInfo : book.BuildInfo.create(optgroup, camelKey, gl, name, ast, opt_attributes.git_branch, opt_attributes.git_commit),
-                        bundleInfo : article.BundleInfo.create(name, ast, attributes),
-                        appConfig : $window.AppConfig.create(name, ast, opt_attributes.popup_url),
-                        systemInfo : game.SystemInfo.create(name, window)
+                    return {
+                        buildInfo: book.BuildInfo.create(optgroup, camelKey, gl, name, ast, opt_attributes.git_branch, opt_attributes.git_commit),
+                        bundleInfo: article.BundleInfo.create(name, ast, attributes),
+                        appConfig: $window.AppConfig.create(name, ast, opt_attributes.popup_url),
+                        systemInfo: game.SystemInfo.create(name, window)
                     };
                 }
                 /** @type {function (Object, Object, ?): ?} */
@@ -4184,73 +4168,73 @@
             }(d = optgroup.MainConfig || (optgroup.MainConfig = {}));
         }).call(this, $("_process"));
     }, {
-        "./app" : 127,
-        "./build" : 128,
-        "./bundle" : 129,
-        "./system" : 133,
-        _process : 125,
-        "babel-runtime/helpers/slicedToArray" : 19,
-        stdlib : 142
+        "./app": 127,
+        "./build": 128,
+        "./bundle": 129,
+        "./system": 133,
+        _process: 125,
+        "babel-runtime/helpers/slicedToArray": 19,
+        stdlib: 142
     }],
-    132 : [function(require, dataAndEvents, optgroup) {
+    132: [function(require, dataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var o;
         var assert = require("stdlib");
-        !function(d) {
+        ! function(d) {
             /**
              * @param {Object} name
              * @param {Object} key
              * @return {?}
              */
             function data(name, key) {
-                return{
-                    appName : assert.assertNonNull(browser[name], "gnar app name"),
-                    url : "https://gnar." + key,
-                    domain : "." + key
+                return {
+                    appName: assert.assertNonNull(browser[name], "gnar app name"),
+                    url: "https://gnar." + key,
+                    domain: "." + key
                 };
             }
             var browser = {
-                chrome : "chromeExt",
-                firefox : "firefoxExt",
-                safari : "safariExt",
-                edge : "edgeExt"
+                chrome: "chromeExt",
+                firefox: "firefoxExt",
+                safari: "safariExt",
+                edge: "edgeExt"
             };
             /** @type {function (Object, Object): ?} */
             d.create = data;
         }(o = optgroup.GnarConfig || (optgroup.GnarConfig = {}));
         var i;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @return {?}
              */
             function create(name) {
-                return{
-                    appName : assert.assertNonNull(browser[name], "felog app name")
+                return {
+                    appName: assert.assertNonNull(browser[name], "felog app name")
                 };
             }
             var browser = {
-                chrome : "extensionChrome",
-                firefox : "extensionFirefox",
-                safari : "extensionSafari",
-                edge : "extensionEdge"
+                chrome: "extensionChrome",
+                firefox: "extensionFirefox",
+                safari: "extensionSafari",
+                edge: "extensionEdge"
             };
             /** @type {function (Object): ?} */
             exports.create = create;
         }(i = optgroup.FelogConfig || (optgroup.FelogConfig = {}));
     }, {
-        stdlib : 142
+        stdlib: 142
     }],
-    133 : [function(require, dataAndEvents, optgroup) {
+    133: [function(require, dataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var Class;
         var drop = require("./bundle");
         var Block = require("stdlib");
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @param {Object} key
@@ -4258,10 +4242,10 @@
              */
             function get(name, key) {
                 var paramType = drop.TargetBrowser.detect(key) || "other";
-                return{
-                    type : paramType,
-                    isWE : "firefox" === name ? Block.try_(function() {
-                        return!!firefox.runtime;
+                return {
+                    type: paramType,
+                    isWE: "firefox" === name ? Block.try_(function() {
+                        return !!firefox.runtime;
                     }, function(dataAndEvents) {
                         return false;
                     }) : "chrome" === name || "edge" === name
@@ -4271,45 +4255,45 @@
             exports.create = get;
         }(Class = optgroup.BrowserInfo || (optgroup.BrowserInfo = {}));
         var keys;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @return {?}
              */
             function create(name) {
-                return{
-                    isWindows : name.navigator.appVersion.indexOf("Win") !== -1
+                return {
+                    isWindows: name.navigator.appVersion.indexOf("Win") !== -1
                 };
             }
             /** @type {function (Object): ?} */
             exports.create = create;
         }(keys = optgroup.OsInfo || (optgroup.OsInfo = {}));
         var c;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @param {Object} key
              * @return {?}
              */
             function create(name, key) {
-                return{
-                    browser : Class.create(name, key),
-                    os : keys.create(key)
+                return {
+                    browser: Class.create(name, key),
+                    os: keys.create(key)
                 };
             }
             /** @type {function (Object, Object): ?} */
             exports.create = create;
         }(c = optgroup.SystemInfo || (optgroup.SystemInfo = {}));
     }, {
-        "./bundle" : 129,
-        stdlib : 142
+        "./bundle": 129,
+        stdlib: 142
     }],
-    134 : [function(dataAndEvents, deepDataAndEvents, optgroup) {
+    134: [function(dataAndEvents, deepDataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var o;
-        !function(exports) {
+        ! function(exports) {
             /**
              * @param {Object} name
              * @param {Object} key
@@ -4327,56 +4311,56 @@
                 var appPathRoute = "https://auth." + name + "/v3";
                 /** @type {string} */
                 var newPath = "https://emailfeedback." + name;
-                return{
-                    app : rootPath,
-                    appPersonalDictionary : rootPath + "/profile/dictionary",
-                    capi : "wss://capi." + name + "/freews",
-                    dapiMimic : propname + "/api/mimic",
-                    dapiProps : propname + "/api/props",
-                    editorDictionary : rootPath + "/profile/dictionary",
-                    dictionary : "https://capi." + name + "/api/defs",
-                    docs : rootPath + "/docs",
-                    docsApi : "https://dox." + name + "/documents",
-                    authCreatePage : appPathRoute + "/redirect-anonymous?location=" + authPath + "/after_install_page",
-                    userOrAnonymous : appPathRoute + "/user/oranonymous",
-                    authSignin : appPathRoute + "/login",
-                    authSignup : appPathRoute + "/signup",
-                    signin : authPath + "/signin",
-                    signup : authPath + "/signup",
-                    resetPassword : authPath + "/resetpassword",
-                    saveEmailFeedback : newPath + "/api/feedback/",
-                    newFelog : key,
-                    referral : authPath + "/referral?page=extension",
-                    welcomeC : authPath + "/extension-success",
-                    upgrade : authPath + "/upgrade",
-                    uninstall : authPath + "/extension-uninstall",
-                    terms : authPath + "/terms",
-                    policy : authPath + "/privacy-policy",
-                    pageConfigUrl : "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
-                    popupUrl : opt_attributes,
-                    grammarlyDomain : name
+                return {
+                    app: rootPath,
+                    appPersonalDictionary: rootPath + "/profile/dictionary",
+                    capi: "wss://capi." + name + "/freews",
+                    dapiMimic: propname + "/api/mimic",
+                    dapiProps: propname + "/api/props",
+                    editorDictionary: rootPath + "/profile/dictionary",
+                    dictionary: "https://capi." + name + "/api/defs",
+                    docs: rootPath + "/docs",
+                    docsApi: "https://dox." + name + "/documents",
+                    authCreatePage: appPathRoute + "/redirect-anonymous?location=" + authPath + "/after_install_page",
+                    userOrAnonymous: appPathRoute + "/user/oranonymous",
+                    authSignin: appPathRoute + "/login",
+                    authSignup: appPathRoute + "/signup",
+                    signin: authPath + "/signin",
+                    signup: authPath + "/signup",
+                    resetPassword: authPath + "/resetpassword",
+                    saveEmailFeedback: newPath + "/api/feedback/",
+                    newFelog: key,
+                    referral: authPath + "/referral?page=extension",
+                    welcomeC: authPath + "/extension-success",
+                    upgrade: authPath + "/upgrade",
+                    uninstall: authPath + "/extension-uninstall",
+                    terms: authPath + "/terms",
+                    policy: authPath + "/privacy-policy",
+                    pageConfigUrl: "https://d3cv4a9a9wh0bt.cloudfront.net/browserplugin/config.json",
+                    popupUrl: opt_attributes,
+                    grammarlyDomain: name
                 };
             }
             /** @type {function (Object, Object, ?): ?} */
             exports.create = init;
         }(o = optgroup.UrlConfig || (optgroup.UrlConfig = {}));
     }, {}],
-    135 : [function(dataAndEvents, deepDataAndEvents, optgroup) {
+    135: [function(dataAndEvents, deepDataAndEvents, optgroup) {
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         optgroup.ports = {
-            bridge : "bridge",
-            background : "message:to-priv",
-            broadcast : "message:to-non-priv"
+            bridge: "bridge",
+            background: "message:to-priv",
+            broadcast: "message:to-non-priv"
         };
     }, {}],
-    136 : [function(Application, dataAndEvents, optgroup) {
+    136: [function(Application, dataAndEvents, optgroup) {
         /**
          * @return {?}
          */
         function isTestsMode() {
-            return!!window.__extensionTestsMode;
+            return !!window.__extensionTestsMode;
         }
         /**
          * @return {?}
@@ -4445,7 +4429,7 @@
             return self.buildInfo.version;
         }
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var sandbox = Application("config");
         var self = sandbox.getGlobal();
@@ -4479,16 +4463,16 @@
         optgroup.gnarAppName = self.appConfig.gnar.appName;
         optgroup.GRAMMARLY_DOMAIN = self.appConfig.url.grammarlyDomain;
     }, {
-        config : 130
+        config: 130
     }],
-    137 : [function(require, dataAndEvents, optgroup) {
+    137: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function isUndefinedOrNull(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -4505,14 +4489,14 @@
          */
         function send(opt_noCache, service, opt_headers, url, var_args, output, serviceName, data, config) {
             var obj = {
-                message : output,
-                logger : var_args,
-                level : path.toFelogString(serviceName),
-                application : opt_noCache,
-                version : service,
-                userId : config && config.userId,
-                containerId : config && config.containerId,
-                env : opt_headers
+                message: output,
+                logger: var_args,
+                level: path.toFelogString(serviceName),
+                application: opt_noCache,
+                version: service,
+                userId: config && config.userId,
+                containerId: config && config.containerId,
+                env: opt_headers
             };
             return data && (obj.extra = data), url + "/log?json=" + encodeURIComponent((0, keys["default"])(obj));
         }
@@ -4529,23 +4513,23 @@
          */
         function init(app, config, allBindingsAccessor, url, logger, output, baseUrl, depMaps) {
             var obj = {
-                message : output,
-                logger : logger,
-                level : path.toFelogString(baseUrl),
-                application : app,
-                version : config,
-                env : allBindingsAccessor,
-                extra_usage : depMaps
+                message: output,
+                logger: logger,
+                level: path.toFelogString(baseUrl),
+                application: app,
+                version: config,
+                env: allBindingsAccessor,
+                extra_usage: depMaps
             };
             return url + "/log?json=" + encodeURIComponent((0, keys["default"])(obj));
         }
         var b = require("babel-runtime/core-js/json/stringify");
         var keys = isUndefinedOrNull(b);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var path;
-        !function(logging) {
+        ! function(logging) {
             /** @type {string} */
             logging[logging.INFO = 0] = "INFO";
             /** @type {string} */
@@ -4559,7 +4543,7 @@
              * @return {?}
              */
             function initialize(name) {
-                switch(name) {
+                switch (name) {
                     case logging.INFO:
                         return "INFO";
                     case logging.WARN:
@@ -4578,16 +4562,16 @@
         /** @type {function (?, string, Object, string, Object, string, string, ?): ?} */
         optgroup.felogUsageRequestUrl = init;
     }, {
-        "babel-runtime/core-js/json/stringify" : 4
+        "babel-runtime/core-js/json/stringify": 4
     }],
-    138 : [function(valueAccessor, dataAndEvents, optgroup) {
+    138: [function(valueAccessor, dataAndEvents, optgroup) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -4606,25 +4590,25 @@
         var value = valueAccessor("babel-runtime/core-js/promise");
         var iterator = lookupIterator(value);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var args = valueAccessor("../newConfig");
         var that = valueAccessor("./felog");
         /** @type {function (Object, string, string, Object, Object): ?} */
         optgroup.sendEventPixel = done;
     }, {
-        "../newConfig" : 136,
-        "./felog" : 137,
-        "babel-runtime/core-js/promise" : 11
+        "../newConfig": 136,
+        "./felog": 137,
+        "babel-runtime/core-js/promise": 11
     }],
-    139 : [function(require, dataAndEvents, optgroup) {
+    139: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {Object} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         var target = require("babel-runtime/core-js/json/stringify");
@@ -4634,7 +4618,7 @@
         var selector = require("babel-runtime/helpers/createClass");
         var elem = Event(selector);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var $$Log = require("./felog");
         /** @type {number} */
@@ -4674,7 +4658,7 @@
                  */
                 this.differentStateDomain = function(dataAndEvents) {
                     self._send("cs.state.differentDomain", "received state for different domain", $$Log.LogLevel.INFO, {
-                        stateDomain : dataAndEvents
+                        stateDomain: dataAndEvents
                     });
                 };
                 /**
@@ -4683,7 +4667,7 @@
                  */
                 this.restoredBgConnection = function(dataAndEvents) {
                     self._send("cs.connection.bg.restored", "bg page connection restored", $$Log.LogLevel.INFO, {
-                        timeWithoutConnection : dataAndEvents
+                        timeWithoutConnection: dataAndEvents
                     });
                 };
                 /**
@@ -4704,7 +4688,7 @@
                  */
                 this.infinityCheckResetFail = function(delay) {
                     self._send("cs.connection.infiniteCheck.failed", "infinite check reset failed", $$Log.LogLevel.ERROR, {
-                        delay : delay
+                        delay: delay
                     });
                 };
                 /**
@@ -4713,7 +4697,7 @@
                  */
                 this.tooLongPageConfigInit = function(dataAndEvents) {
                     self._send("cs.pageConfig.init.exceeded", "page config init timeout", $$Log.LogLevel.WARN, {
-                        initTime : dataAndEvents
+                        initTime: dataAndEvents
                     });
                 };
                 /**
@@ -4722,7 +4706,7 @@
                  */
                 this.tooLongUserUpdateTime = function(date) {
                     self._send("bg.state.user.update.exceeded", "user state update took too long", $$Log.LogLevel.WARN, {
-                        updateTime : date
+                        updateTime: date
                     });
                 };
                 /**
@@ -4737,7 +4721,7 @@
                  */
                 this.restoreBgPageConnection = function(time) {
                     self._send("cs.gbutton.bg\u0421onnection.restored", "gbutton connection to bg page restored", $$Log.LogLevel.INFO, {
-                        time : time
+                        time: time
                     });
                 };
                 /**
@@ -4764,7 +4748,7 @@
                  */
                 this.signinClose = function(dataAndEvents) {
                     self._send("cs.signin.close", "sign in dialog closed", $$Log.LogLevel.INFO, {
-                        openTime : dataAndEvents
+                        openTime: dataAndEvents
                     });
                 };
                 /**
@@ -4780,8 +4764,8 @@
                  */
                 this.popupLoadError = function(output, errorName) {
                     self._send("cs.popup.load.error", "could not open pop-up editor", $$Log.LogLevel.ERROR, {
-                        message : output,
-                        name : errorName
+                        message: output,
+                        name: errorName
                     });
                 };
                 /**
@@ -4790,7 +4774,7 @@
                  */
                 this.loginNoBgPageConnection = function(output) {
                     self._send("debug.cs.connection.signin.bg.timeout", "can not connect to bg page on login", $$Log.LogLevel.INFO, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -4799,7 +4783,7 @@
                  */
                 this.pageConfigCDNError = function(output) {
                     self._send("cs.pageConfig.cdn.error", "could not read page config", $$Log.LogLevel.ERROR, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -4809,8 +4793,8 @@
                  */
                 this.pageConfigLocalStorageError = function(output, errorName) {
                     self._send("cs.pageConfig.localStorage.error", "could not read page config from localStorage", $$Log.LogLevel.INFO, {
-                        message : output,
-                        name : errorName
+                        message: output,
+                        name: errorName
                     });
                 };
                 /**
@@ -4820,8 +4804,8 @@
                  */
                 this.pageConfigUpdated = function(ver, newVersion) {
                     self._send("cs.pageConfig.updated", "page config updated", $$Log.LogLevel.INFO, {
-                        oldVersion : ver,
-                        newVersion : newVersion
+                        oldVersion: ver,
+                        newVersion: newVersion
                     });
                 };
                 /**
@@ -4836,7 +4820,7 @@
                  */
                 this.settingsUsupportedShow = function(dataAndEvents) {
                     self._send("settings.popup.state.unsupported.show", "page unsupported message shown", $$Log.LogLevel.INFO, {
-                        popupType : dataAndEvents
+                        popupType: dataAndEvents
                     });
                 };
                 /**
@@ -4845,7 +4829,7 @@
                  */
                 this.settingsPopupToggled = function(dataAndEvents) {
                     self._send("settings.popup.experiment.toggle", "settings popup disabled/enabled for experiment on /personalize page", $$Log.LogLevel.INFO, {
-                        isPopupDisabled : dataAndEvents
+                        isPopupDisabled: dataAndEvents
                     });
                 };
                 /**
@@ -4861,8 +4845,8 @@
                  */
                 this.capiNotAuthorizedLoop = function(dataAndEvents, deepDataAndEvents) {
                     self._send("debug.socket.notAuthorizedLoop", "could not authenticate on capi and auth", $$Log.LogLevel.INFO, {
-                        authDegradation : dataAndEvents,
-                        cookiesDisabled : deepDataAndEvents
+                        authDegradation: dataAndEvents,
+                        cookiesDisabled: deepDataAndEvents
                     });
                 };
                 /**
@@ -4877,7 +4861,7 @@
                  */
                 this.socketBgRestored = function(dataAndEvents) {
                     self._send("debug.bg.socket.restored", "capi session restored", $$Log.LogLevel.INFO, {
-                        tryCount : dataAndEvents
+                        tryCount: dataAndEvents
                     });
                 };
                 /**
@@ -4887,8 +4871,8 @@
                  */
                 this.socketBgReconnectFail = function(oauth_token, dataAndEvents) {
                     self._send("bg.socket.reconnect.fail", "could not restore ws connection", $$Log.LogLevel.WARN, {
-                        token : oauth_token,
-                        tryCount : dataAndEvents
+                        token: oauth_token,
+                        tryCount: dataAndEvents
                     });
                 };
                 /**
@@ -4903,7 +4887,7 @@
                  */
                 this.soketCsErrorMsg = function(output) {
                     self._send("cs.socket.errorMsg", "capi error", $$Log.LogLevel.WARN, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -4912,7 +4896,7 @@
                  */
                 this.gnarClientInitFail = function(output) {
                     self._send("gnar.bg.tracking.gnar.init.fail", "gnar init failed", $$Log.LogLevel.WARN, {
-                        message : output
+                        message: output
                     });
                 };
                 /**
@@ -4933,7 +4917,7 @@
                  */
                 this.userUpgradeClick = function(labelPlacement) {
                     self._send("cs.ui.action.upgradeClick", "upgrade hook clicked", $$Log.LogLevel.INFO, {
-                        placement : labelPlacement
+                        placement: labelPlacement
                     });
                 };
                 /**
@@ -4948,7 +4932,7 @@
                  */
                 this.checkingToggledInField = function(_enabled) {
                     self._send("cs.ui.gbutton.toggleInField", "checking toggled in field", $$Log.LogLevel.INFO, {
-                        enabled : _enabled
+                        enabled: _enabled
                     });
                 };
                 /**
@@ -4958,8 +4942,8 @@
                  */
                 this.sessionInvalidated = function(err, dataAndEvents) {
                     self._send("bg.session.invalidated", "user session invalidated", $$Log.LogLevel.INFO, {
-                        reason : err,
-                        userChanged : dataAndEvents
+                        reason: err,
+                        userChanged: dataAndEvents
                     });
                 };
                 /**
@@ -4976,8 +4960,8 @@
                  */
                 this.dapiPropInitialized = function(errorName, x) {
                     self._send("bg.settings.dapi.prop.init", "save property to the DAPI", $$Log.LogLevel.INFO, {
-                        name : errorName,
-                        value : x
+                        name: errorName,
+                        value: x
                     });
                 };
                 /**
@@ -4987,8 +4971,8 @@
                  */
                 this.getDapiPropError = function(fieldName, reqData) {
                     self._send("bg.connection.dapi.getProp.error", "could not get dapi property", $$Log.LogLevel.WARN, {
-                        property : fieldName,
-                        body : reqData
+                        property: fieldName,
+                        body: reqData
                     });
                 };
                 /**
@@ -4998,8 +4982,8 @@
                  */
                 this.setDapiPropError = function(fieldName, reqData) {
                     self._send("bg.connection.dapi.setProp.error", "could not set dapi property", $$Log.LogLevel.WARN, {
-                        property : fieldName,
-                        body : reqData
+                        property: fieldName,
+                        body: reqData
                     });
                 };
                 /**
@@ -5008,7 +4992,7 @@
                  */
                 this.toggleExtensionDefs = function(_enabled) {
                     self._send("bg.settings.definitions.toggle", "definitions toggled for domain", $$Log.LogLevel.INFO, {
-                        enabled : _enabled
+                        enabled: _enabled
                     });
                 };
                 /**
@@ -5018,8 +5002,8 @@
                  */
                 this.toggleExtension = function(_enabled, labelPlacement) {
                     self._send("bg.settings.extension.toggle", "extension toggled for domain", $$Log.LogLevel.INFO, {
-                        enabled : _enabled,
-                        placement : labelPlacement
+                        enabled: _enabled,
+                        placement: labelPlacement
                     });
                 };
                 /**
@@ -5041,8 +5025,8 @@
                  */
                 this.cookieOverflow = function(size, dataAndEvents) {
                     self._send("debug.bg.state.cookie.overflow", "cookie is too big", $$Log.LogLevel.INFO, {
-                        size : size,
-                        biggestCookie : dataAndEvents
+                        size: size,
+                        biggestCookie: dataAndEvents
                     });
                 };
                 /**
@@ -5082,8 +5066,8 @@
                  */
                 this.bgPageStartFail = function(output, stack) {
                     self._send("bg.start.fail", "bg page start failed", $$Log.LogLevel.ERROR, {
-                        message : output,
-                        stack : stack
+                        message: output,
+                        stack: stack
                     });
                 };
                 /**
@@ -5092,7 +5076,7 @@
                  */
                 this.bgPageInitTimeout = function(dataAndEvents) {
                     self._send("bg.state.start.timeout", "bg page init timeout", $$Log.LogLevel.WARN, {
-                        initTime : dataAndEvents
+                        initTime: dataAndEvents
                     });
                 };
                 /**
@@ -5101,7 +5085,7 @@
                  */
                 this.bgPageInitFail = function(dataAndEvents) {
                     self._send("bg.state.init.fail", "bg page init failed", $$Log.LogLevel.ERROR, {
-                        initAttempts : dataAndEvents
+                        initAttempts: dataAndEvents
                     });
                 };
                 /**
@@ -5111,8 +5095,8 @@
                  */
                 this.extensionUpdated = function(currentVersion, dataAndEvents) {
                     self._send("bg.state.updated", "extension updated", $$Log.LogLevel.INFO, {
-                        currentVersion : currentVersion,
-                        previousVersion : dataAndEvents
+                        currentVersion: currentVersion,
+                        previousVersion: dataAndEvents
                     });
                 };
                 /**
@@ -5121,7 +5105,7 @@
                  */
                 this.extensionUpdateFail = function(dataAndEvents) {
                     self._send("bg.state.update.fail", "extension update failed", $$Log.LogLevel.INFO, {
-                        previousVersion : dataAndEvents
+                        previousVersion: dataAndEvents
                     });
                 };
                 /**
@@ -5136,7 +5120,7 @@
                  */
                 this.extensionInstall = function(key) {
                     self._send("bg.state.install", "extension installed", $$Log.LogLevel.INFO, {
-                        source : key
+                        source: key
                     });
                 };
                 /**
@@ -5145,7 +5129,7 @@
                  */
                 this.chromeForcedToUpdate = function(newVersion) {
                     self._send("bg.chrome.forcedToUpdate", "chrome forced update", $$Log.LogLevel.INFO, {
-                        newVersion : newVersion
+                        newVersion: newVersion
                     });
                 };
                 /**
@@ -5155,8 +5139,8 @@
                  */
                 this.chromeContentScriptLoadError = function(output, paramType) {
                     self._send("bg.chrome.cs.load.error", "content script execution error", $$Log.LogLevel.WARN, {
-                        message : output,
-                        type : paramType
+                        message: output,
+                        type: paramType
                     });
                 };
                 /**
@@ -5179,9 +5163,9 @@
                  */
                 this.fetchUserFail = function(err, reqData, statusCode) {
                     self._send("bg.user.fetch.fail", "failed to update user", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode,
-                        reason : err
+                        body: reqData,
+                        statusCode: statusCode,
+                        reason: err
                     });
                 };
                 /**
@@ -5191,8 +5175,8 @@
                  */
                 this.fetchMimicFail = function(reqData, statusCode) {
                     self._send("bg.user.mimic.fail", "mimic request failed", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode
+                        body: reqData,
+                        statusCode: statusCode
                     });
                 };
                 /**
@@ -5208,8 +5192,8 @@
                  */
                 this.fetchSettingsFail = function(reqData, statusCode) {
                     self._send("bg.user.settings.fail", "could not get settings from auth", $$Log.LogLevel.WARN, {
-                        body : reqData,
-                        statusCode : statusCode
+                        body: reqData,
+                        statusCode: statusCode
                     });
                 };
                 /**
@@ -5218,7 +5202,7 @@
                  */
                 this.frequentCookieChanges = function(canceled) {
                     self._send("debug.cookie.onChange.error", "cookie change too frequent", $$Log.LogLevel.INFO, {
-                        canceled : canceled
+                        canceled: canceled
                     });
                 };
                 /**
@@ -5227,7 +5211,7 @@
                  */
                 this.initializePropFromDapi = function(errorName) {
                     self._send("bg.state.dapi.prop.initialize", "set property from dapi", $$Log.LogLevel.INFO, {
-                        name : errorName
+                        name: errorName
                     });
                 };
                 /**
@@ -5278,7 +5262,7 @@
                  */
                 this.saveEmailFeedbackError = function(reqData) {
                     self._send("bg.emailfeedback.save.error", "failed to save email feedback", $$Log.LogLevel.INFO, {
-                        body : reqData
+                        body: reqData
                     });
                 };
                 /**
@@ -5306,8 +5290,8 @@
                  */
                 this.proxyPortDisconnected = function(keepData, err) {
                     self._sendWithProbability(which, "proxy.disconnect", "proxy port disconnected", $$Log.LogLevel.INFO, {
-                        port : keepData,
-                        error : err
+                        port: keepData,
+                        error: err
                     });
                 };
                 /**
@@ -5316,7 +5300,7 @@
                  */
                 this.unhandledBgPageException = function(err) {
                     self._send("bg.unhandledException", "unhandled exception on background page", $$Log.LogLevel.ERROR, {
-                        message : err.error ? err.error.message : err.message
+                        message: err.error ? err.error.message : err.message
                     });
                 };
                 /**
@@ -5325,7 +5309,7 @@
                  */
                 this.unhandledBgPageRejection = function(err) {
                     self._send("bg.unhandledRejection", "unhandled promise rejection on background page", $$Log.LogLevel.ERROR, {
-                        message : null != err.reason ? "string" == typeof err.reason ? err.reason : err.reason.message : void 0
+                        message: null != err.reason ? "string" == typeof err.reason ? err.reason : err.reason.message : void 0
                     });
                 };
                 /**
@@ -5340,7 +5324,7 @@
                  */
                 this.storageMigrationFailed = function(e) {
                     self._send("bg.storageMigration.failure", "storage migration failed", $$Log.LogLevel.ERROR, {
-                        message : e && e.message
+                        message: e && e.message
                     });
                 };
                 /**
@@ -5379,7 +5363,7 @@
                  */
                 this.synonymCardShowAction = function(dataAndEvents) {
                     self._sendWithProbability(onComplete, "cs.editor.synonym.show", "show synonymous card action", $$Log.LogLevel.INFO, {
-                        notFoundCard : dataAndEvents
+                        notFoundCard: dataAndEvents
                     });
                 };
                 /**
@@ -5388,7 +5372,7 @@
                  */
                 this.synonymCardHideAction = function(dataAndEvents) {
                     self._sendWithProbability(onComplete, "cs.editor.synonym.hide", "hide synonymous card action", $$Log.LogLevel.INFO, {
-                        notFoundCard : dataAndEvents
+                        notFoundCard: dataAndEvents
                     });
                 };
                 /**
@@ -5416,8 +5400,8 @@
                  */
                 this.couldNotParseTransform = function(dataAndEvents, deepDataAndEvents) {
                     self._send("cs.cards.transforms.parse.error", "Could not parse transform in inline cards", $$Log.LogLevel.WARN, {
-                        transformHTML : dataAndEvents,
-                        fallbackParseSuccessful : deepDataAndEvents
+                        transformHTML: dataAndEvents,
+                        fallbackParseSuccessful: deepDataAndEvents
                     });
                 };
                 /**
@@ -5427,8 +5411,8 @@
                  */
                 this.disabledTabLoad = function(domain, dataAndEvents) {
                     self._sendUsage("usage.loadOnDisabledTab", "tab load event with disabled extension", $$Log.LogLevel.INFO, {
-                        domain : domain,
-                        accountType : dataAndEvents
+                        domain: domain,
+                        accountType: dataAndEvents
                     });
                 };
                 /**
@@ -5440,10 +5424,10 @@
                  */
                 this.initSession = function(domain, res, inType, req) {
                     self._sendUsage("usage.session.init", "init in the field", $$Log.LogLevel.INFO, {
-                        domain : domain,
-                        accountType : res,
-                        fieldType : inType,
-                        fieldSupported : req
+                        domain: domain,
+                        accountType: res,
+                        fieldType: inType,
+                        fieldSupported: req
                     });
                 };
                 /**
@@ -5454,14 +5438,14 @@
                  */
                 this.cardFirstInteraction = function(domain, dataAndEvents, inType) {
                     self._sendUsage("usage.card.interaction", "interaction with card in the field", $$Log.LogLevel.INFO, {
-                        domain : domain,
-                        accountType : dataAndEvents,
-                        fieldType : inType
+                        domain: domain,
+                        accountType: dataAndEvents,
+                        fieldType: inType
                     });
                 };
             }
-            return(0, elem["default"])(clone, [{
-                key : "_send",
+            return (0, elem["default"])(clone, [{
+                key: "_send",
                 /**
                  * @param {string} f
                  * @param {string} newValue
@@ -5469,7 +5453,7 @@
                  * @param {string} data
                  * @return {undefined}
                  */
-                value : function(f, newValue, thisValue, data) {
+                value: function(f, newValue, thisValue, data) {
                     var message = void 0;
                     try {
                         message = (0, targets["default"])(data);
@@ -5480,14 +5464,14 @@
                     }
                     try {
                         this._sendFelog(f, newValue, thisValue, null != data ? {
-                            json : message
+                            json: message
                         } : void 0);
                     } catch (error) {
                         console.warn("Failed to send felog for " + newValue + "@" + f + ": '" + error + "', '" + (error && error.message) + "'");
                     }
                 }
             }, {
-                key : "_sendUsage",
+                key: "_sendUsage",
                 /**
                  * @param {?} newValue
                  * @param {?} thisValue
@@ -5495,11 +5479,11 @@
                  * @param {?} newVal
                  * @return {undefined}
                  */
-                value : function(newValue, thisValue, factor, newVal) {
+                value: function(newValue, thisValue, factor, newVal) {
                     this._sendFelogUsage(newValue, thisValue, factor, newVal);
                 }
             }, {
-                key : "_sendWithProbability",
+                key: "_sendWithProbability",
                 /**
                  * @param {number} thisValue
                  * @param {?} code
@@ -5508,68 +5492,68 @@
                  * @param {?} newValue
                  * @return {undefined}
                  */
-                value : function(thisValue, code, x, callback, newValue) {
+                value: function(thisValue, code, x, callback, newValue) {
                     if (thisValue > Math.random()) {
                         this._send(code, x, callback, newValue);
                     }
                 }
             }, {
-                key : "setUserId",
+                key: "setUserId",
                 /**
                  * @param {?} newValue
                  * @return {undefined}
                  */
-                value : function(newValue) {
+                value: function(newValue) {
                     this._setUserId(newValue);
                 }
             }, {
-                key : "setContainerId",
+                key: "setContainerId",
                 /**
                  * @param {?} newValue
                  * @return {undefined}
                  */
-                value : function(newValue) {
+                value: function(newValue) {
                     this._setContainerId(newValue);
                 }
             }, {
-                key : "notificationShown",
+                key: "notificationShown",
                 /**
                  * @param {string} event
                  * @return {undefined}
                  */
-                value : function(event) {
+                value: function(event) {
                     this._send("cs.notification.show", "show notification on the page", $$Log.LogLevel.INFO, {
-                        type : event
+                        type: event
                     });
                 }
             }, {
-                key : "notificationHide",
+                key: "notificationHide",
                 /**
                  * @param {string} event
                  * @return {undefined}
                  */
-                value : function(event) {
+                value: function(event) {
                     this._send("cs.notification.hide", "hide notification on the page", $$Log.LogLevel.INFO, {
-                        type : event
+                        type: event
                     });
                 }
             }]), clone;
         }();
         optgroup.Telemetry = Telemetry;
     }, {
-        "./felog" : 137,
-        "babel-runtime/core-js/json/stringify" : 4,
-        "babel-runtime/helpers/classCallCheck" : 14,
-        "babel-runtime/helpers/createClass" : 15
+        "./felog": 137,
+        "babel-runtime/core-js/json/stringify": 4,
+        "babel-runtime/helpers/classCallCheck": 14,
+        "babel-runtime/helpers/createClass": 15
     }],
-    140 : [function(require, dataAndEvents, optgroup) {
+    140: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {Object} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -5579,7 +5563,7 @@
          */
         function init(scripts, async) {
             var _ref1;
-            return(_ref1 = []).concat.apply(_ref1, (0, c["default"])(async.map(scripts)));
+            return (_ref1 = []).concat.apply(_ref1, (0, c["default"])(async.map(scripts)));
         }
         /**
          * @param {?} callback
@@ -5593,7 +5577,7 @@
             var cur = elem;
             /** @type {number} */
             var i = 0;
-            for (;i < items.length;i++) {
+            for (; i < items.length; i++) {
                 cur = callback(cur, items[i]);
                 eventPath.push(cur);
             }
@@ -5642,14 +5626,14 @@
             var resLength = 0;
             /** @type {number} */
             var i = 0;
-            for (;i < a.length;i++) {
+            for (; i < a.length; i++) {
                 if (fn(a[i])) {
                     target[j++] = a[i];
                 } else {
                     vec[resLength++] = a[i];
                 }
             }
-            return[target, vec];
+            return [target, vec];
         }
         /**
          * @param {number} size
@@ -5661,13 +5645,15 @@
                 throw new Error("Invalid chunk size, expected > 0");
             }
             if (0 === filter.length) {
-                return[[]];
+                return [
+                    []
+                ];
             }
             /** @type {Array} */
             var resp = [];
             /** @type {number} */
             var i = 0;
-            for (;i < Math.ceil(filter.length / size);i++) {
+            for (; i < Math.ceil(filter.length / size); i++) {
                 resp.push(filter.slice(i * size, (i + 1) * size));
             }
             return resp;
@@ -5681,7 +5667,7 @@
             /** @type {Array} */
             var ret = [];
             var elems = fn(item);
-            for (;void 0 !== elems;) {
+            for (; void 0 !== elems;) {
                 ret.push(elems[0]);
                 elems = fn(elems[1]);
             }
@@ -5704,7 +5690,7 @@
         var complete = require("babel-runtime/helpers/toConsumableArray");
         var c = Event(complete);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (Function, Array): ?} */
         optgroup.flatMap = init;
@@ -5725,17 +5711,17 @@
         /** @type {function (number, number): ?} */
         optgroup.range = create;
     }, {
-        "babel-runtime/core-js/array/from" : 1,
-        "babel-runtime/helpers/toConsumableArray" : 20
+        "babel-runtime/core-js/array/from": 1,
+        "babel-runtime/helpers/toConsumableArray": 20
     }],
-    141 : [function(require, dataAndEvents, optgroup) {
+    141: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {string} type
          * @return {?}
          */
         function Event(type) {
             return type && type.__esModule ? type : {
-                "default" : type
+                "default": type
             };
         }
         /**
@@ -5770,7 +5756,7 @@
         var type = require("babel-runtime/helpers/inherits");
         var event = Event(type);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var AssertionError = function(_super) {
             /**
@@ -5778,9 +5764,9 @@
              * @return {?}
              */
             function process(e) {
-                return(0, targets["default"])(this, process), (0, elem["default"])(this, (process.__proto__ || (0, c["default"])(process)).call(this, "Assertion failed: " + (e ? "string" == typeof e ? e : e() : "(unnamed)")));
+                return (0, targets["default"])(this, process), (0, elem["default"])(this, (process.__proto__ || (0, c["default"])(process)).call(this, "Assertion failed: " + (e ? "string" == typeof e ? e : e() : "(unnamed)")));
             }
-            return(0, event["default"])(process, _super), process;
+            return (0, event["default"])(process, _super), process;
         }(Error);
         optgroup.AssertionError = AssertionError;
         /** @type {function (?, ?): undefined} */
@@ -5788,19 +5774,19 @@
         /** @type {function (number, string): ?} */
         optgroup.assertNonNull = fix;
     }, {
-        "babel-runtime/core-js/object/get-prototype-of" : 8,
-        "babel-runtime/helpers/classCallCheck" : 14,
-        "babel-runtime/helpers/inherits" : 17,
-        "babel-runtime/helpers/possibleConstructorReturn" : 18
+        "babel-runtime/core-js/object/get-prototype-of": 8,
+        "babel-runtime/helpers/classCallCheck": 14,
+        "babel-runtime/helpers/inherits": 17,
+        "babel-runtime/helpers/possibleConstructorReturn": 18
     }],
-    142 : [function(require, dataAndEvents, optgroup) {
+    142: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {Object} selector
          * @return {?}
          */
         function jQuery(selector) {
             return selector && selector.__esModule ? selector : {
-                "default" : selector
+                "default": selector
             };
         }
         /**
@@ -5877,7 +5863,7 @@
         var target = require("babel-runtime/helpers/createClass");
         var targets = jQuery(target);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var chai = require("./assert");
         optgroup.assert = chai.assert;
@@ -5899,13 +5885,13 @@
                 /** @type {(Object|number)} */
                 this._getFallbackValue = elem;
             }
-            return(0, targets["default"])(restoreScript, [{
-                key : "init",
+            return (0, targets["default"])(restoreScript, [{
+                key: "init",
                 /**
                  * @param {number} newValue
                  * @return {undefined}
                  */
-                value : function(newValue) {
+                value: function(newValue) {
                     if (void 0 !== this._value) {
                         throw new Error("Global value already initialized.");
                     }
@@ -5913,11 +5899,11 @@
                     this._value = newValue;
                 }
             }, {
-                key : "get",
+                key: "get",
                 /**
                  * @return {?}
                  */
-                value : function() {
+                value: function() {
                     if (void 0 === this._value) {
                         if (void 0 === this._getFallbackValue) {
                             throw new Error("Global value not initialized and no fallback value provided.");
@@ -5939,9 +5925,9 @@
              * @return {?}
              */
             function value(domain) {
-                return(0, elements["default"])(this, value), (0, c["default"])(this, (value.__proto__ || (0, keys["default"])(value)).call(this, "Matching not exhaustive" + (domain ? ": unexpected value " + domain : "")));
+                return (0, elements["default"])(this, value), (0, c["default"])(this, (value.__proto__ || (0, keys["default"])(value)).call(this, "Matching not exhaustive" + (domain ? ": unexpected value " + domain : "")));
             }
-            return(0, elem["default"])(value, _super), value;
+            return (0, elem["default"])(value, _super), value;
         }(Error);
         optgroup.MatchingNotExhaustiveError = YAMLException;
         /** @type {function (string): ?} */
@@ -5953,24 +5939,24 @@
         /** @type {function (Function, Function): ?} */
         optgroup.try_ = after;
     }, {
-        "./array" : 140,
-        "./assert" : 141,
-        "./object" : 143,
-        "./promise" : 144,
-        "babel-runtime/core-js/object/get-prototype-of" : 8,
-        "babel-runtime/helpers/classCallCheck" : 14,
-        "babel-runtime/helpers/createClass" : 15,
-        "babel-runtime/helpers/inherits" : 17,
-        "babel-runtime/helpers/possibleConstructorReturn" : 18
+        "./array": 140,
+        "./assert": 141,
+        "./object": 143,
+        "./promise": 144,
+        "babel-runtime/core-js/object/get-prototype-of": 8,
+        "babel-runtime/helpers/classCallCheck": 14,
+        "babel-runtime/helpers/createClass": 15,
+        "babel-runtime/helpers/inherits": 17,
+        "babel-runtime/helpers/possibleConstructorReturn": 18
     }],
-    143 : [function(require, dataAndEvents, optgroup) {
+    143: [function(require, dataAndEvents, optgroup) {
         /**
          * @param {string} value
          * @return {?}
          */
         function appendModelPrefix(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         /**
@@ -5980,7 +5966,7 @@
          */
         function initialize(callback, results) {
             var employees = {};
-            return(0, fullOtherName["default"])(results).forEach(function(i) {
+            return (0, fullOtherName["default"])(results).forEach(function(i) {
                 return employees[i] = callback(i, results[i]);
             }), employees;
         }
@@ -5991,7 +5977,7 @@
          */
         function emit(cb, data) {
             var cache = {};
-            return(0, fullOtherName["default"])(data).forEach(function(prop) {
+            return (0, fullOtherName["default"])(data).forEach(function(prop) {
                 if (cb(prop, data[prop])) {
                     cache[prop] = data[prop];
                 }
@@ -6002,7 +5988,7 @@
          * @return {?}
          */
         function values(name) {
-            return(0, fullOtherName["default"])(name).map(function(timeoutKey) {
+            return (0, fullOtherName["default"])(name).map(function(timeoutKey) {
                 return name[timeoutKey];
             });
         }
@@ -6011,14 +5997,14 @@
          * @return {?}
          */
         function pluck(collection) {
-            return(0, fullOtherName["default"])(collection).map(function(method) {
-                return[method, collection[method]];
+            return (0, fullOtherName["default"])(collection).map(function(method) {
+                return [method, collection[method]];
             });
         }
         var other = require("babel-runtime/core-js/object/keys");
         var fullOtherName = appendModelPrefix(other);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         /** @type {function (Function, Array): ?} */
         optgroup.map = initialize;
@@ -6029,25 +6015,25 @@
         /** @type {function (Array): ?} */
         optgroup.pairs = pluck;
     }, {
-        "babel-runtime/core-js/object/keys" : 9
+        "babel-runtime/core-js/object/keys": 9
     }],
-    144 : [function(proceed, dataAndEvents, optgroup) {
+    144: [function(proceed, dataAndEvents, optgroup) {
         /**
          * @param {Object} value
          * @return {?}
          */
         function lookupIterator(value) {
             return value && value.__esModule ? value : {
-                "default" : value
+                "default": value
             };
         }
         var value = proceed("babel-runtime/core-js/promise");
         var iterator = lookupIterator(value);
         Object.defineProperty(optgroup, "__esModule", {
-            value : true
+            value: true
         });
         var s;
-        !function(calendar) {
+        ! function(calendar) {
             /**
              * @param {Object} name
              * @return {?}
@@ -6067,20 +6053,20 @@
                     /** @type {(number|string)} */
                     eb = dataAndEvents;
                 });
-                return{
-                    promise : getPromise,
+                return {
+                    promise: getPromise,
                     /**
                      * @param {Object} name
                      * @return {undefined}
                      */
-                    resolve : function(name) {
+                    resolve: function(name) {
                         next(name);
                     },
                     /**
                      * @param {?} reason
                      * @return {undefined}
                      */
-                    reject : function(reason) {
+                    reject: function(reason) {
                         eb(reason);
                     }
                 };
@@ -6102,6 +6088,6 @@
             calendar.sync = sync;
         }(s = optgroup.SafePromise || (optgroup.SafePromise = {}));
     }, {
-        "babel-runtime/core-js/promise" : 11
+        "babel-runtime/core-js/promise": 11
     }]
 }, {}, [126]);

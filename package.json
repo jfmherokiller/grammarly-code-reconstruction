@@ -1,5 +1,11 @@
 {
   "name": "Grammarly-for-Chrome",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "runpasses": "node passes.js"
+  }
 }
